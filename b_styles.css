@@ -1,0 +1,250 @@
+    body{
+        font-family: 'Hachi Maru Pop', cursive;
+    }
+
+    /* section1-nav */
+    .section1-nav {
+    padding: 20px;
+    background-color: #fff;
+    text-align: center;
+    }
+    .section1-nav h1 {
+    margin: 0 0 10px 0;
+    font-size: 24px;
+    text-align: center;
+    }
+    .section1-nav nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    text-align: center;
+    }
+    .section1-nav nav li {
+    margin: 5px 0;
+    text-align: center;
+    }
+    .section1-nav nav a {
+    text-decoration: none;
+    color: #000;
+    text-align: center;
+    }
+    @media (min-width: 768px) {
+    .section1-nav nav li {
+        display: inline-block;
+        margin-right: 15px;
+    }
+    }
+
+    /* section2-png */
+    .section2-png {
+    position: relative;
+    background-image: url('img/sample3.png');
+    background-size: cover;
+    background-position: center;
+    height: 300vh;
+    }
+    .section2-png .overlay {
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    color: #000;
+    font-weight: bold;
+    font-size: 2em;
+    }
+
+    /* section3-day */
+    .section3-day {
+    padding: 20px;
+    text-align: center;
+    }
+    .section3-day h2 {
+    margin: 0;
+    font-size: 20px;
+    }
+
+    /* section4-venue */
+    .section4-venue {
+    padding: 20px;
+    text-align: center;
+    }
+    .section4-venue h2 {
+    margin-top: 0;
+    text-align: center;
+    }
+    .section4-venue p {
+    margin: 5px 0;
+    text-align: center;
+    }
+    .section4-venue a {
+    color: #000;
+    text-decoration: underline;
+    text-align: center;
+    }
+
+    /* section5-shousai */
+    .section5-shousai {
+    padding: 20px;
+    text-align: center;
+    }
+    .section5-shousai h2 {
+    margin-top: 0;
+    }
+    .section5-shousai p {
+    margin: 10px 0;
+    line-height: 1.5;
+    }
+
+    /* section6-schedule */
+    .section6-schedule {
+    padding: 20px;
+    }
+    .section6-schedule h2 {
+    margin-top: 0;
+    }
+    .section6-schedule table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 10px;
+    }
+    .section6-schedule th,
+    .section6-schedule td {
+    border: 1px solid #000;
+    padding: 5px;
+    text-align: center;
+    }
+    .section6-schedule p {
+    margin: 5px 0;
+    }
+
+    /* section7-jump */
+        .section7-jump {
+    padding: 20px;
+    text-align: center;
+    }
+    .section7-jump ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    }
+    .section7-jump li {
+    display: inline-block;
+    margin: 10px;
+    }
+    .section7-jump a {
+    display: inline-block;
+    padding: 10px 15px;
+    background-color: #e9fffe;
+    color: #000;
+    font-weight: bold;
+    text-decoration: none;
+    border-radius: 8px;
+    border: 2px solid #e7ffd2;
+    transition: background-color 0.2s ease;
+    }
+    .section7-jump a:hover {
+    background-color: #feddb7;
+    }
+
+    /* section8-manga */
+    .section8-manga {
+        padding: 20px;
+        text-align: center;
+    }
+    .section8-manga h2 {
+    margin-top: 0;
+    text-align: center;
+    }
+    .section8-manga p {
+    margin: 10px 0;
+    text-align: center;
+    }
+
+    /* section9-game */
+    .section9-game {
+    padding: 20px;
+    text-align: center;
+    }
+    .section9-game h2 {
+    margin-top: 0;
+    text-align: center;
+    }
+    .section9-game p {
+    margin: 10px 0;
+    text-align: center;
+    }
+
+    /* section10-pafo */
+    .section10-pafo {
+    padding: 20px;
+    text-align: center;
+    }
+    .section10-pafo h2 {
+    margin-top: 0;
+    text-align: center;
+    }
+    .section10-pafo p {
+    margin: 10px 0;
+    text-align: center;
+    }
+
+    /* section11-video */
+    .section11-video {
+    padding: 20px;
+    text-align: center;
+    }
+    .section11-video h2 {
+    margin-top: 0;
+    text-align: center;
+    }
+    .section11-video p {
+    margin: 10px 0;
+    text-align: center;
+    }
+
+    
+    /* section13-comment */
+    .section13-comment {
+    padding: 20px;
+    background-color: #f9f9f9;
+    text-align: center;
+    }
+    .section13-comment h2 {
+    margin-top: 0;
+    }
+    .section13-comment p {
+    margin: 10px 0;
+    line-height: 1.5;
+    }
+
+    /* section14-under */
+    /* section14-under: フッターSNSボタン */
+    .section14-under {
+    padding: 20px;
+    text-align: center;
+    font-size: 0.9em;
+    }
+
+    .section14-under .footer-links {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 15px;
+    }
+
+    .section14-under .footer-links a {
+    display: inline-block;
+    padding: 10px 15px;
+    background-color: #eee;
+    color: #000;
+    text-decoration: none;
+    border: 1px solid #c9ffc7;
+    border-radius: 6px;
+    font-weight: bold;
+    transition: background-color 0.2s ease;
+    }
+
+    .section14-under .footer-links a:hover {
+    background-color: #f6ffc0;
+    }
+
