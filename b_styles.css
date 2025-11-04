@@ -2,37 +2,41 @@
         font-family: 'Hachi Maru Pop', cursive;
     }
 
-    /* section1-nav */
+    /* section1-nav: ナビゲーションボタン仕様 */
     .section1-nav {
     padding: 20px;
     background-color: #fff;
     text-align: center;
     }
     .section1-nav h1 {
-    margin: 0 0 10px 0;
-    font-size: 24px;
-    text-align: center;
+    margin-bottom: 30px;
+    font-size: 50px;
     }
     .section1-nav nav ul {
     list-style: none;
     padding: 0;
     margin: 0;
-    text-align: center;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 50px;
     }
     .section1-nav nav li {
-    margin: 5px 0;
-    text-align: center;
+    margin: 0;
     }
     .section1-nav nav a {
-    text-decoration: none;
+    display: inline-block;
+    padding: 10px 15px;
+    background-color: #ffdddd;
     color: #000;
-    text-align: center;
+    font-weight: bold;
+    text-decoration: none;
+    border-radius: 6px;
+    border: 1px solid #ffe8fa;
+    transition: background-color 0.2s ease;
     }
-    @media (min-width: 768px) {
-    .section1-nav nav li {
-        display: inline-block;
-        margin-right: 15px;
-    }
+    .section1-nav nav a:hover {
+    background-color: #fad6d6;
     }
 
     /* section2-png */
@@ -41,7 +45,7 @@
     background-image: url('img/sample3.png');
     background-size: cover;
     background-position: center;
-    height: 300vh;
+    height: 140vh;
     }
     .section2-png .overlay {
     position: absolute;
@@ -55,43 +59,81 @@
     /* section3-day */
     .section3-day {
     padding: 20px;
+    background-color: #fff;
+    }
+    .section3-day .date-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+    }
+    .section3-day .date-left {
+    flex: 1;
+    min-width: 220px;
+    }
+    .section3-day .date-left p {
+    margin: 10px 0;
+    line-height: 1.5;
+    }
+    .section3-day .date-right {
+    flex: 0 0 auto;
+    background-color: #c8fff8;
+    border-radius: 12px;
+    padding: 30px 150px;
     text-align: center;
     }
-    .section3-day h2 {
+    .section3-day .date-right h1 {
+    font-size: 2.5em;
     margin: 0;
-    font-size: 20px;
     }
 
-    /* section4-venue */
+    /* -------------------- section4-venue -------------------- */
     .section4-venue {
     padding: 20px;
-    text-align: center;
+    }
+    .section4-venue .venue-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    }
+    .section4-venue .venue-left {
+    flex: 1;
+    min-width: 220px;
     }
     .section4-venue h2 {
     margin-top: 0;
-    text-align: center;
+    font-weight: bold;
     }
-    .section4-venue p {
-    margin: 5px 0;
-    text-align: center;
-    }
-    .section4-venue a {
+    .section4-venue .venue-left a {
     color: #000;
     text-decoration: underline;
-    text-align: center;
+    font-weight: bold;
+    }
+    .section4-venue .station-access {
+    margin-top: 10px;
+    padding-left: 1.2em;
+    }
+    .section4-venue .station-access li {
+    margin-bottom: 5px;
+    list-style: disc;
+    }
+    .section4-venue .venue-right {
+    flex: 1;
+    min-width: 280px;
     }
 
-    /* section5-shousai */
+    /* -------------------- section5-shousai -------------------- */
     .section5-shousai {
     padding: 20px;
-    text-align: center;
     }
     .section5-shousai h2 {
-    margin-top: 0;
+    font-weight: bold;
+    margin-bottom: 10px;
     }
     .section5-shousai p {
-    margin: 10px 0;
-    line-height: 1.5;
+    white-space: pre-line;
+    line-height: 1.6;
     }
 
     /* section6-schedule */
@@ -307,7 +349,7 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    gap: 10px;
+    gap: 50px;
     margin-bottom: 15px;
     }
 
