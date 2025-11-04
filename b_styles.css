@@ -45,7 +45,7 @@
     background-image: url('img/sample3.png');
     background-size: cover;
     background-position: center;
-    height: 300vh;
+    height: 140vh;
     }
     .section2-png .overlay {
     position: absolute;
@@ -270,7 +270,7 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    gap: 10px;
+    gap: 50px;
     margin-bottom: 15px;
     }
 
