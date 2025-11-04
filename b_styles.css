@@ -51,9 +51,16 @@
     position: absolute;
     bottom: 20px;
     right: 20px;
-    color: #000;
+    color: #ffffff;
     font-weight: bold;
     font-size: 2em;
+    text-shadow:
+    -1px -1px 0 #000,
+    1px -1px 0 #000,
+    -1px  1px 0 #000,
+    1px  1px 0 #000,
+    2px  2px 8px rgba(0, 0, 0, 1); /* フチ＋ぼかし影 */
+
     }
 
     /* section3-day */
