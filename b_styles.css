@@ -40,26 +40,34 @@
     }
 
     /* section2-png */
+    /* section2-png */
     .section2-png {
-    position: relative;
-    background-image: url('img/sample3.png');
-    background-size: cover;
-    background-position: center;
-    height: 140vh;
+        position: relative;
+        height: 100vh;
+        overflow: hidden;
+    }
+    .section2-png .background-img {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      z-index: -1;
     }
     .section2-png .overlay {
-    position: absolute;
-    bottom: 20px;
-    right: 20px;
-    color: #ffffff;
-    font-weight: bold;
-    font-size: 6em;
-    text-shadow:
-    -1px -1px 0 #000,
-    1px -1px 0 #000,
-    -1px  1px 0 #000,
-    1px  1px 0 #000,
-    2px  2px 8px rgba(0, 0, 0, 1); /* フチ＋ぼかし影 */
+      position: absolute;
+      bottom: 20px;
+      right: 40px;
+      font-size: 6em;
+      font-weight: bold;
+      color: #fff;
+      text-shadow:
+      -1px -1px 0 #000,
+      1px -1px 0 #000,
+      -1px  1px 0 #000,
+      1px  1px 0 #000,
+      2px  2px 8px rgba(0, 0, 0, 1); /* フチ＋ぼかし影 */
 
     }
 
