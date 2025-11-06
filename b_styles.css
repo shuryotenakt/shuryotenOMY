@@ -138,9 +138,12 @@
     }
     .section4-venue h2 {
     margin-top: 0;
+    margin-left: 10px;
     font-weight: bold;
     }
     .section4-venue .venue-left a {
+    margin-left: 20px;
+    font-size: 2em;
     color: #000;
     text-decoration: underline;
     font-weight: bold;
@@ -149,14 +152,48 @@
     margin-top: 10px;
     padding-left: 1.2em;
     }
-    .section4-venue .station-access li {
-    margin-bottom: 5px;
-    list-style: disc;
+    .station-access p {
+    margin: 10px 0;
+    margin-left: 5px;
+    line-height: 1.5;
     }
+
     .section4-venue .venue-right {
     flex: 1;
     min-width: 280px;
     }
+    .gradient-text {
+    background: linear-gradient(
+      270deg,
+      #000000 0%,
+      #000000 64%,
+      #8adcff 65%,
+      #8adcff 83%,
+      #ffffff 82%,
+      #ffffff 90%,
+      #000000 88%,
+      #000000 100%
+    );
+    background-size: 400% 400%;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: textGradientFlow 10s ease-in-out;
+    display: inline-block;
+    }
+
+    @keyframes textGradientFlow {
+      0% {
+        background-position: 0% 100%;
+      }
+      50% {
+        background-position: 100% 50%;
+      }
+      100% {
+        background-position: 0% 30%;
+      }
+    }
+
 
     /* -------------------- section5-shousai -------------------- */
     .section5-shousai {
