@@ -1,5 +1,22 @@
     body {
     font-family: 'IBM Plex Sans JP', sans-serif;
+    background: linear-gradient(to right, rgba(255, 199, 231, 0.76), rgba(168, 232, 255, 0.797));
+    background-size: 400% 400%; /* ← 背景を広げて動かす余地を作る */
+    animation: gradientShift 12s ease infinite;
+    }
+
+    /*背景グラデーション*/
+
+    @keyframes gradientShift {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
     }
 
     /* section1-nav: ナビゲーションボタン仕様 */
@@ -26,17 +43,17 @@
     }
     .section1-nav nav a {
     display: inline-block;
-    padding: 10px 15px;
-    background-color: #ffdddd;
+    padding: 10px 40px;
+    background-color: #ffffff81;
     color: #000;
     font-weight: bold;
     text-decoration: none;
     border-radius: 6px;
-    border: 1px solid #ffe8fa;
+    border: 1px solid #b7f0b5;
     transition: background-color 0.2s ease;
     }
     .section1-nav nav a:hover {
-    background-color: #fad6d6;
+    background-color: #ffcf94b5;
     }
 
     /* section2-png */
@@ -45,6 +62,8 @@
         position: relative;
         height: 100vh;
         overflow: hidden;
+        margin-top: 10px;
+        margin-bottom: 10px;
     }
     .section2-png .background-img {
       position: absolute;
@@ -75,6 +94,8 @@
     .section3-day {
     padding: 20px;
     background-color: #fff;
+    margin-top: 10px;
+    margin-bottom: 10px;
     }
     .section3-day .date-wrapper {
     display: flex;
@@ -106,6 +127,8 @@
     /* -------------------- section4-venue -------------------- */
     .section4-venue {
     padding: 20px;
+    margin-top: 10px;
+    margin-bottom: 10px;
     }
     .section4-venue .venue-wrapper {
     display: flex;
@@ -141,6 +164,8 @@
     /* -------------------- section5-shousai -------------------- */
     .section5-shousai {
     padding: 20px;
+    margin-top: 10px;
+    margin-bottom: 10px;
     }
     .section5-shousai h2 {
     font-weight: bold;
@@ -154,6 +179,8 @@
     /* section6-schedule */
     .section6-schedule {
     padding: 20px;
+    margin-top: 10px;
+    margin-bottom: 10px;
     }
     .section6-schedule h2 {
     margin-top: 0;
@@ -174,9 +201,11 @@
     }
 
     /* section7-jump */
-        .section7-jump {
+    .section7-jump {
     padding: 20px;
     text-align: center;
+    margin-top: 10px;
+    margin-bottom: 10px;
     }
     .section7-jump ul {
     list-style: none;
@@ -204,8 +233,10 @@
 
     /* section8-manga */
     .section8-manga {
-        padding: 20px;
-        text-align: center;
+    padding: 20px;
+    text-align: center;
+    margin-top: 10px;
+    margin-bottom: 10px;
     }
     .section8-manga h2 {
     margin-top: 0;
@@ -226,6 +257,8 @@
   margin: 0 auto 20px;
   overflow: hidden;
   border-radius: 10px;
+  margin-top: 10px;
+  margin-bottom: 10px;
 }
 
 .slider-track {
@@ -304,15 +337,17 @@
   text-align: left;
 }
 .work h1 {
-     font-size: 14px;
-     margin-left: 10px;
-     text-align: center;
+    font-size: 14px;
+    margin-left: 10px;
+    text-align: center;
 }
 
     /* section10-pafo */
     .section10-pafo {
     padding: 20px;
     text-align: center;
+    margin-top: 10px;
+    margin-bottom: 10px;
     }
     .section10-pafo h2 {
     margin-top: 0;
@@ -324,7 +359,7 @@
     }
 
 /* ================================
-    🎥動画カレッジ専用スタイル
+    🎥動画カレッジ専用スタイル section11
  ================================ */
   .title{
     padding: 20px;
@@ -333,6 +368,8 @@
     font-size: 30px; /* 文字サイズ */
     color: #000; 
     border-bottom: 2px dashed #000000;
+    margin-top: 10px;
+    margin-bottom: 10px;
 }
 .image-container {
     display: flex;
@@ -439,19 +476,6 @@
   line-height: 1.8rem;
 }
 
-    /* section11-video */
-    /* .section11-video { */
-    /* padding: 20px; */
-    /* text-align: center; */
-    /* } */
-    /* .section11-video h2 { */
-    /* margin-top: 0; */
-    /* text-align: center; */
-    /* } */
-    /* .section11-video p { */
-    /* margin: 10px 0; */
-    /* text-align: center; */
-    /* } */
 
     
     /* section13-comment */
@@ -459,6 +483,8 @@
     padding: 20px;
     background-color: #f9f9f9;
     text-align: center;
+    margin-top: 10px;
+    margin-bottom: 10px;
     }
     .section13-comment h2 {
     margin-top: 0;
@@ -500,3 +526,13 @@
     background-color: #f6ffc0;
     }
 
+
+    /* 🔳 ガラス調ボックス共通スタイル */
+    .glass-box {
+    background: rgba(255, 255, 255, 0);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.587);
+    border-radius: 20px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.034);
+    }
