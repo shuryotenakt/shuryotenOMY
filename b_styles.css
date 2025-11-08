@@ -19,6 +19,60 @@
     }
     }
 
+        /* ヘッダー部分 */
+    header {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 20px;
+    box-shadow: 0 4px 10px rgba(147, 147, 147, 0.15);
+    border-radius: 20px;
+    position: relative;
+    margin-bottom: auto;
+    z-index: 10;
+
+
+    }
+
+    /* 左・中央・右 */
+    .left {
+    font-weight: bold;
+    font-size: 1.5em;
+    margin-top: 25px;
+    }
+
+    .center {
+    flex: 1;
+    text-align: center;
+    font-weight: bold;
+    color: #222;
+    font-size: 2em;
+    margin-top: 20px;
+    }
+
+    .right {
+    font-weight: bold;
+    color: #555;
+    font-size: 2em;
+    margin-top: 20px;
+    }
+
+    /* レスポンシブ対応 */
+    @media (max-width: 600px) {
+    header {
+        flex-direction: column;
+        text-align: center;
+        padding: 15px 10px;
+    }
+    .center {
+        order: 2;
+        margin: 5px 0;
+    }
+    .left, .right {
+        order: 1;
+        margin: 3px 0;
+    }
+    }
+
     /* section1-nav: ナビゲーションボタン仕様 */
     .section1-nav {
     padding: 20px;
