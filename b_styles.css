@@ -448,9 +448,6 @@
     }
 
 /* ================================
-    🎥動画カレッジ専用スタイル section11
- ================================ */
-/* ================================
   🎥動画カレッジ専用スタイル section11
  ================================ */
 .section11-video h2 {
@@ -468,7 +465,7 @@
     display: flex;
     justify-content: center;  
     align-items: flex-start;
-    gap: 30px;
+    gap: 50px;
     padding: 20px;
     flex-wrap: nowrap;
     overflow-x: auto;
@@ -478,14 +475,14 @@
 .image-container div {
     text-align: center;
     flex-shrink: 0;
-    width: 160px; /* ← 画像と同じ幅に固定 */
+    width: 300px; /* ← 画像と同じ幅に固定 */
     font-size: 14px;
     color: #333;
 }
 
 .image {
-    width: 160px;   /* ← 大きめサイズ */
-    height: 120px;
+    width: 300px;   /* ← 大きめサイズ */
+    height: 200px;
     object-fit: cover;
     object-position: center;
     margin-bottom: 5px;
@@ -498,40 +495,34 @@
 下部のカードブロック
 ========================= */
 .card1,.card2 {
-  width: 500px;
   display: flex;
-  justify-content: flex-start;   /* 左寄せ */
-  align-items: flex-start;       /* 上揃え */
-  gap: 20px;                     /* テキストと画像の間隔 */
+  justify-content: center; 
+  align-items: center;
+  gap: 20px;
   margin: 30px auto;
-  background: none;              /* 背景色なし */
-  box-shadow: none;              /* 影なし */
-  border: none;                  /* 枠線なし */
   box-sizing: border-box;
 }
 
 /* --- テキスト部分 --- */
 .text-box {
-  flex: 1;
-  min-width: 0;
+  flex: 1;                     /* 画像以外の部分を広げる */
   display: flex;
   flex-direction: column;
-  justify-content: flex-start;
+  justify-content: center;
   gap: 12px;
   padding: 0;
   box-sizing: border-box;
   word-break: break-word;
   overflow-wrap: break-word;
-  background: none;
-  box-shadow: none;
-  border: none;
+  min-width: 200px;          /* これがあるとスマホでも潰れない */
+  max-width: 300px; 
 }
 
 .image2 {
   display:flex;
   flex-shrink: 0;           /* ← 画像が潰れないように */
-  width: 160px;
-  height: 120px;
+  width: 300px;
+  height: 200px;
   object-fit: cover;        /* ← 中央トリミング（縦横比を維持） */
   object-position: center;
   background-color: #f5f5f5; /* 画像が透明でも背景が整う */
@@ -562,7 +553,7 @@
 
   .image-container {
     justify-content: center;
-    gap: 15px;
+    gap: 35px;
     overflow-x: visible;
     flex-wrap: nowrap;
   }
@@ -578,10 +569,8 @@
   }
 
   .card1, .card2 {
-    flex-direction: column;
-    align-items: center;
-    gap: 10px;
     margin: 20px auto;
+    flex-direction: column;
   }
 
   .text-box, .image2 {
@@ -595,8 +584,8 @@
   }
 
   .image2 {
-    width: 110px;
-    height: 90px;
+    width: 200px;
+    height: 150px;
   }
 }
 
