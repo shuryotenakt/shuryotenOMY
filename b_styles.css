@@ -630,7 +630,18 @@
 
   
   .footer {
-    background-color: #c6c6c6;
-    padding: 30px;
-    text-align: center;
-  }
+  background-color: #c6c6c6;
+  padding: 30px;
+  text-align: center;
+}
+
+.footer address {
+  font-style: normal; /* ← 斜体を解除 */
+  font-size: 1.5em;   /* ← 住所の文字を大きく */
+  margin-bottom: auto;
+}
+
+.footer .copyright {
+  margin-bottom: 0.1em;
+  font-size: 0.9em;
+}
