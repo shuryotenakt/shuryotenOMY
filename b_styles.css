@@ -1,5 +1,76 @@
-    body{
-        font-family: 'Hachi Maru Pop', cursive;
+    body {
+    font-family: 'IBM Plex Sans JP', sans-serif;
+    background: linear-gradient(to right, rgba(255, 199, 231, 0.76), rgba(168, 232, 255, 0.797));
+    background-size: 400% 400%; /* ← 背景を広げて動かす余地を作る */
+    animation: gradientShift 12s ease infinite;
+    }
+
+    /*背景グラデーション*/
+
+    @keyframes gradientShift {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+    }
+
+        /* ヘッダー部分 */
+    header {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 20px;
+    box-shadow: 0 4px 10px rgba(147, 147, 147, 0.15);
+    border-radius: 20px;
+    position: relative;
+    margin-bottom: auto;
+    z-index: 10;
+
+
+    }
+
+    /* 左・中央・右 */
+    .left {
+    font-weight: bold;
+    font-size: 1.5em;
+    margin-top: 25px;
+    }
+
+    .center {
+    flex: 1;
+    text-align: center;
+    font-weight: bold;
+    color: #222;
+    font-size: 2em;
+    margin-top: 20px;
+    }
+
+    .right {
+    font-weight: bold;
+    color: #555;
+    font-size: 2em;
+    margin-top: 20px;
+    }
+
+    /* レスポンシブ対応 */
+    @media (max-width: 600px) {
+    header {
+        flex-direction: column;
+        text-align: center;
+        padding: 15px 10px;
+    }
+    .center {
+        order: 2;
+        margin: 5px 0;
+    }
+    .left, .right {
+        order: 1;
+        margin: 3px 0;
+    }
     }
 
     /* section1-nav: ナビゲーションボタン仕様 */
@@ -8,10 +79,7 @@
     background-color: #fff;
     text-align: center;
     }
-    .section1-nav h1 {
-    margin-bottom: 30px;
-    font-size: 50px;
-    }
+
     .section1-nav nav ul {
     list-style: none;
     padding: 0;
@@ -26,40 +94,59 @@
     }
     .section1-nav nav a {
     display: inline-block;
-    padding: 10px 15px;
-    background-color: #ffdddd;
+    padding: 10px 40px;
+    background-color: #ffffff81;
     color: #000;
     font-weight: bold;
     text-decoration: none;
     border-radius: 6px;
-    border: 1px solid #ffe8fa;
+    border: 1px solid #b7f0b5;
     transition: background-color 0.2s ease;
     }
     .section1-nav nav a:hover {
-    background-color: #fad6d6;
+    background-color: #ffcf94b5;
     }
 
     /* section2-png */
+    /* section2-png */
     .section2-png {
-    position: relative;
-    background-image: url('img/sample3.png');
-    background-size: cover;
-    background-position: center;
-    height: 140vh;
+        position: relative;
+        height: 100vh;
+        overflow: hidden;
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
+    .section2-png .background-img {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      z-index: -1;
     }
     .section2-png .overlay {
-    position: absolute;
-    bottom: 20px;
-    right: 20px;
-    color: #000;
-    font-weight: bold;
-    font-size: 2em;
+      position: absolute;
+      bottom: 20px;
+      right: 40px;
+      font-size: 6em;
+      font-weight: bold;
+      color: #fff;
+      text-shadow:
+      -1px -1px 0 #000,
+      1px -1px 0 #000,
+      -1px  1px 0 #000,
+      1px  1px 0 #000,
+      2px  2px 8px rgba(0, 0, 0, 1); /* フチ＋ぼかし影 */
+
     }
 
     /* section3-day */
     .section3-day {
     padding: 20px;
     background-color: #fff;
+    margin-top: 10px;
+    margin-bottom: 10px;
     }
     .section3-day .date-wrapper {
     display: flex;
@@ -84,13 +171,15 @@
     text-align: center;
     }
     .section3-day .date-right h1 {
-    font-size: 2.5em;
+    font-size: 4em;
     margin: 0;
     }
 
     /* -------------------- section4-venue -------------------- */
     .section4-venue {
     padding: 20px;
+    margin-top: 10px;
+    margin-bottom: 10px;
     }
     .section4-venue .venue-wrapper {
     display: flex;
@@ -103,9 +192,12 @@
     }
     .section4-venue h2 {
     margin-top: 0;
+    margin-left: 10px;
     font-weight: bold;
     }
     .section4-venue .venue-left a {
+    margin-left: 20px;
+    font-size: 2em;
     color: #000;
     text-decoration: underline;
     font-weight: bold;
@@ -114,18 +206,54 @@
     margin-top: 10px;
     padding-left: 1.2em;
     }
-    .section4-venue .station-access li {
-    margin-bottom: 5px;
-    list-style: disc;
+    .station-access p {
+    margin: 10px 0;
+    margin-left: 5px;
+    line-height: 1.5;
     }
+
     .section4-venue .venue-right {
     flex: 1;
     min-width: 280px;
     }
+    .gradient-text {
+    background: linear-gradient(
+      270deg,
+      #000000 0%,
+      #000000 64%,
+      #8adcff 65%,
+      #8adcff 83%,
+      #ffffff 82%,
+      #ffffff 90%,
+      #000000 88%,
+      #000000 100%
+    );
+    background-size: 400% 400%;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: textGradientFlow 10s ease-in-out;
+    display: inline-block;
+    }
+
+    @keyframes textGradientFlow {
+      0% {
+        background-position: 0% 100%;
+      }
+      50% {
+        background-position: 100% 50%;
+      }
+      100% {
+        background-position: 0% 30%;
+      }
+    }
+
 
     /* -------------------- section5-shousai -------------------- */
     .section5-shousai {
     padding: 20px;
+    margin-top: 10px;
+    margin-bottom: 10px;
     }
     .section5-shousai h2 {
     font-weight: bold;
@@ -139,6 +267,8 @@
     /* section6-schedule */
     .section6-schedule {
     padding: 20px;
+    margin-top: 10px;
+    margin-bottom: 10px;
     }
     .section6-schedule h2 {
     margin-top: 0;
@@ -159,9 +289,11 @@
     }
 
     /* section7-jump */
-        .section7-jump {
+    .section7-jump {
     padding: 20px;
     text-align: center;
+    margin-top: 10px;
+    margin-bottom: 10px;
     }
     .section7-jump ul {
     list-style: none;
@@ -189,8 +321,10 @@
 
     /* section8-manga */
     .section8-manga {
-        padding: 20px;
-        text-align: center;
+    padding: 20px;
+    text-align: center;
+    margin-top: 10px;
+    margin-bottom: 10px;
     }
     .section8-manga h2 {
     margin-top: 0;
@@ -203,90 +337,92 @@
 
     /* section9-game */
     /* --- スライダー --- */
-    .slider-container {
-    position: relative;
-    width: 90%;
-    max-width: 400px;
-    height: 180px;
-    margin: 0 auto 20px;
-    overflow: hidden;
-    border-radius: 10px;
-    }
+.slider-container {
+  position: relative;
+  width: 90%;
+  max-width: 400px;
+  height: 180px;
+  margin: 0 auto 20px;
+  overflow: hidden;
+  border-radius: 10px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
 
-    .slider-track {
-    display: flex;
-    transition: transform 0.6s ease-in-out;
-    }
+.slider-track {
+  display: flex;
+  transition: transform 0.6s ease-in-out;
+}
 
-    .slide {
-    width: 100%;
-    flex-shrink: 0;
-    position: relative;
-    }
+.slide {
+  width: 100%;
+  flex-shrink: 0;
+  position: relative;
+}
 
-    .slide img {
-    width: 100%;
-    height: 120px;
-    object-fit: cover;
-    border-radius: 6px;
-    }
+.slide img {
+  width: 100%;
+  height: 120px;
+  object-fit: cover;
+  border-radius: 6px;
+}
 
-    .slide-caption {
-    font-size: 14px;
-    margin-top: 5px;
-    }
+.slide-caption {
+  font-size: 14px;
+  margin-top: 5px;
+}
 
-    .arrow {
-    position: absolute;
-    top: 40%;
-    transform: translateY(-50%);
-    font-size: 24px;
-    background: rgba(255, 255, 255, 0.7);
-    border-radius: 50%;
-    width: 32px;
-    height: 32px;
-    line-height: 32px;
-    text-align: center;
-    cursor: pointer;
-    user-select: none;
-    }
+.arrow {
+  position: absolute;
+  top: 40%;
+  transform: translateY(-50%);
+  font-size: 24px;
+  background: rgba(255, 255, 255, 0.7);
+  border-radius: 50%;
+  width: 32px;
+  height: 32px;
+  line-height: 32px;
+  text-align: center;
+  cursor: pointer;
+  user-select: none;
+}
 
-    .arrow.left { left: 5px; }
-    .arrow.right { right: 5px; }
+.arrow.left { left: 5px; }
+.arrow.right { right: 5px; }
 
-    .comment-box {
-    width: 80%;
-    max-width: 400px;
-    margin: 10px auto;
-    padding: 10px;
-    border: 1px solid #ccc;
-    background: #e8e8e8;
-    border-radius: 6px;
-    text-align: left;
-    }
+.comment-box {
+  width: 80%;
+  max-width: 400px;
+  margin: 10px auto;
+  padding: 10px;
+  border: 1px solid #ccc;
+  background: #e8e8e8;
+  border-radius: 6px;
+  text-align: left;
+}
 
-    .work {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    width: 85%;
-    max-width: 420px;
-    margin: 15px auto;
-    border-bottom: 1px solid #ddd;
-    padding-bottom: 10px;
-    }
+.work {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 85%;
+  max-width: 420px;
+  margin: 15px auto;
+  border-bottom: 1px solid #ddd;
+  padding-bottom: 10px;
+}
 
-    .work img {
-    width: 80px;
-    height: 80px;
-    object-fit: cover;
-    border-radius: 6px;
-    }
+.work img {
+  width: 80px;
+  height: 80px;
+  object-fit: cover;
+  border-radius: 6px;
+}
 
     .work p {
     font-size: 14px;
     margin-left: 10px;
-    text-align: center;
+    text-align: left;
     }
     .work h1 {
         font-size: 14px;
@@ -298,6 +434,8 @@
     .section10-pafo {
     padding: 20px;
     text-align: center;
+    margin-top: 10px;
+    margin-bottom: 10px;
     }
     .section10-pafo h2 {
     margin-top: 0;
@@ -308,19 +446,124 @@
     text-align: center;
     }
 
-    /* section11-video */
-    .section11-video {
+/* ================================
+    🎥動画カレッジ専用スタイル section11
+ ================================ */
+  .title{
     padding: 20px;
     text-align: center;
-    }
-    .section11-video h2 {
-    margin-top: 0;
-    text-align: center;
-    }
-    .section11-video p {
-    margin: 10px 0;
-    text-align: center;
-    }
+    background-color: #ffffff; /* 背景色 */
+    font-size: 30px; /* 文字サイズ */
+    color: #000; 
+    border-bottom: 2px dashed #000000;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+.image-container {
+    display: flex;
+    justify-content: center; /* 画像を中央揃え */
+    align-items: flex-start;
+    gap: 20px; /* 画像の間隔を設定 */
+    padding: 40px;
+    max-width: 2000px; /* はみ出し防止 */
+}
+
+.image-container div{
+    text-align: center; /* 画像下のテキストを中央揃え */
+    font-size: 14px; /* テキストのサイズ */
+    color: #333; /* テキストの色 */
+    margin-top: 10px; /* 画像とテキストの間隔 */
+}
+
+.image {
+    margin: 20px;
+    width: 300px; /* 画像の幅 */
+    height: auto; /* 高さは自動調整 */
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2); /* 画像に影をつける */
+}
+
+.box-text {
+  width: 300px;
+  padding: 50px;
+  color: #000000;
+  text-align: center;
+  box-sizing: border-box;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  text-align: justify;
+  flex: 1;
+}
+
+.card1{
+  width: 1000px;
+  display: flex;
+  justify-content: center;
+  gap: 0px;
+  align-items: center;
+  padding: 10px;
+  margin: 20px auto;
+}
+
+.card2{
+  width: 1000px;
+  display: flex;
+  justify-content: center;
+  gap: 0px;
+  align-items: center;
+  padding: 10px;
+  margin: 20px auto;
+}
+
+.text-box {
+  width: 500px;
+  height: 300px;
+  background-color: #cecece;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 0px;
+  box-sizing: border-box;
+  word-wrap: break-word;  /* 長い単語を途中で改行する */
+}
+
+.image2 {
+    margin: -50px;
+    width: 400px; /* 画像の幅 */
+    height: 50; /* 高さ調整 */
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    margin-top: 50px; /* 下にずらす */
+}
+
+.title2 {
+  font-size: 16px;
+  color: #555;
+  margin: 0;
+}
+
+.author2{
+  font-size: 12px;
+  color: #666;
+  margin: 0;
+  text-align: left;
+}
+.box{
+  background:#ffffff;
+  border: 3px dashed #000000;
+  border-radius:20px;
+  padding: 1.6rem;
+  line-height: 1.8rem;
+  margin: 30px;
+}
+
+.box2{
+  background:#ffffff;
+  border: 3px double #000000;
+  border-radius:20px;
+  padding: 1.6rem;
+  line-height: 1.8rem;
+}
+
 
     
     /* section13-comment */
@@ -328,6 +571,8 @@
     padding: 20px;
     background-color: #f9f9f9;
     text-align: center;
+    margin-top: 10px;
+    margin-bottom: 10px;
     }
     .section13-comment h2 {
     margin-top: 0;
@@ -355,17 +600,35 @@
 
     .section14-under .footer-links a {
     display: inline-block;
-    padding: 10px 15px;
-    background-color: #eee;
+    padding: 10px 50px;
+    background-color: #ffffff81;
     color: #000;
     text-decoration: none;
-    border: 1px solid #c9ffc7;
+    border: 1px solid #b7f0b5;
     border-radius: 6px;
     font-weight: bold;
     transition: background-color 0.2s ease;
     }
 
     .section14-under .footer-links a:hover {
-    background-color: #f6ffc0;
+    background-color: #ffcf94b5;
     }
 
+
+    /* 🔳 ガラス調ボックス共通スタイル */
+    .glass-box {
+    background: rgba(255, 255, 255, 0);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.587);
+    border-radius: 20px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.034);
+    }
+
+
+  
+  .footer {
+    background-color: #3b3b3b;
+    padding: 20px;
+    text-align: center;
+  }
