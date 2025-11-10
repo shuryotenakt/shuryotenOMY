@@ -6,6 +6,7 @@
     background: linear-gradient(to right, rgba(255, 199, 231, 0.76), rgba(168, 232, 255, 0.797));
     background-size: 400% 400%; /* ← 背景を広げて動かす余地を作る */
     animation: gradientShift 12s ease infinite;
+    max-width: 100%;
     }
 
     /*背景グラデーション*/
@@ -26,7 +27,7 @@
     header {
     display: flex;
     justify-content: space-between;
-    padding: 10px 20px;
+    padding: 1vh 1vh;
     box-shadow: 0 4px 10px rgba(147, 147, 147, 0.15);
     border-radius: 20px;
     position: relative;
@@ -39,8 +40,8 @@
     /* 左・中央・右 */
     .left {
     font-weight: bold;
-    font-size: 1.5em;
-    margin-top: 25px;
+    font-size: 0.4em;
+    margin-top: 2px;
     }
 
     .center {
@@ -48,15 +49,15 @@
     text-align: center;
     font-weight: bold;
     color: #222;
-    font-size: 2em;
-    margin-top: 20px;
+    font-size: 0.4em;
+    margin-top: 2px;
     }
 
     .right {
     font-weight: bold;
     color: #555;
-    font-size: 2em;
-    margin-top: 20px;
+    font-size: 0.4em;
+    margin-top: 2px;
     }
 
     /* レスポンシブ対応 */
@@ -297,17 +298,20 @@
     text-align: center;
     margin-top: 10px;
     margin-bottom: 10px;
+    
     }
     .section7-jump ul {
     list-style: none;
-    padding: 0;
-    margin: 0;
+    display:inline-block;
+    margin: 5px;
+
     }
     .section7-jump li {
     display: inline-block;
     margin: 10px;
     }
     .section7-jump a {
+      font-size: 14px;
     display: inline-block;
     padding: 10px 15px;
     background-color: #e9fffe;
@@ -341,13 +345,13 @@
     /* section9-game */
     /* --- スライダー --- */
 .slider-container {
- position: relative;
- width: 95%;          /* ← 幅を少し広げる */
- max-width: 700px;    /* ← 400px → 700px */
- height: 400px;       /* ← 180px → 320px */
- margin: 30px auto;   /* ← 上下の余白を少し増やす */
- overflow: hidden;
- border-radius: 15px; /* ← 少し角丸を強調 */
+  position: relative;
+  width: 95%;          /* ← 幅を少し広げる */
+  max-width: 700px;    /* ← 400px → 700px */
+  height: 400px;       /* ← 180px → 320px */
+  margin: 30px auto;   /* ← 上下の余白を少し増やす */
+  overflow: hidden;
+  border-radius: 15px; /* ← 少し角丸を強調 */
 }
 
 .slider-track {
@@ -399,8 +403,8 @@
   border: 1px solid #ccc;
   background: #f0f0f0;  /* ← 少し明るいグレーに変更 */
   border-radius: 10px;
-  font-size: 18px;      /* ← テキストを少し大きく */
-  line-height: 1.8;     /* ← 行間もゆったり */
+  font-size: 14px;      /* ← テキストを少し大きく */
+  line-height: 1.6;     /* ← 行間もゆったり */
   text-align: center;   /* ← テキスト中央寄せ */
 }
 
@@ -423,8 +427,8 @@
 
     .work p {
     width: 50%;          /* ← テキスト部分の幅を広げる */
-    font-size: 27px;     /* ← さいず */
-    line-height: 1.8;    /* ← 行間をゆったり */
+    font-size: 14px;     /* ← さいず */
+    line-height: 1.6;    /* ← 行間をゆったり */
     text-align: left;    /* ← 左寄せ */
     }
     .work h1 {
@@ -450,12 +454,14 @@
     text-align: center;
     }
 
-/* ================================
-    🎥動画カレッジ専用スタイル section11
- ================================ */
+
 /* ================================
   🎥動画カレッジ専用スタイル section11
  ================================ */
+  .section11-video{
+    max-width: 100%;
+  }
+  
 .section11-video h2 {
     padding: 15px;
     margin-top: 0;
@@ -481,13 +487,13 @@
 .image-container div {
     text-align: center;
     flex-shrink: 0;
-    width: 160px; /* ← 画像と同じ幅に固定 */
+    width: 90%; /* ← 画像と同じ幅に固定 */
     font-size: 14px;
     color: #333;
 }
 
 .image {
-    width: 160px;   /* ← 大きめサイズ */
+    width: 100%;   /* ← 大きめサイズ */
     height: 120px;
     object-fit: cover;
     object-position: center;
