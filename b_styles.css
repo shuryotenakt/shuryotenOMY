@@ -341,7 +341,7 @@
  position: relative;
  width: 95%;          /* ← 幅を少し広げる */
  max-width: 700px;    /* ← 400px → 700px */
- height: 320px;       /* ← 180px → 320px */
+ height: 400px;       /* ← 180px → 320px */
  margin: 30px auto;   /* ← 上下の余白を少し増やす */
  overflow: hidden;
  border-radius: 15px; /* ← 少し角丸を強調 */
@@ -360,7 +360,7 @@
 
 .slide img {
   width: 100%;
-  height: 120px;
+  height: 400px;
   object-fit: cover;
   border-radius: 6px;
 }
@@ -420,7 +420,7 @@
 
     .work p {
     width: 50%;          /* ← テキスト部分の幅を広げる */
-    font-size: 16px;     /* ← 読みやすく */
+    font-size: 27px;     /* ← さいず */
     line-height: 1.8;    /* ← 行間をゆったり */
     text-align: left;    /* ← 左寄せ */
     }
