@@ -334,22 +334,247 @@
     background-color: #feddb7;
     }
 
-    /* section8-manga */
-    .section8-manga {
-    padding: 20px;
-    text-align: center;
-    margin-top: 10px;
-    margin-bottom: 10px;
-    }
-    .section8-manga h2 {
-    margin-top: 0;
-    text-align: center;
-    }
-    .section8-manga p {
-    margin: 10px 0;
-    text-align: center;
-    }
+/* ==================== section8-manga ==================== */
+.section8-manga {
+  padding: 40px 20px;
+  text-align: center;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
 
+.section8-manga h2 {
+  margin-top: 0;
+  margin-bottom: 30px;
+  font-size: 2.5em;
+  color: #333;
+}
+
+/* --- スライダーラッパー --- */
+.manga-slider-wrapper {
+  max-width: 800px;
+  margin: 0 auto 40px;
+}
+
+.manga-slider-container {
+  position: relative;
+  width: 100%;
+  height: 450px;
+  overflow: hidden;
+  border-radius: 20px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+}
+
+.manga-slider-track {
+  display: flex;
+  height: 100%;
+  transition: transform 0.5s ease-in-out;
+}
+
+.manga-slide {
+  min-width: 100%;
+  height: 100%;
+  flex-shrink: 0;
+}
+
+.manga-slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* --- 矢印ボタン --- */
+.manga-arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(255, 255, 255, 0.85);
+  border: none;
+  font-size: 28px;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  z-index: 10;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.manga-arrow:hover {
+  background: rgba(255, 255, 255, 1);
+  transform: translateY(-50%) scale(1.1);
+}
+
+.manga-prev { left: 15px; }
+.manga-next { right: 15px; }
+
+/* --- ドットインジケーター --- */
+.manga-dots {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  margin-top: 20px;
+}
+
+.manga-dot {
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  background: rgba(0, 0, 0, 0.3);
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.manga-dot.active {
+  background: #ff69b4;
+  width: 16px;
+  height: 16px;
+}
+
+.manga-dot:hover {
+  background: rgba(255, 105, 180, 0.6);
+}
+
+/* --- メッセージボックス --- */
+.manga-message-box {
+  max-width: 800px;
+  margin: 40px auto;
+  padding: 30px;
+  background: rgba(255, 255, 255, 0.7);
+  border-radius: 15px;
+  line-height: 1.8;
+}
+
+.manga-message-title {
+  font-size: 1.4em;
+  font-weight: bold;
+  margin-bottom: 15px;
+  color: #555;
+}
+
+/* --- 作品カードグリッド --- */
+.manga-works-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 30px;
+  max-width: 1200px;
+  margin: 50px auto;
+  padding: 0 20px;
+}
+
+.manga-work-card {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.manga-work-image {
+  width: 100%;
+  height: 250px;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.manga-work-card:hover .manga-work-image {
+  transform: translateY(-5px);
+}
+
+.manga-work-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.manga-work-info {
+  padding: 20px;
+  background: rgba(255, 255, 255, 0.6);
+  border-radius: 12px;
+  text-align: left;
+}
+
+.manga-work-info h3 {
+  margin: 0 0 12px 0;
+  font-size: 1.3em;
+  color: #333;
+}
+
+.manga-work-info p {
+  margin: 0;
+  line-height: 1.6;
+  color: #555;
+}
+
+/* --- 担任コメント --- */
+.manga-teacher-comment {
+  max-width: 900px;
+  margin: 50px auto 30px;
+  padding: 35px;
+  background: rgba(255, 240, 245, 0.7);
+  border-radius: 15px;
+  border: 2px solid rgba(255, 182, 193, 0.5);
+  line-height: 1.8;
+}
+
+.manga-teacher-name {
+  font-weight: bold;
+  font-size: 1.2em;
+  margin-bottom: 15px;
+  color: #d63384;
+}
+
+/* --- レスポンシブ対応 --- */
+@media (max-width: 768px) {
+  .section8-manga h2 {
+    font-size: 2em;
+  }
+  
+  .manga-slider-container {
+    height: 300px;
+  }
+  
+  .manga-arrow {
+    width: 40px;
+    height: 40px;
+    font-size: 20px;
+  }
+  
+  .manga-works-grid {
+    grid-template-columns: 1fr;
+    gap: 25px;
+  }
+  
+  .manga-work-image {
+    height: 200px;
+  }
+  
+  .manga-message-box,
+  .manga-teacher-comment {
+    padding: 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .section8-manga {
+    padding: 30px 15px;
+  }
+  
+  .manga-slider-container {
+    height: 250px;
+    border-radius: 15px;
+  }
+  
+  .manga-arrow {
+    width: 35px;
+    height: 35px;
+    font-size: 18px;
+  }
+  
+  .manga-prev { left: 10px; }
+  .manga-next { right: 10px; }
+}
     /* section9-game */
     /* --- スライダー --- */
 .slider-container {

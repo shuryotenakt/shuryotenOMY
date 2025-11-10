@@ -113,10 +113,128 @@
 </section>
 
 <section id="manga-college" class="section8-manga">
-  <!-- マンガイラストカレッジ用情報:contentReference[oaicite:8]{index=8} -->
-  <h2>マンガイラストカレッジ用</h2>
-  <p>キービジュアルデザイン &amp; カレッジ担任コメント等</p>
-  <p>test</p>
+  <!-- マンガイラストカレッジ用情報 -->
+  <h2>マンガ・イラストカレッジ</h2>
+  
+  <!-- 作品スライダー -->
+  <div class="manga-slider-wrapper">
+    <div class="manga-slider-container">
+      <div class="manga-slider-track">
+        <div class="manga-slide">
+          <img src="img/sample1.png" alt="イラスト作品1">
+        </div>
+        <div class="manga-slide">
+          <img src="img/sample2.png" alt="イラスト作品2">
+        </div>
+        <div class="manga-slide">
+          <img src="img/sample3.png" alt="イラスト作品3">
+        </div>
+      </div>
+      <button class="manga-arrow manga-prev">&#10094;</button>
+      <button class="manga-arrow manga-next">&#10095;</button>
+    </div>
+    
+    <!-- スライダー下のドットインジケーター -->
+    <div class="manga-dots">
+      <span class="manga-dot active" data-index="0"></span>
+      <span class="manga-dot" data-index="1"></span>
+      <span class="manga-dot" data-index="2"></span>
+    </div>
+  </div>
+
+  <!-- メッセージボックス -->
+  <div class="manga-message-box glass-box">
+    <p class="manga-message-title">Add Text</p>
+    <p>学生たちが1年間かけて制作したオリジナル作品を展示しています。<br>
+    それぞれの個性が光る作品をぜひご覧ください。</p>
+  </div>
+
+  <!-- 作品紹介カード -->
+  <div class="manga-works-grid">
+    <div class="manga-work-card">
+      <div class="manga-work-image">
+        <img src="img/sample1.png" alt="作品A">
+      </div>
+      <div class="manga-work-info glass-box">
+        <h3>作品タイトル1</h3>
+        <p>この作品は〇〇をテーマに描きました。キャラクターデザインにこだわり、独自の世界観を表現しています。</p>
+      </div>
+    </div>
+
+    <div class="manga-work-card">
+      <div class="manga-work-image">
+        <img src="img/sample2.png" alt="作品B">
+      </div>
+      <div class="manga-work-info glass-box">
+        <h3>作品タイトル2</h3>
+        <p>ファンタジーの世界を舞台にした物語です。色彩表現と構図に力を入れて制作しました。</p>
+      </div>
+    </div>
+
+    <div class="manga-work-card">
+      <div class="manga-work-image">
+        <img src="img/sample3.png" alt="作品C">
+      </div>
+      <div class="manga-work-info glass-box">
+        <h3>作品タイトル3</h3>
+        <p>日常の一コマを切り取った作品です。温かみのあるタッチで描きました。</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- 担任コメント -->
+  <div class="manga-teacher-comment glass-box">
+    <p class="manga-teacher-name">担当講師：マンガ太郎</p>
+    <p>マンガ・イラストカレッジの学生たちは、この1年間で大きく成長しました。<br>
+    基礎から応用まで、様々な技術を習得し、それぞれの個性を活かした作品を生み出しています。<br>
+    ぜひ会場で実物をご覧ください！</p>
+  </div>
+
+  <script>
+    // スライダー機能
+    (function() {
+      const track = document.querySelector('.manga-slider-track');
+      const slides = document.querySelectorAll('.manga-slide');
+      const prevBtn = document.querySelector('.manga-prev');
+      const nextBtn = document.querySelector('.manga-next');
+      const dots = document.querySelectorAll('.manga-dot');
+      let currentIndex = 0;
+      const totalSlides = slides.length;
+
+      function updateSlider() {
+        track.style.transform = `translateX(-${currentIndex * 100}%)`;
+        
+        // ドット更新
+        dots.forEach((dot, idx) => {
+          dot.classList.toggle('active', idx === currentIndex);
+        });
+      }
+
+      function goToNext() {
+        currentIndex = (currentIndex + 1) % totalSlides;
+        updateSlider();
+      }
+
+      function goToPrev() {
+        currentIndex = (currentIndex - 1 + totalSlides) % totalSlides;
+        updateSlider();
+      }
+
+      nextBtn.addEventListener('click', goToNext);
+      prevBtn.addEventListener('click', goToPrev);
+
+      // ドットクリックで移動
+      dots.forEach(dot => {
+        dot.addEventListener('click', function() {
+          currentIndex = parseInt(this.dataset.index);
+          updateSlider();
+        });
+      });
+
+      // 自動スライド（5秒ごと）
+      setInterval(goToNext, 5000);
+    })();
+  </script>
 </section>
 
 <section id="game-college" class="section9-game">
