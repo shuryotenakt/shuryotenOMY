@@ -338,15 +338,13 @@
     /* section9-game */
     /* --- スライダー --- */
 .slider-container {
-  position: relative;
-  width: 90%;
-  max-width: 400px;
-  height: 180px;
-  margin: 0 auto 20px;
-  overflow: hidden;
-  border-radius: 10px;
-  margin-top: 10px;
-  margin-bottom: 10px;
+ position: relative;
+ width: 95%;          /* ← 幅を少し広げる */
+ max-width: 700px;    /* ← 400px → 700px */
+ height: 320px;       /* ← 180px → 320px */
+ margin: 30px auto;   /* ← 上下の余白を少し増やす */
+ overflow: hidden;
+ border-radius: 15px; /* ← 少し角丸を強調 */
 }
 
 .slider-track {
@@ -391,43 +389,46 @@
 .arrow.right { right: 5px; }
 
 .comment-box {
-  width: 80%;
-  max-width: 400px;
-  margin: 10px auto;
-  padding: 10px;
+  width: 95%;           /* ← 幅を拡大 */
+  max-width: 700px;     /* ← 400px → 700px */
+  margin: 20px auto;    /* ← 余白を追加して中央寄せ */
+  padding: 25px;        /* ← 内側の余白を広げる */
   border: 1px solid #ccc;
-  background: #e8e8e8;
-  border-radius: 6px;
-  text-align: left;
+  background: #f0f0f0;  /* ← 少し明るいグレーに変更 */
+  border-radius: 10px;
+  font-size: 18px;      /* ← テキストを少し大きく */
+  line-height: 1.8;     /* ← 行間もゆったり */
+  text-align: center;   /* ← テキスト中央寄せ */
 }
 
 .work {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  width: 85%;
-  max-width: 420px;
-  margin: 15px auto;
+  width: 90%;            /* ← ページ幅の90%まで拡大 */
+  max-width: 900px;      /* ← 枠の最大サイズを広げる（420→900px） */
+  margin: 30px auto;     /* ← 余白を少し広げてゆったり */
   border-bottom: 1px solid #ddd;
-  padding-bottom: 10px;
+  padding-bottom: 20px;  /* ← 下の余白も少し増やす */
 }
 
 .work img {
-  width: 80px;
-  height: 80px;
-  object-fit: cover;
-  border-radius: 6px;
+  width: 25%;          /* ← 左側の画像をやや大きく */
+  height: auto;
+  border-radius: 10px;
 }
 
     .work p {
-    font-size: 14px;
-    margin-left: 10px;
-    text-align: left;
+    width: 50%;          /* ← テキスト部分の幅を広げる */
+    font-size: 16px;     /* ← 読みやすく */
+    line-height: 1.8;    /* ← 行間をゆったり */
+    text-align: left;    /* ← 左寄せ */
     }
     .work h1 {
-        font-size: 14px;
-        margin-left: 10px;
-        text-align: center;
+    font-size: 28px;      
+    margin-left: 0;       
+    text-align: center;   
+    width: 100%;    
     }
 
     /* section10-pafo */
