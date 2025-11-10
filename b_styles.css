@@ -1,107 +1,118 @@
     body {
+    margin: 0;
+    padding: 0; /* ← モバイルで左右に適度な余白を入れる */
+    box-sizing: border-box;
     font-family: 'IBM Plex Sans JP', sans-serif;
-    background: linear-gradient(to right, rgba(255, 199, 231, 0.76), rgba(168, 232, 255, 0.797));
-    background-size: 400% 400%; /* ← 背景を広げて動かす余地を作る */
-    animation: gradientShift 12s ease infinite;
+    background: linear-gradient(
+      90deg,
+      rgba(255, 199, 231, 0.76) 0%,
+      rgba(255, 215, 240, 0.7) 30%,
+      rgba(168, 232, 255, 0.797) 100%
+    );
+
+    background-size: 300% 300%; /* ← 背景を広げて動かす余地を作る */
+    animation: gradientShift 30s ease-in-out infinite;
+    max-width: 100vw;
+    overflow-x: hidden;
     }
 
     /*背景グラデーション*/
 
     @keyframes gradientShift {
-    0% {
-        background-position: 0% 50%;
-    }
-    50% {
-        background-position: 100% 50%;
-    }
-    100% {
-        background-position: 0% 50%;
-    }
-    }
+  0%   { background-position: 0% 50%; }
+  50%  { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+
 
         /* ヘッダー部分 */
     header {
     display: flex;
     justify-content: space-between;
-    padding: 10px 20px;
+    align-items: center;
+    padding: 1vh 5vw;
     box-shadow: 0 4px 10px rgba(147, 147, 147, 0.15);
     border-radius: 20px;
+    background-color: rgba(255, 240, 245, 0.7);
+    margin: 0 auto;
+    max-width: 100%;
     position: relative;
-    margin-bottom: auto;
     z-index: 10;
-
-
     }
 
     /* 左・中央・右 */
-    .left {
+    header .left,
+    header .center,
+    header .right {
     font-weight: bold;
-    font-size: 1.5em;
-    margin-top: 25px;
+    font-size: 0.8em;
+    color: #000;
     }
 
-    .center {
+
+    header .center {
     flex: 1;
-    text-align: center;
-    font-weight: bold;
-    color: #222;
-    font-size: 2em;
-    margin-top: 20px;
+    text-align: center; /* ← 中央揃え */
+    margin: 0 auto; /* ← 自動で中央に配置 */
     }
 
-    .right {
-    font-weight: bold;
-    color: #555;
-    font-size: 2em;
-    margin-top: 20px;
+
+    header .left,
+    header .right {
+    flex: 0 0 auto;
     }
 
     /* レスポンシブ対応 */
     @media (max-width: 600px) {
     header {
-        flex-direction: column;
-        text-align: center;
-        padding: 15px 10px;
+        flex-direction: row ;
+        padding: 10px 5vh;
     }
-    .center {
-        order: 2;
-        margin: 5px 0;
+    header .center {
+    order: 1;
     }
-    .left, .right {
-        order: 1;
-        margin: 3px 0;
+    header .left {
+    order: 0;
+    }
+    header .right {
+    order: 2;
     }
     }
 
     /* section1-nav: ナビゲーションボタン仕様 */
     .section1-nav {
     padding: 20px;
-    background-color: #fff;
+    max-width: 100%;
     text-align: center;
     }
 
     .section1-nav nav ul {
     list-style: none;
     padding: 0;
-    margin: 0;
+    margin: 0 auto;
     display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 50px;
+    flex-direction: column;       /* 縦並び */    
+    gap: 10px;
+    max-width: 280px;
+    align-items: center;
+    justify-content: center;    
     }
     .section1-nav nav li {
     margin: 0;
     }
     .section1-nav nav a {
     display: inline-block;
-    padding: 10px 40px;
+    width: 100%;
+    padding: 12px;
     background-color: #ffffff81;
+    border: 1px solid #b7f0b5;
+    border-radius: 6px;
     color: #000;
     font-weight: bold;
     text-decoration: none;
-    border-radius: 6px;
-    border: 1px solid #b7f0b5;
     transition: background-color 0.2s ease;
+    text-align: center;
     }
     .section1-nav nav a:hover {
     background-color: #ffcf94b5;
@@ -171,7 +182,7 @@
     text-align: center;
     }
     .section3-day .date-right h1 {
-    font-size: 4em;
+    font-size: 2em;
     margin: 0;
     }
 
@@ -232,7 +243,7 @@
     background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-    animation: textGradientFlow 10s ease-in-out;
+    animation: textGradientFlow 10s ease-in-out infinite;
     display: inline-block;
     }
 
@@ -294,17 +305,20 @@
     text-align: center;
     margin-top: 10px;
     margin-bottom: 10px;
+    
     }
     .section7-jump ul {
     list-style: none;
-    padding: 0;
-    margin: 0;
+    display:inline-block;
+    margin: 5px;
+
     }
     .section7-jump li {
     display: inline-block;
     margin: 10px;
     }
     .section7-jump a {
+      font-size: 14px;
     display: inline-block;
     padding: 10px 15px;
     background-color: #e9fffe;
@@ -319,32 +333,257 @@
     background-color: #feddb7;
     }
 
-    /* section8-manga */
-    .section8-manga {
-    padding: 20px;
-    text-align: center;
-    margin-top: 10px;
-    margin-bottom: 10px;
-    }
-    .section8-manga h2 {
-    margin-top: 0;
-    text-align: center;
-    }
-    .section8-manga p {
-    margin: 10px 0;
-    text-align: center;
-    }
+/* ==================== section8-manga ==================== */
+.section8-manga {
+  padding: 40px 20px;
+  text-align: center;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
 
+.section8-manga h2 {
+  margin-top: 0;
+  margin-bottom: 30px;
+  font-size: 2.5em;
+  color: #333;
+}
+
+/* --- スライダーラッパー --- */
+.manga-slider-wrapper {
+  max-width: 800px;
+  margin: 0 auto 40px;
+}
+
+.manga-slider-container {
+  position: relative;
+  width: 100%;
+  height: 450px;
+  overflow: hidden;
+  border-radius: 20px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+}
+
+.manga-slider-track {
+  display: flex;
+  height: 100%;
+  transition: transform 0.5s ease-in-out;
+}
+
+.manga-slide {
+  min-width: 100%;
+  height: 100%;
+  flex-shrink: 0;
+}
+
+.manga-slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* --- 矢印ボタン --- */
+.manga-arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(255, 255, 255, 0.85);
+  border: none;
+  font-size: 28px;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  z-index: 10;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.manga-arrow:hover {
+  background: rgba(255, 255, 255, 1);
+  transform: translateY(-50%) scale(1.1);
+}
+
+.manga-prev { left: 15px; }
+.manga-next { right: 15px; }
+
+/* --- ドットインジケーター --- */
+.manga-dots {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  margin-top: 20px;
+}
+
+.manga-dot {
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  background: rgba(0, 0, 0, 0.3);
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.manga-dot.active {
+  background: #ff69b4;
+  width: 16px;
+  height: 16px;
+}
+
+.manga-dot:hover {
+  background: rgba(255, 105, 180, 0.6);
+}
+
+/* --- メッセージボックス --- */
+.manga-message-box {
+  max-width: 800px;
+  margin: 40px auto;
+  padding: 30px;
+  background: rgba(255, 255, 255, 0.7);
+  border-radius: 15px;
+  line-height: 1.8;
+}
+
+.manga-message-title {
+  font-size: 1.4em;
+  font-weight: bold;
+  margin-bottom: 15px;
+  color: #555;
+}
+
+/* --- 作品カードグリッド --- */
+.manga-works-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 30px;
+  max-width: 1200px;
+  margin: 50px auto;
+  padding: 0 20px;
+}
+
+.manga-work-card {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.manga-work-image {
+  width: 100%;
+  height: 250px;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.manga-work-card:hover .manga-work-image {
+  transform: translateY(-5px);
+}
+
+.manga-work-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.manga-work-info {
+  padding: 20px;
+  background: rgba(255, 255, 255, 0.6);
+  border-radius: 12px;
+  text-align: left;
+}
+
+.manga-work-info h3 {
+  margin: 0 0 12px 0;
+  font-size: 1.3em;
+  color: #333;
+}
+
+.manga-work-info p {
+  margin: 0;
+  line-height: 1.6;
+  color: #555;
+}
+
+/* --- 担任コメント --- */
+.manga-teacher-comment {
+  max-width: 900px;
+  margin: 50px auto 30px;
+  padding: 35px;
+  background: rgba(255, 240, 245, 0.7);
+  border-radius: 15px;
+  border: 2px solid rgba(255, 182, 193, 0.5);
+  line-height: 1.8;
+}
+
+.manga-teacher-name {
+  font-weight: bold;
+  font-size: 1.2em;
+  margin-bottom: 15px;
+  color: #d63384;
+}
+
+/* --- レスポンシブ対応 --- */
+@media (max-width: 768px) {
+  .section8-manga h2 {
+    font-size: 2em;
+  }
+  
+  .manga-slider-container {
+    height: 300px;
+  }
+  
+  .manga-arrow {
+    width: 40px;
+    height: 40px;
+    font-size: 20px;
+  }
+  
+  .manga-works-grid {
+    grid-template-columns: 1fr;
+    gap: 25px;
+  }
+  
+  .manga-work-image {
+    height: 200px;
+  }
+  
+  .manga-message-box,
+  .manga-teacher-comment {
+    padding: 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .section8-manga {
+    padding: 30px 15px;
+  }
+  
+  .manga-slider-container {
+    height: 250px;
+    border-radius: 15px;
+  }
+  
+  .manga-arrow {
+    width: 35px;
+    height: 35px;
+    font-size: 18px;
+  }
+  
+  .manga-prev { left: 10px; }
+  .manga-next { right: 10px; }
+}
     /* section9-game */
     /* --- スライダー --- */
 .slider-container {
- position: relative;
- width: 95%;          /* ← 幅を少し広げる */
- max-width: 700px;    /* ← 400px → 700px */
- height: 400px;       /* ← 180px → 320px */
- margin: 30px auto;   /* ← 上下の余白を少し増やす */
- overflow: hidden;
- border-radius: 15px; /* ← 少し角丸を強調 */
+  position: relative;
+  width: 95%;          /* ← 幅を少し広げる */
+  max-width: 700px;    /* ← 400px → 700px */
+  height: 400px;       /* ← 180px → 320px */
+  margin: 30px auto;   /* ← 上下の余白を少し増やす */
+  overflow: hidden;
+  border-radius: 15px; /* ← 少し角丸を強調 */
 }
 
 .slider-track {
@@ -396,8 +635,8 @@
   border: 1px solid #ccc;
   background: #f0f0f0;  /* ← 少し明るいグレーに変更 */
   border-radius: 10px;
-  font-size: 18px;      /* ← テキストを少し大きく */
-  line-height: 1.8;     /* ← 行間もゆったり */
+  font-size: 14px;      /* ← テキストを少し大きく */
+  line-height: 1.6;     /* ← 行間もゆったり */
   text-align: center;   /* ← テキスト中央寄せ */
 }
 
@@ -420,8 +659,8 @@
 
     .work p {
     width: 50%;          /* ← テキスト部分の幅を広げる */
-    font-size: 27px;     /* ← さいず */
-    line-height: 1.8;    /* ← 行間をゆったり */
+    font-size: 14px;     /* ← さいず */
+    line-height: 1.6;    /* ← 行間をゆったり */
     text-align: left;    /* ← 左寄せ */
     }
     .work h1 {
@@ -446,6 +685,7 @@
     margin: 10px 0;
     text-align: center;
     }
+
 
 /* ================================
   🎥動画カレッジ専用スタイル section11
@@ -589,6 +829,7 @@
   }
 }
 
+
     
     /* section13-comment */
     .section13-comment {
@@ -642,7 +883,11 @@
 
     /* 🔳 ガラス調ボックス共通スタイル */
     .glass-box {
-    background: rgba(255, 255, 255, 0);
+    width: 100%; /* ← スマホで画面幅に合わせる */
+    max-width: 90%;
+    padding: 20px auto;
+    margin: 20px auto;
+    background: rgba(255, 255, 255, 0.15);
     backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(10px);
     border: 1px solid rgba(255, 255, 255, 0.587);
@@ -653,18 +898,22 @@
 
   
   .footer {
-  background-color: #c6c6c6;
-  padding: 30px;
+  padding: 5vh 5vw 5vh; /* ← 左右にvw余白、下を広く */
+  max-width: 100%;
+  background-color: #9c9c9c69;
   text-align: center;
 }
 
 .footer address {
   font-style: normal; /* ← 斜体を解除 */
-  font-size: 1.5em;   /* ← 住所の文字を大きく */
-  margin-bottom: auto;
+  font-size: 1em;   /* ← 住所の文字を大きく */
+  margin-bottom: 1em;
 }
 
-.footer .copyright {
-  margin-bottom: 0.1em;
-  font-size: 0.9em;
+.footer p {
+  margin-top: 3em; /* ← 上に余白を入れて下に固定感を出す */
+  border-top: 2px solid #999;
+  padding-top: 3em;
+  font-size: 0.5em;
+  color: #333;
 }
