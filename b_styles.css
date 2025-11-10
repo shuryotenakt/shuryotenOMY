@@ -1,86 +1,82 @@
     body {
     margin: 0;
-    padding: 0 5vw; /* ← モバイルで左右に適度な余白を入れる */
+    padding: 0; /* ← モバイルで左右に適度な余白を入れる */
     box-sizing: border-box;
     font-family: 'IBM Plex Sans JP', sans-serif;
-    background: linear-gradient(to right, rgba(255, 199, 231, 0.76), rgba(168, 232, 255, 0.797));
-    background-size: 400% 400%; /* ← 背景を広げて動かす余地を作る */
-    animation: gradientShift 12s ease infinite;
-    max-width: 100%;
+    background: linear-gradient(
+      90deg,
+      rgba(255, 199, 231, 0.76) 0%,
+      rgba(255, 215, 240, 0.7) 30%,
+      rgba(168, 232, 255, 0.797) 100%
+    );
+
+    background-size: 300% 300%; /* ← 背景を広げて動かす余地を作る */
+    animation: gradientShift 30s ease-in-out infinite;
+    max-width: 100vw;
+    overflow-x: hidden;
     }
 
     /*背景グラデーション*/
 
     @keyframes gradientShift {
-    0% {
-        background-position: 0% 50%;
-    }
-    50% {
-        background-position: 100% 50%;
-    }
-    100% {
-        background-position: 0% 50%;
-    }
-    }
+  0%   { background-position: 0% 50%; }
+  50%  { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+
 
         /* ヘッダー部分 */
     header {
     display: flex;
     justify-content: space-between;
-    padding: 1vh 1vh;
+    align-items: center;
+    padding: 1vh 5vw;
     box-shadow: 0 4px 10px rgba(147, 147, 147, 0.15);
     border-radius: 20px;
+    background-color: rgba(255, 240, 245, 0.7);
+    margin: 0 auto;
+    max-width: 100%;
     position: relative;
-    margin-bottom: auto;
     z-index: 10;
-    flex-direction: row;  /* ← ★追加: 強制的に横並びに固定 */
     }
 
     /* 左・中央・右 */
-    .left {
-      flex: 0 0 auto;
+    header .left,
+    header .center,
+    header .right {
     font-weight: bold;
-    font-size: 0.6em;
-    margin-top: 2px;
+    font-size: 0.8em;
     color: #000;
     }
 
-    .center {
-    flex: 0 1 auto;
-    text-align: center;
-    font-weight: bold;
-    color: #000000;
-    font-size: 0.8em;
-    margin-top: 2px;
-    margin-inline: auto;
+
+    header .center {
+    flex: 1;
+    text-align: center; /* ← 中央揃え */
+    margin: 0 auto; /* ← 自動で中央に配置 */
     }
 
-    .right {
-      flex: 0 0 auto;
-    font-weight: bold;
-    color: #000000;
-    font-size: 0.8em;
-    margin-top: 2px;
+
+    header .left,
+    header .right {
+    flex: 0 0 auto;
     }
 
     /* レスポンシブ対応 */
     @media (max-width: 600px) {
     header {
-        flex-direction: row !important;
-        text-align: center;
-        padding: 15px 10px;
+        flex-direction: row ;
+        padding: 10px 5vh;
     }
-    .center {
-        order: 1;
-        margin: 5px 0;
+    header .center {
+    order: 1;
     }
-    .left{
-      order: 0;
-      margin: 3px 0;
+    header .left {
+    order: 0;
     }
-    .right {
-        order: 2;
-        margin: 3px 0;
+    header .right {
+    order: 2;
     }
     }
 
@@ -88,32 +84,35 @@
     .section1-nav {
     padding: 20px;
     max-width: 100%;
-    background-color: #fff;
     text-align: center;
     }
 
     .section1-nav nav ul {
     list-style: none;
     padding: 0;
-    margin: 0;
+    margin: 0 auto;
     display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 50px;
+    flex-direction: column;       /* 縦並び */    
+    gap: 10px;
+    max-width: 280px;
+    align-items: center;
+    justify-content: center;    
     }
     .section1-nav nav li {
     margin: 0;
     }
     .section1-nav nav a {
     display: inline-block;
-    padding: 10px 40px;
+    width: 100%;
+    padding: 12px;
     background-color: #ffffff81;
+    border: 1px solid #b7f0b5;
+    border-radius: 6px;
     color: #000;
     font-weight: bold;
     text-decoration: none;
-    border-radius: 6px;
-    border: 1px solid #b7f0b5;
     transition: background-color 0.2s ease;
+    text-align: center;
     }
     .section1-nav nav a:hover {
     background-color: #ffcf94b5;
@@ -244,7 +243,7 @@
     background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-    animation: textGradientFlow 10s ease-in-out;
+    animation: textGradientFlow 10s ease-in-out infinite;
     display: inline-block;
     }
 
@@ -896,8 +895,8 @@
     /* 🔳 ガラス調ボックス共通スタイル */
     .glass-box {
     width: 100%; /* ← スマホで画面幅に合わせる */
-    max-width: 100%;
-    padding: 20px;
+    max-width: 90%;
+    padding: 20px auto;
     margin: 20px auto;
     background: rgba(255, 255, 255, 0.15);
     backdrop-filter: blur(10px);
