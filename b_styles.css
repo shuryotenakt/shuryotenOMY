@@ -450,121 +450,155 @@
 /* ================================
     🎥動画カレッジ専用スタイル section11
  ================================ */
-  .title{
-    padding: 20px;
+/* ================================
+  🎥動画カレッジ専用スタイル section11
+ ================================ */
+.section11-video h2 {
+    padding: 15px;
+    margin-top: 0;
     text-align: center;
-    background-color: #ffffff; /* 背景色 */
-    font-size: 30px; /* 文字サイズ */
-    color: #000; 
-    border-bottom: 2px dashed #000000;
-    margin-top: 10px;
-    margin-bottom: 10px;
-}
-.image-container {
-    display: flex;
-    justify-content: center; /* 画像を中央揃え */
-    align-items: flex-start;
-    gap: 20px; /* 画像の間隔を設定 */
-    padding: 40px;
-    max-width: 2000px; /* はみ出し防止 */
+    border: 2px solid #000;
+    font-size: 20px;
 }
 
-.image-container div{
-    text-align: center; /* 画像下のテキストを中央揃え */
-    font-size: 14px; /* テキストのサイズ */
-    color: #333; /* テキストの色 */
-    margin-top: 10px; /* 画像とテキストの間隔 */
+/* =========================
+上部3枚の画像ブロック
+========================= */
+.image-container {
+    display: flex;
+    justify-content: center;  
+    align-items: flex-start;
+    gap: 30px;
+    padding: 20px;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+}
+
+.image-container div {
+    text-align: center;
+    flex-shrink: 0;
+    width: 160px; /* ← 画像と同じ幅に固定 */
+    font-size: 14px;
+    color: #333;
 }
 
 .image {
-    margin: 20px;
-    width: 300px; /* 画像の幅 */
-    height: auto; /* 高さは自動調整 */
-    box-shadow: 0 4px 8px rgba(0,0,0,0.2); /* 画像に影をつける */
+    width: 160px;   /* ← 大きめサイズ */
+    height: 120px;
+    object-fit: cover;
+    object-position: center;
+    margin-bottom: 5px;
+    box-shadow: 0 3px 8px rgba(0,0,0,0.2);
+    border-radius: 6px;
+    display: block;
 }
 
-.box-text {
-  width: 300px;
-  padding: 50px;
-  color: #000000;
-  text-align: center;
-  box-sizing: border-box;
-  display: inline-flex;
-  justify-content: center;
-  align-items: center;
-  text-align: justify;
-  flex: 1;
-}
-
-.card1{
-  width: 1000px;
-  display: flex;
-  justify-content: center;
-  gap: 0px;
-  align-items: center;
-  padding: 10px;
-  margin: 20px auto;
-}
-
-.card2{
-  width: 1000px;
-  display: flex;
-  justify-content: center;
-  gap: 0px;
-  align-items: center;
-  padding: 10px;
-  margin: 20px auto;
-}
-
-.text-box {
+/* =========================
+下部のカードブロック
+========================= */
+.card1,.card2 {
   width: 500px;
-  height: 300px;
-  background-color: #cecece;
+  display: flex;
+  justify-content: flex-start;   /* 左寄せ */
+  align-items: flex-start;       /* 上揃え */
+  gap: 20px;                     /* テキストと画像の間隔 */
+  margin: 30px auto;
+  background: none;              /* 背景色なし */
+  box-shadow: none;              /* 影なし */
+  border: none;                  /* 枠線なし */
+  box-sizing: border-box;
+}
+
+/* --- テキスト部分 --- */
+.text-box {
+  flex: 1;
+  min-width: 0;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
-  padding: 0px;
+  justify-content: flex-start;
+  gap: 12px;
+  padding: 0;
   box-sizing: border-box;
-  word-wrap: break-word;  /* 長い単語を途中で改行する */
+  word-break: break-word;
+  overflow-wrap: break-word;
+  background: none;
+  box-shadow: none;
+  border: none;
 }
 
 .image2 {
-    margin: -50px;
-    width: 400px; /* 画像の幅 */
-    height: 50; /* 高さ調整 */
-    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
-    margin-top: 50px; /* 下にずらす */
+  display:flex;
+  flex-shrink: 0;           /* ← 画像が潰れないように */
+  width: 160px;
+  height: 120px;
+  object-fit: cover;        /* ← 中央トリミング（縦横比を維持） */
+  object-position: center;
+  background-color: #f5f5f5; /* 画像が透明でも背景が整う */
+  border-radius: 6px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.2);
 }
-
 .title2 {
-  font-size: 16px;
-  color: #555;
   margin: 0;
+  font-size: 18px;
+  color: #000;
+  line-height: 1.6;
 }
 
-.author2{
-  font-size: 12px;
-  color: #666;
+.author1 {
   margin: 0;
-  text-align: left;
+  font-size: 14px;
+  color: #000;
 }
-.box{
-  background:#ffffff;
-  border: 3px dashed #000000;
-  border-radius:20px;
-  padding: 1.6rem;
-  line-height: 1.8rem;
-  margin: 30px;
-}
+/* =========================
+スマホ対応（600px以下）
+========================= */
+@media screen and (max-width: 600px) {
 
-.box2{
-  background:#ffffff;
-  border: 3px double #000000;
-  border-radius:20px;
-  padding: 1.6rem;
-  line-height: 1.8rem;
-}
+  .section11-video h2 {
+    font-size: 16px;
+    padding: 10px;
+  }
 
+  .image-container {
+    justify-content: center;
+    gap: 15px;
+    overflow-x: visible;
+    flex-wrap: nowrap;
+  }
+
+  .image-container div {
+    width: 110px; /* ← スマホでは画像と同じ幅 */
+    font-size: 12px;
+  }
+
+  .image {
+    width: 110px;
+    height: 90px;
+  }
+
+  .card1, .card2 {
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    margin: 20px auto;
+  }
+
+  .text-box, .image2 {
+    width: 90%;
+    height: auto;
+  }
+
+  .text-box {
+    font-size: 13px;
+    padding: 10px;
+  }
+
+  .image2 {
+    width: 110px;
+    height: 90px;
+  }
+}
 
     
     /* section13-comment */
