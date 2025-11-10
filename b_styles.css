@@ -1,4 +1,7 @@
     body {
+    margin: 0;
+    padding: 0 5vw; /* ← モバイルで左右に適度な余白を入れる */
+    box-sizing: border-box;
     font-family: 'IBM Plex Sans JP', sans-serif;
     background: linear-gradient(to right, rgba(255, 199, 231, 0.76), rgba(168, 232, 255, 0.797));
     background-size: 400% 400%; /* ← 背景を広げて動かす余地を作る */
@@ -171,7 +174,7 @@
     text-align: center;
     }
     .section3-day .date-right h1 {
-    font-size: 4em;
+    font-size: 2em;
     margin: 0;
     }
 
@@ -653,7 +656,11 @@
 
     /* 🔳 ガラス調ボックス共通スタイル */
     .glass-box {
-    background: rgba(255, 255, 255, 0);
+    width: 100%; /* ← スマホで画面幅に合わせる */
+    max-width: 100%;
+    padding: 20px;
+    margin: 20px auto;
+    background: rgba(255, 255, 255, 0.15);
     backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(10px);
     border: 1px solid rgba(255, 255, 255, 0.587);
@@ -664,18 +671,22 @@
 
   
   .footer {
-  background-color: #c6c6c6;
-  padding: 30px;
+  padding: 5vh 5vw 5vh; /* ← 左右にvw余白、下を広く */
+  max-width: 100%;
+  background-color: #9c9c9c69;
   text-align: center;
 }
 
 .footer address {
   font-style: normal; /* ← 斜体を解除 */
-  font-size: 1.5em;   /* ← 住所の文字を大きく */
-  margin-bottom: auto;
+  font-size: 1em;   /* ← 住所の文字を大きく */
+  margin-bottom: 1em;
 }
 
-.footer .copyright {
-  margin-bottom: 0.1em;
-  font-size: 0.9em;
+.footer p {
+  margin-top: 3em; /* ← 上に余白を入れて下に固定感を出す */
+  border-top: 2px solid #999;
+  padding-top: 3em;
+  font-size: 0.5em;
+  color: #333;
 }
