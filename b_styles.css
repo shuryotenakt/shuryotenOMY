@@ -588,6 +588,7 @@
     padding: 20px;
     text-align: center;
     font-size: 0.9em;
+    border-top: 2px solid #000000; /* ← 仕切り線を追加 */
     }
 
     .section14-under .footer-links {
@@ -628,7 +629,7 @@
 
   
   .footer {
-    background-color: #3b3b3b;
-    padding: 20px;
+    background-color: #c6c6c6;
+    padding: 30px;
     text-align: center;
   }
