@@ -38,24 +38,28 @@
 
     /* 左・中央・右 */
     .left {
+      flex: 0 0 auto;
     font-weight: bold;
-    font-size: 0.4em;
+    font-size: 0.6em;
     margin-top: 2px;
+    color: #000;
     }
 
     .center {
-    flex: 1;
+    flex: 0 1 auto;
     text-align: center;
     font-weight: bold;
-    color: #222;
-    font-size: 0.6em;
+    color: #000000;
+    font-size: 0.8em;
     margin-top: 2px;
+    margin-inline: auto;
     }
 
     .right {
+      flex: 0 0 auto;
     font-weight: bold;
-    color: #555;
-    font-size: 0.6em;
+    color: #000000;
+    font-size: 0.8em;
     margin-top: 2px;
     }
 
@@ -67,11 +71,15 @@
         padding: 15px 10px;
     }
     .center {
-        order: 2;
+        order: 1;
         margin: 5px 0;
     }
-    .left, .right {
-        order: 1;
+    .left{
+      order: 0;
+      margin: 3px 0;
+    }
+    .right {
+        order: 2;
         margin: 3px 0;
     }
     }
@@ -79,6 +87,7 @@
     /* section1-nav: ナビゲーションボタン仕様 */
     .section1-nav {
     padding: 20px;
+    max-width: 100%;
     background-color: #fff;
     text-align: center;
     }
