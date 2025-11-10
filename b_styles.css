@@ -413,7 +413,7 @@
 }
 
 .work img {
-  width: 25%;          /* ← 左側の画像をやや大きく */
+  width: 30%;          /* ← 左側の画像をやや大きく */
   height: auto;
   border-radius: 10px;
 }
