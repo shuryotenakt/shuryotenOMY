@@ -198,10 +198,64 @@
   </script>
 </section>
 
-<section id="pafo-college" class="section10-pafo">
-  <!-- パフォーミングアーツカレッジ用情報:contentReference[oaicite:10]{index=10} -->
-  <h2>パフォーミングアーツカレッジ用</h2>
-  <p>キービジュアルデザイン &amp; カレッジ担任コメント等</p>
+<section id="performing-arts" class="section10-pafo">
+    <h2>パフォーミングアーツカレッジ</h2>
+    <p>「夢を、舞台に。」— 表現の力で未来を切り拓く</p>
+
+    <!-- スライダー -->
+    <div class="slider-container">
+        <div class="slider" id="slider">
+            <img src="img/DESPICABLE ME 4.jpg" alt="舞台の様子">
+            <img src="img/DESPICABLE ME 4.jpg"" alt="ダンスレッスン">
+            <img src="img/DESPICABLE ME 4.jpg"" alt="演技クラス">
+            <img src="img/DESPICABLE ME 4.jpg"" alt="音楽ステージ">
+        </div>
+        <div class="btn-img prev-img" onclick="moveSlide(-1)">＜</div>
+        <div class="btn-img next-img" onclick="moveSlide(1)">＞</div>
+    </div>
+
+    <!-- ギャラリー -->
+    <div class="photo-gallery">
+        <div class="photo-item">
+            <img src="img/DESPICABLE ME 4.jpg"" alt="舞台発表">
+            <div class="photo-caption">舞台発表</div>
+        </div>
+        <div class="photo-item">
+            <img src="img/DESPICABLE ME 4.jpg"" alt="声優レッスン">
+            <div class="photo-caption">声優レッスン</div>
+        </div>
+        <div class="photo-item">
+            <img src="img/DESPICABLE ME 4.jpg"" alt="ダンス練習">
+            <div class="photo-caption">ダンス練習</div>
+        </div>
+        <div class="photo-item">
+            <img src="img/DESPICABLE ME 4.jpg"" alt="演技リハーサル">
+            <div class="photo-caption">演技リハーサル</div>
+        </div>
+    </div>
+
+    <!-- タブ切替 -->
+    <div class="pa-tabs">
+        <div class="tab-buttons">
+            <button onclick="openTab('teacher')">先生のメッセージ</button>
+            <button onclick="openTab('student')">学生の声</button>
+            <button onclick="openTab('activities')">活動内容</button>
+        </div>
+        <div class="tab-content" id="teacher">
+            <p>「表現とは“心を動かす力”です。テクニックだけでなく、あなた自身の魅力を最大限に引き出すことが大切。挑戦し続けることで、必ずあなたの“声”や“演技”が誰かの心に届く日が来ます。」— 講師一同</p>
+        </div>
+        <div class="tab-content" id="student" style="display:none;">
+            <p>「最初は緊張の連続でしたが、今ではステージが私の居場所になりました。」<br>
+                「失敗もたくさん経験しました。でも仲間と支え合って成長できたことが何よりの宝物です。」<br>
+                「夢を追うことの大変さと楽しさ、両方をこの学校で知ることができました！」</p>
+        </div>
+        <div class="tab-content" id="activities" style="display:none;">
+            <p>・演技レッスン、ダンスレッスン、声優演習<br>
+                ・舞台公演・発表会への参加<br>
+                ・ワークショップ・外部講師による特別授業<br>
+                ・チーム制作・舞台制作プロジェクト</p>
+        </div>
+    </div>
 </section>
 
 <section id="movie-college" class="section11-video">
