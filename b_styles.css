@@ -420,7 +420,7 @@
 
     .work p {
     width: 50%;          /* ← テキスト部分の幅を広げる */
-    font-size: 27px;     /* ← さいず */
+    font-size: 23px;     /* ← さいず */
     line-height: 1.8;    /* ← 行間をゆったり */
     text-align: left;    /* ← 左寄せ */
     }
