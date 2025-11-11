@@ -238,3 +238,242 @@
         font-size: 0.95em;
     }
     }
+
+    /* ==================== section8-manga ==================== */
+.section8-manga {
+  padding: 40px 20px;
+  text-align: center;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.section8-manga h2 {
+  margin-top: 0;
+  margin-bottom: 30px;
+  font-size: 2.5em;
+  color: #333;
+}
+
+/* --- スライダーラッパー --- */
+.manga-slider-wrapper {
+  max-width: 800px;
+  margin: 0 auto 40px;
+}
+
+.manga-slider-container {
+  position: relative;
+  width: 100%;
+  height: 450px;
+  overflow: hidden;
+  border-radius: 20px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+}
+
+.manga-slider-track {
+  display: flex;
+  height: 100%;
+  transition: transform 0.5s ease-in-out;
+}
+
+.manga-slide {
+  min-width: 100%;
+  height: 100%;
+  flex-shrink: 0;
+}
+
+.manga-slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* --- 矢印ボタン --- */
+.manga-arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(255, 255, 255, 0.85);
+  border: none;
+  font-size: 28px;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  z-index: 10;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.manga-arrow:hover {
+  background: rgba(255, 255, 255, 1);
+  transform: translateY(-50%) scale(1.1);
+}
+
+.manga-prev { left: 15px; }
+.manga-next { right: 15px; }
+
+/* --- ドットインジケーター --- */
+.manga-dots {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  margin-top: 20px;
+}
+
+.manga-dot {
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  background: rgba(0, 0, 0, 0.3);
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.manga-dot.active {
+  background: #ff69b4;
+  width: 16px;
+  height: 16px;
+}
+
+.manga-dot:hover {
+  background: rgba(255, 105, 180, 0.6);
+}
+
+    /* 写真ギャラリー */
+.photo-gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.photo-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.photo-item img {
+    width: 400px;
+    height: 225px;
+    object-fit: cover;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.photo-caption {
+    margin-top: 8px;
+    font-size: 0.95em;
+    color: #555;
+    text-align: center;
+}
+/* --- レスポンシブ対応 --- */
+@media (max-width: 768px) {
+  .section8-manga h2 {
+    font-size: 2em;
+  }
+  
+  .manga-slider-container {
+    height: 300px;
+  }
+  
+  .manga-arrow {
+    width: 40px;
+    height: 40px;
+    font-size: 20px;
+  }
+  
+  .manga-works-grid {
+    grid-template-columns: 1fr;
+    gap: 25px;
+  }
+  
+  .manga-work-image {
+    height: 200px;
+  }
+  
+  .manga-message-box,
+  .manga-teacher-comment {
+    padding: 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .section8-manga {
+    padding: 30px 15px;
+  }
+  
+  .manga-slider-container {
+    height: 250px;
+    border-radius: 15px;
+  }
+  
+  .manga-arrow {
+    width: 35px;
+    height: 35px;
+    font-size: 18px;
+  }
+  
+  .manga-prev { left: 10px; }
+  .manga-next { right: 10px; }
+}
+
+/* ================================
+    パフォーミングアーツ用タブ
+   =============================== */
+.pa-tabs {
+    margin-top: 40px;
+    text-align: center;
+}
+
+.tab-buttons {
+    margin-bottom: 20px;
+}
+
+.tab-buttons button {
+    background: #007215;
+    color: #fff;
+    border: none;
+    padding: 14px 28px;
+    margin: 0 10px;
+    border-radius: 30px;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 1.2em;
+    transition: 0.3s;
+}
+
+.tab-buttons button:hover {
+    background: #005b12;
+}
+
+.tab-content {
+    background: #f0fff0;
+    padding: 30px 25px;
+    border-radius: 20px;
+    margin-top: 15px;
+    max-width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: left;
+    line-height: 1.8;
+    font-size: 1.1em;
+    color: #004d0a;
+}
+
+/* ボタン */
+.btn {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 10px 25px;
+    background: #e60000;
+    color: #ddff8f;
+    text-decoration: none;
+    border-radius: 100px;
+    font-weight: bold;
+    transition: 0.3s;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
