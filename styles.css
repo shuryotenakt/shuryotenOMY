@@ -340,35 +340,6 @@
 .manga-dot:hover {
   background: rgba(255, 105, 180, 0.6);
 }
-
-    /* 写真ギャラリー */
-.photo-gallery {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 20px;
-}
-
-.photo-item {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-.photo-item img {
-    width: 400px;
-    height: 225px;
-    object-fit: cover;
-    border-radius: 15px;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-}
-
-.photo-caption {
-    margin-top: 8px;
-    font-size: 0.95em;
-    color: #555;
-    text-align: center;
-}
 /* --- レスポンシブ対応 --- */
 @media (max-width: 768px) {
   .section8-manga h2 {
@@ -420,6 +391,38 @@
   .manga-next { right: 10px; }
 }
 
+
+
+    /* 写真ギャラリー */
+.photo-gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.photo-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.photo-item img {
+    width: 40vw;
+    height: 15vh;
+    max-width: 100%;
+    object-fit: cover;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.photo-caption {
+    margin-top: 8px;
+    font-size: 0.95em;
+    color: #555;
+    text-align: center;
+}
+
 /* ================================
     パフォーミングアーツ用タブ
    =============================== */
@@ -444,6 +447,8 @@
     font-size: 1.2em;
     transition: 0.3s;
 }
+
+
 
 .tab-buttons button:hover {
     background: #005b12;
@@ -477,3 +482,33 @@
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
+/* ================================
+    スマホ対応
+   =============================== */
+@media (max-width: 600px) {
+    .hero { padding: 40px 15px; }
+    .hero h1 { font-size: 2em; }
+    .section { padding: 1.5em 1em; }
+    .section-image { width: 100%; }
+    .section h2 { font-size: 1.3em; }
+    .section p { font-size: 0.95em; }
+    .slider img { width: 100%; height: auto; }
+
+    .tab-buttons {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .tab-buttons button {
+        padding: 16px 24px;
+        margin: 8px 0;
+        font-size: 1.1em;
+        width: 90%;
+    }
+
+    .tab-content {
+        font-size: 1em;
+        padding: 20px 15px;
+    }
+}
