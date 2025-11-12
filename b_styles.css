@@ -74,7 +74,6 @@ header .right {
     font-size: clamp(0.9rem, 3.5vw, 1.2rem); /* モバイルではやや大きめ */
   }
 }
-
 /* ================================
 🎯 section1-nav: ナビゲーションボタン
 ================================ */
@@ -86,14 +85,14 @@ header .right {
 
 /* --- ナビゲーション全体 --- */
 .section1-nav nav ul {
-  list-style: none;
+  list-style: none;       /* ✅ 黒丸消す */
   padding: 0;
   margin: 0 auto;
   display: flex;
   justify-content: center; /* ✅ 中央寄せ */
   align-items: center;
   gap: 20px;
-  flex-wrap: wrap; /* ✅ 小さい画面でも折り返せる */
+  flex-wrap: wrap; /* ✅ 小さい画面では自動で折り返す */
   max-width: 900px;
 }
 
@@ -107,7 +106,7 @@ header .right {
 /* --- リンクボタン --- */
 .section1-nav nav a {
   display: inline-block;
-  width: 100%;              /* ✅ 各ボタン幅を均一に */
+  width: 100%;              /* ✅ 各ボタン幅を統一 */
   max-width: 250px;         /* ✅ 広がりすぎ防止 */
   padding: 14px 20px;
   background-color: #ffffffc9;
@@ -150,23 +149,49 @@ header .right {
   }
 }
 
-/* section2-png */
-    .section2-png {
-        position: relative;
-        height: 100vh;
-        overflow: hidden;
-        margin-top: 10px;
-        margin-bottom: 10px;
-    }
-    .section2-png .background-img {
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100vh;
-      height: 100vh;
-      object-fit: cover;
-      z-index: -1;
-    }
+
+/* ================================
+🎨 Section2: 全デバイスで画像を横いっぱい表示
+================================ */
+.section2-png {
+  position: relative;
+  width: 100vw;           /* ✅ ビューポート幅いっぱい */
+  overflow: hidden;
+  margin: 0;
+  padding: 0;
+}
+
+.section2-png img {
+  display: block;
+  width: 100vw;           /* ✅ 常に画面横幅に合わせる */
+  height: auto;           /* ✅ 縦は自動調整（比率保持） */
+  object-fit: contain;    /* ✅ 画像全体を切らずに表示 */
+  object-position: center center;
+  margin: 0 auto;
+}
+
+/* ===== スマホ調整（縦長端末） ===== */
+@media (max-width: 768px) {
+  .section2-png {
+    width: 100vw;
+  }
+
+  .section2-png img {
+    width: 100vw;
+    height: auto;
+    object-fit: contain;
+  }
+}
+
+/* ===== PCでも横幅いっぱいに広げる ===== */
+@media (min-width: 1024px) {
+  .section2-png img {
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+  }
+}
+
     .section2-png .overlay {
       position: absolute;
       bottom: 20px;
