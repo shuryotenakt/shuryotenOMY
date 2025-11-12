@@ -220,39 +220,126 @@ header .right {
 }
 
 
-    /* section3-day */
-    .section3-day {
-    padding: 20px;
-    background-color: #fff;
-    margin-top: 10px;
-    margin-bottom: 10px;
-    }
-    .section3-day .date-wrapper {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    align-items: center;
-    gap: 20px;
-    }
-    .section3-day .date-left {
-    flex: 1;
-    min-width: 220px;
-    }
-    .section3-day .date-left p {
-    margin: 10px 0;
-    line-height: 1.5;
-    }
-    .section3-day .date-right {
-    flex: 0 0 auto;
-    background-color: #c8fff8;
-    border-radius: 12px;
-    padding: 0.5vh 10vh;
-    text-align: center;
-    }
-    .section3-day .date-right h1 {
-    font-size: 2em;
-    margin: 0;
-    }
+/* ================================
+🎟️ section3-day: PC/スマホ両対応・かぶり防止＋幅調整
+================================ */
+.section3-day {
+  display: flex;
+  justify-content: space-between;
+  align-items: stretch;
+  background: rgba(255, 255, 255, 0.4);
+  border-radius: 20px;
+  backdrop-filter: blur(10px);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+  margin: 40px auto;
+  padding: 0;
+  width: 90%;
+  max-width: 1000px;
+  overflow: hidden;
+}
+
+/* 左半分 */
+.section3-day .date-left {
+  flex: 1.1; /* ✅ 左やや広め */
+  background: transparent;
+  padding: 40px 40px 40px 60px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.section3-day .date-left p {
+  font-size: clamp(1rem, 1.8vw, 1.5rem);
+  line-height: 1.8;
+  color: #000;
+  margin: 0;
+  font-weight: 600;
+}
+
+/* 右半分（日付） */
+.section3-day .date-right {
+  flex: 0.9; /* ✅ 右やや狭く（左右バランス最適化） */
+  background: linear-gradient(135deg, #a2e3ff, #56b6ff);
+  background-size: 200% 200%;
+  animation: gradientFlow 8s ease-in-out infinite;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  min-height: 180px;
+}
+
+/* アニメーション */
+@keyframes gradientFlow {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* 日付コンテンツ */
+.section3-day .date-right .date-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: #000;
+  font-family: 'Bebas Neue', sans-serif;
+}
+
+/* 年 */
+.section3-day .date-right .year {
+  font-size: clamp(1rem, 1.8vw, 1.3rem);
+  margin-bottom: 0.5em;
+}
+
+/* 日付数字 */
+.section3-day .date-right h1 {
+  font-size: clamp(3rem, 10vw, 7rem);
+  font-weight: 900;
+  letter-spacing: 0.05em;
+  margin: 0;
+  line-height: 1.1; /* ✅ 被り防止で少し余裕 */
+}
+
+/* 曜日 */
+.section3-day .date-right .weekday {
+  font-size: clamp(1rem, 1.5vw, 1.2rem);
+  margin-top: 0.6em; /* ✅ 下に離す */
+}
+
+/* 📱 スマホ調整 */
+@media (max-width: 768px) {
+  .section3-day {
+    flex-direction: row; /* ✅ 横並び維持 */
+  }
+
+  /* 左右比率調整でテキストの改行を防ぐ */
+  .section3-day .date-left {
+    flex: 1.3; /* ✅ 左を広く */
+    padding: 20px 15px 20px 25px;
+  }
+
+  .section3-day .date-left p {
+    font-size: clamp(0.9rem, 2.5vw, 1.2rem);
+    line-height: 1.6;
+  }
+
+  .section3-day .date-right {
+    flex: 0.7;
+    padding: 10px;
+    min-height: 150px;
+  }
+
+  .section3-day .date-right h1 {
+    font-size: clamp(2.5rem, 11vw, 5rem);
+    line-height: 1.2;
+  }
+
+  .section3-day .date-right .weekday {
+    margin-top: 0.5em;
+  }
+}
+
 
     /* -------------------- section4-venue -------------------- */
     .section4-venue {
@@ -281,14 +368,9 @@ header .right {
     text-decoration: underline;
     font-weight: bold;
     }
-    .section4-venue .station-access {
+    .section4-venue {
     margin-top: 10px;
     padding-left: 1.2em;
-    }
-    .station-access p {
-    margin: 10px 0;
-    margin-left: 5px;
-    line-height: 1.5;
     }
 
     .section4-venue .venue-right {
