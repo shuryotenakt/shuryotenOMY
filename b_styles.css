@@ -192,21 +192,33 @@ header .right {
   }
 }
 
-    .section2-png .overlay {
-      position: absolute;
-      bottom: 20px;
-      right: 40px;
-      font-size: 6em;
-      font-weight: bold;
-      color: #fff;
-      text-shadow:
-      -1px -1px 0 #000,
-      1px -1px 0 #000,
-      -1px  1px 0 #000,
-      1px  1px 0 #000,
-      2px  2px 8px rgba(0, 0, 0, 1); /* フチ＋ぼかし影 */
+.section2-png .overlay {
+  position: absolute;
+  bottom: 1%;
+  right: 8%;
+  transform: translate(0, 0);
+  font-size: clamp(2.5rem, 6vw, 5rem); /* ← ここを拡大！ */
+  font-weight: bold;
+  color: #fff;
+  text-shadow:
+    -2px -2px 4px #000,
+      2px -2px 4px #000,
+    -2px  2px 4px #000,
+      2px  2px 4px #000;
+  white-space: nowrap;
+  z-index: 5;
+  
+}
 
-    }
+/* 📱 スマホ調整（縦長時） */
+@media (max-width: 600px) {
+  .section2-png .overlay {
+    bottom: 1%;
+    right: 5%;
+    font-size: clamp(2rem, 9vw, 4rem); /* ← スマホも少し大きめ */
+  }
+}
+
 
     /* section3-day */
     .section3-day {
