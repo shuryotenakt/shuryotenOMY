@@ -228,6 +228,7 @@
     min-width: 280px;
     }
     .gradient-text {
+    max-width: 110%;
     background: linear-gradient(
       270deg,
       #000000 0%,
