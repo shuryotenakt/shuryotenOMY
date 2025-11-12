@@ -239,28 +239,30 @@
     }
     }
 
-    /* ==================== section8-manga ==================== */
-.section8-manga {
-  padding: 40px 20px;
-  text-align: center;
-  margin-top: 10px;
-  margin-bottom: 10px;
-}
+/* ================================
+📘 カレッジ共通（レイアウトベース）
+================================ */
 
-.section8-manga h2 {
-  margin-top: 0;
-  margin-bottom: 30px;
-  font-size: 2.5em;
+/* 全体 */
+h2 {
+  font-size: 2em;
+  margin: 40px 0 20px;
+  text-align: center;
   color: #333;
 }
 
-/* --- スライダーラッパー --- */
-.manga-slider-wrapper {
+/* ================================
+🎨 作品スライダー (img-slider-main)
+================================ */
+.img-slider-main {
+  padding: 40px 20px;
+  text-align: center;
+  position: relative;
   max-width: 800px;
   margin: 0 auto 40px;
 }
 
-.manga-slider-container {
+.img-slider-custom {
   position: relative;
   width: 100%;
   height: 450px;
@@ -287,7 +289,7 @@
   object-fit: cover;
 }
 
-/* --- 矢印ボタン --- */
+/* 矢印ボタン */
 .manga-arrow {
   position: absolute;
   top: 50%;
@@ -311,10 +313,14 @@
   transform: translateY(-50%) scale(1.1);
 }
 
-.manga-prev { left: 15px; }
-.manga-next { right: 15px; }
+.manga-prev {
+  left: 15px;
+}
+.manga-next {
+  right: 15px;
+}
 
-/* --- ドットインジケーター --- */
+/* ドットインジケーター */
 .manga-dots {
   display: flex;
   justify-content: center;
@@ -340,175 +346,138 @@
 .manga-dot:hover {
   background: rgba(255, 105, 180, 0.6);
 }
-/* --- レスポンシブ対応 --- */
+
+/* ================================
+🎭 パフォーミングアーツ（ギャラリー＋タブ）
+================================ */
+
+/* ギャラリー部分 */
+.college-gallery {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  margin: 40px auto;
+}
+
+.photo-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.photo-item img {
+  width: 300px;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.photo-caption {
+  margin-top: 8px;
+  font-size: 0.95em;
+  color: #555;
+  text-align: center;
+}
+
+/* タブ部分 */
+.pa-tabs {
+  margin-top: 50px;
+  text-align: center;
+}
+
+.tab-buttons {
+  margin-bottom: 25px;
+}
+
+.tab-buttons button {
+  background: #007215;
+  color: #fff;
+  border: none;
+  padding: 14px 28px;
+  margin: 0 10px;
+  border-radius: 30px;
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 1.2em;
+  transition: 0.3s;
+}
+
+.tab-buttons button:hover {
+  background: #005b12;
+}
+
+.tab-content {
+  background: #f0fff0;
+  padding: 30px 25px;
+  border-radius: 20px;
+  margin-top: 15px;
+  max-width: 90%;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: left;
+  line-height: 1.8;
+  font-size: 1.1em;
+  color: #004d0a;
+}
+
+/* ================================
+📱 レスポンシブ対応
+================================ */
 @media (max-width: 768px) {
-  .section8-manga h2 {
-    font-size: 2em;
+  h2 {
+    font-size: 1.6em;
   }
-  
-  .manga-slider-container {
+
+  .img-slider-custom {
     height: 300px;
   }
-  
+
   .manga-arrow {
     width: 40px;
     height: 40px;
     font-size: 20px;
   }
-  
-  .manga-works-grid {
-    grid-template-columns: 1fr;
-    gap: 25px;
+
+  .photo-item img {
+    width: 90%;
+    height: auto;
   }
-  
-  .manga-work-image {
-    height: 200px;
+
+  .tab-buttons {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
   }
-  
-  .manga-message-box,
-  .manga-teacher-comment {
-    padding: 20px;
+
+  .tab-buttons button {
+    width: 90%;
+    margin: 8px 0;
+    font-size: 1.1em;
+  }
+
+  .tab-content {
+    font-size: 1em;
+    padding: 20px 15px;
   }
 }
 
 @media (max-width: 480px) {
-  .section8-manga {
-    padding: 30px 15px;
-  }
-  
-  .manga-slider-container {
+  .img-slider-custom {
     height: 250px;
-    border-radius: 15px;
   }
-  
+
   .manga-arrow {
     width: 35px;
     height: 35px;
     font-size: 18px;
   }
-  
-  .manga-prev { left: 10px; }
-  .manga-next { right: 10px; }
-}
 
-
-
-    /* 写真ギャラリー */
-.photo-gallery {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 20px;
-}
-
-.photo-item {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-.photo-item img {
-    width: 40vw;
-    height: 15vh;
-    max-width: 100%;
-    object-fit: cover;
-    border-radius: 15px;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-}
-
-.photo-caption {
-    margin-top: 8px;
-    font-size: 0.95em;
-    color: #555;
-    text-align: center;
-}
-
-/* ================================
-    パフォーミングアーツ用タブ
-   =============================== */
-.pa-tabs {
-    margin-top: 40px;
-    text-align: center;
-}
-
-.tab-buttons {
-    margin-bottom: 20px;
-}
-
-.tab-buttons button {
-    background: #007215;
-    color: #fff;
-    border: none;
-    padding: 14px 28px;
-    margin: 0 10px;
-    border-radius: 30px;
-    cursor: pointer;
-    font-weight: bold;
-    font-size: 1.2em;
-    transition: 0.3s;
-}
-
-
-
-.tab-buttons button:hover {
-    background: #005b12;
-}
-
-.tab-content {
-    background: #f0fff0;
-    padding: 30px 25px;
-    border-radius: 20px;
-    margin-top: 15px;
-    max-width: 90%;
-    margin-left: auto;
-    margin-right: auto;
-    text-align: left;
-    line-height: 1.8;
-    font-size: 1.1em;
-    color: #004d0a;
-}
-
-/* ボタン */
-.btn {
-    display: inline-block;
-    margin-top: 10px;
-    padding: 10px 25px;
-    background: #e60000;
-    color: #ddff8f;
-    text-decoration: none;
-    border-radius: 100px;
-    font-weight: bold;
-    transition: 0.3s;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-}
-
-/* ================================
-    スマホ対応
-   =============================== */
-@media (max-width: 600px) {
-    .hero { padding: 40px 15px; }
-    .hero h1 { font-size: 2em; }
-    .section { padding: 1.5em 1em; }
-    .section-image { width: 100%; }
-    .section h2 { font-size: 1.3em; }
-    .section p { font-size: 0.95em; }
-    .slider img { width: 100%; height: auto; }
-
-    .tab-buttons {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .tab-buttons button {
-        padding: 16px 24px;
-        margin: 8px 0;
-        font-size: 1.1em;
-        width: 90%;
-    }
-
-    .tab-content {
-        font-size: 1em;
-        padding: 20px 15px;
-    }
+  .manga-prev {
+    left: 10px;
+  }
+  .manga-next {
+    right: 10px;
+  }
 }
