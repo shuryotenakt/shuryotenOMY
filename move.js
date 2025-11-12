@@ -1,41 +1,36 @@
-    // move.js（安定版：自動スライドなし、ズレ防止、タブ修正）
+    // move.js（複数スライダー対応・空白スライド防止・自動なし）
 
     document.addEventListener("DOMContentLoaded", () => {
     // ======================
-    // 🎞 スライダー機能
+    // 🎞 スライダー機能（複数スライダー対応）
     // ======================
-    const track = document.querySelector(".manga-slider-track");
-    const slides = document.querySelectorAll(".manga-slide");
-    const prevBtn = document.querySelector(".manga-prev");
-    const nextBtn = document.querySelector(".manga-next");
-    const dots = document.querySelectorAll(".manga-dot");
 
-    if (track && slides.length > 0) {
+    const sliderWrappers = document.querySelectorAll(".img-slider-main");
+
+    sliderWrappers.forEach((wrapper) => {
+        const track = wrapper.querySelector(".manga-slider-track");
+        const slides = wrapper.querySelectorAll(".manga-slide");
+        const prevBtn = wrapper.querySelector(".manga-prev");
+        const nextBtn = wrapper.querySelector(".manga-next");
+        const dots = wrapper.querySelectorAll(".manga-dot");
+
+        if (!track || slides.length === 0) return;
+
         let currentIndex = 0;
         const totalSlides = slides.length;
 
         function updateSlider() {
-        // 現在位置を移動
         track.style.transform = `translateX(-${currentIndex * 100}%)`;
-        // ドット同期
         dots.forEach((dot, i) => dot.classList.toggle("active", i === currentIndex));
         }
 
         function goToNext() {
-        if (currentIndex < totalSlides - 1) {
-            currentIndex++;
-        } else {
-            currentIndex = 0;
-        }
+        currentIndex = (currentIndex + 1) % totalSlides;
         updateSlider();
         }
 
         function goToPrev() {
-        if (currentIndex > 0) {
-            currentIndex--;
-        } else {
-            currentIndex = totalSlides - 1;
-        }
+        currentIndex = (currentIndex - 1 + totalSlides) % totalSlides;
         updateSlider();
         }
 
@@ -49,18 +44,19 @@
         });
         });
 
-        // 初期状態を更新
+        // 初期表示
         updateSlider();
-    }
+    });
 
     // ======================
-    // 🗂 タブ切替（安定動作）
+    // 🗂 タブ切替機能
     // ======================
+
     const tabButtons = document.querySelectorAll(".tab-buttons button");
     const tabContents = document.querySelectorAll(".tab-content");
 
     if (tabButtons.length > 0 && tabContents.length > 0) {
-        // 初期表示：最初のタブのみ表示
+        // 初期状態：最初のタブだけ表示
         tabContents.forEach((c, i) => (c.style.display = i === 0 ? "block" : "none"));
 
         tabButtons.forEach((button) => {
