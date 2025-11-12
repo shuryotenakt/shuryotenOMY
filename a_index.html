@@ -8,7 +8,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Hachi+Maru+Pop&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="a_index.css" />
 
     <body>
     <header id="head" class="hero">
@@ -187,9 +187,129 @@
     </section>
 
     <h4>sato commit 5</h4>
+
+    <h2>マンガ・イラストカレッジ</h2>
+    
+    <!-- 作品スライダー -->
+    <div class="img-slider-main">
+        <div class="img-slider-custom">
+        <div class="manga-slider-track">
+            <div class="manga-slide">
+            <img src="img/sample.png" alt="イラスト作品1">
+            </div>
+            <div class="manga-slide">
+            <img src="img/sample2.png" alt="イラスト作品2">
+            </div>
+            <div class="manga-slide">
+            <img src="img/sample3.png" alt="イラスト作品3">
+            </div>
+        </div>
+        <button class="manga-arrow manga-prev">&#10094;</button>
+        <button class="manga-arrow manga-next">&#10095;</button>
+        </div>
+        
+        <!-- スライダー下のドットインジケーター -->
+        <div class="manga-dots">
+        <span class="manga-dot active" data-index="0"></span>
+        <span class="manga-dot" data-index="1"></span>
+        <span class="manga-dot" data-index="2"></span>
+        </div>
+    </div>
+    <script>
+        // スライダー機能
+        (function() {
+        const track = document.querySelector('.manga-slider-track');
+        const slides = document.querySelectorAll('.manga-slide');
+        const prevBtn = document.querySelector('.manga-prev');
+        const nextBtn = document.querySelector('.manga-next');
+        const dots = document.querySelectorAll('.manga-dot');
+        let currentIndex = 0;
+        const totalSlides = slides.length;
+
+        function updateSlider() {
+            track.style.transform = `translateX(-${currentIndex * 100}%)`;
+            
+            // ドット更新
+            dots.forEach((dot, idx) => {
+            dot.classList.toggle('active', idx === currentIndex);
+            });
+        }
+
+        function goToNext() {
+            currentIndex = (currentIndex + 1) % totalSlides;
+            updateSlider();
+        }
+
+        function goToPrev() {
+            currentIndex = (currentIndex - 1 + totalSlides) % totalSlides;
+            updateSlider();
+        }
+
+        nextBtn.addEventListener('click', goToNext);
+        prevBtn.addEventListener('click', goToPrev);
+
+        // ドットクリックで移動
+        dots.forEach(dot => {
+            dot.addEventListener('click', function() {
+            currentIndex = parseInt(this.dataset.index);
+            updateSlider();
+            });
+        });
+
+        })();
+    </script>
+    </section>
+
+
+    <!-- パフォからーギャラリー -->
+
+    <div class="college-gallery">
+        <div class="photo-item">
+            <img src="img/sample.png" alt="舞台発表">
+            <div class="photo-caption">舞台発表</div>
+        </div>
+        <div class="photo-item">
+            <img src="img/sample2.png" alt="声優レッスン">
+            <div class="photo-caption">声優レッスン</div>
+        </div>
+        <div class="photo-item">
+            <img src="img/sample3.png" alt="ダンス練習">
+            <div class="photo-caption">ダンス練習</div>
+        </div>
+        <div class="photo-item">
+            <img src="img/sample4.png" alt="演技リハーサル">
+            <div class="photo-caption">演技リハーサル</div>
+        </div>
+    </div>
+
+    <!-- タブ切替 -->
+    <div class="pa-tabs">
+        <div class="tab-buttons">
+            <button  onclick="openTab('teacher')">先生コメント</button>
+            <button  onclick="openTab('student')">学生コメント</button>
+            <button  onclick="openTab('activities')">活動内容</button>
+        </div>
+        <div class="tab-content" id="teacher">
+            <p>「表現とは“心を動かす力”です。テクニックだけでなく、あなた自身の魅力を最大限に引き出すことが大切。挑戦し続けることで、必ずあなたの“声”や“演技”が誰かの心に届く日が来ます。」— 講師一同</p>
+        </div>
+        <div class="tab-content" id="student" style="display:none;">
+            <p>「最初は緊張の連続でしたが、今ではステージが私の居場所になりました。」<br>
+                「失敗もたくさん経験しました。でも仲間と支え合って成長できたことが何よりの宝物です。」<br>
+                「夢を追うことの大変さと楽しさ、両方をこの学校で知ることができました！」</p>
+        </div>
+        <div class="tab-content" id="activities" style="display:none;">
+            <p>・演技レッスン、ダンスレッスン、声優演習<br>
+                ・舞台公演・発表会への参加<br>
+                ・ワークショップ・外部講師による特別授業<br>
+                ・チーム制作・舞台制作プロジェクト</p>
+        </div>
+    </div>
+
     <footer>
     <p>ヒューマンアカデミー 大宮校｜TEL: 048-615-4386</p>
     <p>&copy; 2025 ヒューマンアカデミー ITカレッジ</p>
     </footer>
+
+    <script src="move.js"></script>
     </body>
 </html>
