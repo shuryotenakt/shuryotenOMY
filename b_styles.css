@@ -26,59 +26,54 @@
 
 
 
-        /* ヘッダー部分 */
-    header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 1vh 5vw;
-    box-shadow: 0 4px 10px rgba(147, 147, 147, 0.15);
-    border-radius: 20px;
-    background-color: rgba(255, 240, 245, 0.7);
-    margin: 0 auto;
-    max-width: 100%;
-    position: relative;
-    z-index: 10;
-    }
+    /* ================================
+  ヘッダー：レスポンシブ対応版
+================================ */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: clamp(0.5rem, 1vw, 1rem) clamp(2rem, 5vw, 5rem);
+  box-shadow: 0 4px 10px rgba(147, 147, 147, 0.15);
+  border-radius: 20px;
+  background-color: rgba(255, 240, 245, 0.7);
+  margin: 0 auto;
+  max-width: 100%;
+  position: relative;
+  z-index: 10;
+  flex-wrap: wrap; /* 小画面で折り返しOK */
+}
 
-    /* 左・中央・右 */
-    header .left,
-    header .center,
-    header .right {
-    font-weight: bold;
-    font-size: 0.8em;
-    color: #000;
-    }
+/* 左右テキスト */
+header .left,
+header .right {
+  font-weight: bold;
+  color: #000;
+  /* ✅ 画面サイズに応じて文字サイズを調整 */
+  font-size: clamp(0.8rem, 1.2vw, 1.2rem);
+}
 
+header .left {
+  text-align: left;
+}
+header .right {
+  text-align: right;
+}
 
-    header .center {
-    flex: 1;
-    text-align: center; /* ← 中央揃え */
-    margin: 0 auto; /* ← 自動で中央に配置 */
-    }
+/* ===== スマホ調整 ===== */
+@media (max-width: 600px) {
+  header {
+    flex-direction: column;
+    gap: 0.4rem;
+    text-align: center;
+    border-radius: 0;
+  }
 
-
-    header .left,
-    header .right {
-    flex: 0 0 auto;
-    }
-
-    /* レスポンシブ対応 */
-    @media (max-width: 600px) {
-    header {
-        flex-direction: row ;
-        padding: 10px 5vh;
-    }
-    header .center {
-    order: 1;
-    }
-    header .left {
-    order: 0;
-    }
-    header .right {
-    order: 2;
-    }
-    }
+  header .left,
+  header .right {
+    font-size: clamp(0.9rem, 3.5vw, 1.2rem); /* モバイルではやや大きめ */
+  }
+}
 
     /* section1-nav: ナビゲーションボタン仕様 */
     .section1-nav {
