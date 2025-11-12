@@ -341,74 +341,128 @@ header .right {
 }
 
 
-    /* -------------------- section4-venue -------------------- */
-    .section4-venue {
-    padding: 20px;
-    margin-top: 10px;
-    margin-bottom: 10px;
-    }
-    .section4-venue .venue-wrapper {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 20px;
-    }
-    .section4-venue .venue-left {
-    flex: 1;
-    min-width: 220px;
-    }
-    .section4-venue h2 {
-    margin-top: 0;
-    margin-left: 10px;
-    font-weight: bold;
-    }
-    .section4-venue .venue-left a {
-    margin-left: 20px;
-    font-size: 2em;
-    color: #000;
-    text-decoration: underline;
-    font-weight: bold;
-    }
-    .section4-venue {
-    margin-top: 10px;
-    padding-left: 1.2em;
-    }
+/* -------------------- section4-venue（PC縦位置揃え対応） -------------------- */
+.section4-venue {
+  padding: 20px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
 
-    .section4-venue .venue-right {
-    flex: 1;
-    min-width: 280px;
-    }
-    .gradient-text {
-    max-width: 110%;
-    background: linear-gradient(
-      270deg,
-      #000000 0%,
-      #000000 64%,
-      #8adcff 65%,
-      #8adcff 83%,
-      #ffffff 82%,
-      #ffffff 90%,
-      #000000 88%,
-      #000000 100%
-    );
-    background-size: 400% 400%;
-    background-clip: text;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    animation: textGradientFlow 10s ease-in-out infinite;
-    display: inline-block;
-    }
+/* 全体：PCで横並び、スマホで縦並び */
+.section4-venue .venue-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: stretch; /* ✅ 縦方向の高さを揃える */
+  flex-wrap: nowrap;
+  gap: 20px;
+}
 
-    @keyframes textGradientFlow {
-      0% {
-        background-position: 0% 100%;
-      }
-      50% {
-        background-position: 100% 50%;
-      }
-      100% {
-        background-position: 0% 30%;
-      }
-    }
+/* 左側 */
+.section4-venue .venue-left {
+  flex: 1;
+  min-width: 300px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* ✅ 中央寄せ */
+  height: 100%;             /* ✅ 高さを右に合わせる */
+}
+
+/* 「会場」タイトル */
+.section4-venue h2 {
+  margin-top: 15px; /* ✅ 上に少し余白追加 */
+  margin-left: 10px;
+  margin-bottom: 5px;
+  font-weight: bold;
+  font-size: clamp(1.2rem, 2vw, 1.6rem);
+  white-space: nowrap;
+}
+
+/* グラデーション文字リンク */
+.section4-venue .venue-left a {
+  display: inline-block;
+  font-size: clamp(1.4rem, 2.2vw, 2rem);
+  font-weight: bold;
+  text-decoration: underline;
+  text-decoration-color: rgba(0, 0, 0, 0.3);
+  white-space: nowrap;
+  color: transparent;
+  background: linear-gradient(
+    270deg,
+    #000000 0%,
+    #000000 64%,
+    #8adcff 65%,
+    #8adcff 83%,
+    #ffffff 82%,
+    #ffffff 90%,
+    #000000 88%,
+    #000000 100%
+  );
+  background-size: 400% 400%;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: textGradientFlow 10s ease-in-out infinite;
+  margin-left: 20px;
+}
+
+/* グラデアニメ */
+@keyframes textGradientFlow {
+  0% { background-position: 0% 100%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 30%; }
+}
+
+/* アクセス説明 */
+.section4-venue .station-access {
+  margin-top: 10px;
+  padding-left: 1.2em;
+  word-break: keep-all;
+}
+
+.station-access p {
+  margin: 10px 0;
+  margin-left: 5px;
+  line-height: 1.5;
+}
+
+/* 右側：Googleマップ */
+.section4-venue .venue-right {
+  flex: 1;
+  min-width: 300px;
+  display: flex;
+  align-items: stretch;
+}
+
+.section4-venue .venue-right iframe {
+  width: 100%;
+  height: 260px; /* ✅ PC用の高さに固定（左と揃う） */
+  border: none;
+  display: block;
+  border-radius: 10px;
+}
+
+/* 📱 スマホ：縦並び */
+@media (max-width: 768px) {
+  .section4-venue .venue-wrapper {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .section4-venue .venue-left {
+    align-items: center;
+    justify-content: flex-start;
+  }
+
+  .section4-venue h2 {
+    margin-top: 10px;
+  }
+
+  .section4-venue .venue-right iframe {
+    width: 100%;
+    height: 250px;
+  }
+}
 
 
     /* -------------------- section5-shousai -------------------- */
