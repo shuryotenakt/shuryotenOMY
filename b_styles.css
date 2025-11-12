@@ -389,7 +389,7 @@
 .arrow.right { right: 5px; }
 
 .comment-box {
-  width: 95%;           /* ← 幅を拡大 */
+  width: 100%;           /* ← 幅を拡大 */
   max-width: 700px;     /* ← 400px → 700px */
   margin: 20px auto;    /* ← 余白を追加して中央寄せ */
   padding: 25px;        /* ← 内側の余白を広げる */
