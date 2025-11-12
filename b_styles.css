@@ -26,239 +26,443 @@
 
 
 
-        /* ヘッダー部分 */
-    header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 1vh 5vw;
-    box-shadow: 0 4px 10px rgba(147, 147, 147, 0.15);
-    border-radius: 20px;
-    background-color: rgba(255, 240, 245, 0.7);
-    margin: 0 auto;
-    max-width: 100%;
-    position: relative;
-    z-index: 10;
-    }
+    /* ================================
+  ヘッダー：レスポンシブ対応版
+================================ */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: clamp(0.5rem, 1vw, 1rem) clamp(2rem, 5vw, 5rem);
+  box-shadow: 0 4px 10px rgba(147, 147, 147, 0.15);
+  border-radius: 20px;
+  background-color: rgba(255, 240, 245, 0.7);
+  margin: 0 auto;
+  max-width: 100%;
+  position: relative;
+  z-index: 10;
+  flex-wrap: wrap; /* 小画面で折り返しOK */
+}
 
-    /* 左・中央・右 */
-    header .left,
-    header .center,
-    header .right {
-    font-weight: bold;
-    font-size: 0.8em;
-    color: #000;
-    }
+/* 左右テキスト */
+header .left,
+header .right {
+  font-weight: bold;
+  color: #000;
+  /* ✅ 画面サイズに応じて文字サイズを調整 */
+  font-size: clamp(0.8rem, 1.2vw, 1.2rem);
+}
 
+header .left {
+  text-align: left;
+}
+header .right {
+  text-align: right;
+}
 
-    header .center {
-    flex: 1;
-    text-align: center; /* ← 中央揃え */
-    margin: 0 auto; /* ← 自動で中央に配置 */
-    }
-
-
-    header .left,
-    header .right {
-    flex: 0 0 auto;
-    }
-
-    /* レスポンシブ対応 */
-    @media (max-width: 600px) {
-    header {
-        flex-direction: row ;
-        padding: 10px 5vh;
-    }
-    header .center {
-    order: 1;
-    }
-    header .left {
-    order: 0;
-    }
-    header .right {
-    order: 2;
-    }
-    }
-
-    /* section1-nav: ナビゲーションボタン仕様 */
-    .section1-nav {
-    padding: 20px;
-    max-width: 100%;
+/* ===== スマホ調整 ===== */
+@media (max-width: 600px) {
+  header {
+    flex-direction: column;
+    gap: 0.4rem;
     text-align: center;
-    }
+    border-radius: 0;
+  }
 
-    .section1-nav nav ul {
-    list-style: none;
-    padding: 0;
-    margin: 0 auto;
-    display: flex;
-    flex-direction: column;       /* 縦並び */    
+  header .left,
+  header .right {
+    font-size: clamp(0.9rem, 3.5vw, 1.2rem); /* モバイルではやや大きめ */
+  }
+}
+/* ================================
+🎯 section1-nav: ナビゲーションボタン
+================================ */
+.section1-nav {
+  padding: 40px 20px;
+  max-width: 100%;
+  text-align: center;
+}
+
+/* --- ナビゲーション全体 --- */
+.section1-nav nav ul {
+  list-style: none;       /* ✅ 黒丸消す */
+  padding: 0;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center; /* ✅ 中央寄せ */
+  align-items: center;
+  gap: 20px;
+  flex-wrap: wrap; /* ✅ 小さい画面では自動で折り返す */
+  max-width: 900px;
+}
+
+/* --- 各ボタン --- */
+.section1-nav nav li {
+  flex: 1 1 200px; /* ✅ 均等幅（最小200px） */
+  display: flex;
+  justify-content: center;
+}
+
+/* --- リンクボタン --- */
+.section1-nav nav a {
+  display: inline-block;
+  width: 100%;              /* ✅ 各ボタン幅を統一 */
+  max-width: 250px;         /* ✅ 広がりすぎ防止 */
+  padding: 14px 20px;
+  background-color: #ffffffc9;
+  border: 2px solid #b7f0b5;
+  border-radius: 10px;
+  color: #000;
+  font-weight: bold;
+  text-decoration: none;
+  text-align: center;
+  white-space: nowrap;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.05);
+  transition: background-color 0.2s ease, transform 0.2s ease;
+}
+
+.section1-nav nav a:hover {
+  background-color: #ffcf94b5;
+  transform: translateY(-2px);
+}
+
+/* ============================
+📱 スマホ対応（600px以下）
+============================ */
+@media (max-width: 600px) {
+  .section1-nav {
+    padding: 20px 10px;
+  }
+
+  .section1-nav nav ul {
     gap: 10px;
-    max-width: 280px;
-    align-items: center;
-    justify-content: center;    
-    }
-    .section1-nav nav li {
-    margin: 0;
-    }
-    .section1-nav nav a {
-    display: inline-block;
+  }
+
+  .section1-nav nav li {
+    flex: 1 1 30%; /* ✅ スマホでも横3つに並ぶ */
+  }
+
+  .section1-nav nav a {
     width: 100%;
-    padding: 12px;
-    background-color: #ffffff81;
-    border: 1px solid #b7f0b5;
-    border-radius: 6px;
-    color: #000;
-    font-weight: bold;
-    text-decoration: none;
-    transition: background-color 0.2s ease;
-    text-align: center;
-    }
-    .section1-nav nav a:hover {
-    background-color: #ffcf94b5;
-    }
+    font-size: 0.9em;
+    padding: 10px 0;
+  }
+}
 
-    /* section2-png */
-    /* section2-png */
-    .section2-png {
-        position: relative;
-        height: 100vh;
-        overflow: hidden;
-        margin-top: 10px;
-        margin-bottom: 10px;
-    }
-    .section2-png .background-img {
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100vh;
-      height: 100vh;
-      object-fit: cover;
-      z-index: -1;
-    }
-    .section2-png .overlay {
-      position: absolute;
-      bottom: 20px;
-      right: 40px;
-      font-size: 6em;
-      font-weight: bold;
-      color: #fff;
-      text-shadow:
-      -1px -1px 0 #000,
-      1px -1px 0 #000,
-      -1px  1px 0 #000,
-      1px  1px 0 #000,
-      2px  2px 8px rgba(0, 0, 0, 1); /* フチ＋ぼかし影 */
 
-    }
+/* ================================
+🎨 Section2: 全デバイスで画像を横いっぱい表示
+================================ */
+.section2-png {
+  position: relative;
+  width: 100vw;           /* ✅ ビューポート幅いっぱい */
+  overflow: hidden;
+  margin: 0;
+  padding: 0;
+}
 
-    /* section3-day */
-    .section3-day {
-    padding: 20px;
-    background-color: #fff;
-    margin-top: 10px;
-    margin-bottom: 10px;
-    }
-    .section3-day .date-wrapper {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
+.section2-png img {
+  display: block;
+  width: 100vw;           /* ✅ 常に画面横幅に合わせる */
+  height: auto;           /* ✅ 縦は自動調整（比率保持） */
+  object-fit: contain;    /* ✅ 画像全体を切らずに表示 */
+  object-position: center center;
+  margin: 0 auto;
+}
+
+/* ===== スマホ調整（縦長端末） ===== */
+@media (max-width: 768px) {
+  .section2-png {
+    width: 100vw;
+  }
+
+  .section2-png img {
+    width: 100vw;
+    height: auto;
+    object-fit: contain;
+  }
+}
+
+/* ===== PCでも横幅いっぱいに広げる ===== */
+@media (min-width: 1024px) {
+  .section2-png img {
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+  }
+}
+
+.section2-png .overlay {
+  position: absolute;
+  bottom: 1%;
+  right: 8%;
+  transform: translate(0, 0);
+  font-size: clamp(2.5rem, 6vw, 5rem); /* ← ここを拡大！ */
+  font-weight: bold;
+  color: #fff;
+  text-shadow:
+    -2px -2px 4px #000,
+      2px -2px 4px #000,
+    -2px  2px 4px #000,
+      2px  2px 4px #000;
+  white-space: nowrap;
+  z-index: 5;
+  
+}
+
+/* 📱 スマホ調整（縦長時） */
+@media (max-width: 600px) {
+  .section2-png .overlay {
+    bottom: 1%;
+    right: 5%;
+    font-size: clamp(2rem, 9vw, 4rem); /* ← スマホも少し大きめ */
+  }
+}
+
+
+/* ================================
+🎟️ section3-day: PC/スマホ両対応・かぶり防止＋幅調整
+================================ */
+.section3-day {
+  display: flex;
+  justify-content: space-between;
+  align-items: stretch;
+  background: rgba(255, 255, 255, 0.4);
+  border-radius: 20px;
+  backdrop-filter: blur(10px);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+  margin: 40px auto;
+  padding: 0;
+  width: 90%;
+  max-width: 1000px;
+  overflow: hidden;
+}
+
+/* 左半分 */
+.section3-day .date-left {
+  flex: 1.1; /* ✅ 左やや広め */
+  background: transparent;
+  padding: 40px 40px 40px 60px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.section3-day .date-left p {
+  font-size: clamp(1rem, 1.8vw, 1.5rem);
+  line-height: 1.8;
+  color: #000;
+  margin: 0;
+  font-weight: 600;
+}
+
+/* 右半分（日付） */
+.section3-day .date-right {
+  flex: 0.9; /* ✅ 右やや狭く（左右バランス最適化） */
+  background: linear-gradient(135deg, #a2e3ff, #56b6ff);
+  background-size: 200% 200%;
+  animation: gradientFlow 8s ease-in-out infinite;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  min-height: 180px;
+}
+
+/* アニメーション */
+@keyframes gradientFlow {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* 日付コンテンツ */
+.section3-day .date-right .date-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: #000;
+  font-family: 'Bebas Neue', sans-serif;
+}
+
+/* 年 */
+.section3-day .date-right .year {
+  font-size: clamp(1rem, 1.8vw, 1.3rem);
+  margin-bottom: 0.5em;
+}
+
+/* 日付数字 */
+.section3-day .date-right h1 {
+  font-size: clamp(3rem, 10vw, 7rem);
+  font-weight: 900;
+  letter-spacing: 0.05em;
+  margin: 0;
+  line-height: 1.1; /* ✅ 被り防止で少し余裕 */
+}
+
+/* 曜日 */
+.section3-day .date-right .weekday {
+  font-size: clamp(1rem, 1.5vw, 1.2rem);
+  margin-top: 0.6em; /* ✅ 下に離す */
+}
+
+/* 📱 スマホ調整 */
+@media (max-width: 768px) {
+  .section3-day {
+    flex-direction: row; /* ✅ 横並び維持 */
+  }
+
+  /* 左右比率調整でテキストの改行を防ぐ */
+  .section3-day .date-left {
+    flex: 1.3; /* ✅ 左を広く */
+    padding: 20px 15px 20px 25px;
+  }
+
+  .section3-day .date-left p {
+    font-size: clamp(0.9rem, 2.5vw, 1.2rem);
+    line-height: 1.6;
+  }
+
+  .section3-day .date-right {
+    flex: 0.7;
+    padding: 10px;
+    min-height: 150px;
+  }
+
+  .section3-day .date-right h1 {
+    font-size: clamp(2.5rem, 11vw, 5rem);
+    line-height: 1.2;
+  }
+
+  .section3-day .date-right .weekday {
+    margin-top: 0.5em;
+  }
+}
+
+
+/* -------------------- section4-venue（PC縦位置揃え対応） -------------------- */
+.section4-venue {
+  padding: 20px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+/* 全体：PCで横並び、スマホで縦並び */
+.section4-venue .venue-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: stretch; /* ✅ 縦方向の高さを揃える */
+  flex-wrap: nowrap;
+  gap: 20px;
+}
+
+/* 左側 */
+.section4-venue .venue-left {
+  flex: 1;
+  min-width: 300px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* ✅ 中央寄せ */
+  height: 100%;             /* ✅ 高さを右に合わせる */
+}
+
+/* 「会場」タイトル */
+.section4-venue h2 {
+  margin-top: 15px; /* ✅ 上に少し余白追加 */
+  margin-left: 10px;
+  margin-bottom: 5px;
+  font-weight: bold;
+  font-size: clamp(1.2rem, 2vw, 1.6rem);
+  white-space: nowrap;
+}
+
+/* グラデーション文字リンク */
+.section4-venue .venue-left a {
+  display: inline-block;
+  font-size: clamp(1.4rem, 2.2vw, 2rem);
+  font-weight: bold;
+  text-decoration: underline;
+  text-decoration-color: rgba(0, 0, 0, 0.3);
+  white-space: nowrap;
+  color: transparent;
+  background: linear-gradient(
+    270deg,
+    #000000 0%,
+    #000000 64%,
+    #8adcff 65%,
+    #8adcff 83%,
+    #ffffff 82%,
+    #ffffff 90%,
+    #000000 88%,
+    #000000 100%
+  );
+  background-size: 400% 400%;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: textGradientFlow 10s ease-in-out infinite;
+  margin-left: 20px;
+}
+
+/* グラデアニメ */
+@keyframes textGradientFlow {
+  0% { background-position: 0% 100%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 30%; }
+}
+
+/* アクセス説明 */
+.section4-venue .station-access {
+  margin-top: 10px;
+  padding-left: 1.2em;
+  word-break: keep-all;
+}
+
+.station-access p {
+  margin: 10px 0;
+  margin-left: 5px;
+  line-height: 1.5;
+}
+
+/* 右側：Googleマップ */
+.section4-venue .venue-right {
+  flex: 1;
+  min-width: 300px;
+  display: flex;
+  align-items: stretch;
+}
+
+.section4-venue .venue-right iframe {
+  width: 100%;
+  height: 260px; /* ✅ PC用の高さに固定（左と揃う） */
+  border: none;
+  display: block;
+  border-radius: 10px;
+}
+
+/* 📱 スマホ：縦並び */
+@media (max-width: 768px) {
+  .section4-venue .venue-wrapper {
+    flex-direction: column;
     align-items: center;
-    gap: 20px;
-    }
-    .section3-day .date-left {
-    flex: 1;
-    min-width: 220px;
-    }
-    .section3-day .date-left p {
-    margin: 10px 0;
-    line-height: 1.5;
-    }
-    .section3-day .date-right {
-    flex: 0 0 auto;
-    background-color: #c8fff8;
-    border-radius: 12px;
-    padding: 0.5vh 10vh;
     text-align: center;
-    }
-    .section3-day .date-right h1 {
-    font-size: 2em;
-    margin: 0;
-    }
+  }
 
-    /* -------------------- section4-venue -------------------- */
-    .section4-venue {
-    padding: 20px;
+  .section4-venue .venue-left {
+    align-items: center;
+    justify-content: flex-start;
+  }
+
+  .section4-venue h2 {
     margin-top: 10px;
-    margin-bottom: 10px;
-    }
-    .section4-venue .venue-wrapper {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 20px;
-    }
-    .section4-venue .venue-left {
-    flex: 1;
-    min-width: 220px;
-    }
-    .section4-venue h2 {
-    margin-top: 0;
-    margin-left: 10px;
-    font-weight: bold;
-    }
-    .section4-venue .venue-left a {
-    margin-left: 20px;
-    font-size: 2em;
-    color: #000;
-    text-decoration: underline;
-    font-weight: bold;
-    }
-    .section4-venue .station-access {
-    margin-top: 10px;
-    padding-left: 1.2em;
-    }
-    .station-access p {
-    margin: 10px 0;
-    margin-left: 5px;
-    line-height: 1.5;
-    }
+  }
 
-    .section4-venue .venue-right {
-    flex: 1;
-    min-width: 280px;
-    }
-    .gradient-text {
-    max-width: 110%;
-    background: linear-gradient(
-      270deg,
-      #000000 0%,
-      #000000 64%,
-      #8adcff 65%,
-      #8adcff 83%,
-      #ffffff 82%,
-      #ffffff 90%,
-      #000000 88%,
-      #000000 100%
-    );
-    background-size: 400% 400%;
-    background-clip: text;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    animation: textGradientFlow 10s ease-in-out infinite;
-    display: inline-block;
-    }
-
-    @keyframes textGradientFlow {
-      0% {
-        background-position: 0% 100%;
-      }
-      50% {
-        background-position: 100% 50%;
-      }
-      100% {
-        background-position: 0% 30%;
-      }
-    }
+  .section4-venue .venue-right iframe {
+    width: 100%;
+    height: 250px;
+  }
+}
 
 
     /* -------------------- section5-shousai -------------------- */
