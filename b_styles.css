@@ -948,37 +948,61 @@ h2 {
 }
 
 /* ================================
-🎭 ギャラリー（2×2固定）※画像切らない版
+🎭 ギャラリー（PC・スマホ統一の完全版）
+   - 2×2固定
+   - 画像の縦横比バラバラでも崩れない
+   - 画像は枠の「長い方」に合わせて縮む（切れない）
+   - スライダーと同じ見た目
 ================================ */
 .college-gallery {
   display: grid;
-  grid-template-columns: repeat(2, 1fr); /* ← 常に2列固定 */
+  grid-template-columns: repeat(2, 1fr);
   gap: 25px;
   max-width: 900px;
   margin: 40px auto;
 }
 
+/* ▼ 各カードの親要素 */
 .photo-item {
   display: flex;
   flex-direction: column;
   align-items: center;
-}
-
-.photo-item img {
   width: 100%;
-  height: auto;             /* ← 高さを自動にする（比率維持） */
-  object-fit: contain;      /* ← 画像を切らずにそのまま表示 */
-  border-radius: 12px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  background-color: #fff;   /* ← 背景白（余白が出る場合のため） */
 }
 
+/* ▼ 枠（PC・スマホ共通で使える最適形） */
+.gallery-frame {
+  width: 100%;
+  aspect-ratio: 16 / 9;     /* ★ スマホに最適：縦横バランスが良い正方形 */
+  background-color: transparent;
+  border-radius: 20px;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.15);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;         /* ★ 枠外の画像がはみ出さないように */
+}
+
+/* ▼ 画像：縦横どちらが長くても「枠の中に縮む」設定（最強） */
+.gallery-frame img {
+  max-width: 100%;          /* 横長画像はこれで横が枠に合う */
+  max-height: 100%;         /* 縦長画像はこれで縦が枠に合う */
+  width: auto;
+  height: auto;
+  object-fit: contain;       /* 切れない・収まる */
+  background-color: transparent;
+  display: block;
+  object-position: center;
+}
+
+/* ▼ キャプション */
 .photo-caption {
   margin-top: 8px;
   font-size: 0.95em;
-  color: #555;
+  color: #333;
   text-align: center;
 }
+
 
 /* ================================
 🗂 タブ切替
