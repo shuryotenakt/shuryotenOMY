@@ -139,7 +139,7 @@
 
     <!-- 作業風景ギャラリー -->
 
-    <div class="college-gallery">
+    <!-- <div class="college-gallery">
         <div class="photo-item">
             <img src="img/sample.png" alt="舞台発表">
             <div class="photo-caption">舞台発表</div>
@@ -156,10 +156,10 @@
             <img src="img/sample4.png" alt="演技リハーサル">
             <div class="photo-caption">演技リハーサル</div>
         </div>
-    </div>
+    </div> -->
 
     <!-- タブ切替メッセージ -->
-    <div class="pa-tabs">
+    <!-- <div class="pa-tabs">
         <div class="tab-buttons">
             <button  onclick="openTab('teacher')">先生コメント</button>
             <button  onclick="openTab('student')">学生コメント</button>
@@ -180,226 +180,249 @@
                 ・チーム制作・舞台制作プロジェクト</p>
         </div>
     </div>
-</section>
+</section> -->
 
 <section id="manga-college" class="section8-manga">
   <!-- マンガイラストカレッジ用情報 -->
   <h2>マンガ・イラストカレッジ</h2>
   
-    <!-- 作品スライダー -->
-    <div class="img-slider-main">
-        <div class="img-slider-custom">
+  <!-- 作品スライダー -->
+  <div class="img-slider-main">
+      <div class="img-slider-custom">
         <div class="manga-slider-track">
             <div class="manga-slide">
-            <img src="img/sample.png" alt="イラスト作品1">
+              <img src="img/sample.png" alt="イラスト作品1">
             </div>
             <div class="manga-slide">
-            <img src="img/sample2.png" alt="イラスト作品2">
+              <img src="img/sample2.png" alt="イラスト作品2">
             </div>
             <div class="manga-slide">
-            <img src="img/sample3.png" alt="イラスト作品3">
+              <img src="img/sample3.png" alt="イラスト作品3">
             </div>
         </div>
         <button class="manga-arrow manga-prev">&#10094;</button>
         <button class="manga-arrow manga-next">&#10095;</button>
-        </div>
-        
-        <!-- スライダー下のドットインジケーター -->
-        <div class="manga-dots"></div>
-    </div>
-    </section>
+      </div>
+      
+      <!-- スライダー下のドットインジケーター -->
+      <div class="manga-dots"></div>
+  </div>
 
+  <!-- ギャラリー（2×2固定） -->
+  <div class="college-gallery">
+      <div class="photo-item">
+          <img src="img/sample.png" alt="舞台発表">
+          <div class="photo-caption">舞台発表</div>
+      </div>
+      <div class="photo-item">
+          <img src="img/sample2.png" alt="声優レッスン">
+          <div class="photo-caption">声優レッスン</div>
+      </div>
+      <div class="photo-item">
+          <img src="img/sample3.png" alt="ダンス練習">
+          <div class="photo-caption">ダンス練習</div>
+      </div>
+      <div class="photo-item">
+          <img src="img/sample4.png" alt="演技リハーサル">
+          <div class="photo-caption">演技リハーサル</div>
+      </div>
+  </div>
 
-    <!-- ギャラリー -->
+  <!-- タブ切替（マンガ専用ID） -->
+  <div class="pa-tabs">
+      <div class="tab-buttons">
+          <button onclick="openTab('teacher-manga')">先生コメント</button>
+          <button onclick="openTab('student-manga')">学生コメント</button>
+          <button onclick="openTab('activities-manga')">今回の意気込み</button>
+      </div>
 
-    <div class="college-gallery">
-        <div class="photo-item">
-            <img src="img/sample.png" alt="舞台発表">
-            <div class="photo-caption">舞台発表</div>
-        </div>
-        <div class="photo-item">
-            <img src="img/sample2.png" alt="声優レッスン">
-            <div class="photo-caption">声優レッスン</div>
-        </div>
-        <div class="photo-item">
-            <img src="img/sample3.png" alt="ダンス練習">
-            <div class="photo-caption">ダンス練習</div>
-        </div>
-        <div class="photo-item">
-            <img src="img/sample4.png" alt="演技リハーサル">
-            <div class="photo-caption">演技リハーサル</div>
-        </div>
-    </div>
+      <div class="tab-content" id="teacher-manga">
+          <p>
+            「表現とは“心を動かす力”です。テクニックだけでなく、あなた自身の魅力を最大限に引き出すことが大切。
+            挑戦し続けることで、必ずあなたの“声”や“演技”が誰かの心に届く日が来ます。」— 講師一同
+          </p>
+      </div>
 
-    <!-- タブ切替 -->
-    <div class="pa-tabs">
-        <div class="tab-buttons">
-            <button  onclick="openTab('teacher')">先生コメント</button>
-            <button  onclick="openTab('student')">学生コメント</button>
-            <button  onclick="openTab('activities')">今回の意気込み</button>
-        </div>
-        <div class="tab-content" id="teacher">
-            <p>「表現とは“心を動かす力”です。テクニックだけでなく、あなた自身の魅力を最大限に引き出すことが大切。挑戦し続けることで、必ずあなたの“声”や“演技”が誰かの心に届く日が来ます。」— 講師一同</p>
-        </div>
-        <div class="tab-content" id="student" style="display:none;">
-            <p>「最初は緊張の連続でしたが、今ではステージが私の居場所になりました。」<br>
-                「失敗もたくさん経験しました。でも仲間と支え合って成長できたことが何よりの宝物です。」<br>
-                「夢を追うことの大変さと楽しさ、両方をこの学校で知ることができました！」</p>
-        </div>
-        <div class="tab-content" id="activities" style="display:none;">
-            <p>・演技レッスン、ダンスレッスン、声優演習<br>
-                ・舞台公演・発表会への参加<br>
-                ・ワークショップ・外部講師による特別授業<br>
-                ・チーム制作・舞台制作プロジェクト</p>
-        </div>
-    </div>
-  
-</section>
-<section>
-  <h2>ゲームカレッジ</h2>
-    
-    <!-- 作品スライダー -->
-    <div class="img-slider-main">
-        <div class="img-slider-custom">
-        <div class="manga-slider-track">
-            <div class="manga-slide">
-            <img src="game_back1.jpg" alt="イラスト作品1">
-            </div>
-            <div class="manga-slide">
-            <img src="img/sample2.png" alt="イラスト作品2">
-            </div>
-            <div class="manga-slide">
-            <img src="img/sample3.png" alt="イラスト作品3">
-            </div>
-            <div class="manga-slide">
-            <img src="img/sample3.png" alt="イラスト作品3">
-            </div>
-        </div>
-        <button class="manga-arrow manga-prev">&#10094;</button>
-        <button class="manga-arrow manga-next">&#10095;</button>
-        </div>
-        
-        <!-- スライダー下のドットインジケーター -->
-        <div class="manga-dots"></div>
-    </section>
+      <div class="tab-content" id="student-manga" style="display:none;">
+          <p>
+            「最初は緊張の連続でしたが、今ではステージが私の居場所になりました。」<br>
+            「失敗もたくさん経験しました。でも仲間と支え合って成長できたことが何よりの宝物です。」<br>
+            「夢を追うことの大変さと楽しさ、両方をこの学校で知ることができました！」
+          </p>
+      </div>
 
+      <div class="tab-content" id="activities-manga" style="display:none;">
+          <p>
+            ・演技レッスン、ダンスレッスン、声優演習<br>
+            ・舞台公演・発表会への参加<br>
+            ・ワークショップ・外部講師による特別授業<br>
+            ・チーム制作・舞台制作プロジェクト
+          </p>
+      </div>
+  </div>
 
-    <!-- ギャラリー -->
-
-    <div class="college-gallery">
-        <div class="photo-item">
-            <img src="img/sample.png" alt="舞台発表">
-            <div class="photo-caption">舞台発表</div>
-        </div>
-        <div class="photo-item">
-            <img src="img/sample2.png" alt="声優レッスン">
-            <div class="photo-caption">声優レッスン</div>
-        </div>
-        <div class="photo-item">
-            <img src="img/sample3.png" alt="ダンス練習">
-            <div class="photo-caption">ダンス練習</div>
-        </div>
-        <div class="photo-item">
-            <img src="img/sample4.png" alt="演技リハーサル">
-            <div class="photo-caption">演技リハーサル</div>
-        </div>
-    </div>
-
-    <!-- タブ切替 -->
-    <div class="pa-tabs">
-        <div class="tab-buttons">
-            <button  onclick="openTab('teacher')">先生コメント</button>
-            <button  onclick="openTab('student')">学生コメント</button>
-            <button  onclick="openTab('activities')">今回の意気込み</button>
-        </div>
-        <div class="tab-content" id="teacher">
-            <p>「表現とは“心を動かす力”です。テクニックだけでなく、あなた自身の魅力を最大限に引き出すことが大切。挑戦し続けることで、必ずあなたの“声”や“演技”が誰かの心に届く日が来ます。」— 講師一同</p>
-        </div>
-        <div class="tab-content" id="student" style="display:none;">
-            <p>「最初は緊張の連続でしたが、今ではステージが私の居場所になりました。」<br>
-                「失敗もたくさん経験しました。でも仲間と支え合って成長できたことが何よりの宝物です。」<br>
-                「夢を追うことの大変さと楽しさ、両方をこの学校で知ることができました！」</p>
-        </div>
-        <div class="tab-content" id="activities" style="display:none;">
-            <p>・演技レッスン、ダンスレッスン、声優演習<br>
-                ・舞台公演・発表会への参加<br>
-                ・ワークショップ・外部講師による特別授業<br>
-                ・チーム制作・舞台制作プロジェクト</p>
-        </div>
-    </div>
 </section>
 
 <section id="game-college" class="section9-game">
-  <!--ゲームカレッジ-->
+  <h2>ゲームカレッジ</h2>
+    
+  <!-- 作品スライダー -->
+  <div class="img-slider-main">
+      <div class="img-slider-custom">
+        <div class="manga-slider-track">
+            <div class="manga-slide">
+              <img src="game_back1.jpg" alt="ゲーム作品1">
+            </div>
+            <div class="manga-slide">
+              <img src="img/sample2.png" alt="ゲーム作品2">
+            </div>
+            <div class="manga-slide">
+              <img src="img/sample3.png" alt="ゲーム作品3">
+            </div>
+            <div class="manga-slide">
+              <img src="img/sample3.png" alt="ゲーム作品4">
+            </div>
+        </div>
+        <button class="manga-arrow manga-prev">&#10094;</button>
+        <button class="manga-arrow manga-next">&#10095;</button>
+      </div>
+
+      <!-- スライダー下のドットインジケーター -->
+      <div class="manga-dots"></div>
+  </div>
+
+  <!-- ギャラリー -->
+  <div class="college-gallery">
+      <div class="photo-item">
+          <img src="img/sample.png" alt="制作風景1">
+          <div class="photo-caption">制作風景1</div>
+      </div>
+      <div class="photo-item">
+          <img src="img/sample2.png" alt="制作風景2">
+          <div class="photo-caption">制作風景2</div>
+      </div>
+      <div class="photo-item">
+          <img src="img/sample3.png" alt="制作風景3">
+          <div class="photo-caption">制作風景3</div>
+      </div>
+      <div class="photo-item">
+          <img src="img/sample4.png" alt="制作風景4">
+          <div class="photo-caption">制作風景4</div>
+      </div>
+  </div>
+
+  <!-- タブ切替（ゲーム専用ID） -->
+  <div class="pa-tabs">
+      <div class="tab-buttons">
+          <button onclick="openTab('teacher-game')">先生コメント</button>
+          <button onclick="openTab('student-game')">学生コメント</button>
+          <button onclick="openTab('activities-game')">今回の意気込み</button>
+      </div>
+
+      <div class="tab-content" id="teacher-game">
+          <p>
+            「ゲーム制作は“遊ぶ楽しさ”を形にする仕事です。<br>
+            発想力・技術力・チームワークが大きな力になります。」
+          </p>
+      </div>
+
+      <div class="tab-content" id="student-game" style="display:none;">
+          <p>
+            「最初は思った通り動かないことばかりでしたが、<br>
+            仲間と協力して完成させた瞬間の達成感は忘れられません。」<br><br>
+            「自分の作ったゲームで誰かが笑ってくれることが最高です。」
+          </p>
+      </div>
+
+      <div class="tab-content" id="activities-game" style="display:none;">
+          <p>
+            ・Unity / Unreal Engine での制作<br>
+            ・プログラム演習（C# / C++）<br>
+            ・チーム制作プロジェクト<br>
+            ・企画書制作 / プレゼンテーション
+          </p>
+      </div>
+  </div>
 </section>
 
 <section id="pafo-college" class="section10-pafo">
-    <h2>パフォーミングアーツカレッジ</h2>
+  <h2>パフォーミングアーツカレッジ</h2>
 
-    <!-- 作品スライダー -->
-    <div class="img-slider-main">
-        <div class="img-slider-custom">
-            <div class="manga-slider-track">
-                <div class="manga-slide">
-                    <img src="img/sample.png" alt="舞台作品1">
-                </div>
-                <div class="manga-slide">
-                    <img src="img/sample2.png" alt="舞台作品2">
-                </div>
-                <div class="manga-slide">
-                    <img src="img/sample3.png" alt="舞台作品3">
-                </div>
-            </div>
-            <button class="manga-arrow manga-prev">&#10094;</button>
-            <button class="manga-arrow manga-next">&#10095;</button>
-        </div>
+  <!-- 作品スライダー -->
+  <div class="img-slider-main">
+      <div class="img-slider-custom">
+          <div class="manga-slider-track">
+              <div class="manga-slide">
+                  <img src="img/sample.png" alt="舞台作品1">
+              </div>
+              <div class="manga-slide">
+                  <img src="img/sample2.png" alt="舞台作品2">
+              </div>
+              <div class="manga-slide">
+                  <img src="img/sample3.png" alt="舞台作品3">
+              </div>
+          </div>
+          <button class="manga-arrow manga-prev">&#10094;</button>
+          <button class="manga-arrow manga-next">&#10095;</button>
+      </div>
 
-        <!-- スライダー下のドットインジケーター -->
-        <div class="manga-dots"></div>
-    </div>
+      <!-- スライダー下のドットインジケーター -->
+      <div class="manga-dots"></div>
+  </div>
 
-    <!-- ギャラリー -->
-    <div class="college-gallery">
-        <div class="photo-item">
-            <img src="img/sample.png" alt="舞台発表">
-            <div class="photo-caption">舞台発表</div>
-        </div>
-        <div class="photo-item">
-            <img src="img/sample2.png" alt="声優レッスン">
-            <div class="photo-caption">声優レッスン</div>
-        </div>
-        <div class="photo-item">
-            <img src="img/sample3.png" alt="ダンス練習">
-            <div class="photo-caption">ダンス練習</div>
-        </div>
-        <div class="photo-item">
-            <img src="img/sample4.png" alt="演技リハーサル">
-            <div class="photo-caption">演技リハーサル</div>
-        </div>
-    </div>
+  <!-- ギャラリー -->
+  <div class="college-gallery">
+      <div class="photo-item">
+          <img src="img/sample.png" alt="舞台発表">
+          <div class="photo-caption">舞台発表</div>
+      </div>
+      <div class="photo-item">
+          <img src="img/sample2.png" alt="声優レッスン">
+          <div class="photo-caption">声優レッスン</div>
+      </div>
+      <div class="photo-item">
+          <img src="img/sample3.png" alt="ダンス練習">
+          <div class="photo-caption">ダンス練習</div>
+      </div>
+      <div class="photo-item">
+          <img src="img/sample4.png" alt="演技リハーサル">
+          <div class="photo-caption">演技リハーサル</div>
+      </div>
+  </div>
 
-    <!-- タブ切替 -->
-    <div class="pa-tabs">
-        <div class="tab-buttons">
-            <button onclick="openTab('teacher')">先生コメント</button>
-            <button onclick="openTab('student')">学生コメント</button>
-            <button onclick="openTab('activities')">今回の意気込み</button>
-        </div>
-        <div class="tab-content" id="teacher">
-            <p>「表現とは“心を動かす力”です。テクニックだけでなく、あなた自身の魅力を最大限に引き出すことが大切。挑戦し続けることで、必ずあなたの“声”や“演技”が誰かの心に届く日が来ます。」— 講師一同</p>
-        </div>
-        <div class="tab-content" id="student" style="display:none;">
-            <p>「最初は緊張の連続でしたが、今ではステージが私の居場所になりました。」<br>
-              「失敗もたくさん経験しました。でも仲間と支え合って成長できたことが何よりの宝物です。」<br>
-              「夢を追うことの大変さと楽しさ、両方をこの学校で知ることができました！」</p>
-        </div>
-        <div class="tab-content" id="activities" style="display:none;">
-            <p>・演技レッスン、ダンスレッスン、声優演習<br>
-              ・舞台公演・発表会への参加<br>
-              ・ワークショップ・外部講師による特別授業<br>
-              ・チーム制作・舞台制作プロジェクト</p>
-        </div>
-    </div>
+  <!-- タブ切替（パフォ専用ID） -->
+  <div class="pa-tabs">
+      <div class="tab-buttons">
+          <button onclick="openTab('teacher-pafo')">先生コメント</button>
+          <button onclick="openTab('student-pafo')">学生コメント</button>
+          <button onclick="openTab('activities-pafo')">今回の意気込み</button>
+      </div>
+
+      <div class="tab-content" id="teacher-pafo">
+          <p>
+            「表現とは“心を動かす力”です。テクニックだけでなく、あなた自身の魅力を最大限に引き出すことが大切。<br>
+            挑戦し続けることで、必ずあなたの“声”や“演技”が誰かの心に届く日が来ます。」— 講師一同
+          </p>
+      </div>
+
+      <div class="tab-content" id="student-pafo" style="display:none;">
+          <p>
+            「最初は緊張の連続でしたが、今ではステージが私の居場所になりました。」<br>
+            「失敗もたくさん経験しました。でも仲間と支え合って成長できたことが何よりの宝物です。」<br>
+            「夢を追うことの大変さと楽しさ、両方をこの学校で知ることができました！」
+          </p>
+      </div>
+
+      <div class="tab-content" id="activities-pafo" style="display:none;">
+          <p>
+            ・演技レッスン、ダンスレッスン、声優演習<br>
+            ・舞台公演・発表会への参加<br>
+            ・ワークショップ・外部講師による特別授業<br>
+            ・チーム制作・舞台制作プロジェクト
+          </p>
+      </div>
+  </div>
+
 </section>
 
 <section id="movie-college" class="section11-video">
