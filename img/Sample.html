@@ -285,9 +285,7 @@
     <p>作品3の紹介テキスト</p>
   </div>
 
-
-
-  <script>
+    <script>
     const track = document.querySelector('.slider-track');
     const slides = document.querySelectorAll('.slide');
     const prev = document.querySelector('.arrow.left');
@@ -315,65 +313,131 @@
   </script>
 </section>
 
-<section id="performing-arts" class="section10-pafo">
-    <h2>パフォーミングアーツカレッジ</h2>
-    <p>「夢を、舞台に。」— 表現の力で未来を切り拓く</p>
+<section id="pafo-college" class="section10-pafo">
+  <h2>パフォーミングアーツカレッジ</h2>
 
-    <!-- スライダー -->
-    <div class="slider-container">
-        <div class="slider" id="slider">
-            <img src="img/DESPICABLE ME 4.jpg" alt="舞台の様子">
-            <img src="img/DESPICABLE ME 4.jpg"" alt="ダンスレッスン">
-            <img src="img/DESPICABLE ME 4.jpg"" alt="演技クラス">
-            <img src="img/DESPICABLE ME 4.jpg"" alt="音楽ステージ">
+  <!-- スライダー -->
+  <div class="pafo-slider-wrapper">
+    <div class="pafo-slider-container">
+      <div class="pafo-slider-track">
+        <div class="pafo-slide">
+          <img src="img/DESPICABLE ME 4.jpg" alt="舞台発表">
         </div>
-        <div class="btn-img prev-img" onclick="moveSlide(-1)">＜</div>
-        <div class="btn-img next-img" onclick="moveSlide(1)">＞</div>
+        <div class="pafo-slide">
+          <img src="img/DESPICABLE ME 4.jpg" alt="声優レッスン">
+        </div>
+        <div class="pafo-slide">
+          <img src="img/DESPICABLE ME 4.jpg" alt="ダンス練習">
+        </div>
+        <div class="pafo-slide">
+          <img src="img/DESPICABLE ME 4.jpg" alt="演技クラス">
+        </div>
+      </div>
+      <button class="pafo-arrow pafo-prev">&#10094;</button>
+      <button class="pafo-arrow pafo-next">&#10095;</button>
     </div>
 
-    <!-- ギャラリー -->
-    <div class="photo-gallery">
-        <div class="photo-item">
-            <img src="img/DESPICABLE ME 4.jpg"" alt="舞台発表">
-            <div class="photo-caption">舞台発表</div>
-        </div>
-        <div class="photo-item">
-            <img src="img/DESPICABLE ME 4.jpg"" alt="声優レッスン">
-            <div class="photo-caption">声優レッスン</div>
-        </div>
-        <div class="photo-item">
-            <img src="img/DESPICABLE ME 4.jpg"" alt="ダンス練習">
-            <div class="photo-caption">ダンス練習</div>
-        </div>
-        <div class="photo-item">
-            <img src="img/DESPICABLE ME 4.jpg"" alt="演技リハーサル">
-            <div class="photo-caption">演技リハーサル</div>
-        </div>
+    <!-- ドットインジケーター -->
+    <div class="pafo-dots">
+      <span class="pafo-dot active" data-index="0"></span>
+      <span class="pafo-dot" data-index="1"></span>
+      <span class="pafo-dot" data-index="2"></span>
+      <span class="pafo-dot" data-index="3"></span>
+    </div>
+  </div>
+
+  <!-- メッセージボックス -->
+  <div class="pafo-message-box glass-box">
+    <p class="pafo-message-title">Add Text</p>
+    <p>「夢を、舞台に。」― 表現の力で未来を切り拓く。<br>
+    学生たちは歌・ダンス・演技など、さまざまな表現に挑戦し、観客の心を動かすパフォーマンスを追求しています。</p>
+  </div>
+
+  <!-- 作品紹介カード -->
+  <div class="pafo-works-grid">
+    <div class="pafo-work-card">
+      <div class="pafo-work-image">
+        <img src="img/DESPICABLE ME 4.jpg" alt="舞台作品A">
+      </div>
+      <div class="pafo-work-info glass-box">
+        <h3>作品タイトル1：舞台「星の約束」</h3>
+        <p>演技・照明・音響まで学生が一丸となって作り上げた感動の舞台作品。</p>
+      </div>
     </div>
 
-    <!-- タブ切替 -->
-    <div class="pa-tabs">
-        <div class="tab-buttons">
-            <button onclick="openTab('teacher')">先生のメッセージ</button>
-            <button onclick="openTab('student')">学生の声</button>
-            <button onclick="openTab('activities')">活動内容</button>
-        </div>
-        <div class="tab-content" id="teacher">
-            <p>「表現とは“心を動かす力”です。テクニックだけでなく、あなた自身の魅力を最大限に引き出すことが大切。挑戦し続けることで、必ずあなたの“声”や“演技”が誰かの心に届く日が来ます。」— 講師一同</p>
-        </div>
-        <div class="tab-content" id="student" style="display:none;">
-            <p>「最初は緊張の連続でしたが、今ではステージが私の居場所になりました。」<br>
-                「失敗もたくさん経験しました。でも仲間と支え合って成長できたことが何よりの宝物です。」<br>
-                「夢を追うことの大変さと楽しさ、両方をこの学校で知ることができました！」</p>
-        </div>
-        <div class="tab-content" id="activities" style="display:none;">
-            <p>・演技レッスン、ダンスレッスン、声優演習<br>
-                ・舞台公演・発表会への参加<br>
-                ・ワークショップ・外部講師による特別授業<br>
-                ・チーム制作・舞台制作プロジェクト</p>
-        </div>
+    <div class="pafo-work-card">
+      <div class="pafo-work-image">
+        <img src="img/DESPICABLE ME 4.jpg" alt="作品B">
+      </div>
+      <div class="pafo-work-info glass-box">
+        <h3>作品タイトル2：ダンスショー「Rhythm of Life」</h3>
+        <p>仲間との息の合ったダンスパフォーマンス。会場を熱気で包み込みました。</p>
+      </div>
     </div>
+
+    <div class="pafo-work-card">
+      <div class="pafo-work-image">
+        <img src="img/DESPICABLE ME 4.jpg" alt="作品C">
+      </div>
+      <div class="pafo-work-info glass-box">
+        <h3>作品タイトル3：声優演技「音の物語」</h3>
+        <p>声だけで感情を伝える難しさに挑戦。表現の深さを追求した作品です。</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- 担任コメント -->
+  <div class="pafo-teacher-comment glass-box">
+    <p class="pafo-teacher-name">担当講師：舞台花子</p>
+    <p>パフォーミングアーツカレッジの学生たちは、舞台・声優・ダンスなどの表現を通じて、
+    自分自身を磨き、観る人の心に響く作品を生み出しています。<br>
+    この修了展が次のステージへの第一歩になることを願っています。</p>
+  </div>
+
+  <!-- スライダー動作スクリプト -->
+  <script>
+    (function() {
+      const track = document.querySelector('.pafo-slider-track');
+      const slides = document.querySelectorAll('.pafo-slide');
+      const prevBtn = document.querySelector('.pafo-prev');
+      const nextBtn = document.querySelector('.pafo-next');
+      const dots = document.querySelectorAll('.pafo-dot');
+      let currentIndex = 0;
+      const totalSlides = slides.length;
+
+      function updateSlider() {
+        track.style.transform = `translateX(-${currentIndex * 100}%)`;
+        dots.forEach((dot, idx) => {
+          dot.classList.toggle('active', idx === currentIndex);
+        });
+      }
+
+      function goToNext() {
+        currentIndex = (currentIndex + 1) % totalSlides;
+        updateSlider();
+      }
+
+      function goToPrev() {
+        currentIndex = (currentIndex - 1 + totalSlides) % totalSlides;
+        updateSlider();
+      }
+
+      nextBtn.addEventListener('click', goToNext);
+      prevBtn.addEventListener('click', goToPrev);
+
+      dots.forEach(dot => {
+        dot.addEventListener('click', function() {
+          currentIndex = parseInt(this.dataset.index);
+          updateSlider();
+        });
+      });
+
+      // 自動スライド
+      setInterval(goToNext, 5000);
+    })();
+  </script>
 </section>
+
 
 <section id="movie-college" class="section11-video">
   <!-- 動画カレッジ用情報:contentReference[oaicite:11]{index=11} -->
