@@ -345,22 +345,35 @@
 
 <section id="pafo-college" class="section10-pafo">
     <h2>パフォーミングアーツカレッジ</h2>
-    <p>「夢を、舞台に。」— 表現の力で未来を切り拓く</p>
 
-    <!-- スライダー -->
-    <div class="slider-container">
-        <div class="slider" id="slider">
-            <img src="img/sample.png" alt="舞台の様子">
-            <img src="img/sample2.png" alt="ダンスレッスン">
-            <img src="img/sample3.png" alt="演技クラス">
-            <img src="img/sample4.png" alt="音楽ステージ">
+    <!-- 作品スライダー -->
+    <div class="img-slider-main">
+        <div class="img-slider-custom">
+            <div class="manga-slider-track">
+                <div class="manga-slide">
+                    <img src="img/sample.png" alt="舞台作品1">
+                </div>
+                <div class="manga-slide">
+                    <img src="img/sample2.png" alt="舞台作品2">
+                </div>
+                <div class="manga-slide">
+                    <img src="img/sample3.png" alt="舞台作品3">
+                </div>
+            </div>
+            <button class="manga-arrow manga-prev">&#10094;</button>
+            <button class="manga-arrow manga-next">&#10095;</button>
         </div>
-        <div class="btn-img prev-img" onclick="moveSlide(-1)">＜</div>
-        <div class="btn-img next-img" onclick="moveSlide(1)">＞</div>
+
+        <!-- スライダー下のドットインジケーター -->
+        <div class="manga-dots">
+            <span class="manga-dot active" data-index="0"></span>
+            <span class="manga-dot" data-index="1"></span>
+            <span class="manga-dot" data-index="2"></span>
+        </div>
     </div>
 
     <!-- ギャラリー -->
-    <div class="photo-gallery">
+    <div class="college-gallery">
         <div class="photo-item">
             <img src="img/sample.png" alt="舞台発表">
             <div class="photo-caption">舞台発表</div>
@@ -382,23 +395,23 @@
     <!-- タブ切替 -->
     <div class="pa-tabs">
         <div class="tab-buttons">
-            <button onclick="openTab('teacher')">先生のメッセージ</button>
-            <button onclick="openTab('student')">学生の声</button>
-            <button onclick="openTab('activities')">活動内容</button>
+            <button onclick="openTab('teacher')">先生コメント</button>
+            <button onclick="openTab('student')">学生コメント</button>
+            <button onclick="openTab('activities')">今回の意気込み</button>
         </div>
         <div class="tab-content" id="teacher">
             <p>「表現とは“心を動かす力”です。テクニックだけでなく、あなた自身の魅力を最大限に引き出すことが大切。挑戦し続けることで、必ずあなたの“声”や“演技”が誰かの心に届く日が来ます。」— 講師一同</p>
         </div>
         <div class="tab-content" id="student" style="display:none;">
             <p>「最初は緊張の連続でしたが、今ではステージが私の居場所になりました。」<br>
-                「失敗もたくさん経験しました。でも仲間と支え合って成長できたことが何よりの宝物です。」<br>
-                「夢を追うことの大変さと楽しさ、両方をこの学校で知ることができました！」</p>
+               「失敗もたくさん経験しました。でも仲間と支え合って成長できたことが何よりの宝物です。」<br>
+               「夢を追うことの大変さと楽しさ、両方をこの学校で知ることができました！」</p>
         </div>
         <div class="tab-content" id="activities" style="display:none;">
             <p>・演技レッスン、ダンスレッスン、声優演習<br>
-                ・舞台公演・発表会への参加<br>
-                ・ワークショップ・外部講師による特別授業<br>
-                ・チーム制作・舞台制作プロジェクト</p>
+               ・舞台公演・発表会への参加<br>
+               ・ワークショップ・外部講師による特別授業<br>
+               ・チーム制作・舞台制作プロジェクト</p>
         </div>
     </div>
 </section>
