@@ -492,39 +492,93 @@ header .right {
     margin: 5px 0;
     }
 
-    /* section7-jump */
-    .section7-jump {
-    padding: 20px;
-    text-align: center;
-    margin-top: 10px;
-    margin-bottom: 10px;
-    
-    }
-    .section7-jump ul {
-    list-style: none;
-    display:inline-block;
-    margin: 5px;
+/*---------------- section7-jump ---------------- */
+.section7-jump {
+  padding: 20px 0;
+  text-align: center;
+  margin: 20px auto;
+}
 
-    }
-    .section7-jump li {
+/* 全体中央揃え */
+.section7-jump nav {
+  display: flex;
+  justify-content: center;
+}
+
+/* PC：ゆったり配置の4列 */
+.section7-jump ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 50px;               /* PCのボタン間隔を広げる */
+  width: 80%;
+  max-width: 100%;       /* PCボタンが大きく見えるよう調整 */
+}
+
+/* ボタンデザイン（統一幅＋中央配置） */
+.section7-jump a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 100%;
+  height: 70px;            /* PCでゆったり大きめに */
+  padding: 0 10px;
+
+  background-color: #e9fffe;
+  border: 2px solid #e7ffd2;
+  border-radius: 12px;
+  text-decoration: none;
+
+  font-weight: bold;
+  font-size: 1rem;
+  color: #000;
+
+  white-space: nowrap;     /* ← 全体は改行させない（スマホでもPCでも） */
+  transition: background-color 0.2s ease;
+}
+
+/* =========================================
+📱 スマホ専用（768px以下）
+========================================= */
+@media (max-width: 768px) {
+
+  /* グリッド：2列×2行 */
+  .section7-jump ul {
+    grid-template-columns: repeat(2, 1fr);
+    width: 90%;
+    gap: 20px 30px;            /* ← ボタンの間隔を広くする */
+    margin: 0 auto;
+  }
+
+  /* ボタン本体 */
+  .section7-jump a {
+    height: 70px;              /* ← 高さ広めで見やすい */
+    font-size: 0.95rem;
+
+    padding: 5px 10px;
+    white-space: normal;       /* ← 改行 OK にする（必須） */
+    line-height: 1.2;          /* ← 2行でも綺麗に見える */
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+
+    /* 全ボタン同じ幅に */
+    width: 100%;
+  }
+
+  /* 「カレッジ」を2行目へ強制的に送る */
+  .section7-jump a span {
     display: inline-block;
-    margin: 10px;
-    }
-    .section7-jump a {
-      font-size: 14px;
-    display: inline-block;
-    padding: 10px 15px;
-    background-color: #e9fffe;
-    color: #000;
-    font-weight: bold;
-    text-decoration: none;
-    border-radius: 8px;
-    border: 2px solid #e7ffd2;
-    transition: background-color 0.2s ease;
-    }
-    .section7-jump a:hover {
-    background-color: #feddb7;
-    }
+    white-space: normal;
+  }
+
+}
 
 
 
