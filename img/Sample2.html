@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>総合学園ヒューマンアカデミー大宮校修了展 2025</title>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+JP&display=swap" rel="stylesheet">
+<style>
+/* ====== 共通スタイル ====== */
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'IBM Plex Sans JP', sans-serif;
+  background: linear-gradient(
+    90deg,
+    rgba(255, 199, 231, 0.76) 0%,
+    rgba(255, 215, 240, 0.7) 30%,
+    rgba(168, 232, 255, 0.797) 100%
+  );
+  background-size: 300% 300%;
+  animation: gradientShift 30s ease-in-out infinite;
+  overflow-x: hidden;
+}
+
+@keyframes gradientShift {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* ====== ヘッダー ====== */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1vh 5vw;
+  box-shadow: 0 4px 10px rgba(147,147,147,0.15);
+  border-radius: 20px;
+  background-color: rgba(255,240,245,0.7);
+  margin: 0 auto;
+  max-width: 100%;
+  position: relative;
+  z-index: 10;
+}
+
+header .left, header .center, header .right {
+  font-weight: bold;
+  font-size: 0.8em;
+  color: #000;
+}
+
+header .center { flex: 1; text-align: center; margin: 0 auto; }
+header .left, header .right { flex: 0 0 auto; }
+
+@media (max-width: 600px) {
+  header { flex-direction: row; padding: 10px 5vh; }
+  header .center { order: 1; }
+  header .left { order: 0; }
+  header .right { order: 2; }
+}
+
+/* ====== ガラスボックス ====== */
+.glass-box {
+  width: 90%;
+  padding: 20px;
+  margin: 20px auto;
+  background: rgba(255,255,255,0.15);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(255,255,255,0.587);
+  border-radius: 20px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.034);
+}
+
+/* ====== ナビゲーション ====== */
+.section1-nav nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  max-width: 280px;
+  align-items: center;
+}
+
+.section1-nav nav a {
+  display: inline-block;
+  width: 100%;
+  padding: 12px;
+  background-color: #ffffff81;
+  border: 1px solid #b7f0b5;
+  border-radius: 6px;
+  color: #000;
+  font-weight: bold;
+  text-decoration: none;
+  text-align: center;
+  transition: 0.2s;
+}
+
+.section1-nav nav a:hover { background-color: #ffcf94b5; }
+
+/* ====== セクション2背景 ====== */
+.section2-png { position: relative; height: 100vh; overflow: hidden; margin: 10px 0; }
+.section2-png .background-img { position: absolute; top:0; left:0; width:100%; height:100%; object-fit:cover; z-index:-1; }
+.section2-png .overlay {
+  position: absolute;
+  bottom:20px; right:40px;
+  font-size:6em; font-weight:bold; color:#fff;
+  text-shadow: -1px -1px 0 #000,1px -1px 0 #000,-1px 1px 0 #000,1px 1px 0 #000,2px 2px 8px rgba(0,0,0,1);
+}
+
+/* ====== 会場セクション ====== */
+.section4-venue .venue-wrapper { display: flex; flex-wrap: wrap; gap: 20px; }
+.section4-venue .venue-left { flex:1; min-width:220px; }
+.section4-venue .venue-right { flex:1; min-width:280px; }
+
+/* ====== タイムスケジュール ====== */
+.section6-schedule table { width:100%; border-collapse: collapse; }
+.section6-schedule th, .section6-schedule td { border:1px solid #000; padding:5px; text-align:center; }
+
+/* ====== マンガスライダー ====== */
+.manga-slider-container { position:relative; width:100%; height:450px; overflow:hidden; border-radius:20px; }
+.manga-slider-track { display:flex; height:100%; transition: transform 0.5s ease-in-out; }
+.manga-slide { min-width:100%; height:100%; flex-shrink:0; }
+.manga-slide img { width:100%; height:100%; object-fit:cover; }
+
+/* 矢印ボタン */
+.manga-arrow { position:absolute; top:50%; transform:translateY(-50%); background: rgba(255,255,255,0.85); border:none; font-size:28px; width:50px; height:50px; border-radius:50%; cursor:pointer; display:flex; align-items:center; justify-content:center; z-index:10; }
+.manga-prev { left:15px; } .manga-next { right:15px; }
+
+/* ドットインジケーター */
+.manga-dots { display:flex; justify-content:center; gap:12px; margin-top:20px; }
+.manga-dot { width:14px; height:14px; border-radius:50%; background: rgba(0,0,0,0.3); cursor:pointer; transition:0.3s; }
+.manga-dot.active { background:#ff69b4; width:16px; height:16px; }
+
+/* ====== レスポンシブ ====== */
+@media (max-width:768px) { .manga-slider-container{height:300px;} }
+@media (max-width:480px) { .manga-slider-container{height:250px;} }
+
+/* 他のセクションも必要に応じて追加可能 */
+</style>
+</head>
+<body>
+
+<header>
+  <div class="left">ヒューマンアカデミー株式会社</div>
+  <div class="center">大宮校修了展</div>
+  <div class="right">TEL:048-615-4386</div>
+</header>
+
+<section id="top" class="section1-nav glass-box">
+  <nav>
+    <ul>
+      <li><a href="#access">アクセス</a></li>
+      <li><a href="#schedule">スケジュール</a></li>
+      <li><a href="#key-bijuaru">キービジュアル</a></li>
+    </ul>
+  </nav>
+</section>
+
+<section class="section2-png">
+  <img src="img/sample4.png" alt="ビジュアル" class="background-img">
+  <div class="overlay">大宮校修了展</div>
+</section>
+
+<section id="access" class="section4-venue">
+  <div class="venue-wrapper">
+    <div class="venue-left glass-box">
+      <h2>会場情報</h2>
+      <p>ソニックシティホール</p>
+      <div class="station-access">
+        <p>JR大宮駅 西口より徒歩3分</p>
+      </div>
+    </div>
+    <div class="venue-right">
+      <iframe src="https://www.google.com/maps/embed?pb=!1m18!..." width="100%" height="250" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+    </div>
+  </div>
+</section>
+
+<section id="schedule" class="section6-schedule glass-box">
+  <h2>タイムスケジュール</h2>
+  <table>
+    <thead><tr><th>時間</th><th>内容</th></tr></thead>
+    <tbody>
+      <tr><td>10:00 - 10:30</td><td>開会式・挨拶</td></tr>
+      <tr><td>10:30 - 12:00</td><td>各カレッジ作品展示・パフォーマンス</td></tr>
+      <tr><td>12:00 - 13:00</td><td>休憩・交流タイム</td></tr>
+      <tr><td>13:00 - 15:30</td><td>各カレッジ作品展示・パフォーマンス続き</td></tr>
+      <tr><td>15:30 - 16:00</td><td>閉会式・挨拶</td></tr>
+    </tbody>
+  </table>
+</section>
+
+<section id="key-bijuaru" class="section7-jump">
+  <nav>
+    <ul>
+      <li><a href="#manga-college">マンガ・イラストカレッジ</a></li>
+      <li><a href="#game-college">ゲームカレッジ</a></li>
+      <li><a href="#pafo-college">パフォーミングアーツカレッジ</a></li>
+    </ul>
+  </nav>
+</section>
+
+<section id="manga-college" class="section8-manga glass-box">
+  <h2>マンガ・イラストカレッジ</h2>
+  <div class="manga-slider-wrapper">
+    <div class="manga-slider-container">
+      <div class="manga-slider-track">
+        <div class="manga-slide"><img src="img/sample1.png" alt=""></div>
+        <div class="manga-slide"><img src="img/sample2.png" alt=""></div>
+        <div class="manga-slide"><img src="img/sample3.png" alt=""></div>
+      </div>
+      <button class="manga-arrow manga-prev">&#10094;</button>
+      <button class="manga-arrow manga-next">&#10095;</button>
+    </div>
+    <div class="manga-dots">
+      <span class="manga-dot active" data-index="0"></span>
+      <span class="manga-dot" data-index="1"></span>
+      <span class="manga-dot" data-index="2"></span>
+    </div>
+  </div>
+</section>
+
+<script>
+/* --- マンガスライダー --- */
+const track = document.querySelector('.manga-slider-track');
+const slides = Array.from(track.children);
+const prevBtn = document.querySelector('.manga-prev');
+const nextBtn = document.querySelector('.manga-next');
+const dots = document.querySelectorAll('.manga-dot');
+let currentIndex = 0;
+
+function updateSlider() {
+  track.style.transform = `translateX(-${currentIndex*100}%)`;
+  dots.forEach(dot=>dot.classList.remove('active'));
+  dots[currentIndex].classList.add('active');
+}
+
+prevBtn.addEventListener('click', () => {
+  currentIndex = (currentIndex-1+slides.length)%slides.length;
+  updateSlider();
+});
+
+nextBtn.addEventListener('click', () => {
+  currentIndex = (currentIndex+1)%slides.length;
+  updateSlider();
+});
+
+dots.forEach(dot=>{
+  dot.addEventListener('click',()=>{ currentIndex = parseInt(dot.dataset.index); updateSlider(); });
+});
+</script>
+
+</body>
+</html>
