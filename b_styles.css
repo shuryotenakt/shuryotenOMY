@@ -825,7 +825,7 @@ h2 {
 }
 
 /* ================================
-🎨 作品スライダー (カレッジ共通)
+🎨 作品スライダー (カレッジ共通) — 画像切らずに統一
 ================================ */
 
 .img-slider-main {
@@ -839,31 +839,31 @@ h2 {
 .img-slider-custom {
   position: relative;
   width: 100%;
-  height: 50vh;
+  aspect-ratio: 16 / 9;      /* ★ 枠を16:9で統一 */
   overflow: hidden;
   border-radius: 20px;
   box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
-  margin: 0 auto;
+  background-color: #ffffff00;    /* ★ 縦長画像の左右余白が白で綺麗に */
 }
 
 .manga-slider-track {
   display: flex;
   width: 100%;
-  height: 100%;
+  height: 100%;             /* ★ 枠内に収まる */
   transition: transform 0.6s ease-in-out;
 }
 
 .manga-slide {
-  flex: 0 0 100%; /* ← 1枚あたり100%の幅 */
+  flex: 0 0 100%;
   height: 100%;
-  flex-shrink: 0;
 }
 
 .manga-slide img {
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  object-fit: contain;       /* ★ 絶対に切らない！（重要） */
   object-position: center;
+  background-color: #ffffff00;    /* ★ 余白が出ても自然に見える */
   display: block;
 }
 
@@ -891,12 +891,8 @@ h2 {
   transform: translateY(-50%) scale(1.1);
 }
 
-.manga-prev {
-  left: 15px;
-}
-.manga-next {
-  right: 15px;
-}
+.manga-prev { left: 15px; }
+.manga-next { right: 15px; }
 
 /* ドットインジケーター */
 .manga-dots {
@@ -926,14 +922,39 @@ h2 {
 }
 
 /* ================================
-🎭 ギャラリー
+📱 スマホ（画像そのまま・高さ自動）
 ================================ */
+@media (max-width: 768px) {
+  .img-slider-custom {
+    aspect-ratio: 16 / 9;  /* スマホも同じ比率でOK */
+  }
 
+  .manga-arrow {
+    width: 40px;
+    height: 40px;
+    font-size: 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .manga-arrow {
+    width: 35px;
+    height: 35px;
+    font-size: 18px;
+  }
+
+  .manga-prev { left: 10px; }
+  .manga-next { right: 10px; }
+}
+
+/* ================================
+🎭 ギャラリー（2×2固定）※画像切らない版
+================================ */
 .college-gallery {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 20px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* ← 常に2列固定 */
+  gap: 25px;
+  max-width: 900px;
   margin: 40px auto;
 }
 
@@ -944,11 +965,12 @@ h2 {
 }
 
 .photo-item img {
-  width: 300px;
-  height: 180px;
-  object-fit: cover;
+  width: 100%;
+  height: auto;             /* ← 高さを自動にする（比率維持） */
+  object-fit: contain;      /* ← 画像を切らずにそのまま表示 */
   border-radius: 12px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  background-color: #fff;   /* ← 背景白（余白が出る場合のため） */
 }
 
 .photo-caption {
