@@ -25,55 +25,77 @@
 }
 
 
-/* カレッジタイトル（文字の装飾は今まで通り） */
+/* =============================== */
+/*     カレッジタイトル（完全版）    */
+/* =============================== */
+
 .college-title {
   font-family: "Shippori Mincho", serif;
   font-weight: 700;
   font-size: 2rem;
-  letter-spacing: 2px;
   font-style: italic;
+  letter-spacing: 2px;
 
   text-align: center;
-  margin: 60px 0 40px;
-  position: relative;
+  margin: 60px auto 40px;
   padding: 20px 0;
 
   max-width: 95%;
-  margin-left: auto;
-  margin-right: auto;
   word-break: keep-all;
+  position: relative;
 }
 
-/* 画面幅いっぱいの横線（上） */
-.college-title::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100vw;              /* ← 画面幅ぴったり */
-  height: 2px;
-  background: #333;
-
-  transform: translateX(calc(-50vw + 50%));
-}
-
-/* 画面幅いっぱいの横線（下） */
+/* ▼ 上下の横線（共通デザイン＋アニメーション） */
+.college-title::before,
 .college-title::after {
   content: "";
   position: absolute;
-  bottom: 0;
   left: 0;
-  width: 100vw;              /* ← 画面幅ぴったり */
-  height: 2px;
-  background: #333;
+  max-width: 100%;
+  width: 120%;               /* ★ 横幅いっぱい（画面幅） */
+  height: 3px;                /* ★ 線の太さ（調整可） */
 
+  /* ▼ 流れるグラデーション（右→左） */
+  background: linear-gradient(90deg,
+    rgba(255,255,255,0) 0%,
+    #fc9460 20%,
+    #ffce6c 40%,
+    #71ecff 60%,
+    #fc9460 80%,
+    rgba(255,255,255,0) 100%
+  );
+
+  background-size: 200% 100%;
+  animation: flowLine 4s linear infinite;  /* ★ 流れる速度 */
+  opacity: 0.9;
+}
+
+/* ▼ 上の線（位置だけ） */
+.college-title::before {
+  top: 0;
   transform: translateX(calc(-50vw + 50%));
 }
 
-/* スマホ用 */
+/* ▼ 下の線（位置だけ） */
+.college-title::after {
+  bottom: 0;
+  transform: translateX(calc(-50vw + 50%));
+}
+
+/* ▼ ラインアニメーション */
+@keyframes flowLine {
+  0% {
+    background-position: 200% 0;
+  }
+  100% {
+    background-position: -200% 0;
+  }
+}
+
+/* ▼ スマホ調整 */
 @media (max-width: 600px) {
   .college-title {
-    font-size: 1.6rem;
+    font-size: 1.6rem;  /* 見た目整える */
     max-width: 100%;
   }
 }
