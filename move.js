@@ -88,3 +88,27 @@
     });
     });
     });
+
+    // ===============================
+// ▼ トップへ戻るボタン（フェードイン表示）
+// ===============================
+
+const toTopBtn = document.getElementById("toTopBtn");
+
+window.addEventListener("scroll", () => {
+    // 少しでも下に行ったらボタン表示
+    if (window.scrollY > 100) {
+        toTopBtn.classList.add("show");
+    } else {
+        toTopBtn.classList.remove("show");
+    }
+    });
+
+    // ボタンを押したらメイン（home）へスムーススクロール
+    toTopBtn.addEventListener("click", () => {
+    window.scrollTo({
+        top: 0,
+        behavior: "smooth"
+    });
+    });
+

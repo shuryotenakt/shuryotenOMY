@@ -872,6 +872,56 @@ header .right {
   }
 }
 
+/* =============== */
+/* ▼ トップに戻るボタン（常時右下） */
+/* =============== */
+
+:root {
+  --totop-bg: #a4ffac5e;   /* ボタンの背景色（調整可） */
+  --totop-icon: #ff3939;   /* 三角の色（調整可） */
+}
+
+.to-top-btn {
+  position: fixed;
+  right: 20px;
+  bottom: 20px;
+  width: 60px;      /* ← ボタン全体サイズ（丸） */
+  height: 60px;
+  background: var(--totop-bg);
+  border-radius: 50%;
+  box-shadow: 0px 4px 10px rgba(0,0,0,0.25);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+
+  opacity: 0;
+  pointer-events: none;      /* 非表示中クリック不可 */
+  transition: opacity 0.4s ease;
+  z-index: 999;
+}
+
+/* 三角アイコン */
+.triangle-up {
+  width: 0;
+  height: 0;
+  border-left: 20px solid transparent;   /* ← サイズ調整できる */
+  border-right: 20px solid transparent;
+  border-bottom: 24px solid var(--totop-icon);  /* 三角の色 */
+}
+
+/* ▼ ボタンが表示される状態 */
+.to-top-btn.show {
+  opacity: 1;
+  pointer-events: auto;
+}
+/* 📱 スマホだけホームボタンの位置を少し上へ */
+@media (max-width: 600px) {
+  #toTopBtn {
+    bottom: 50px !important;   /* ← ここを調整する */
+    right: 20px;
+  }
+}
 
 
     /* 🔳 ガラス調ボックス共通スタイル */
