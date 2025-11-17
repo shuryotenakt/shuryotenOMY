@@ -25,6 +25,60 @@
 }
 
 
+/* カレッジタイトル（文字の装飾は今まで通り） */
+.college-title {
+  font-family: "Shippori Mincho", serif;
+  font-weight: 700;
+  font-size: 2rem;
+  letter-spacing: 2px;
+  font-style: italic;
+
+  text-align: center;
+  margin: 60px 0 40px;
+  position: relative;
+  padding: 20px 0;
+
+  max-width: 95%;
+  margin-left: auto;
+  margin-right: auto;
+  word-break: keep-all;
+}
+
+/* 画面幅いっぱいの横線（上） */
+.college-title::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;              /* ← 画面幅ぴったり */
+  height: 2px;
+  background: #333;
+
+  transform: translateX(calc(-50vw + 50%));
+}
+
+/* 画面幅いっぱいの横線（下） */
+.college-title::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100vw;              /* ← 画面幅ぴったり */
+  height: 2px;
+  background: #333;
+
+  transform: translateX(calc(-50vw + 50%));
+}
+
+/* スマホ用 */
+@media (max-width: 600px) {
+  .college-title {
+    font-size: 1.6rem;
+    max-width: 100%;
+  }
+}
+
+
 
     /* ================================
   ヘッダー：レスポンシブ対応版
@@ -456,7 +510,7 @@ header .right {
     /* -------------------- section5-shousai -------------------- */
     /* -------------------- section5-shousai -------------------- */
 /* ----------------------------
-   section5 全体
+  section5 全体
 ---------------------------- */
 .section5 {
     width: 100%;
@@ -475,7 +529,7 @@ header .right {
 }
 
 /* ----------------------------
-   STEP（各行）
+  STEP（各行）
 ---------------------------- */
 .section5-step {
     display: grid;
@@ -514,7 +568,7 @@ header .right {
 }
 
 /* ----------------------------
-   スマホ対応
+  スマホ対応
 ---------------------------- */
 @media (max-width: 768px) {
     .section5-step {
@@ -671,13 +725,11 @@ header .right {
 /* ================================
   🎥動画カレッジ専用スタイル section11
  ================================ */
-.section11-video h2 {
-    padding: 15px;
-    margin-top: 0;
-    text-align: center;
-    border: 2px solid #000;
-    font-size: 20px;
+/* ▼ 動画カレッジだけタイトル上の余白を追加 */
+.section11-video {
+  margin-top: 40px;    /* ← 好きな値に調整できる（50〜80推奨） */
 }
+
 
 /* =========================
 上部3枚の画像ブロック
