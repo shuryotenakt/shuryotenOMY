@@ -794,6 +794,13 @@ header .right {
     background-color: #ffcf94b5;
     }
 
+      @media (max-width: 600px) {
+    .section14-under a {
+    margin: 1px auto !important;   /* ★ 上下の余白を丸ごと上書き */
+  }
+}
+
+
 
     /* 🔳 ガラス調ボックス共通スタイル */
     .glass-box {
