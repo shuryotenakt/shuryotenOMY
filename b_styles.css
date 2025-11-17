@@ -540,6 +540,25 @@ header .right {
   white-space: nowrap;     /* ← 全体は改行させない（スマホでもPCでも） */
   transition: background-color 0.2s ease;
 }
+/* Section7 カレッジジャンプのホバー */
+.section7-jump a:hover {
+  background-color: #ffcf94b5;   /* ← 指定してくれた色 */
+  transition: background-color 0.2s ease;
+}
+
+
+/* ▼ タブボタンが定期的に光るアニメーション */
+@keyframes pulse-glow {
+  0% { box-shadow: 0 0 0 rgba(255, 255, 255, 0); }
+  50% { box-shadow: 0 0 12px rgba(255, 255, 255, 0.8); }
+  100% { box-shadow: 0 0 0 rgba(255, 255, 255, 0); }
+}
+
+/* ▼ タブボタンに適用（全カレッジ共通） */
+.tab-buttons button {
+  animation: pulse-glow 2s infinite; /* 1〜2秒ループ */
+}
+
 
 /* =========================================
 📱 スマホ専用（768px以下）
