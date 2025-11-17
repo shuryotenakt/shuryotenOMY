@@ -492,6 +492,14 @@ header .right {
     margin: 5px 0;
     }
 
+    .section15-map h2{
+      max-width: 100vw;
+      margin-top: 10px;
+    }
+    .section15-map .mapimage{
+      max-width: 100%;
+    }
+
 /*---------------- section7-jump ---------------- */
 .section7-jump {
   padding: 0 0;
