@@ -841,8 +841,9 @@ header .right {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    gap: 50px;
+    gap: 10px;
     margin-bottom: 15px;
+    align-items: stretch;   /* ★ 高さも揃う */
     }
 
     .section14-under .footer-links a {
@@ -855,6 +856,10 @@ header .right {
     border-radius: 6px;
     font-weight: bold;
     transition: background-color 0.2s ease;
+      /* ★ ボタンの幅を「最大のボタン」に揃える */
+    flex: 1 1 auto;          /* ← 横幅を揃えるポイント その1 */
+    max-width: 250px;        /* ← 上限（必要なら調整可能） */
+    justify-content: center;
     }
 
     .section14-under .footer-links a:hover {
