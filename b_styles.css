@@ -585,6 +585,7 @@ header .right {
 /* 画像 */
 .section5-step-img img {
     width: 100%;
+    height: 200px;
     border-radius: 6px;
     object-fit: cover;
 }
