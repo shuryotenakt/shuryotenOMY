@@ -1,4 +1,8 @@
-    body {
+* {
+  outline: 2px solid red;
+}
+
+body {
     margin: 0;
     padding: 0; /* ← モバイルで左右に適度な余白を入れる */
     box-sizing: border-box;
@@ -1367,5 +1371,25 @@ h2 {
   }
   .manga-next {
     right: 10px;
+  }
+}
+/* ▼ スマホ（600px以下）だけギャラリーを縦1列にする */
+@media screen and (max-width: 600px) {
+  .college-gallery {
+    grid-template-columns: 1fr !important; /* ← 1列にする */
+  }
+
+  .gallery-frame {
+    width: 85vw !important;   /* ← 画面の85%の大きさ */
+    margin: 0 auto;           /* ← 中央に寄せる */
+  }
+
+  .gallery-frame img {
+    max-width: 100%;
+    max-height: 100%;
+  }
+
+  .photo-item {
+    width: 100%;
   }
 }
