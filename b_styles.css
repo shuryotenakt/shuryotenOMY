@@ -852,7 +852,7 @@ header .right {
 .image2 {
   display:flex;
   flex-shrink: 0;           /* ← 画像が潰れないように */
-  width: 300px;
+  width: 350px;
   height: 200px;
   object-fit: cover;        /* ← 中央トリミング（縦横比を維持） */
   object-position: center;
@@ -881,18 +881,18 @@ header .right {
 
   .image-container {
     justify-content: center;
-    gap: 35px;
+    gap: 20px;
     overflow-x: visible;
     flex-wrap: nowrap;
   }
 
   .image-container div {
-    width: 110px; /* ← スマホでは画像と同じ幅 */
+    width: 120px; /* ← スマホでは画像と同じ幅 */
     font-size: 12px;
   }
 
   .image {
-    width: 110px;
+    width: 120px;
     height: 90px;
   }
 
@@ -914,8 +914,8 @@ header .right {
   }
 
   .image2 {
-    width: 200px;
-    height: 150px;
+    width: 350px;
+    height: 200px;
   }
 }
 
