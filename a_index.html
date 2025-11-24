@@ -168,6 +168,67 @@
     </nav>
     </section>
 
+    <!-- ▼▼▼ サンプルカレッジ：新スライダー実装用 ▼▼▼ -->
+<section id="sample-college" class="section-sample-college">
+
+    <h2 class="college-title">サンプルカレッジ</h2>
+
+    <!-- ★ 新スライダー（中央大・左右小） -->
+    <div class="sample-slider-wrap">
+        <div class="sample-slide-track">
+
+            <!-- 画像は自由に増減OK（可変対応） -->
+            <div class="sample-slide"><img src="img/manga/カルーセル01.jpg"></div>
+            <div class="sample-slide"><img src="img/manga/カルーセル02.jpg"></div>
+            <div class="sample-slide"><img src="img/manga/カルーセル03.jpg"></div>
+            <div class="sample-slide"><img src="img/manga/カルーセル04.jpg"></div>
+        </div>
+
+        <!-- 両サイド矢印 -->
+        <button class="sample-arrow sample-prev">&#10094;</button>
+        <button class="sample-arrow sample-next">&#10095;</button>
+    </div>
+
+    <!-- ▼ ギャラリー（既存をそのままコピー） -->
+    <div class="college-gallery">
+        <div class="photo-item">
+            <div class="gallery-frame">
+            <img src="img/manga/【back写真】修了展_1.jpg">
+            </div>
+            <div class="photo-caption">ギャラリーの説明例。</div>
+        </div>
+
+        <div class="photo-item">
+            <div class="gallery-frame">
+            <img src="img/manga/【back写真】修了展_2.jpg">
+            </div>
+            <div class="photo-caption">ギャラリーの説明例。</div>
+        </div>
+    </div>
+
+    <!-- ▼ コメントタブ（既存のコピペ） -->
+    <div class="pa-tabs">
+        <div class="tab-buttons">
+            <button onclick="openTab('teacher-sample')">先生コメント</button>
+            <button onclick="openTab('student-sample')">学生コメント</button>
+            <button onclick="openTab('activities-sample')">今回の意気込み</button>
+        </div>
+
+        <div class="tab-content" id="teacher-sample">
+            <p>サンプル用コメント文章です。</p>
+        </div>
+        <div class="tab-content" id="student-sample" style="display:none;">
+            <p>サンプル用 comment2</p>
+        </div>
+        <div class="tab-content" id="activities-sample" style="display:none;">
+            <p>サンプル用 comment3</p>
+        </div>
+    </div>
+
+</section>
+<!-- ▲▲▲ ここまでサンプルカレッジ ▲▲▲ -->
+
+
     <section id="manga-college" class="section8-manga">
     <!-- マンガイラストカレッジ用情報 -->
     <h2 class="college-title">マンガ・イラストカレッジ</h2>
@@ -558,6 +619,8 @@
 
 
 
-    <script src="move.js"></script>
+    
+    <script src="move2.js"></script>
+
     </body>
     </html>
