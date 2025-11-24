@@ -1393,3 +1393,81 @@ h2 {
     width: 100%;
   }
 }
+/* ================================
+   新スライダー（中央大・左右小）
+================================ */
+.sample-slider-wrap {
+  width: 100%;
+  max-width: 900px;
+  margin: 40px auto;
+  position: relative;
+  overflow: hidden;
+}
+
+.sample-slide-track {
+  display: flex;
+  align-items: center;
+  transition: transform 0.6s ease;
+}
+
+/* スライド1枚ぶんの枠 */
+.sample-slide {
+  flex: 0 0 60%;              /* 中央の画像が大きく見える比率 */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: transform 0.4s ease, opacity 0.4s ease;
+}
+
+.sample-slide img {
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+  border-radius: 12px;
+  box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+}
+
+/* 左右スライドの画像を少し小さく表示 */
+.sample-slide:not(.active) {
+  opacity: 0.6;
+  transform: scale(0.75);
+}
+
+/* 中央の画像（active） */
+.sample-slide.active {
+  opacity: 1;
+  transform: scale(1);
+}
+
+/* ====== 矢印 ====== */
+.sample-arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 55px;
+  height: 55px;
+  font-size: 28px;
+  border: none;
+  border-radius: 50%;
+  background-color: #ffffffb0;
+  cursor: pointer;
+  z-index: 10;
+}
+
+.sample-prev { left: 10px; }
+.sample-next { right: 10px; }
+
+/* ===== スマホ ===== */
+@media (max-width: 600px) {
+  .sample-slide { flex: 0 0 80%; }
+
+  .sample-slide:not(.active) {
+    transform: scale(0.6);
+  }
+
+  .sample-arrow {
+    width: 45px;
+    height: 45px;
+    font-size: 20px;
+  }
+}
