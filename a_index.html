@@ -169,64 +169,65 @@
     </section>
 
     <!-- ▼▼▼ サンプルカレッジ：新スライダー実装用 ▼▼▼ -->
-<section id="sample-college" class="section-sample-college">
+    <section id="sample-college" class="section-sample-college">
 
-    <h2 class="college-title">サンプルカレッジ</h2>
+        <h2 class="college-title">サンプルカレッジ</h2>
 
-    <!-- ★ 新スライダー（中央大・左右小） -->
-    <div class="sample-slider-wrap">
-        <div class="sample-slide-track">
-
-            <!-- 画像は自由に増減OK（可変対応） -->
-            <div class="sample-slide"><img src="img/manga/カルーセル01.jpg"></div>
-            <div class="sample-slide"><img src="img/manga/カルーセル02.jpg"></div>
-            <div class="sample-slide"><img src="img/manga/カルーセル03.jpg"></div>
-            <div class="sample-slide"><img src="img/manga/カルーセル04.jpg"></div>
-        </div>
-
-        <!-- 両サイド矢印 -->
-        <button class="sample-arrow sample-prev">&#10094;</button>
-        <button class="sample-arrow sample-next">&#10095;</button>
-    </div>
-
-    <!-- ▼ ギャラリー（既存をそのままコピー） -->
-    <div class="college-gallery">
-        <div class="photo-item">
-            <div class="gallery-frame">
-            <img src="img/manga/【back写真】修了展_1.jpg">
+        <!-- ★ Front部分（動画風カードデザイン） -->
+        <div class="college-front" id="sample-front">
+            <!-- 背景画像（ぼかし用） -->
+            <div class="front-bg-layer"></div>
+            
+            <!-- 中央のカード -->
+            <div class="front-card">
+                <div class="card-body-text">
+                    <p>「入学してから１年間！成長した成果を見に来てください」<br/>１年担任　シュウ<br><br/>
+                「学生生活の集大成を展示します！学生制作のグッズ販売もしますのでお楽しみに」<br/>２年担任　髙根沢</span></p>
+                </div>
+                <!-- 白い丸ボタン -->
+                <button id="open-sample-btn" class="open-circle-btn"></button>
             </div>
-            <div class="photo-caption">ギャラリーの説明例。</div>
         </div>
 
-        <div class="photo-item">
-            <div class="gallery-frame">
-            <img src="img/manga/【back写真】修了展_2.jpg">
+        <div class="college-back" id="sample-back" style="display: none;">
+        <!-- ★ 新スライダー（中央大・左右小・自動循環） -->
+            <div class="sample-slider-wrap">
+                <div class="sample-slide-track">
+                    <div class="sample-slide"><img src="img/manga/カルーセル01.jpg" alt="1"></div>
+                    <div class="sample-slide"><img src="img/manga/カルーセル02.jpg" alt="2"></div>
+                    <div class="sample-slide"><img src="img/manga/カルーセル03.jpg" alt="3"></div>
+                    <div class="sample-slide"><img src="img/manga/カルーセル04.jpg" alt="4"></div>
+                    <div class="sample-slide"><img src="img/manga/カルーセル05.jpg" alt="5"></div>
+                    <div class="sample-slide"><img src="img/manga/カルーセル06.jpg" alt="6"></div>
+                </div>
+
+                <!-- 両サイド矢印 -->
+                <button class="sample-arrow sample-prev">&#10094;</button>
+                <button class="sample-arrow sample-next">&#10095;</button>
             </div>
-            <div class="photo-caption">ギャラリーの説明例。</div>
-        </div>
-    </div>
 
-    <!-- ▼ コメントタブ（既存のコピペ） -->
-    <div class="pa-tabs">
-        <div class="tab-buttons">
-            <button onclick="openTab('teacher-sample')">先生コメント</button>
-            <button onclick="openTab('student-sample')">学生コメント</button>
-            <button onclick="openTab('activities-sample')">今回の意気込み</button>
+            <!-- ▼ ギャラリー（既存をそのままコピー） -->
+            <div class="college-gallery">
+                <div class="photo-item">
+                    <div class="gallery-frame">
+                    <img src="img/manga/【back写真】修了展_1.jpg">
+                    </div>
+                    <div class="photo-caption">ギャラリーの説明例。</div>
+                </div>
+
+                <div class="photo-item">
+                    <div class="gallery-frame">
+                    <img src="img/manga/【back写真】修了展_2.jpg">
+                    </div>
+                    <div class="photo-caption">ギャラリーの説明例。</div>
+                </div>
+            </div>
+            <!-- 戻るボタン（右下に配置） -->
+            <button id="close-sample-btn" class="close-btn">× 閉じる</button>
         </div>
 
-        <div class="tab-content" id="teacher-sample">
-            <p>サンプル用コメント文章です。</p>
-        </div>
-        <div class="tab-content" id="student-sample" style="display:none;">
-            <p>サンプル用 comment2</p>
-        </div>
-        <div class="tab-content" id="activities-sample" style="display:none;">
-            <p>サンプル用 comment3</p>
-        </div>
-    </div>
-
-</section>
-<!-- ▲▲▲ ここまでサンプルカレッジ ▲▲▲ -->
+    </section>
+    <!-- ▲▲▲ ここまでサンプルカレッジ ▲▲▲ -->
 
 
     <section id="manga-college" class="section8-manga">
