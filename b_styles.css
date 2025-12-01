@@ -836,6 +836,16 @@ header .right {
   box-sizing: border-box;
 }
 
+.card5{
+  display: flex;
+  justify-content: center; 
+  align-items: center;
+  gap: 20px;
+  margin: 30px auto;
+  width: 90%;
+  box-sizing: border-box;
+  flex-direction: row-reverse; /*左右入れ替え*/
+}
 
 /* --- テキスト部分 --- */
 .text-box {
