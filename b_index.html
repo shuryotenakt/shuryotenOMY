@@ -265,90 +265,78 @@
 
 </section>
 
-<section id="game-college" class="section9-game">
-  <h2 class="college-title">ゲームカレッジ</h2>
-    
-  <!-- 作品スライダー -->
-  <div class="img-slider-main">
-      <div class="img-slider-custom">
-        <div class="manga-slider-track">
-            <div class="manga-slide">
-              <img src="img/game/game_back1.jpg" alt="ゲーム作品1">
+<section id="game-college" class="section-game-college">
+
+    <h2 class="college-title">ゲームカレッジ</h2>
+
+    <!-- ▼▼▼ Front部分（動画風カードデザイン） ▼▼▼ -->
+    <div class="college-front" id="game-front">
+        <div class="front-bg-layer"></div>
+
+        <div class="front-card">
+            <div class="card-body-text">
+                <p>
+                    「ゲーム制作は“遊ぶ楽しさ”を形にする仕事です。」<br>
+                    担任：鈴木<br><br>
+                    「自分がつくったゲームで誰かが笑ってくれるのが最高！」<br>
+                    学生より
+                </p>
             </div>
-            <div class="manga-slide">
-              <img src="img/game/game_back2.jpg" alt="ゲーム作品2">
+
+            <!-- 白い丸ボタン -->
+            <button id="open-game-btn" class="open-circle-btn"></button>
+        </div>
+    </div>
+
+    <!-- ▼▼▼ Back部分（スライダー ＋ ギャラリー） ▼▼▼ -->
+    <div class="college-back" id="game-back" style="display:none;">
+
+        <!-- ★ 新スライダー（サンプルと同じ構造に統一） -->
+        <div class="sample-slider-wrap">
+            <div class="sample-slide-track">
+
+                <!-- ゲーム作品スライド -->
+                <div class="sample-slide"><img src="img/game/game_back1.jpg" alt="ゲーム作品1"></div>
+                <div class="sample-slide"><img src="img/game/game_back2.jpg" alt="ゲーム作品2"></div>
+                <div class="sample-slide"><img src="img/game/game_back3.jpg" alt="ゲーム作品3"></div>
+                <div class="sample-slide"><img src="img/game/game_front1.jpg" alt="ゲーム作品4"></div>
+                <div class="sample-slide"><img src="img/game/game_front2.png" alt="ゲーム作品5"></div>
+                <div class="sample-slide"><img src="img/game/game_front3.jpg" alt="ゲーム作品6"></div>
+
             </div>
-            <div class="manga-slide">
-              <img src="img/game/game_back3.jpg" alt="ゲーム作品3">
+
+            <!-- 矢印 -->
+            <button class="sample-arrow sample-prev">&#10094;</button>
+            <button class="sample-arrow sample-next">&#10095;</button>
+        </div>
+
+        <!-- ▼ ギャラリー（サンプルと統一） -->
+        <div class="college-gallery">
+            <div class="photo-item">
+                <div class="gallery-frame">
+                    <img src="img/game/game_front1.jpg" alt="制作風景1">
+                </div>
+                <div class="photo-caption">
+                    担任の一言『思考錯誤の連続。その分、熱がこもっています』（鈴木）
+                </div>
             </div>
-             <div class="manga-slide">
-              <img src="img/game/game_front1.jpg" alt="ゲーム作品4">
-            </div>
-             <div class="manga-slide">
-              <img src="img/game/game_front2.png" alt="ゲーム作品5">
-            </div>
-             <div class="manga-slide">
-              <img src="img/game/game_front3.jpg" alt="ゲーム作品6">
+
+            <div class="photo-item">
+                <div class="gallery-frame">
+                    <img src="img/game/game_front2.png" alt="制作風景2">
+                </div>
+                <div class="photo-caption">
+                    担任の一言『展示イベントでも、ゲームは大人気！』（鈴木）
+                </div>
             </div>
         </div>
-        <button class="manga-arrow manga-prev">&#10094;</button>
-        <button class="manga-arrow manga-next">&#10095;</button>
-      </div>
 
-      <!-- スライダー下のドットインジケーター -->
-      <div class="manga-dots"></div>
-  </div>
+        <!-- 戻るボタン -->
+        <button id="close-game-btn" class="close-btn">× 閉じる</button>
 
-  <!-- ギャラリー -->
-  <div class="college-gallery">
-      <div class="photo-item">
-        <div class="gallery-frame">
-          <img src="img/game/game_front1.jpg" alt="制作風景1">
-        </div>
-          <div class="photo-caption">担任の一言 『思考錯誤の連続。その分、熱がこもっています』（鈴木）</div>
-      </div>
-      <div class="photo-item">
-        <div class="gallery-frame">
-          <img src="img/game/game_front2.png" alt="制作風景2">
-        </div>
-          <div class="photo-caption">担任の一言 『展示イベントでも、ゲームは大人気！』（鈴木）</div>
-
-       </div>
-  </div>
-
-  <!-- タブ切替（ゲーム専用ID） -->
-  <div class="pa-tabs">
-      <div class="tab-buttons">
-          <button onclick="openTab('teacher-game')">先生コメント</button>
-          <button onclick="openTab('student-game')">学生コメント</button>
-          <button onclick="openTab('activities-game')">今回の意気込み</button>
-      </div>
-
-      <div class="tab-content" id="teacher-game">
-          <p>
-            「ゲーム制作は“遊ぶ楽しさ”を形にする仕事です。<br>
-            発想力・技術力・チームワークが大きな力になります。」
-          </p>
-      </div>
-
-      <div class="tab-content" id="student-game" style="display:none;">
-          <p>
-            「最初は思った通り動かないことばかりでしたが、<br>
-            仲間と協力して完成させた瞬間の達成感は忘れられません。」<br><br>
-            「自分の作ったゲームで誰かが笑ってくれることが最高です。」
-          </p>
-      </div>
-
-      <div class="tab-content" id="activities-game" style="display:none;">
-          <p>
-            ・Unity / Unreal Engine での制作<br>
-            ・プログラム演習（C# / C++）<br>
-            ・チーム制作プロジェクト<br>
-            ・企画書制作 / プレゼンテーション
-          </p>
-      </div>
-  </div>
+    </div>
 </section>
+
 
 <section id="pafo-college" class="section10-pafo">
   <h2 class="college-title">パフォーミングアーツカレッジ</h2>
