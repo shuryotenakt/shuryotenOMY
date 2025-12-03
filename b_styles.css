@@ -413,6 +413,7 @@ header .right {
   .section3-day .date-right h1 {
     font-size: clamp(2.5rem, 11vw, 5rem);
     line-height: 1.2;
+    white-space: nowrap;
   }
 
   .section3-day .date-right .weekday {
