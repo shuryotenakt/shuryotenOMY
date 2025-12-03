@@ -44,7 +44,7 @@ body {
   margin: 60px auto 40px;
   padding: 20px 0;
 
-  max-width: 95%;
+  max-width: 100%;
   word-break: keep-all;
   position: relative;
 }
@@ -56,7 +56,7 @@ body {
   position: absolute;
   left: 0;
   max-width: 100%;
-  width: 120%;               /* ★ 横幅いっぱい（画面幅） */
+  width: 100vw;               /* ★ 横幅いっぱい（画面幅） */
   height: 3px;                /* ★ 線の太さ（調整可） */
 
   /* ▼ 流れるグラデーション（右→左） */
@@ -77,13 +77,13 @@ body {
 /* ▼ 上の線（位置だけ） */
 .college-title::before {
   top: 0;
-  transform: translateX(calc(-50vw + 50%));
+  transform: translateX(-0%);
 }
 
 /* ▼ 下の線（位置だけ） */
 .college-title::after {
   bottom: 0;
-  transform: translateX(calc(-50vw + 50%));
+  transform: translateX(-0%);
 }
 
 /* ▼ ラインアニメーション */
@@ -413,6 +413,7 @@ header .right {
   .section3-day .date-right h1 {
     font-size: clamp(2.5rem, 11vw, 5rem);
     line-height: 1.2;
+    white-space: nowrap;
   }
 
   .section3-day .date-right .weekday {
@@ -532,9 +533,18 @@ header .right {
   }
 }
 
+@media (max-width: 768px) {
+  .glass-box {
+    backdrop-filter: none !important;
+    -webkit-backdrop-filter: none !important;
+    background: none !important;
+    box-shadow: none !important;
+    border: none !important;
+  }
+}
 
-    /* -------------------- section5-shousai -------------------- */
-    /* -------------------- section5-shousai -------------------- */
+
+
 /* ----------------------------
   section5 全体
 ---------------------------- */
