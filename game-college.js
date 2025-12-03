@@ -7,9 +7,9 @@ document.addEventListener("DOMContentLoaded", () => {
 
   const frontSection = document.getElementById("game-college-front");
   const backSection = document.getElementById("game-college-back");
-  const openBtn = document.getElementById("game-college-btn");
+  const openBtn = document.getElementById("open-game-college-btn");
 
-  const closeBtn = document.getElementById("game-college-btn");
+  const closeBtn = document.getElementById("close-game-college-btn");
 
   if (!track || slides.length === 0) return;
 
