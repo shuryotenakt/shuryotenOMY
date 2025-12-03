@@ -1402,3 +1402,61 @@ h2 {
     width: 100%;
   }
 }
+
+
+/* ===== ポップアップ全体の背景 ===== */
+.popup-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.7);
+  display: none;            /* 🔹最初は非表示 */
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+}
+
+/* ===== ポップアップの中身（画像） ===== */
+.popup-content {
+  position: relative;
+  max-width: 90vw;
+  max-height: 90vh;
+}
+
+.popup-img {
+  width: 80%;
+  height: auto;
+  border-radius: 10px;
+}
+
+/* ===== 閉じるボタン ===== */
+.popup-close {
+  position: absolute;
+  top: -12%;                 /* ← 画像より上部へ移動 */
+  right: 0;
+  width: 10vw;               /* ← 画面幅の 10% */
+  height: 10vw;
+  max-width: 60px;           /* ← PC用の上限 */
+  max-height: 60px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  font-size: 6vw;            /* ← × の大きさ */
+  background: rgba(0,0,0,0.6);
+  color: #fff;
+  border-radius: 50%;
+  cursor: pointer;
+  z-index: 10000;
+  text-shadow: 0 0 10px #000;
+}
+
+.popup-content {
+  position: relative;
+  max-width: 95vw;
+  max-height: 90vh;
+  padding-top: 12vw; /* ← ×ボタンのために上に余白 */
+}

@@ -31,9 +31,16 @@
     </section>
 
     <section class="section2-png">
-    <!-- メイン画像　タイトルコール -->
-    <img src="img/main_img_width.jpg" alt="ビジュアル" class="background-img">
-    <div class="overlay">大宮校修了展</div>
+        <!-- メイン画像　タイトルコール -->
+        <img src="img/main_img_width.jpg" alt="ビジュアル" class="background-img">
+        <div class="overlay">大宮校修了展</div>
+        <!-- 🔽 ポップアップ（最初は非表示） -->
+        <div id="popupOverlay" class="popup-overlay">
+            <div class="popup-content">
+                <span id="popupClose" class="popup-close">&times;</span>
+                <img src="img/main_img_hight.jpg" alt="フル画像" class="popup-img">
+            </div>
+        </div>
     </section>
 
     <section class="section3-day glass-box">
@@ -622,6 +629,7 @@
 
     <script src="move.js"></script>
     <script src="move2.js"></script>
+    <script src="popup.js"></script>
 
     </body>
     </html>
