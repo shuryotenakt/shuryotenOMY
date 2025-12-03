@@ -271,77 +271,66 @@
 
 </section>
 
-<section id="game-college" class="section-game-college">
+<!-- ▼▼▼ げむカレッジ：新スライダー実装用 ▼▼▼ -->
+    <section id="game-college" class="section9-game">
 
-    <h2 class="college-title">ゲームカレッジ</h2>
+        <h2 class="college-title">ゲームカレッジ</h2>
 
-    <!-- ▼▼▼ Front部分（動画風カードデザイン） ▼▼▼ -->
-    <div class="college-front" id="game-front">
-        <div class="front-bg-layer"></div>
-
-        <div class="front-card">
-            <div class="card-body-text">
-                <p>
-                    「ゲーム制作は“遊ぶ楽しさ”を形にする仕事です。」<br>
-                    担任：鈴木<br><br>
-                    「自分がつくったゲームで誰かが笑ってくれるのが最高！」<br>
-                    学生より
-                </p>
-            </div>
-
-            <!-- 白い丸ボタン -->
-            <button id="open-game-btn" class="open-circle-btn"></button>
-        </div>
-    </div>
-
-    <!-- ▼▼▼ Back部分（スライダー ＋ ギャラリー） ▼▼▼ -->
-    <div class="college-back" id="game-back" style="display:none;">
-
-        <!-- ★ 新スライダー（サンプルと同じ構造に統一） -->
-        <div class="sample-slider-wrap">
-            <div class="sample-slide-track">
-
-                <!-- ゲーム作品スライド -->
-                <div class="sample-slide"><img src="img/game/game_back1.jpg" alt="ゲーム作品1"></div>
-                <div class="sample-slide"><img src="img/game/game_back2.jpg" alt="ゲーム作品2"></div>
-                <div class="sample-slide"><img src="img/game/game_back3.jpg" alt="ゲーム作品3"></div>
-                <div class="sample-slide"><img src="img/game/game_front1.jpg" alt="ゲーム作品4"></div>
-                <div class="sample-slide"><img src="img/game/game_front2.png" alt="ゲーム作品5"></div>
-                <div class="sample-slide"><img src="img/game/game_front3.jpg" alt="ゲーム作品6"></div>
-
-            </div>
-
-            <!-- 矢印 -->
-            <button class="sample-arrow sample-prev">&#10094;</button>
-            <button class="sample-arrow sample-next">&#10095;</button>
-        </div>
-
-        <!-- ▼ ギャラリー（サンプルと統一） -->
-        <div class="college-gallery">
-            <div class="photo-item">
-                <div class="gallery-frame">
-                    <img src="img/game/game_front1.jpg" alt="制作風景1">
+        <!-- ★ Front部分（動画風カードデザイン） -->
+        <div class="college-front" id="game-college-front">
+            <!-- 背景画像（ぼかし用） -->
+            <div class="front-bg-layer"></div>
+            
+            <!-- 中央のカード -->
+            <div class="front-card">
+                <div class="card-body-text">
+                    <p>「入学してから１年間！成長した成果を見に来てください」<br/>１年担任　シュウ<br><br/>
+                「学生生活の集大成を展示します！学生制作のグッズ販売もしますのでお楽しみに」<br/>２年担任　髙根沢</span></p>
                 </div>
-                <div class="photo-caption">
-                    担任の一言『思考錯誤の連続。その分、熱がこもっています』（鈴木）
-                </div>
-            </div>
-
-            <div class="photo-item">
-                <div class="gallery-frame">
-                    <img src="img/game/game_front2.png" alt="制作風景2">
-                </div>
-                <div class="photo-caption">
-                    担任の一言『展示イベントでも、ゲームは大人気！』（鈴木）
-                </div>
+                <!-- 白い丸ボタン -->
+                <button id="open-game-college-btn" class="open-circle-btn"></button>
             </div>
         </div>
 
-        <!-- 戻るボタン -->
-        <button id="close-game-btn" class="close-btn">× 閉じる</button>
+        <div class="college-back" id="game-college-back" style="display: none;">
+        <!-- ★ 新スライダー（中央大・左右小・自動循環） -->
+            <div class="sample-slider-wrap">
+                <div class="sample-slide-track">
+                    <div class="sample-slide"><img src="game_back1.jpg" alt="1"></div>
+                    <div class="sample-slide"><img src="game_front1.jpg" alt="2"></div>
+                    <div class="sample-slide"><img src="img/manga/カルーセル03.jpg" alt="3"></div>
+                    <div class="sample-slide"><img src="img/manga/カルーセル04.jpg" alt="4"></div>
+                    <div class="sample-slide"><img src="img/manga/カルーセル05.jpg" alt="5"></div>
+                    <div class="sample-slide"><img src="img/manga/カルーセル06.jpg" alt="6"></div>
+                </div>
 
-    </div>
-</section>
+                <!-- 両サイド矢印 -->
+                <button class="sample-arrow sample-prev">&#10094;</button>
+                <button class="sample-arrow sample-next">&#10095;</button>
+            </div>
+
+            <!-- ▼ ギャラリー（既存をそのままコピー） -->
+            <div class="college-gallery">
+                <div class="photo-item">
+                    <div class="gallery-frame">
+                    <img src="img/manga/【back写真】修了展_1.jpg">
+                    </div>
+                    <div class="photo-caption">ギャラリーの説明例。</div>
+                </div>
+
+                <div class="photo-item">
+                    <div class="gallery-frame">
+                    <img src="img/manga/【back写真】修了展_2.jpg">
+                    </div>
+                    <div class="photo-caption">ギャラリーの説明例。</div>
+                </div>
+            </div>
+            <!-- 戻るボタン（右下に配置） -->
+            <button id="close-game-college-btn" class="close-btn">× 閉じる</button>
+        </div>
+
+    </section>
+    <!-- ▲▲▲ ここまでげむカレッジ ▲▲▲ -->
 
 
 <section id="pafo-college" class="section10-pafo">
@@ -510,31 +499,6 @@
     </div>
     <img src="/img/video/Bチーム.png" alt="=画像7"class="image2">
   </div>
-
-
-  <!-- タブ切替 -->
-    <div class="pa-tabs">
-        <div class="tab-buttons">
-            <button onclick="openTab('teacher')">先生コメント</button>
-            <button onclick="openTab('student')">学生コメント</button>
-            <button onclick="openTab('activities')">今回の意気込み</button>
-        </div>
-        <div class="tab-content" id="teacher">
-            <p>「表現とは“心を動かす力”です。テクニックだけでなく、あなた自身の魅力を最大限に引き出すことが大切。挑戦し続けることで、必ずあなたの“声”や“演技”が誰かの心に届く日が来ます。」— 講師一同</p>
-        </div>
-        <div class="tab-content" id="student" style="display:none;">
-            <p>「最初は緊張の連続でしたが、今ではステージが私の居場所になりました。」<br>
-                「失敗もたくさん経験しました。でも仲間と支え合って成長できたことが何よりの宝物です。」<br>
-                「夢を追うことの大変さと楽しさ、両方をこの学校で知ることができました！」</p>
-        </div>
-        <div class="tab-content" id="activities" style="display:none;">
-            <p>「近年、主力となっている動画業界。動画制作に関する知識を学び、
-                私たちは2年間を通じて様々な作品制作に取り組みました。<br />
-                イデアを想像し、カタチにしていく。
-                私たちが形作った様々な動画をぜひご覧ください。」
-            </p>
-        </div>
-    </div>
 </section>
 
 
@@ -576,6 +540,5 @@
 
 <script src="move.js"></script>
 <script src="move2.js"></script>
-<script src="popup.js"></script>
 </body>
 </html>
