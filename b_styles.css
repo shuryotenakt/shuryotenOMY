@@ -767,7 +767,6 @@ header .right {
   margin-top: 40px;    /* ← 好きな値に調整できる（50〜80推奨） */
 }
 
-
 /* =========================
 上部3枚の画像ブロック
 ========================= */
@@ -889,8 +888,6 @@ header .right {
 スマホ対応（600px以下）
 ========================= */
 @media screen and (max-width: 600px) {
-
-  
 
   .image-container {
     justify-content: center;
