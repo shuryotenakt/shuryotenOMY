@@ -1,9 +1,9 @@
 document.addEventListener("DOMContentLoaded", () => {
-  const track = document.querySelector(".video-slide-track");
+  const track = document.querySelector(".sample-slide-track");
   // querySelectorAllの結果はNodeListなので、操作しやすい配列(Array)に変換
-  let slides = Array.from(document.querySelectorAll(".video-slide"));
-  const prevBtn = document.querySelector(".video-prev");
-  const nextBtn = document.querySelector(".video-next");
+  let slides = Array.from(document.querySelectorAll(".sample-slide"));
+  const prevBtn = document.querySelector(".sample-prev");
+  const nextBtn = document.querySelector(".sample-next");
 
   const frontSection = document.getElementById("video-front");
   const backSection = document.getElementById("video-back");
