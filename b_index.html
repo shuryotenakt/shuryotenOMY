@@ -173,103 +173,67 @@
     </ul>
   </nav>
 </section>
+    <!-- ▼▼▼ mangaカレッジ：新スライダー実装用 ▼▼▼ -->
+    <section id="manga-college" class="section-sample-college">
 
-<section id="manga-college" class="section8-manga">
-  <!-- マンガイラストカレッジ用情報 -->
-  <h2 class="college-title">マンガ・イラストカレッジ</h2>
-  
-  <!-- 作品スライダー -->
-  <div class="img-slider-main">
-      <div class="img-slider-custom">
-        <div class="manga-slider-track">
-            <div class="manga-slide">
-              <img src="img/manga/カルーセル01.jpg" alt="イラスト作品1">
-            </div>
-            <div class="manga-slide">
-              <img src="img/manga/カルーセル02.jpg" alt="イラスト作品1">
-            </div>
-            <div class="manga-slide">
-              <img src="img/manga/カルーセル03.jpg" alt="イラスト作品1">
-            </div>
-            <div class="manga-slide">
-              <img src="img/manga/カルーセル04.jpg" alt="イラスト作品1">
-            </div>
-            <div class="manga-slide">
-              <img src="img/manga/カルーセル05.jpg" alt="イラスト作品1">
-            </div>
-            <div class="manga-slide">
-              <img src="img/manga/カルーセル06.jpg" alt="イラスト作品1">
-            </div>
+        <h2 class="college-title">マンガ・イラストカレッジ</h2>
 
-
+        <!-- ★ Front部分（動画風カードデザイン） -->
+        <div class="college-front" id="manga-front">
+            <!-- 背景画像（ぼかし用） -->
+            <div class="front-bg-layer"></div>
+            
+            <!-- 中央のカード -->
+            <div class="front-card">
+                <div class="card-body-text">
+                    <p>「入学してから１年間！成長した成果を見に来てください」<br/>１年担任　シュウ<br><br/>
+                「学生生活の集大成を展示します！学生制作のグッズ販売もしますのでお楽しみに」<br/>２年担任　髙根沢</span></p>
+                </div>
+                <!-- 白い丸ボタン -->
+                <button id="open-manga-btn" class="open-circle-btn"></button>
+            </div>
         </div>
-        <button class="manga-arrow manga-prev">&#10094;</button>
-        <button class="manga-arrow manga-next">&#10095;</button>
-      </div>
-      
-      <!-- スライダー下のドットインジケーター -->
-      <div class="manga-dots"></div>
-  </div>
 
-  <!-- ギャラリー（2×2固定） -->
-  <div class="college-gallery">
-      <div class="photo-item">
-        <div class="gallery-frame">
-          <img src="img/manga/【back写真】修了展_1.jpg" alt="学生作品">
+        <div class="college-back" id="manga-back" style="display: none;">
+        <!-- ★ 新スライダー（中央大・左右小・自動循環） -->
+            <div class="sample-slider-wrap">
+                <div class="sample-slide-track">
+                    <div class="sample-slide"><img src="img/manga/カルーセル01.jpg" alt="1"></div>
+                    <div class="sample-slide"><img src="img/manga/カルーセル02.jpg" alt="2"></div>
+                    <div class="sample-slide"><img src="img/manga/カルーセル03.jpg" alt="3"></div>
+                    <div class="sample-slide"><img src="img/manga/カルーセル04.jpg" alt="4"></div>
+                    <div class="sample-slide"><img src="img/manga/カルーセル05.jpg" alt="5"></div>
+                    <div class="sample-slide"><img src="img/manga/カルーセル06.jpg" alt="6"></div>
+                </div>
+
+                <!-- 両サイド矢印 -->
+                <button class="sample-arrow sample-prev">&#10094;</button>
+                <button class="sample-arrow sample-next">&#10095;</button>
+            </div>
+
+            <!-- ▼ ギャラリー（既存をそのままコピー） -->
+            <div class="college-gallery">
+                <div class="photo-item">
+                    <div class="gallery-frame">
+                    <img src="img/manga/【back写真】修了展_1.jpg">
+                    </div>
+                    <div class="photo-caption">個人物販スペースで学生の自作グッズを販売します😄</div>
+                </div>
+
+                <div class="photo-item">
+                    <div class="gallery-frame">
+                    <img src="img/manga/【back写真】修了展_2.jpg">
+                    </div>
+                    <div class="photo-caption">厳選された学生作品を展示中！</div>
+                </div>
+            </div>
+            <!-- 戻るボタン（右下に配置） -->
+            <button id="close-manga-btn" class="close-btn">× 閉じる</button>
         </div>
-          <div class="photo-caption">今の世の中ネットでいろいろ調べられるけど、即売会でしか知れないことも一つのきっかけとして素敵ですよね♪</div>
-      </div>
-      <div class="photo-item">
-        <div class="gallery-frame">
-          <img src="img/manga/【back写真】修了展_2.jpg" alt="作品展示">
-        </div>
-          <div class="photo-caption">厳選された学生作品を展示中！</div>
-      </div>
-      <!-- tada start -->
-      <div class="photo-item">
-        <div class="gallery-frame">
-          <img src="img/manga/【back写真】修了展_3.jpg" alt="個人物販">
-        </div>
-        <div class="photo-caption">個人物販スペースで学生の自作グッズを販売します😄
-        </div>
-      </div>
-      <!-- tada end -->
-  </div>
 
-  <!-- タブ切替（マンガ専用ID） -->
-  <div class="pa-tabs">
-      <div class="tab-buttons">
-          <button onclick="openTab('teacher-manga')">先生コメント</button>
-          <button onclick="openTab('student-manga')">学生コメント</button>
-          <button onclick="openTab('activities-manga')">今回の意気込み</button>
-      </div>
+    </section>
+    <!-- ▲▲▲ ここまでmangaカレッジ ▲▲▲ -->
 
-      <div class="tab-content" id="teacher-manga">
-          <p>
-            「入学してから１年間！成長した成果を見に来てください」１年担任　シュウ<br>
-            「学生生活の集大成を展示します！学生制作のグッズ販売もしますのでお楽しみに」２年担任　髙根沢
-          </p>
-      </div>
-
-      <div class="tab-content" id="student-manga" style="display:none;">
-          <p>
-            「最初は緊張の連続でしたが、今ではステージが私の居場所になりました。」<br>
-            「失敗もたくさん経験しました。でも仲間と支え合って成長できたことが何よりの宝物です。」<br>
-            「夢を追うことの大変さと楽しさ、両方をこの学校で知ることができました！」
-          </p>
-      </div>
-
-      <div class="tab-content" id="activities-manga" style="display:none;">
-          <p>
-            ・演技レッスン、ダンスレッスン、声優演習<br>
-            ・舞台公演・発表会への参加<br>
-            ・ワークショップ・外部講師による特別授業<br>
-            ・チーム制作・舞台制作プロジェクト
-          </p>
-      </div>
-  </div>
-
-</section>
 
 <!-- ▼▼▼ げむカレッジ：新スライダー実装用 ▼▼▼ -->
     <section id="game-college" class="section-sample-college">
@@ -544,6 +508,7 @@
 
 <script src="video.js"></script>
 <script src="game-college.js"></script>
+<script src="manga-college.js"></script>
 
 </body>
 </html>
