@@ -8,18 +8,18 @@
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+JP&display=swap" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@400;700&display=swap" rel="stylesheet">
-        <link rel="stylesheet" href="a_index.css" />
+        <link rel="stylesheet" href="b_styles.css" />
     </head>
     <body>
     <!--ヘッダー-->
     <body class="page default">
     <header>
-    <div class="left">ヒューマンアカデミー株式会社</div>
+    <div class="left">総合学園ヒューマンアカデミー　大宮校</div>
     <div class="right">TEL:０４８－６１５－４３８６</div>
     </header>
 
 
-    <section id="top" class="section1-nav glass-box">
+    <section id="top" class="section1-nav">
     <!-- ホームージャンプボタン -->
     <nav>
         <ul>
@@ -31,24 +31,25 @@
     </section>
 
     <section class="section2-png">
-        <!-- メイン画像　タイトルコール -->
-        <img src="img/main_img_width.jpg" alt="ビジュアル" class="background-img">
-        <div class="overlay">大宮校修了展</div>
-        <!-- 🔽 ポップアップ（最初は非表示） -->
-        <div id="popupOverlay" class="popup-overlay">
-            <div class="popup-content">
-                <span id="popupClose" class="popup-close">&times;</span>
-                <img src="img/main_img_hight.jpg" alt="フル画像" class="popup-img">
+    <!-- メイン画像　タイトルコール -->
+    <img src="img/main_img_width.jpg" alt="ビジュアル" class="background-img">
+    <div class="overlay">大宮校修了展</div>
+            <!-- 🔽 ポップアップ（最初は非表示） -->
+            <div id="popupOverlay" class="popup-overlay">
+                <div class="popup-content">
+                    <span id="popupClose" class="popup-close">&times;</span>
+                    <img src="img/main_img_hight.jpg" alt="フル画像" class="popup-img">
+                </div>
             </div>
-        </div>
     </section>
 
-    <section class="section3-day glass-box">
+    <section class="section3-day">
     <div class="date-left">
         <p>
         大宮校修了展<br>
         今年も開催決定！！<br>
-        ぜひご参加ください！
+        たくさんの方のご来場を<br>
+        お待ちしております！
         </p>
     </div>
 
@@ -65,7 +66,7 @@
     <!-- セクション4: 会場情報（グーグルマップ付き） -->
     <section id="access" class="section4-venue">
     <div class="venue-wrapper">
-        <div class="venue-left glass-box">
+        <div class="venue-left">
         <h2>【会場】</h2>
         <p class="gradient-text"><a href="https://www.google.com/maps/place/%E3%82%BD%E3%83%8B%E3%83%83%E3%82%AF%E3%82%B7%E3%83%86%E3%82%A3%E5%9B%BD%E9%9A%9B%E4%BC%9A%E8%AD%B0%E5%AE%A4/@35.905915,139.617268,18z/data=!3m1!5s0x6018c14348328a1d:0x789ca96c38f35e8a!4m10!1m2!2m1!1z44K944OL44OD44Kv44K344OG44Kj44Ob44O844Or5Zu96Zqb5Lya6K2w5a6k!3m6!1s0x6018c176102828b7:0x879143d9aaa5299b!8m2!3d35.905915!4d139.6194359!15sCi3jgr3jg4vjg4Pjgq_jgrfjg4bjgqPjg5vjg7zjg6vlm73pmpvkvJrorbDlrqRaNCIy44K944OL44OD44KvIOOCt-ODhuOCoyDjg5vjg7zjg6sg5Zu96ZqbIOS8muitsCDlrqSSARFjb25mZXJlbmNlX2NlbnRlcpoBI0NoWkRTVWhOTUc5blMwVkpRMEZuU1VOR2NuRm1OMWxuRUFF4AEA-gEECCgQIg!16s%2Fg%2F11jp0t7gzc?authuser=0&entry=ttu&g_ep=EgoyMDI1MTAyOS4yIKXMDSoASAFQAw%3D%3D" target="_blank">ソニックシティホール</a></p>
         </div>
@@ -79,7 +80,7 @@
     </section>
 
     <!-- セクション5: 詳細（行き方詳細を書く場所に変更） -->
-    <section class="section5 glass-box">
+    <section class="section5">
 
         <!-- マップ全体 -->
         <div class="section5-map">
@@ -140,7 +141,6 @@
                 <img src="img/map/map4.JPG" alt="階段入口">
             </div>
         </div>
-
     </section>
 
     <section id="jounaimap" class="section15-map">
@@ -165,6 +165,7 @@
 
     <section id="key-bijuaru" class="section7-jump">
     <!-- 各カレッジの紹介リンク -->
+    <h2>各カレッジの紹介リンク</h2>
     <nav>
         <ul>
         <li><a href="#manga-college"><span>マンガ・イラスト<br>カレッジ</span></a></li>
@@ -175,340 +176,208 @@
     </nav>
     </section>
 
-    <!-- ▼▼▼ サンプルカレッジ：新スライダー実装用 ▼▼▼ -->
-    <section id="sample-college" class="section-sample-college">
+        <!-- ▼▼▼ mangaカレッジ：新スライダー実装用 ▼▼▼ -->
+        <section id="manga-college" class="section-sample-college">
 
-        <h2 class="college-title">サンプルカレッジ</h2>
+            <h2 class="college-title">マンガ・イラストカレッジ</h2>
+
+            <!-- ★ Front部分（動画風カードデザイン） -->
+            <div class="college-front" id="manga-front">
+                <!-- 背景画像（ぼかし用） -->
+                <div class="front-bg-layer"></div>
+                
+                <!-- 中央のカード -->
+                <div class="front-card">
+                    <div class="card-body-text">
+                        <p>「入学してから１年間！成長した成果を見に来てください」<br/>１年担任　シュウ<br><br/>
+                    「学生生活の集大成を展示します！学生制作のグッズ販売もしますのでお楽しみに」<br/>２年担任　髙根沢</span></p>
+                    </div>
+                    <!-- 白い丸ボタン -->
+                    <button id="open-manga-btn" class="open-circle-btn"></button>
+                </div>
+            </div>
+
+            <div class="college-back" id="manga-back" style="display: none;">
+            <!-- ★ 新スライダー（中央大・左右小・自動循環） -->
+                <div class="sample-slider-wrap">
+                    <div class="sample-slide-track">
+                        <div class="sample-slide"><img src="img/manga/カルーセル01.jpg" alt="1"></div>
+                        <div class="sample-slide"><img src="img/manga/カルーセル02.jpg" alt="2"></div>
+                        <div class="sample-slide"><img src="img/manga/カルーセル03.jpg" alt="3"></div>
+                        <div class="sample-slide"><img src="img/manga/カルーセル04.jpg" alt="4"></div>
+                        <div class="sample-slide"><img src="img/manga/カルーセル05.jpg" alt="5"></div>
+                        <div class="sample-slide"><img src="img/manga/カルーセル06.jpg" alt="6"></div>
+                    </div>
+
+                    <!-- 両サイド矢印 -->
+                    <button class="sample-arrow sample-prev">&#10094;</button>
+                    <button class="sample-arrow sample-next">&#10095;</button>
+                </div>
+
+                <!-- ▼ ギャラリー（既存をそのままコピー） -->
+                <div class="college-gallery">
+                    <div class="photo-item">
+                        <div class="gallery-frame">
+                        <img src="img/manga/【back写真】修了展_1.jpg">
+                        </div>
+                        <div class="photo-caption">個人物販スペースで学生の自作グッズを販売します😄</div>
+                    </div>
+
+                    <div class="photo-item">
+                        <div class="gallery-frame">
+                        <img src="img/manga/【back写真】修了展_2.jpg">
+                        </div>
+                        <div class="photo-caption">厳選された学生作品を展示中！</div>
+                    </div>
+                </div>
+                <!-- 戻るボタン（右下に配置） -->
+                <button id="close-manga-btn" class="close-btn">× 閉じる</button>
+            </div>
+
+        </section>
+        <!-- ▲▲▲ ここまでmangaカレッジ ▲▲▲ -->
+
+
+    <!-- ▼▼▼ げむカレッジ：新スライダー実装用 ▼▼▼ -->
+    <section id="game-college" class="section-sample-college">
+
+        <h2 class="college-title">ゲームカレッジ</h2>
 
         <!-- ★ Front部分（動画風カードデザイン） -->
-        <div class="college-front" id="sample-front">
-            <!-- 背景画像（ぼかし用） -->
+        <div class="college-front" id="game-college-front">
             <div class="front-bg-layer"></div>
             
             <!-- 中央のカード -->
             <div class="front-card">
                 <div class="card-body-text">
-                    <p>「入学してから１年間！成長した成果を見に来てください」<br/>１年担任　シュウ<br><br/>
-                「学生生活の集大成を展示します！学生制作のグッズ販売もしますのでお楽しみに」<br/>２年担任　髙根沢</span></p>
+                    <p>担任の一言 『思考錯誤の連続。その分、熱がこもっています』<br/><br/>(鈴木)</p>
                 </div>
-                <!-- 白い丸ボタン -->
-                <button id="open-sample-btn" class="open-circle-btn"></button>
+
+                <button id="open-game-college-btn" class="open-circle-btn"></button>
             </div>
         </div>
 
-        <div class="college-back" id="sample-back" style="display: none;">
-        <!-- ★ 新スライダー（中央大・左右小・自動循環） -->
+        <div class="college-back" id="game-college-back" style="display: none;">
+
+            <!-- ★ 新スライダー -->
             <div class="sample-slider-wrap">
                 <div class="sample-slide-track">
-                    <div class="sample-slide"><img src="img/manga/カルーセル01.jpg" alt="1"></div>
-                    <div class="sample-slide"><img src="img/manga/カルーセル02.jpg" alt="2"></div>
-                    <div class="sample-slide"><img src="img/manga/カルーセル03.jpg" alt="3"></div>
-                    <div class="sample-slide"><img src="img/manga/カルーセル04.jpg" alt="4"></div>
-                    <div class="sample-slide"><img src="img/manga/カルーセル05.jpg" alt="5"></div>
-                    <div class="sample-slide"><img src="img/manga/カルーセル06.jpg" alt="6"></div>
+                    <div class="sample-slide"><img src="img/game/game_front1.jpg" alt="1"></div>
+                    <div class="sample-slide"><img src="img/game/game_front2.png" alt="2"></div>
+                    <div class="sample-slide"><img src="img/game/game_front3.jpg" alt="3"></div>
                 </div>
 
-                <!-- 両サイド矢印 -->
                 <button class="sample-arrow sample-prev">&#10094;</button>
                 <button class="sample-arrow sample-next">&#10095;</button>
             </div>
 
-            <!-- ▼ ギャラリー（既存をそのままコピー） -->
+            <!-- ▼ ギャラリー -->
             <div class="college-gallery">
                 <div class="photo-item">
                     <div class="gallery-frame">
-                    <img src="img/manga/【back写真】修了展_1.jpg">
+                        <img src="img/game/game_back1.jpg">
                     </div>
-                    <div class="photo-caption">ギャラリーの説明例。</div>
+                    <div class="photo-caption">チーム制作は過酷、でもそれ以上に楽しい♪</div>
                 </div>
 
                 <div class="photo-item">
                     <div class="gallery-frame">
-                    <img src="img/manga/【back写真】修了展_2.jpg">
+                        <img src="img/game/game_back2.jpg">
                     </div>
-                    <div class="photo-caption">ギャラリーの説明例。</div>
+                    <div class="photo-caption">ドキドキの就活イベント！ 企業様に、がんばった成果をアピール！</div>
                 </div>
             </div>
-            <!-- 戻るボタン（右下に配置） -->
-            <button id="close-sample-btn" class="close-btn">× 閉じる</button>
+
+            <button id="close-game-college-btn" class="close-btn">× 閉じる</button>
         </div>
 
     </section>
-    <!-- ▲▲▲ ここまでサンプルカレッジ ▲▲▲ -->
+        <!-- ▲▲▲ ここまでげむカレッジ ▲▲▲ -->
 
 
-    <section id="manga-college" class="section8-manga">
-    <!-- マンガイラストカレッジ用情報 -->
-    <h2 class="college-title">マンガ・イラストカレッジ</h2>
-    
-    <!-- 作品スライダー -->
-    <div class="img-slider-main">
-        <div class="img-slider-custom">
-            <div class="manga-slider-track">
-                <div class="manga-slide">
-                <img src="img/manga/カルーセル01.jpg" alt="イラスト作品1">
-                </div>
-                <div class="manga-slide">
-                <img src="img/manga/カルーセル02.jpg" alt="イラスト作品1">
-                </div>
-                <div class="manga-slide">
-                <img src="img/manga/カルーセル03.jpg" alt="イラスト作品1">
-                </div>
-                <div class="manga-slide">
-                <img src="img/manga/カルーセル04.jpg" alt="イラスト作品1">
-                </div>
-                <div class="manga-slide">
-                <img src="img/manga/カルーセル05.jpg" alt="イラスト作品1">
-                </div>
-                <div class="manga-slide">
-                <img src="img/manga/カルーセル06.jpg" alt="イラスト作品1">
-                </div>
 
+        <!-- ▼▼▼ pafoカレッジ：新スライダー実装用 ▼▼▼ -->
+        <section id="pafo-college" class="section-sample-college">
 
-            </div>
-            <button class="manga-arrow manga-prev">&#10094;</button>
-            <button class="manga-arrow manga-next">&#10095;</button>
-        </div>
-        
-        <!-- スライダー下のドットインジケーター -->
-        <div class="manga-dots"></div>
-    </div>
+            <h2 class="college-title">パフォーミングアーツカレッジ</h2>
 
-    <!-- ギャラリー（2×2固定） -->
-    <div class="college-gallery">
-        <div class="photo-item">
-            <div class="gallery-frame">
-            <img src="img/manga/【back写真】修了展_1.jpg" alt="学生作品">
-            </div>
-            <div class="photo-caption">今の世の中ネットでいろいろ調べられるけど、即売会でしか知れないことも一つのきっかけとして素敵ですよね♪</div>
-        </div>
-        <div class="photo-item">
-            <div class="gallery-frame">
-            <img src="img/manga/【back写真】修了展_2.jpg" alt="作品展示">
-            </div>
-            <div class="photo-caption">厳選された学生作品を展示中！</div>
-        </div>
-    </div>
-
-    <!-- タブ切替（マンガ専用ID） -->
-    <div class="pa-tabs">
-        <div class="tab-buttons">
-            <button onclick="openTab('teacher-manga')">先生コメント</button>
-            <button onclick="openTab('student-manga')">学生コメント</button>
-            <button onclick="openTab('activities-manga')">今回の意気込み</button>
-        </div>
-
-        <div class="tab-content" id="teacher-manga">
-            <p>
-                「入学してから１年間！成長した成果を見に来てください」１年担任　シュウ<br>
-                「学生生活の集大成を展示します！学生制作のグッズ販売もしますのでお楽しみに」２年担任　髙根沢
-            </p>
-        </div>
-
-        <div class="tab-content" id="student-manga" style="display:none;">
-            <p>
-                「最初は緊張の連続でしたが、今ではステージが私の居場所になりました。」<br>
-                「失敗もたくさん経験しました。でも仲間と支え合って成長できたことが何よりの宝物です。」<br>
-                「夢を追うことの大変さと楽しさ、両方をこの学校で知ることができました！」
-            </p>
-        </div>
-
-        <div class="tab-content" id="activities-manga" style="display:none;">
-            <p>
-                ・演技レッスン、ダンスレッスン、声優演習<br>
-                ・舞台公演・発表会への参加<br>
-                ・ワークショップ・外部講師による特別授業<br>
-                ・チーム制作・舞台制作プロジェクト
-            </p>
-        </div>
-    </div>
-
-    </section>
-
-    <section id="game-college" class="section9-game">
-    <h2 class="college-title">ゲームカレッジ</h2>
-        
-    <!-- 作品スライダー -->
-    <div class="img-slider-main">
-        <div class="img-slider-custom">
-            <div class="manga-slider-track">
-                <div class="manga-slide">
-                <img src="img/game/game_back1.jpg" alt="ゲーム作品1">
-                </div>
-                <div class="manga-slide">
-                <img src="img/game/game_back2.jpg" alt="ゲーム作品2">
-                </div>
-                <div class="manga-slide">
-                <img src="img/game/game_back3.jpg" alt="ゲーム作品3">
+            <!-- ★ Front部分（動画風カードデザイン） -->
+            <div class="college-front" id="pafo-front">
+                <!-- 背景画像（ぼかし用） -->
+                <div class="front-bg-layer"></div>
+                
+                <!-- 中央のカード -->
+                <div class="front-card">
+                    <div class="card-body-text">
+                        <p>自分と向き合い作品と向き合い、たくさん悩んでたくさん挑戦して、1年間でとっても成長しました。</p>
+                        <p>修了展では、アフレコLIVEと朗読劇をお届けします。</p>
+                            <p>身近で生の演技を楽しんでいってくださいね。</p>  <p>1年講師一同</span></p>
+                    </div>
+                    <!-- 白い丸ボタン -->
+                    <button id="open-pafo-btn" class="open-circle-btn"></button>
                 </div>
             </div>
-            <button class="manga-arrow manga-prev">&#10094;</button>
-            <button class="manga-arrow manga-next">&#10095;</button>
-        </div>
 
-        <!-- スライダー下のドットインジケーター -->
-        <div class="manga-dots"></div>
-    </div>
+            <div class="college-back" id="pafo" style="display: none;">
+            <!-- ★ 新スライダー（中央大・左右小・自動循環） -->
+                <div class="sample-slider-wrap">
+                    <div class="sample-slide-track">
+                        <div class="sample-slide"><img src="img/pafo/パフォ/パフォ素材/パフォ/アフレコ風景１.jpg" alt="1"></div>
+                        <div class="sample-slide"><img src="img/pafo/パフォ/パフォ素材/パフォ/アフレコ風景２.jpg" alt="2"></div>
+                        <div class="sample-slide"><img src="img/pafo/パフォ/パフォ素材/パフォ/元気いっぱいエネルギー溢れる1年生.jpg" alt="3"></div>
+                        <div class="sample-slide"><img src="img/pafo/パフォ/パフォ素材/パフォ/仲良しいいチーム.jpg" alt="4"></div>
+                        <div class="sample-slide"><img src="img/pafo/パフォ/パフォ素材/パフォ/入学してすぐ行われた2年生との交流会.jpg" alt="5"></div>
+                        <div class="sample-slide"><img src="img/pafo/パフォ/パフォ素材/パフォ/初めての行事「川越散策」.jpg" alt="6"></div>
+                    </div>
 
-    <!-- ギャラリー -->
-    <div class="college-gallery">
-        <div class="photo-item">
-            <div class="gallery-frame">
-            <img src="img/game/game_front1.jpg" alt="制作風景1">
-            </div>
-            <div class="photo-caption">担任の一言 『思考錯誤の連続。その分、熱がこもっています』（鈴木）</div>
-        </div>
-        <div class="photo-item">
-            <div class="gallery-frame">
-            <img src="img/game/game_front2.png" alt="制作風景2">
-            </div>
-            <div class="photo-caption">担任の一言 『展示イベントでも、ゲームは大人気！』（鈴木）</div>
-        </div>
-        <div class="photo-item">
-            <div class="gallery-frame">
-            <img src="img/game/game_front3.jpg" alt="制作風景3">
-            </div>
-            <div class="photo-caption"> 担任の一言 『みんなで、ゲーム企画書を作りました！』（鈴木）</div>
-        </div>
-        <div class="photo-item">
-            <div class="gallery-frame">
-            <img src="img/game/game_back3.jpg" alt="制作風景4">
-            </div>
-            <div class="photo-caption">インプットも大切！ ジョイポリスで楽しく学ぼう！</div>
-        </div>
-    </div>
-
-    <!-- タブ切替（ゲーム専用ID） -->
-    <div class="pa-tabs">
-        <div class="tab-buttons">
-            <button onclick="openTab('teacher-game')">先生コメント</button>
-            <button onclick="openTab('student-game')">学生コメント</button>
-            <button onclick="openTab('activities-game')">今回の意気込み</button>
-        </div>
-
-        <div class="tab-content" id="teacher-game">
-            <p>
-                「ゲーム制作は“遊ぶ楽しさ”を形にする仕事です。<br>
-                発想力・技術力・チームワークが大きな力になります。」
-            </p>
-        </div>
-
-        <div class="tab-content" id="student-game" style="display:none;">
-            <p>
-                「最初は思った通り動かないことばかりでしたが、<br>
-                仲間と協力して完成させた瞬間の達成感は忘れられません。」<br><br>
-                「自分の作ったゲームで誰かが笑ってくれることが最高です。」
-            </p>
-        </div>
-
-        <div class="tab-content" id="activities-game" style="display:none;">
-            <p>
-                ・Unity / Unreal Engine での制作<br>
-                ・プログラム演習（C# / C++）<br>
-                ・チーム制作プロジェクト<br>
-                ・企画書制作 / プレゼンテーション
-            </p>
-        </div>
-    </div>
-    </section>
-
-    <section id="pafo-college" class="section10-pafo">
-    <h2 class="college-title">パフォーミングアーツカレッジ</h2>
-
-    <!-- 作品スライダー -->
-    <div class="img-slider-main">
-        <div class="img-slider-custom">
-            <div class="manga-slider-track">
-                <div class="manga-slide">
-                    <img src="img/pafo/パフォ/パフォ素材/パフォ/初めての行事「川越散策」.jpg" alt="初めての行事「川越散策」">
+                    <!-- 両サイド矢印 -->
+                    <button class="sample-arrow sample-prev">&#10094;</button>
+                    <button class="sample-arrow sample-next">&#10095;</button>
                 </div>
-                <div class="manga-slide">
-                    <img src="img/pafo/パフォ/パフォ素材/パフォ/元気いっぱいエネルギー溢れる1年生.jpg" alt="元気あふれる1年生">
+
+                <!-- ▼ ギャラリー（既存をそのままコピー） -->
+                <div class="college-gallery">
+                    <div class="photo-item">
+                        <div class="gallery-frame">
+                        <img src="img/pafo/パフォ/パフォ素材/パフォ/初めてのインターン！自分たちで作り上げて立派にやり遂げました！.jpg">
+                        </div>
+                        <div class="photo-caption">初めてのインターン！自分たちで作り上げて立派にやり遂げました！😄😄</div>
+                    </div>
+
+                    <div class="photo-item">
+                        <div class="gallery-frame">
+                        <img src="img/pafo/パフォ/パフォ素材/パフォ/劇団四季のアラジンを観に行きました.jpg">
+                        </div>
+                        <div class="photo-caption">劇団四季のアラジンを観に行きました。😎</div>
+                    </div>
                 </div>
-                <div class="manga-slide">
-                    <img src="img/pafo/パフォ/パフォ素材/パフォ/仲良しいいチーム.jpg" alt="仲良しいいチーム">
-                </div>
-                <div class="manga-slide">
-                    <img src="img/pafo/パフォ/パフォ素材/パフォ/入学してすぐ行われた2年生との交流会.jpg" alt="入学してすぐに行われた2年生との交流会">
-                </div>
+                <!-- 戻るボタン（右下に配置） -->
+                <button id="close-pafo-btn" class="close-btn">× 閉じる</button>
             </div>
-            <button class="manga-arrow manga-prev">&#10094;</button>
-            <button class="manga-arrow manga-next">&#10095;</button>
-        </div>
-
-        <!-- スライダー下のドットインジケーター -->
-        <div class="manga-dots"></div>
-    </div>
-
-    <!-- ギャラリー -->
-    <div class="college-gallery">
-        <div class="photo-item">
-            <div class="gallery-frame">
-            <img src="img/pafo/パフォ/パフォ素材/パフォ/アフレコ風景１.jpg" alt="アフレコ風景1">
-            </div>
-            <div class="photo-caption">アフレコ風景🎙️</div>
-        </div>
-        <div class="photo-item">
-            <div class="gallery-frame">
-            <img src="img/pafo/パフォ/パフォ素材/パフォ/アフレコ風景２.jpg" alt="アフレコ風景2">
-            </div>
-            <div class="photo-caption">声優レッスン🎙️😲</div>
-        </div>
-        <div class="photo-item">
-            <div class="gallery-frame">
-            <img src="img/pafo/パフォ/パフォ素材/パフォ/初めてのインターン！自分たちで作り上げて立派にやり遂げました！.jpg" alt="初めてのインターン！自分たちで作り上げて立派にやり遂げました！">
-            </div>
-            <div class="photo-caption">初めてのインターン！自分たちで作り上げて立派にやり遂げました！😎</div>
-        </div>
-        <div class="photo-item">
-            <div class="gallery-frame">
-            <img src="img/pafo/パフォ/パフォ素材/パフォ/劇団四季のアラジンを観に行きました.jpg" alt="劇団四季のアラジンを観に行きました!!">
-            </div>
-            <div class="photo-caption">劇団四季のアラジンを観に行きました!!😊</div>
-        </div>
-    </div>
-
-    <!-- タブ切替（パフォ専用ID） -->
-    <div class="pa-tabs">
-        <div class="tab-buttons">
-            <button onclick="openTab('teacher-pafo')">先生コメント</button>
-            <button onclick="openTab('student-pafo')">学生コメント</button>
-            <button onclick="openTab('activities-pafo')">今回の意気込み</button>
-        </div>
-
-        <div class="tab-content" id="teacher-pafo">
-            <p>
-                自分と向き合い作品と向き合い、たくさん悩んでたくさん挑戦して、1年間でとっても成長しました。<br>
-                修了展では、アフレコLIVEと朗読劇をお届けします。<br>
-                身近で生の演技を楽しんでいってくださいね。<br>
-                挑戦し続けることで、必ずあなたの“声”や“演技”が誰かの心に届く日が来ます。」— 講師一同
-            </p>
-        </div>
-
-        <div class="tab-content" id="student-pafo" style="display:none;">
-            <p>
-                「最初は緊張の連続でしたが、今ではステージが私の居場所になりました。」<br>
-                「失敗もたくさん経験しました。でも仲間と支え合って成長できたことが何よりの宝物です。」<br>
-                「夢を追うことの大変さと楽しさ、両方をこの学校で知ることができました！」
-            </p>
-        </div>
-
-        <div class="tab-content" id="activities-pafo" style="display:none;">
-            <p>
-                ・演技レッスン、ダンスレッスン、声優演習<br>
-                ・舞台公演・発表会への参加<br>
-                ・ワークショップ・外部講師による特別授業<br>
-                ・チーム制作・舞台制作プロジェクト
-            </p>
-        </div>
-    </div>
-
-    </section>
+        </section>
+        <!-- ▲▲▲ ここまでパフォーミングアーツカレッジ ▲▲▲ -->
 
     <section id="movie-college" class="section11-video">
-    <!-- <h2>動画カレッジ用</h2> -->
-    <h2 class="college-title">動画カレッジ</h2>
-        <div class="image-container">
+        <section id="video-college" class="section-sample-college">
+            <h2 class="college-title">動画カレッジ</h2>
+            
+            <!-- ★ Front部分（動画風カードデザイン） -->
+            <div class="college-front" id="video-front">
+                <!-- 背景画像（ぼかし用） -->
+                <div class="front-bg-layer"></div>
+                
+                <!-- 中央のカード -->
+                <div class="front-card">
+                    <div class="card-body-text">
+                        <p>「想像して創造する。アイディアをカタチにする学校」<br/><br/>
+                        修了展に向けて全員準備してきました！<br/>カメラ体験会も是非来てください！<br/>by:青木 </span></p>
+                    </div>
+                    <!-- 白い丸ボタン -->
+                    <button id="open-video-btn" class="open-circle-btn"></button>
+                </div>
+            </div>
+        <div class="college-back" id="video-back" style="display: none;">
+            <div class="image-container">
         <div>
         <img src="/img/video/IMG_1034.jpeg" alt="画像1" class="image">
         <p>枯れたことのないひまわりこの子はずっと太陽を見ております。</p>
@@ -523,7 +392,7 @@
         </div>
         </div>
         <div class="card1">
-        <div class="text-box glass-box">
+        <div class="text-box">
         <p class="title2">2-1<br>
             このチームは、今回の埼玉県警察とのコラボ企画でいいものを<br />
             お届け出来るよう精一杯頑張ります。
@@ -533,7 +402,7 @@
         <img src="/img/video/2-1.png" alt="=画像4"class="image2">
     </div>
     <div class="card2">
-        <div class="text-box glass-box">
+        <div class="text-box">
         <p class="title2">2-2<br>
         フィッシング詐欺の対策映像を制作しました。<br /> 
         実写にこだわらず、自分達で素材を作り、声もチーム内で録りました。
@@ -542,42 +411,68 @@
         </div>
         <img src="/img/video/2-2.png" alt="=画像5"class="image2">
     </div>
+    <!-- tada start-->
         <div class="card3">
-        <div class="text-box glass-box">
+        <div class="text-box">
         <p class="title2">Aチーム<br>
         石橋：禁酒呑童子の再戦伝のモーションを担当しました。<br />
         読み手が物語に吸い込まれるようなモーションを制作したのでぜひ見に来てくだい！！<br /> 
-        山本：烈焔の心のモーションの編集を担当しました。<br />
-        物語に合わせて見やすいように編集しました。<br />
+        山本：烈焔の心のモーションの編集を担当しました。物語に合わせて見やすいように編集しました。 
         </p>
         <p class="author1"></p>
         </div>
         <img src="/img/video/Aチーム.png" alt="=画像6"class="image2">
-    </div>
-    <div class="card4">
-        <div class="text-box glass-box">
-        <p class="title2">ADDTEXT<br>
-        私は牛乳がすきです。<br />
+        </div>
+        <div class="card3">
+        <div class="text-box">
+        <p class="title2">Aチーム<br>
+        渡邉：２作品のBGM、最終調整を担当しました。２つの音を重ねて風景を感じさせ
+        タり、その場の雰囲気に合わせて音声を調整して臨場感を出せるように意識しまし
+        た。ぜひ音にも注目してお楽しみ下さい！ 
         </p>
-        <p class="author1">ミスターカルシウム</p>
+        <p class="author1"></p>
+        </div>
+        <img src="/img/video/A2チーム.png" alt="=画像6.5"class="image2">
+        </div>
+    <!-- tada end-->
+    <div class="card4">
+        <div class="text-box">
+        <p class="title2">Bチーム<br>
+        大河内：今回私は音声を担当しました。音声にも注目してみてください。<br />
+        山口：最終調整を担当した山口です。細部までこだわった作品をご覧ください。<br /> 
+        平野：モーション担当です。現地でライブアフレコを見てください。<br />
+        </p>
+        <p class="author1"></p>
         </div>
         <img src="/img/video/Bチーム.png" alt="=画像7"class="image2">
     </div>
-</section>
+                <!-- 戻るボタン（右下に配置） -->
+                <button id="close-video-btn" class="close-btn">× 閉じる</button>
+            </div>
+    </section>
 
 
 
-    <section class="section13-comment glass-box">
+    <section class="section13-comment">
     <!-- 修了展への想い:contentReference[oaicite:13]{index=13} -->
-    <h2>ー 修了展への想い ー</h2>
-    <p>僕たち、私たちは、この修了展に向けて多くの時間をかけて一生懸命準備をしてきました。</p>
-    <p>1年間の学びの集大成をぜひその目でご覧ください。<br>
-    多くの方のご来場、心よりお待ちしております！</p>
+    <h2 class="college-title">IT College<br>Web Project 2025</h2>
+    <p>
+        このページは、総合学園ヒューマンアカデミー大宮校 ITカレッジの6人チームで制作しました。
+    </p>
+    <p>
+        企画・デザイン・コーディング・テスト・公開まで、Webサイト制作の一連の流れを自分たちの手で完結させることを目標に進めてきました。
+    </p>
+    <p>
+        レイアウト調整やスマホ対応など、何度も試行錯誤を重ね、今の形にたどり着きました。
+    </p>
+    <p>
+        最後までご覧いただきありがとうございます。<br>ぜひ当日会場までお越しくださいませ！
+    </p>
     </section>
 
     <section class="section14-under">
     <!-- 各カレッジリンクおよび著作権表記:contentReference[oaicite:14]{index=14} -->
-    <p>各カレッジの --- Ｔｗｉｔｔｅｒ（新Ｘ）--- リンク</p>
+    <h3>各カレッジの<br>--- Ｔｗｉｔｔｅｒ（新Ｘ）---</h3>
     <div class="footer-links">
         <a href="https://x.com/Human_manga" target="_blank">マンガ・イラストカレッジ</a>
         <a href="https://x.com/human_game_ha" target="_blank">ゲームカレッジ</a>
@@ -592,7 +487,10 @@
         埼玉県さいたま市大宮区宮町１－１０３－１<br>大宮ＹＫビル１階<br>
         ☎０４８－６１５－４３８６<br>
     </address>
-    <p class="copyright">Copyright ©2025 ヒューマンアカデミー大宮校 ITカレッジ</p>
+    <p class="copyright">
+        Copyright ©2025<br>
+        ヒューマンアカデミー大宮校 ITカレッジ
+    </p>
     </footer>
 
     <!-- ▲ ホームに戻るボタン -->
@@ -606,5 +504,9 @@
     <script src="move2.js"></script>
     <script src="popup.js"></script>
 
+    <script src="video.js"></script>
+    <script src="game-college.js"></script>
+    <script src="manga-college.js"></script>
+    <script src="pafo.js"></script>
     </body>
     </html>
