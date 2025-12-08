@@ -8,7 +8,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+JP&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@400;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="a_index.css" />
+    <link rel="stylesheet" href="b_styles.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
 <body>
@@ -239,61 +239,60 @@
     <!-- ▲▲▲ ここまでmangaカレッジ ▲▲▲ -->
 
 
-<!-- ▼▼▼ げむカレッジ：新スライダー実装用 ▼▼▼ -->
-<section id="game-college" class="section-sample-college">
+<!-- ▼▼▼ ゲームカレッジ：新スライダー（game版） ▼▼▼ -->
+<section id="game-college" class="section-game-college">
 
-    <h2 class="college-title">ゲームカレッジ</h2>
+    <h2 class="game-college-title">ゲームカレッジ</h2>
 
-    <!-- ★ Front部分（動画風カードデザイン） -->
-    <div class="college-front" id="game-college-front">
-        <div class="front-bg-layer"></div>
-        
-        <!-- 中央のカード -->
-        <div class="front-card">
-            <div class="card-body-text">
+    <!-- Front -->
+    <div class="game-college-front" id="game-front">
+        <div class="game-front-bg-layer"></div>
+
+        <div class="game-front-card">
+            <div class="game-card-body-text">
                 <p>担任の一言 『思考錯誤の連続。その分、熱がこもっています』<br/><br/>(鈴木)</p>
             </div>
-
-            <button id="open-game-college-btn" class="open-circle-btn"></button>
+            <button id="open-game-btn" class="game-open-circle-btn"></button>
         </div>
     </div>
 
-    <div class="college-back" id="game-college-back" style="display: none;">
+    <div class="game-college-back" id="game-back" style="display:none;">
 
-        <!-- ★ 新スライダー -->
-        <div class="sample-slider-wrap">
-            <div class="sample-slide-track">
-                <div class="sample-slide"><img src="img/game/game_front1.jpg" alt="1"></div>
-                <div class="sample-slide"><img src="img/game/game_front2.png" alt="2"></div>
-                <div class="sample-slide"><img src="img/game/game_front3.jpg" alt="3"></div>
+        <!-- ★ game スライダー -->
+        <div class="game-slider-wrap">
+            <div class="game-slide-track">
+                <div class="game-slide active"><img src="img/game/game_front1.jpg" alt="1"></div>
+                <div class="game-slide"><img src="img/game/game_front2.png" alt="2"></div>
+                <div class="game-slide"><img src="img/game/game_front3.jpg" alt="3"></div>
             </div>
 
-            <button class="sample-arrow sample-prev">&#10094;</button>
-            <button class="sample-arrow sample-next">&#10095;</button>
+            <button class="game-arrow game-prev">&#10094;</button>
+            <button class="game-arrow game-next">&#10095;</button>
         </div>
 
-        <!-- ▼ ギャラリー -->
-        <div class="college-gallery">
-            <div class="photo-item">
-                <div class="gallery-frame">
+        <!-- ギャラリー -->
+        <div class="game-college-gallery">
+            <div class="game-photo-item">
+                <div class="game-gallery-frame">
                     <img src="img/game/game_back1.jpg">
                 </div>
-                <div class="photo-caption">チーム制作は過酷、でもそれ以上に楽しい♪</div>
+                <div class="game-photo-caption">チーム制作は過酷、でもそれ以上に楽しい♪</div>
             </div>
 
-            <div class="photo-item">
-                <div class="gallery-frame">
+            <div class="game-photo-item">
+                <div class="game-gallery-frame">
                     <img src="img/game/game_back2.jpg">
                 </div>
-                <div class="photo-caption">ドキドキの就活イベント！ 企業様に、がんばった成果をアピール！</div>
+                <div class="game-photo-caption">ドキドキの就活イベント！ 企業様に、がんばった成果をアピール！</div>
             </div>
         </div>
 
-        <button id="close-game-college-btn" class="close-btn">× 閉じる</button>
+        <button id="close-game-btn" class="game-close-btn">× 閉じる</button>
     </div>
 
 </section>
-    <!-- ▲▲▲ ここまでげむカレッジ ▲▲▲ -->
+<!-- ▲▲▲ ゲームカレッジ end ▲▲▲ -->
+
 
 
 
@@ -360,7 +359,7 @@
         <!-- ★ Front部分（動画風カードデザイン） -->
         <div class="college-front" id="video-front">
             <!-- 背景画像（ぼかし用） -->
-            <div class="front-bg-layer"></div>
+            <div class="video-front-bg-layer"></div>
             
             <!-- 中央のカード -->
             <div class="front-card">
@@ -376,16 +375,11 @@
         <div class="image-container">
     <div>
       <img src="/img/video/IMG_1034.jpeg" alt="画像1" class="image">
-      <p>枯れたことのないひまわりこの子はずっと太陽を見ております。</p>
     </div>
     <div>
       <img src="/img/video/IMG_2235.jpeg" alt="画像2" class="image">
-      <p>すてき</p>
     </div>
-    <div>
-      <img src="/img/video/IMG_0883.jpeg" alt="画像3" class="image">
-      <p>例）私たちの日常</p>
-    </div>
+  
     </div>
       <div class="card1">
     <div class="text-box">
@@ -467,9 +461,14 @@
 </section>
 
 <section class="section14-under">
-    <h3>各カレッジの<br>--- Ｔｗｉｔｔｅｒ（新Ｘ） ---</h3>
+    <h3>---　 旧Ｔｗｉｔｔｅｒ　 ---<br>各リンク</h3>
 
     <div class="footer-links">
+        <a href="https://x.com/human_omiya01" target="_blank">
+            <i class="fa-brands fa-x-twitter"></i>
+            <span>総合学園ヒューマンアカデミー<br>大宮校</span>
+            <i class="fa-brands fa-x-twitter"></i>
+        </a>
 
         <a href="https://x.com/Human_manga" target="_blank">
             <i class="fa-brands fa-x-twitter"></i>
@@ -496,6 +495,15 @@
         </a>
 
     </div>
+</section>
+<!--調整中です-->
+<section class="section-ankto ">
+  <p>アンケート</p>
+  <a href="https://qr.c-cloud.co.jp/t/l/UuSAuK" target="_blank"style="display:inline-block;">
+      <img src="/img/sample-QR.png" alt="画像1"class="image">
+      </a>
+  <p>こちらから修了展のアンケートができますのでよろしければお答えいただけますと嬉しいです</p>
+
 </section>
 
 
