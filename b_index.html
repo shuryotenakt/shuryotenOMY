@@ -298,64 +298,59 @@
 
 
     <!-- ▼▼▼ pafoカレッジ：新スライダー実装用 ▼▼▼ -->
+    <!-- tada 12/08 追加START -->
     <section id="pafo-college" class="section-sample-college">
 
         <h2 class="college-title">パフォーミングアーツカレッジ</h2>
 
-        <!-- ★ Front部分（動画風カードデザイン） -->
         <div class="college-front" id="pafo-front">
-            <!-- 背景画像（ぼかし用） -->
-            <div class="front-bg-layer"></div>
+            <div class="pafo-front-bg-layer"></div>
             
-            <!-- 中央のカード -->
             <div class="front-card">
                 <div class="card-body-text">
-                    <p>自分と向き合い作品と向き合い、たくさん悩んでたくさん挑戦して、1年間でとっても成長しました。</p>
-                    <p>修了展では、アフレコLIVEと朗読劇をお届けします。</p>
-                        <p>身近で生の演技を楽しんでいってくださいね。</p>  <p>1年講師一同</span></p>
+                    <p>自分と向き合い作品と向き合い、たくさん悩んでたくさん挑戦して、1年間でとっても成長しました。
+                    修了展では、アフレコLIVEと朗読劇をお届けします。
+                    身近で生の演技を楽しんでいってくださいね。<br/>1年担任　亀中</span></p>
                 </div>
-                <!-- 白い丸ボタン -->
                 <button id="open-pafo-btn" class="open-circle-btn"></button>
             </div>
         </div>
 
-        <div class="college-back" id="pafo" style="display: none;">
-        <!-- ★ 新スライダー（中央大・左右小・自動循環） -->
-            <div class="sample-slider-wrap">
-                <div class="sample-slide-track">
-                    <div class="sample-slide"><img src="img/pafo/パフォ/パフォ素材/パフォ/アフレコ風景１.jpg" alt="1"></div>
-                    <div class="sample-slide"><img src="img/pafo/パフォ/パフォ素材/パフォ/アフレコ風景２.jpg" alt="2"></div>
-                    <div class="sample-slide"><img src="img/pafo/パフォ/パフォ素材/パフォ/元気いっぱいエネルギー溢れる1年生.jpg" alt="3"></div>
-                    <div class="sample-slide"><img src="img/pafo/パフォ/パフォ素材/パフォ/仲良しいいチーム.jpg" alt="4"></div>
-                    <div class="sample-slide"><img src="img/pafo/パフォ/パフォ素材/パフォ/入学してすぐ行われた2年生との交流会.jpg" alt="5"></div>
-                    <div class="sample-slide"><img src="img/pafo/パフォ/パフォ素材/パフォ/初めての行事「川越散策」.jpg" alt="6"></div>
+        <div class="college-back" id="pafo-back" style="display: none;">
+        <div class="pafo-slider-wrap">
+                <div class="pafo-slide-track">
+                    <div class="pafo-slide"><img src="/img/pafo/パフォ/パフォ素材/パフォ/仲良しいいチーム.jpg" alt="1"></div>
+                    <div class="pafo-slide"><img src="/img/pafo/パフォ/パフォ素材/パフォ/アフレコ風景１.jpg" alt="2"></div>
+                    <div class="pafo-slide"><img src="/img/pafo/パフォ/パフォ素材/パフォ/入学してすぐ行われた2年生との交流会.jpg" alt="3"></div>
+                    <div class="pafo-slide"><img src="/img/pafo/パフォ/パフォ素材/パフォ/アフレコ風景２.jpg" alt="4"></div>
+                    <div class="pafo-slide"><img src="img/pafo/パフォ/パフォ素材/パフォ/初めての行事「川越散策」.jpg" alt="5"></div>
+                    <div class="pafo-slide"><img src="/img/pafo/パフォ/パフォ素材/パフォ/劇団四季のアラジンを観に行きました.jpg" alt="6"></div>
                 </div>
 
-                <!-- 両サイド矢印 -->
-                <button class="sample-arrow sample-prev">&#10094;</button>
-                <button class="sample-arrow sample-next">&#10095;</button>
+                <button class="pafo-arrow pafo-prev">&#10094;</button>
+                <button class="pafo-arrow pafo-next">&#10095;</button>
             </div>
 
-            <!-- ▼ ギャラリー（既存をそのままコピー） -->
             <div class="college-gallery">
                 <div class="photo-item">
                     <div class="gallery-frame">
-                    <img src="img/pafo/パフォ/パフォ素材/パフォ/初めてのインターン！自分たちで作り上げて立派にやり遂げました！.jpg">
+                    <img src="/img/pafo/パフォ/パフォ素材/パフォ/元気いっぱいエネルギー溢れる1年生.jpg">
                     </div>
-                    <div class="photo-caption">初めてのインターン！自分たちで作り上げて立派にやり遂げました！😄😄</div>
+                    <div class="photo-caption">元気いっぱいエネルギー溢れる1年生</div>
                 </div>
 
                 <div class="photo-item">
                     <div class="gallery-frame">
-                    <img src="img/pafo/パフォ/パフォ素材/パフォ/劇団四季のアラジンを観に行きました.jpg">
+                    <img src="/img/pafo/パフォ/パフォ素材/パフォ/初めてのインターン！自分たちで作り上げて立派にやり遂げました！.jpg">
                     </div>
-                    <div class="photo-caption">劇団四季のアラジンを観に行きました。😎</div>
+                    <div class="photo-caption">初めてのインターン！自分たちで作り上げて立派にやり遂げました！</div>
                 </div>
             </div>
-            <!-- 戻るボタン（右下に配置） -->
             <button id="close-pafo-btn" class="close-btn">× 閉じる</button>
         </div>
+
     </section>
+    <!-- tada 12/8 追加END -->
     <!-- ▲▲▲ ここまでパフォーミングアーツカレッジ ▲▲▲ -->
 
 <section id="movie-college" class="section11-video">
