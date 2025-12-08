@@ -1788,3 +1788,120 @@ section.open .back {
   z-index: 1;
   transition: transform 0.8s ease;
 }
+
+/* ================================
+   ゲームカレッジ用スライダー (game-クラス)
+   ※pafoクラスを完全変換
+================================ */
+
+/* 背景画像レイヤー（ぼかし） */
+.game-front-bg-layer {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  padding: 20px;
+  background-image: url("img/game/game_front1.jpg");
+  background-size: cover;
+  background-position: center;
+  filter: blur(1px) brightness(0.3);
+  z-index: 1;
+  transition: transform 0.8s ease;
+}
+
+/* スライダー全体 */
+.game-slider-wrap {
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+}
+
+/* スライダートラック（スライドを横に並べる） */
+.game-slide-track {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  position: relative;
+}
+
+/* スライド共通 */
+.game-slide {
+  flex: 0 0 20%;
+  max-width: 20%;
+  width: 100%;
+  height: 90%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.6s ease-in-out;
+  opacity: 0.6;
+  transform: scale(0.9);
+  position: relative;
+  z-index: 1;
+}
+
+.game-slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+/* 非active */
+.game-slide:not(.active) {
+  opacity: 0.6;
+  transform: scale(0.75);
+}
+
+/* active（中央） */
+.game-slide.active {
+  flex: 0 0 60%;
+  max-width: 100%;
+  height: 80%;
+  opacity: 1;
+  transform: scale(1);
+  z-index: 2;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+/* 矢印ボタン */
+.game-arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 30px;
+  height: 30px;
+  border: none;
+  background: rgba(255, 255, 255, 0.8);
+  border-radius: 50%;
+  font-size: 18px;
+  cursor: pointer;
+  z-index: 10;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.game-prev { left: 10px; }
+.game-next { right: 10px; }
+
+/* スマホ対応 */
+@media (max-width: 600px) {
+  .game-slide {
+    flex: 0 0 60%;
+  }
+
+  .game-slide:not(.active) {
+    transform: scale(0.6);
+    flex: 0 0 20%;
+  }
+
+  .game-slide.active {
+    flex: 0 0 60%;
+  }
+
+  .game-slide-track {
+    height: 100%;
+  }
+}
