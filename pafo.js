@@ -5,11 +5,11 @@ document.addEventListener("DOMContentLoaded", () => {
   const prevBtn = document.querySelector(".sample-prev");
   const nextBtn = document.querySelector(".sample-next");
 
-  const frontSection = document.getElementById("manga-front");
-  const backSection = document.getElementById("manga-back");
-  const openBtn = document.getElementById("open-manga-btn");
+  const frontSection = document.getElementById("pafo-front");
+  const backSection = document.getElementById("pafo-back");
+  const openBtn = document.getElementById("open-pafo-btn");
 
-  const closeBtn = document.getElementById("close-manga-btn");
+  const closeBtn = document.getElementById("close-pafo-btn");
 
   if (!track || slides.length === 0) return;
 
