@@ -1050,10 +1050,10 @@ header .right {
 }
 
 .footer p {
-  margin-top: 3em; /* ← 上に余白を入れて下に固定感を出す */
+  margin-top: 1em; /* ← 上に余白を入れて下に固定感を出す */
   border-top: 2px solid #999;
-  padding-top: 3em;
-  font-size: 0.5em;
+  padding-top: 1em;
+  font-size: 1em;
   color: #333;
 }
 
