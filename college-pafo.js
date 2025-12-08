@@ -1,5 +1,3 @@
-pafo.js;
-
 document.addEventListener("DOMContentLoaded", () => {
   // pafo- に変更して取得
   const track = document.querySelector(".pafo-slide-track");
