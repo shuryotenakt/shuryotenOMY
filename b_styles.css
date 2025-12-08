@@ -1,6 +1,6 @@
-* {
+/* * {
   outline: 2px solid red;
-}
+} */
 
 body {
     margin: 0;
@@ -533,15 +533,6 @@ header .right {
   }
 }
 
-@media (max-width: 768px) {
-  .glass-box {
-    backdrop-filter: none !important;
-    -webkit-backdrop-filter: none !important;
-    background: none !important;
-    box-shadow: none !important;
-    border: none !important;
-  }
-}
 
 
 
@@ -550,7 +541,7 @@ header .right {
 ---------------------------- */
 .section5 {
     width: 100%;
-    max-width: 900px;
+    max-width: 90%;
     margin: 0 auto;
     padding: 30px 20px;
     font-family: "Meiryo", sans-serif;
@@ -934,7 +925,7 @@ header .right {
     /* section13-comment */
     .section13-comment {
     padding: 20px;
-    background-color: #f9f9f9;
+    background-color: none; /* 透明白 */
     text-align: center;
     margin-top: 10px;
     margin-bottom: 10px;
@@ -1043,21 +1034,7 @@ header .right {
 }
 
 
-    /* 🔳 ガラス調ボックス共通スタイル */
-    .glass-box {
-    width: 100%; /* ← スマホで画面幅に合わせる */
-    max-width: 90%;
-    padding: 20px auto;
-    margin: 20px auto;
-    background: rgba(255, 255, 255, 0.15);
-    backdrop-filter: blur(10px);
-    -webkit-backdrop-filter: blur(10px);
-    border: 1px solid rgba(255, 255, 255, 0.587);
-    border-radius: 20px;
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.034);
-    }
-
-
+    
   
   .footer {
   padding: 5vh 5vw 5vh; /* ← 左右にvw余白、下を広く */
