@@ -717,16 +717,16 @@ header .right {
   .section7-jump ul {
     grid-template-columns: repeat(2, 1fr);
     width: 90%;
-    gap: 20px 30px;            /* ← ボタンの間隔を広くする */
+    gap: 20px 10px;            /* ← ボタンの間隔を広くする */
     margin: 0 auto;
   }
 
   /* ボタン本体 */
   .section7-jump a {
-    height: 70px;              /* ← 高さ広めで見やすい */
+    height: 50px;              /* ← 高さ広めで見やすい */
     font-size: 0.95rem;
 
-    padding: 5px 10px;
+    padding: 5px 8px;
     white-space: normal;       /* ← 改行 OK にする（必須） */
     line-height: 1.2;          /* ← 2行でも綺麗に見える */
 
@@ -736,13 +736,14 @@ header .right {
     text-align: center;
 
     /* 全ボタン同じ幅に */
-    width: 100%;
+    width: 90%;
   }
 
   /* 「カレッジ」を2行目へ強制的に送る */
   .section7-jump a span {
     display: inline-block;
     white-space: normal;
+    white-space: nowrap;/*文字の改行禁止*/
   }
 
 }
