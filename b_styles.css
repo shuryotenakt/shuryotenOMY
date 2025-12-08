@@ -1308,23 +1308,19 @@ h2 {
 }
 
 /* ===== ポップアップの中身（画像） ===== */
-.popup-content {
-  position: relative;
-  max-width: 90vw;
-  max-height: 90vh;
-}
 
 .popup-img {
-  width: 80%;
-  height: auto;
-  border-radius: 10px;
+  max-height: 70vh;  /* ← 画面の70%以内に収まるように */
+  width: auto;       /* ← 縦長画像を自然に表示 */
+  max-width: 90vw;   /* ← 横にはみ出さないようにする */
 }
+
 
 /* ===== 閉じるボタン ===== */
 .popup-close {
   position: absolute;
-  top: -12%;                 /* ← 画像より上部へ移動 */
-  right: 0;
+  top: -50px;                 /* ← 画像より上部へ移動 */
+  right: -1px;
   width: 10vw;               /* ← 画面幅の 10% */
   height: 10vw;
   max-width: 60px;           /* ← PC用の上限 */
@@ -1344,11 +1340,19 @@ h2 {
 }
 
 .popup-content {
+  max-height: 80vh;
+  padding-top: 0;
   position: relative;
-  max-width: 95vw;
-  max-height: 90vh;
-  padding-top: 12vw; /* ← ×ボタンのために上に余白 */
 }
+
+@media (max-width: 600px) {
+  
+  .popup-img {
+    max-height: 65vh; /* ← スマホはもっと強めに制限 */
+  }
+}
+
+
 
 /* ===============================
     Front  ここから２重構造のやつ
