@@ -100,7 +100,7 @@ body {
 @media (max-width: 600px) {
   .college-title {
     font-size: 1.6rem;  /* 見た目整える */
-    max-width: 100%;
+    max-width: 95vw;
   }
 }
 
@@ -925,7 +925,7 @@ header .right {
     /* section13-comment */
     .section13-comment {
     padding: 20px;
-    background-color: none; /* 透明白 */
+    background: none;
     text-align: center;
     margin-top: 10px;
     margin-bottom: 10px;
