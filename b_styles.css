@@ -771,24 +771,16 @@ header .right {
   display: flex;
   justify-content: center;
   align-items: flex-start;
-  gap: 50px;
+  gap: 100px;
   padding: 20px;
   flex-wrap: nowrap;
   overflow-x: auto;
   -webkit-overflow-scrolling: touch;
 }
 
-.image-container div {
-  text-align: center;
-  flex-shrink: 0;
-  width: 300px; /* ← 画像と同じ幅に固定 */
-  font-size: 14px;
-  color: #333;
-}
-
 .image {
-  width: 300px; /* ← 大きめサイズ */
-  height: 200px;
+  width: 500px; /* ← 大きめサイズ */
+  height: 300px;
   object-fit: cover;
   object-position: center;
   margin-bottom: 5px;
