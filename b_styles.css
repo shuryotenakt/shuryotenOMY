@@ -938,47 +938,73 @@ header .right {
     line-height: 1.5;
     }
 
-    /* section14-under */
-    /* section14-under: フッターSNSボタン */
-    .section14-under {
-    padding: 20px;
-    text-align: center;
-    font-size: 0.9em;
-    border-top: 2px solid #000000; /* ← 仕切り線を追加 */
-    }
+/* =============================== */
+/*   section14-under：フッターSNSボタン   */
+/* =============================== */
 
-    .section14-under .footer-links {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 10px;
-    margin-bottom: 15px;
-    align-items: stretch;   /* ★ 高さも揃う */
-    }
+.section14-under {
+  padding: 20px;
+  text-align: center;
+  font-size: 0.9em;
+  border-top: 2px solid #000000;
+}
 
-    .section14-under .footer-links a {
-    display: inline-block;
-    padding: 10px 50px;
-    background-color: #ffffff81;
-    color: #000;
-    text-decoration: none;
-    border: 1px solid #b7f0b5;
-    border-radius: 6px;
-    font-weight: bold;
-    transition: background-color 0.2s ease;
-      /* ★ ボタンの幅を「最大のボタン」に揃える */
-    flex: 1 1 auto;          /* ← 横幅を揃えるポイント その1 */
-    max-width: 250px;        /* ← 上限（必要なら調整可能） */
-    justify-content: center;
-    }
+/* --- リンクの並び --- */
+.section14-under .footer-links {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 12px;
+  margin-bottom: 15px;
 
-    .section14-under .footer-links a:hover {
-    background-color: #ffcf94b5;
-    }
+  align-items: stretch;  /* ★ ボタンの高さを揃えたい場合に有効 */
+}
 
-      @media (max-width: 600px) {
-    .section14-under a {
-    margin: 1px auto !important;   /* ★ 上下の余白を丸ごと上書き */
+/* --- 各リンクボタン --- */
+.section14-under .footer-links a {
+  display: flex;                    /* ← アイコン＋文字を並べる */
+  align-items: center;
+  justify-content: space-between;   /* ← 両端にアイコン・中央に文字 */
+
+  gap: 10px;
+  padding: 10px 20px;
+
+  background-color: #ffffff81;
+  color: #000;
+  text-decoration: none;
+
+  border: 1px solid #b7f0b5;
+  border-radius: 6px;
+  font-weight: bold;
+  transition: background-color 0.2s ease;
+
+  /* ★ 幅をそろえるための設定 */
+  flex: 1 1 auto;
+  max-width: 260px;
+
+  text-align: center;
+}
+
+/* --- ホバー時 --- */
+.section14-under .footer-links a:hover {
+  background-color: #ffcf94b5;
+}
+
+/* --- Xアイコン --- */
+.section14-under .footer-links a i {
+  font-size: 20px;
+  color: #000;
+}
+
+/* --- スマホ調整 --- */
+@media (max-width: 600px) {
+  .section14-under .footer-links a {
+    max-width: 90%;        /* ← ボタンを幅広にし、見やすく */
+    padding: 12px 18px;
+  }
+
+  .section14-under .footer-links a i {
+    font-size: 22px;       /* ← スマホではアイコン少し大きく */
   }
 }
 
