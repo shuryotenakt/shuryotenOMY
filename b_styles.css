@@ -1780,7 +1780,6 @@ section.open .back {
   z-index: 1;
   transition: transform 0.8s ease;
 }
-<<<<<<< HEAD
 
 /* ================================
    ゲームカレッジ用スライダー (game-クラス)
@@ -1942,4 +1941,3 @@ section.open .back {
       margin-bottom: 10px;
   }
 }
->>>>>>> d91ff22eaac38b27a1bb2b7a220ea32433d6aa7b
