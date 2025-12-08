@@ -15,7 +15,7 @@ body {
     );
 
     background-size: 300% 300%; /* ← 背景を広げて動かす余地を作る */
-    animation: gradientShift 30s ease-in-out infinite;
+    animation: gradientShift 10s ease-in-out infinite;
     max-width: 100vw;
     overflow-x: hidden;
     }
