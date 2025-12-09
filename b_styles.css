@@ -521,7 +521,7 @@ header .right {
     width: 100%;
     height: 250px;
   }
-  .section4-venue p{
+  .section4-venue p {
     margin-top: -10px;
   }
 }
@@ -636,11 +636,10 @@ header .right {
   display: inline-block;
   white-space: nowrap;
   transform-origin: left center;
-    /* はみ出す時だけ縮む */
+  /* はみ出す時だけ縮む */
   width: max-content;
   max-width: 100%;
 }
-
 
 /*-----------------map-----------------------*/
 .section15-map h2 {
@@ -851,8 +850,8 @@ header .right {
   }
 
   .image {
-    width: 100%;      /* 画面幅に合わせる */
-    height: auto;     /* 自然な縦横比に戻す */
+    width: 100%; /* 画面幅に合わせる */
+    height: auto; /* 自然な縦横比に戻す */
     max-width: 250px; /* 必要なら上限を設定（好みに応じて調整） */
   }
 
@@ -863,7 +862,6 @@ header .right {
     margin: 20px auto;
     flex-direction: column-reverse; /*上下入れ替え*/
   }
-
 
   .text-box {
     padding: 10px;
@@ -899,11 +897,11 @@ header .right {
   border-top: 2px solid #000000;
 }
 
-.section14-under h3{
+.section14-under h3 {
   text-align: center;
 }
 
-.section14-under .acount-name{
+.section14-under .acount-name {
   color: #000;
   font-weight: bold;
   white-space: nowrap; /*文字の改行禁止*/
@@ -1223,10 +1221,10 @@ h2 {
 }
 
 .it-photo {
-  display: block;/* ← インライン画像をブロック化して中央寄せ可能に */
-  margin: 0 auto;/* ← 中央配置 */
-  max-width: 100%;/* ← 横幅は親要素の100%まで */
-  height: auto;/* ← 縦横比を保持したまま縮小 */
+  display: block; /* ← インライン画像をブロック化して中央寄せ可能に */
+  margin: 0 auto; /* ← 中央配置 */
+  max-width: 100%; /* ← 横幅は親要素の100%まで */
+  height: auto; /* ← 縦横比を保持したまま縮小 */
 }
 
 /* ===== ポップアップ全体の背景 ===== */
@@ -1348,7 +1346,7 @@ h2 {
   z-index: 2;
   width: 500px;
   padding-bottom: 30px;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+  /*box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);*/
   /* アニメーション用 */
   transition: transform 0.5s ease, opacity 0.5s ease;
 }
@@ -1592,11 +1590,12 @@ section.open .back {
   /* 任意の背景画像を指定 */
   background-image: url("img/pafo/劇団四季のアラジンを観に行きました.jpg");
 
- 
   /* ▼ 薄いオレンジのフィルター（ふわっと感） */
-  background-color: rgba(255, 170, 80, 0.35); /* ← 薄いオレンジ！ */
+  /*background-color: rgba(255, 170, 80, 0.35);*/
+  /* ← 薄いオレンジ！ */
   background-blend-mode: overlay;
-  
+  background-color: rgba(159, 203, 251, 0.45);
+  background-blend-mode: overlay;
   background-size: cover;
   background-position: center;
   filter: blur(1px) brightness(0.3); /* ぼかしと暗さ */
@@ -1697,8 +1696,6 @@ section.open .back {
   .pafo-slide.active {
     flex: 0 0 60%;
   }
-
-  
 }
 
 /* ================================
@@ -1718,6 +1715,8 @@ section.open .back {
   background-image: url("/img/video/IMG_2416.JPG");
   background-size: cover;
   background-position: center;
+  background-color: rgba(159, 203, 251, 0.45);
+  background-blend-mode: overlay;
   filter: blur(1px) brightness(0.3); /* ぼかしと暗さ */
   z-index: 1;
   transition: transform 0.8s ease;
@@ -1772,11 +1771,14 @@ section.open .back {
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-direction: column;
+  font-size: small;
   transition: all 0.6s ease-in-out;
   opacity: 0.6; /* 中央以外は薄く */
   transform: scale(0.9); /* 中央以外は小さく */
   position: relative;
   z-index: 1;
+  text-align: center;
 }
 
 .game-slide img {
@@ -1800,7 +1802,29 @@ section.open .back {
   opacity: 1;
   transform: scale(1);
   z-index: 2;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+  /* box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3); */
+}
+
+.game-slide.active .game-text {
+  opacity: 1; /* 不透明にする */
+  visibility: visible; /* 見えるようにする */
+}
+
+.game-text {
+  background-color: #f0f0f0; /* 背景色（薄いグレー） */
+  color: #333; /* 文字色 */
+
+  /* 【重要】横長の丸にする設定 */
+  border-radius: 50px;
+  padding: 10px 10px;
+  /* 配置とサイズの調整 */
+  width: 100%;
+  margin-top: 10px;
+  font-size: 50%;
+
+  opacity: 0; /* 透明にする */
+  visibility: hidden; /* マウス判定もなくす */
+  transition: opacity 0.5s; /* ふわっと切り替える */
 }
 
 /* 矢印ボタン */
@@ -1828,7 +1852,7 @@ section.open .back {
   right: 10px;
 }
 
-.game-college-back{
+.game-college-back {
   background-color: #baf7e0cb;
 }
 
@@ -1844,7 +1868,11 @@ section.open .back {
   }
 
   .game-slide.active {
+    width: 200px;
     flex: 0 0 60%;
+    opacity: 1; /* くっきり表示 */
+    transform: scale(1); /* 元のサイズ */
+    z-index: 2; /* 一番手前に */
   }
 
   .game-slide-track {
@@ -1853,55 +1881,56 @@ section.open .back {
     width: 100%;
     position: relative;
     height: 200px;
+    margin-top: 20px;
   }
 }
 
 /*section-アンケート*/
 .section-ankto {
-    font-size: 25px;
-    padding: 20px;
-    text-align: center;
-    margin-top: 10px;
-    margin-bottom: 10px;
-    background-color: rgba(255, 255, 255, 0.1);
+  font-size: 25px;
+  padding: 20px;
+  text-align: center;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  background-color: rgba(255, 255, 255, 0.1);
 }
 
 /* 画像（クラス image でも img でもOKに統一） */
 .section-ankto img,
 .section-ankto .image {
-    width: 100%;
-    max-width: 300px;
-    height: auto;      /* ← 高さ固定を完全に解除 */
-    display: block;
-    margin: 0 auto;
-    border-radius: 8px;
-    margin-bottom: 40px;
+  width: 100%;
+  max-width: 300px;
+  height: auto; /* ← 高さ固定を完全に解除 */
+  display: block;
+  margin: 0 auto;
+  border-radius: 8px;
+  margin-bottom: 40px;
 }
 
 .section-ankto a {
-    display: inline-block;
+  display: inline-block;
 }
 
 /* スマホレイアウト */
 @media screen and (max-width: 600px) {
-    .section-ankto {
-        font-size: 18px;
-        max-width: 95%;
-        padding: 15px;
-        margin-top: 15px;
-    }
+  .section-ankto {
+    font-size: 18px;
+    max-width: 95%;
+    padding: 15px;
+    margin-top: 15px;
+  }
 
-    .section-ankto img,
-    .section-ankto .image {
-        max-width: 200px;
-        height: auto; /* 念のため追加 */
-        margin-bottom: 20px;
-    }
+  .section-ankto img,
+  .section-ankto .image {
+    max-width: 200px;
+    height: auto; /* 念のため追加 */
+    margin-bottom: 20px;
+  }
 
-    .section-ankto p {
-        font-size: 20px;
-        margin-bottom: 10px;
-    }
+  .section-ankto p {
+    font-size: 20px;
+    margin-bottom: 10px;
+  }
 }
 
 /* ================================
@@ -1919,8 +1948,8 @@ section.open .back {
   padding: 20px;
   /* 任意の背景画像を指定 */
   background-image: url("img/manga/【back写真】修了展_1.jpg");
-
-  
+  background-color: rgba(159, 203, 251, 0.45);
+  background-blend-mode: overlay;
   background-size: cover;
   background-position: center;
   filter: blur(1px) brightness(0.3); /* ぼかしと暗さ */
@@ -2007,7 +2036,7 @@ section.open .back {
   right: 10px;
 }
 
-.manga-college-back{
+.manga-college-back {
   background-color: rgb(255, 200, 199);
 }
 
@@ -2025,7 +2054,4 @@ section.open .back {
   .manga-slide.active {
     flex: 0 0 60%;
   }
-
-  
-  }
-
+}
