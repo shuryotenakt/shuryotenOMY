@@ -1222,6 +1222,10 @@ h2 {
   }
 }
 
+.it-photo{
+  max-width: 90%;
+}
+
 /* ===== ポップアップ全体の背景 ===== */
 .popup-overlay {
   position: fixed;
