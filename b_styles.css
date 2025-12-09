@@ -906,6 +906,7 @@ header .right {
 .section14-under .acount-name{
   color: #000;
   font-weight: bold;
+  white-space: nowrap; /*文字の改行禁止*/
 }
 
 /* --- リンクの並び --- */
