@@ -1919,6 +1919,11 @@ section.open .back {
   padding: 20px;
   /* 任意の背景画像を指定 */
   background-image: url("img/manga/【back写真】修了展_1.jpg");
+  
+  /* ▼ 薄いオレンジのフィルター（ふわっと感） */
+  background-color: rgba(255, 170, 80, 0.35); /* ← 薄いオレンジ！ */
+  background-blend-mode: overlay;
+
   background-size: cover;
   background-position: center;
   filter: blur(1px) brightness(0.3); /* ぼかしと暗さ */
