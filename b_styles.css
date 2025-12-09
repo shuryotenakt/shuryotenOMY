@@ -1,6 +1,6 @@
-* {
+/* * {
   outline: 2px solid red;
-}
+} */
 
 body {
   margin: 0;
@@ -926,7 +926,7 @@ header .right {
   justify-content: space-between; /* ← 両端にアイコン・中央に文字 */
   gap: 10px;
   text-decoration: none;
-  border: 1px solid #b7f0b5;
+  border: 1px solid #000000;
   border-radius: 6px;
   transition: background-color 0.2s ease;
   /* ★ 幅をそろえるための設定 */
@@ -1223,10 +1223,10 @@ h2 {
 }
 
 .it-photo {
-  display: block;        /* ← インライン画像をブロック化して中央寄せ可能に */
-  margin: 0 auto;        /* ← 中央配置 */
-  max-width: 100%;       /* ← 横幅は親要素の100%まで */
-  height: auto;          /* ← 縦横比を保持したまま縮小 */
+  display: block;/* ← インライン画像をブロック化して中央寄せ可能に */
+  margin: 0 auto;/* ← 中央配置 */
+  max-width: 100%;/* ← 横幅は親要素の100%まで */
+  height: auto;/* ← 縦横比を保持したまま縮小 */
 }
 
 /* ===== ポップアップ全体の背景 ===== */
