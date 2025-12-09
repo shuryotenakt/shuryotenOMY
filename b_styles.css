@@ -750,7 +750,6 @@ header .right {
 .image {
   object-fit: cover;
   object-position: center;
-  margin-bottom: 5px;
   box-shadow: 0 3px 8px rgba(0, 0, 0, 0.2);
   border-radius: 6px;
   display: block;
@@ -843,14 +842,10 @@ header .right {
     flex-wrap: nowrap;
   }
 
-  .image-container div {
-    width: 120px; /* ← スマホでは画像と同じ幅 */
-    font-size: 12px;
-  }
-
   .image {
-    width: 120px;
-    height: 90px;
+    width: 100%;      /* 画面幅に合わせる */
+    height: auto;     /* 自然な縦横比に戻す */
+    max-width: 250px; /* 必要なら上限を設定（好みに応じて調整） */
   }
 
   .card1,
