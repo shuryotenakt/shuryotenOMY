@@ -927,7 +927,6 @@ header .right {
   transition: background-color 0.2s ease;
   /* ★ 幅をそろえるための設定 */
   flex: 1 1 auto;
-  max-width: 260px;
   text-align: center;
 }
 
@@ -1031,7 +1030,8 @@ header .right {
 ================================ */
 
 h2 {
-  color: #333;
+  color: #000000;
+  text-align: center;
 }
 
 /* ================================
@@ -1351,6 +1351,7 @@ h2 {
   padding: 10px 5px;
   color: #ffffff;
   font-size: 1.2rem;
+  text-align: center;
   font-weight: bold;
   line-height: 1.6;
 }
