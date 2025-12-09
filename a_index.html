@@ -8,14 +8,14 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+JP&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@400;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="b_styles.css" />
+    <link rel="stylesheet" href="a_index.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
 <body>
 <!--ヘッダー-->
 <body class="page default">
 <header>
-  <div class="left">総合学園ヒューマンアカデミー　大宮校</div>
+  <div class="left">総合学園ヒューマンアカデミー大宮校</div>
   <div class="right">TEL:０４８－６１５－４３８６</div>
 </header>
 
@@ -71,6 +71,7 @@
       <h2>【会場】</h2>
       <p class="gradient-text"><a href="https://www.google.com/maps/place/%E3%82%BD%E3%83%8B%E3%83%83%E3%82%AF%E3%82%B7%E3%83%86%E3%82%A3%E5%9B%BD%E9%9A%9B%E4%BC%9A%E8%AD%B0%E5%AE%A4/@35.905915,139.617268,18z/data=!3m1!5s0x6018c14348328a1d:0x789ca96c38f35e8a!4m10!1m2!2m1!1z44K944OL44OD44Kv44K344OG44Kj44Ob44O844Or5Zu96Zqb5Lya6K2w5a6k!3m6!1s0x6018c176102828b7:0x879143d9aaa5299b!8m2!3d35.905915!4d139.6194359!15sCi3jgr3jg4vjg4Pjgq_jgrfjg4bjgqPjg5vjg7zjg6vlm73pmpvkvJrorbDlrqRaNCIy44K944OL44OD44KvIOOCt-ODhuOCoyDjg5vjg7zjg6sg5Zu96ZqbIOS8muitsCDlrqSSARFjb25mZXJlbmNlX2NlbnRlcpoBI0NoWkRTVWhOTUc5blMwVkpRMEZuU1VOR2NuRm1OMWxuRUFF4AEA-gEECCgQIg!16s%2Fg%2F11jp0t7gzc?authuser=0&entry=ttu&g_ep=EgoyMDI1MTAyOS4yIKXMDSoASAFQAw%3D%3D" target="_blank">ソニックシティホール</a></p>
     </div>
+    <p>会場をタップでgoogle mapを開く</p>
     <div class="venue-right">
       <iframe
         src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3242.2629834605137!2d139.6172227152248!3d35.90751678014316!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6018c2b35eb64bd7%3A0x8de9b34dbd681c2!2z44CSMzMwLTA4MTUg5Z-8546J55yM5aSn5a2m5biC5qCD5rWc5Yy65bel5qWt77yU5LiB55uu77yR4oiS77yR77yR!5e0!3m2!1sja!2sjp!4v1638359247983!5m2!1sja!2sjp"
@@ -154,12 +155,21 @@
   <h2>タイムスケジュール</h2>
         <table>
         <thead>
-            <tr><th>時間</th><th>内容</th></tr>
+            <tr><th>時　間</th><th>内　容</th></tr>
         </thead>
         <tbody>
-            <tr><td>10:00 - 12:00</td><td>午前の部</td></tr>
+            <tr><td>10:00 - </td><td>午 前 の 部　～　開幕　～</td></tr>
+
+            <tr><td>11:30 - </td><td><span class="auto-shrink">パフォーミングアーツカレッジ</span><br>
+            ①朗読劇<br>
+            ②アフレコLIVE １本目</td></tr>
+
             <tr><td>12:00 - 13:00</td><td> ~ ~ ~  お昼休憩 TIME  ~ ~ ~ </td></tr>
-            <tr><td>13:00 - 16:00</td><td>午後の部</td></tr>
+
+            <tr><td>13:30 - </td><td><span class="auto-shrink">パフォーミングアーツカレッジ</span><br>
+            ①アフレコLIVE ２本目<br>②アフレコLIVE ３本目</td></tr>
+
+            <tr><td> - 16:00</td><td>午 後 の 部　～　終幕　～</td></tr>
         </tbody>
         </table>
 </section>
@@ -185,7 +195,7 @@
         <!-- ★ Front部分（動画風カードデザイン） -->
         <div class="college-front" id="manga-front">
             <!-- 背景画像（ぼかし用） -->
-            <div class="front-bg-layer"></div>
+            <div class="manga-front-bg-layer"></div>
             
             <!-- 中央のカード -->
             <div class="front-card">
@@ -199,20 +209,22 @@
         </div>
 
         <div class="college-back" id="manga-back" style="display: none;">
+
+          <div class="manga-college-back">
         <!-- ★ 新スライダー（中央大・左右小・自動循環） -->
-            <div class="sample-slider-wrap">
-                <div class="sample-slide-track">
-                    <div class="sample-slide"><img src="img/manga/カルーセル01.jpg" alt="1"></div>
-                    <div class="sample-slide"><img src="img/manga/カルーセル02.jpg" alt="2"></div>
-                    <div class="sample-slide"><img src="img/manga/カルーセル03.jpg" alt="3"></div>
-                    <div class="sample-slide"><img src="img/manga/カルーセル04.jpg" alt="4"></div>
-                    <div class="sample-slide"><img src="img/manga/カルーセル05.jpg" alt="5"></div>
-                    <div class="sample-slide"><img src="img/manga/カルーセル06.jpg" alt="6"></div>
+            <div class="manga-slider-wrap">
+                <div class="manga-slide-track">
+                    <div class="manga-slide"><img src="img/manga/カルーセル01.jpg" alt="1"></div>
+                    <div class="manga-slide"><img src="img/manga/カルーセル02.jpg" alt="2"></div>
+                    <div class="manga-slide"><img src="img/manga/カルーセル03.jpg" alt="3"></div>
+                    <div class="manga-slide"><img src="img/manga/カルーセル04.jpg" alt="4"></div>
+                    <div class="manga-slide"><img src="img/manga/カルーセル05.jpg" alt="5"></div>
+                    <div class="manga-slide"><img src="img/manga/カルーセル06.jpg" alt="6"></div>
                 </div>
 
                 <!-- 両サイド矢印 -->
-                <button class="sample-arrow sample-prev">&#10094;</button>
-                <button class="sample-arrow sample-next">&#10095;</button>
+                <button class="manga-arrow manga-prev">&#10094;</button>
+                <button class="manga-arrow manga-next">&#10095;</button>
             </div>
 
             <!-- ▼ ギャラリー（既存をそのままコピー） -->
@@ -250,14 +262,14 @@
 
         <div class="front-card">
             <div class="card-body-text">
-                <p>担任の一言 『思考錯誤の連続。その分、熱がこもっています』<br/><br/>(鈴木)</p>
+                <p>『思考錯誤の連続。<br/>その分、熱がこもっています』<br/><br/>担任　鈴木</p>
             </div>
             <button id="open-game-btn" class="open-circle-btn"></button>
         </div>
     </div>
 
     <div class="college-back" id="game-back" style="display:none;">
-
+      <div class="game-college-back">
         <!-- ★ game スライダー -->
         <div class="game-slider-wrap">
             <div class="game-slide-track">
@@ -269,7 +281,7 @@
             <button class="game-arrow game-prev">&#10094;</button>
             <button class="game-arrow game-next">&#10095;</button>
         </div>
-
+      
         <!-- ギャラリー -->
         <div class="college-gallery">
             <div class="photo-item">
@@ -283,10 +295,10 @@
                 <div class="gallery-frame">
                     <img src="img/game/game_back2.jpg">
                 </div>
-                <div class="photo-caption">ドキドキの就活イベント！ 企業様に、がんばった成果をアピール！</div>
+                <div class="photo-caption">ドキドキの就活イベント！ <br/>企業様に、がんばった成果をアピール！</div>
             </div>
         </div>
-
+      </div>
         <button id="close-game-btn" class="close-btn">× 閉じる</button>
     </div>
 
@@ -307,9 +319,9 @@
             
             <div class="front-card">
                 <div class="card-body-text">
-                    <p>自分と向き合い作品と向き合い、たくさん悩んでたくさん挑戦して、1年間でとっても成長しました。
+                    <p>自分と向き合い作品と向き合い、たくさん悩んでたくさん挑戦して、1年間でとっても成長しました。<br /><br />
                     修了展では、アフレコLIVEと朗読劇をお届けします。
-                    身近で生の演技を楽しんでいってくださいね。<br/>1年担任　亀中</span></p>
+                    身近で生の演技を楽しんでいってくださいね。<br/><br />1年担任　亀中</span></p>
                 </div>
                 <button id="open-pafo-btn" class="open-circle-btn"></button>
             </div>
@@ -342,7 +354,7 @@
                     <div class="gallery-frame">
                     <img src="/img/pafo/パフォ/パフォ素材/パフォ/初めてのインターン！自分たちで作り上げて立派にやり遂げました！.jpg">
                     </div>
-                    <div class="photo-caption">初めてのインターン！自分たちで作り上げて立派にやり遂げました！</div>
+                    <div class="photo-caption">初めてのインターン！<br/>自分たちで作り上げて立派にやり遂げました！</div>
                 </div>
             </div>
             <button id="close-pafo-btn" class="close-btn">× 閉じる</button>
@@ -365,7 +377,7 @@
             <div class="front-card">
                 <div class="card-body-text">
                     <p>「想像して創造する。アイディアをカタチにする学校」<br/><br/>
-                    修了展に向けて全員準備してきました！<br/>カメラ体験会も是非来てください！<br/>by:青木 </span></p>
+                    修了展に向けて全員準備してきました！<br/>カメラ体験会も是非来てください！<br/>担任　青木 </span></p>
                 </div>
                 <!-- 白い丸ボタン -->
                 <button id="open-video-btn" class="open-circle-btn"></button>
@@ -466,45 +478,45 @@
     <div class="footer-links">
         <a href="https://x.com/human_omiya01" target="_blank">
             <i class="fa-brands fa-x-twitter"></i>
-            <span>総合学園ヒューマンアカデミー<br>大宮校</span>
+            <span class="acount-name">総合学園ヒューマンアカデミー<br>大宮校</span>
             <i class="fa-brands fa-x-twitter"></i>
         </a>
 
         <a href="https://x.com/Human_manga" target="_blank">
             <i class="fa-brands fa-x-twitter"></i>
-            <span>マンガ・イラストカレッジ</span>
+            <span class="acount-name">マンガ・イラストカレッジ</span>
             <i class="fa-brands fa-x-twitter"></i>
         </a>
 
         <a href="https://x.com/human_game_ha" target="_blank">
             <i class="fa-brands fa-x-twitter"></i>
-            <span>ゲームカレッジ</span>
+            <span class="acount-name">ゲームカレッジ</span>
             <i class="fa-brands fa-x-twitter"></i>
         </a>
 
         <a href="https://x.com/human_voiceact" target="_blank">
             <i class="fa-brands fa-x-twitter"></i>
-            <span>パフォーミングアーツカレッジ</span>
+            <span class="acount-name">パフォーミングアーツカレッジ</span>
             <i class="fa-brands fa-x-twitter"></i>
         </a>
 
         <a href="https://x.com/human_vcreator" target="_blank">
             <i class="fa-brands fa-x-twitter"></i>
-            <span>動画カレッジ</span>
+            <span class="acount-name">動画カレッジ</span>
             <i class="fa-brands fa-x-twitter"></i>
         </a>
 
     </div>
 </section>
 <!--調整中です-->
-<section class="section-ankto ">
+<!-- <section class="section-ankto ">
   <p>アンケート</p>
   <a href="https://qr.c-cloud.co.jp/t/l/UuSAuK" target="_blank"style="display:inline-block;">
       <img src="/img/sample-QR.png" alt="画像1"class="image">
       </a>
   <p>こちらから修了展のアンケートができますのでよろしければお答えいただけますと嬉しいです</p>
 
-</section>
+</section> -->
 
 
 <footer class="footer">
