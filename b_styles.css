@@ -1735,6 +1735,11 @@ section.open .back {
   padding: 20px;
   /* 任意の背景画像を指定 */
   background-image: url("img/game/game_front1.jpg");
+
+  /* ▼ ふわっと可愛い薄い水色レイヤー */
+  background-color: rgba(150, 200, 255, 0.45); /* やさしい水色 */
+  background-blend-mode: overlay;
+
   background-size: cover;
   background-position: center;
   filter: blur(1px) brightness(0.3); /* ぼかしと暗さ */
