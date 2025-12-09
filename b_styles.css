@@ -1733,7 +1733,7 @@ section.open .back {
   background-image: url("img/game/game_front1.jpg");
 
   /* ▼ ふわっと可愛い薄い水色レイヤー */
-  background-color: rgba(150, 200, 255, 0.45); /* やさしい水色 */
+  background-color: rgba(159, 203, 251, 0.45); /* やさしい水色 */
   background-blend-mode: overlay;
 
   background-size: cover;
