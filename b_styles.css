@@ -1614,6 +1614,7 @@ section.open .back {
   display: flex;
   align-items: center;
   width: 100%;
+  height: 200px;
   position: relative;
 }
 
@@ -2020,7 +2021,6 @@ section.open .back {
     flex: 0 0 60%;
   }
 
-  .manga-slide-track {
-    height: 100%;
+  
   }
-}
+
