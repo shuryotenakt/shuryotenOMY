@@ -1592,9 +1592,10 @@ section.open .back {
   /* 任意の背景画像を指定 */
   background-image: url("img/pafo/パフォ/パフォ素材/パフォ/劇団四季のアラジンを観に行きました.jpg");
 
-    /* ▼ ふわっと可愛いピンクレイヤー */
-  background-color: rgba(255, 150, 200, 0.45); /* やさしいピンク */
-  background-blend-mode: overlay;              /* 画像＋色を綺麗に合成 */
+ 
+  /* ▼ 薄いオレンジのフィルター（ふわっと感） */
+  background-color: rgba(255, 170, 80, 0.35); /* ← 薄いオレンジ！ */
+  background-blend-mode: overlay;
   
   background-size: cover;
   background-position: center;
@@ -1740,7 +1741,7 @@ section.open .back {
   background-image: url("img/game/game_front1.jpg");
 
   /* ▼ ふわっと可愛い薄い水色レイヤー */
-  background-color: rgba(150, 200, 255, 0.45); /* やさしい水色 */
+  background-color: rgba(159, 203, 251, 0.45); /* やさしい水色 */
   background-blend-mode: overlay;
 
   background-size: cover;
