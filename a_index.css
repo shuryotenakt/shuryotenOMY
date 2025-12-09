@@ -1,6 +1,6 @@
-* {
+/* * {
   outline: 2px solid red;
-}
+} */
 
 body {
   margin: 0;
@@ -906,6 +906,7 @@ header .right {
 .section14-under .acount-name{
   color: #000;
   font-weight: bold;
+  white-space: nowrap; /*文字の改行禁止*/
 }
 
 /* --- リンクの並び --- */
@@ -925,7 +926,7 @@ header .right {
   justify-content: space-between; /* ← 両端にアイコン・中央に文字 */
   gap: 10px;
   text-decoration: none;
-  border: 1px solid #b7f0b5;
+  border: 1px solid #000000;
   border-radius: 6px;
   transition: background-color 0.2s ease;
   /* ★ 幅をそろえるための設定 */
@@ -1219,6 +1220,13 @@ h2 {
   .photo-item {
     width: 100%;
   }
+}
+
+.it-photo {
+  display: block;/* ← インライン画像をブロック化して中央寄せ可能に */
+  margin: 0 auto;/* ← 中央配置 */
+  max-width: 100%;/* ← 横幅は親要素の100%まで */
+  height: auto;/* ← 縦横比を保持したまま縮小 */
 }
 
 /* ===== ポップアップ全体の背景 ===== */
@@ -1583,6 +1591,12 @@ section.open .back {
   padding: 20px;
   /* 任意の背景画像を指定 */
   background-image: url("img/pafo/パフォ/パフォ素材/パフォ/劇団四季のアラジンを観に行きました.jpg");
+
+ 
+  /* ▼ 薄いオレンジのフィルター（ふわっと感） */
+  background-color: rgba(255, 170, 80, 0.35); /* ← 薄いオレンジ！ */
+  background-blend-mode: overlay;
+  
   background-size: cover;
   background-position: center;
   filter: blur(1px) brightness(0.3); /* ぼかしと暗さ */
@@ -1725,6 +1739,11 @@ section.open .back {
   padding: 20px;
   /* 任意の背景画像を指定 */
   background-image: url("img/game/game_front1.jpg");
+
+  /* ▼ ふわっと可愛い薄い水色レイヤー */
+  background-color: rgba(159, 203, 251, 0.45); /* やさしい水色 */
+  background-blend-mode: overlay;
+
   background-size: cover;
   background-position: center;
   filter: blur(1px) brightness(0.3); /* ぼかしと暗さ */
@@ -2004,4 +2023,23 @@ section.open .back {
   .manga-slide-track {
     height: 100%;
   }
+}
+
+
+/* ▼ ① 文字カードを先に消す */
+.front-card.fade-text-out {
+  opacity: 0;
+  transform: translateY(-10px);
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+/* ▼ ② 背景写真を明るくしてから消す */
+.front-bg-layer.reveal-then-fade {
+  filter: brightness(1) blur(0px); /* 一瞬明るく */
+  transition: filter 0.3s ease;
+}
+
+.front-bg-layer.fade-out {
+  opacity: 0;
+  transition: opacity 0.3s ease;
 }

@@ -41,6 +41,10 @@ document.addEventListener("DOMContentLoaded", () => {
         requestAnimationFrame(() => {
           frontSection.classList.remove("fade-out");
         });
+
+       document.getElementById("game-college").scrollIntoView({
+        behavior: "smooth" 
+       }); 
       }, 600);
     });
   }
