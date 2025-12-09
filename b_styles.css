@@ -1590,7 +1590,7 @@ section.open .back {
   height: 100%;
   padding: 20px;
   /* 任意の背景画像を指定 */
-  background-image: url("img/pafo/パフォ/パフォ素材/パフォ/劇団四季のアラジンを観に行きました.jpg");
+  background-image: url("img/pafo/劇団四季のアラジンを観に行きました.jpg");
 
  
   /* ▼ 薄いオレンジのフィルター（ふわっと感） */
@@ -1920,7 +1920,7 @@ section.open .back {
   height: 100%;
   padding: 20px;
   /* 任意の背景画像を指定 */
-  background-image: url("img/pafo/パフォ/パフォ素材/パフォ/劇団四季のアラジンを観に行きました.jpg");
+  background-image: url("img/pafo/劇団四季のアラジンを観に行きました.jpg");
   background-size: cover;
   background-position: center;
   filter: blur(1px) brightness(0.3); /* ぼかしと暗さ */
