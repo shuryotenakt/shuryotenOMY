@@ -2024,3 +2024,22 @@ section.open .back {
     height: 100%;
   }
 }
+
+
+/* ▼ ① 文字カードを先に消す */
+.front-card.fade-text-out {
+  opacity: 0;
+  transform: translateY(-10px);
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+/* ▼ ② 背景写真を明るくしてから消す */
+.front-bg-layer.reveal-then-fade {
+  filter: brightness(1) blur(0px); /* 一瞬明るく */
+  transition: filter 0.3s ease;
+}
+
+.front-bg-layer.fade-out {
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
