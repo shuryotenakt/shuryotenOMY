@@ -56,6 +56,11 @@ document.addEventListener("DOMContentLoaded", () => {
         requestAnimationFrame(() => {
           frontSection.classList.remove("fade-out");
         });
+
+        
+       document.getElementById("manga-college").scrollIntoView({
+        behavior: "smooth" 
+       }); 
       }, 600);
     });
   }

@@ -41,6 +41,11 @@ document.addEventListener("DOMContentLoaded", () => {
         requestAnimationFrame(() => {
           frontSection.classList.remove("fade-out");
         });
+
+        
+       document.getElementById("pafo-college").scrollIntoView({
+        behavior: "smooth" 
+       }); 
       }, 600);
     });
   }
