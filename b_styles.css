@@ -6,7 +6,6 @@ body {
   margin: 0;
   padding: 0; /* ← モバイルで左右に適度な余白を入れる */
   box-sizing: border-box;
-  font-family: "IBM Plex Sans JP", sans-serif;
   background: linear-gradient(
     90deg,
     rgba(255, 199, 231, 0.76) 0%,
@@ -44,13 +43,9 @@ body {
   font-size: clamp(1.2rem, 6vw, 2rem);
   font-style: italic;
   letter-spacing: 2px;
-
   text-align: center;
   margin: 60px auto 40px;
   padding: 20px 0;
-
-  max-width: 100%;
-  word-break: nowrap;
   position: relative;
 }
 
@@ -189,9 +184,7 @@ header .right {
 /* --- リンクボタン --- */
 .section1-nav nav a {
   display: inline-block;
-  width: 100%; /* ✅ 各ボタン幅を統一 */
   max-width: 250px; /* ✅ 広がりすぎ防止 */
-  padding: 14px 20px;
   background-color: #ffffffc9;
   border: 2px solid #b7f0b5;
   border-radius: 10px;
@@ -245,9 +238,6 @@ header .right {
 
 .section2-png img {
   display: block;
-  width: 100vw; /* ✅ 常に画面横幅に合わせる */
-  height: auto; /* ✅ 縦は自動調整（比率保持） */
-  object-fit: contain; /* ✅ 画像全体を切らずに表示 */
   object-position: center center;
   margin: 0 auto;
 }
@@ -317,9 +307,7 @@ header .right {
 
 /* 左半分 */
 .section3-day .date-left {
-  flex: 1.1; /* ✅ 左やや広め */
   background: transparent;
-  padding: 40px 40px 40px 60px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -377,11 +365,9 @@ header .right {
 
 /* 日付数字 */
 .section3-day .date-right h1 {
-  font-size: clamp(3rem, 10vw, 7rem);
   font-weight: 900;
   letter-spacing: 0.05em;
   margin: 0;
-  line-height: 1.1; /* ✅ 被り防止で少し余裕 */
 }
 
 /* 曜日 */
@@ -435,7 +421,6 @@ header .right {
 .section4-venue .venue-wrapper {
   display: flex;
   justify-content: space-between;
-  align-items: stretch; /* ✅ 高さを右の地図に合わせる */
   flex-wrap: nowrap;
   gap: 0px;
 }
@@ -446,8 +431,6 @@ header .right {
   min-width: 300px;
   display: flex;
   flex-direction: column;
-  justify-content: center; /* ✅ 垂直中央 */
-  align-items: center; /* ✅ 水平中央 */
   text-align: center;
   height: 100%; /* ✅ 高さを右の地図と揃える */
 }
@@ -523,7 +506,6 @@ header .right {
   .section4-venue .venue-wrapper {
     flex-direction: column;
     align-items: center;
-    text-align: center;
   }
 
   .section4-venue .venue-left {
@@ -553,7 +535,6 @@ header .right {
   margin: 0 auto;
   padding: 30px 20px;
   font-family: "Meiryo", sans-serif;
-  line-height: 1.7;
 }
 
 /* マップ画像 */
@@ -568,7 +549,6 @@ header .right {
 ---------------------------- */
 .section5-step {
   display: grid;
-  grid-template-columns: 80px 1fr 250px;
   gap: 20px;
   align-items: center;
   margin-bottom: 50px;
@@ -666,7 +646,6 @@ header .right {
 /*---------------- section7-jump ---------------- */
 .section7-jump {
   padding: 0 0;
-  text-align: center;
   margin: 20px auto;
 }
 
@@ -680,35 +659,18 @@ header .right {
 .section7-jump ul {
   list-style: none;
   padding: 0;
-  margin: 0;
-
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 50px; /* PCのボタン間隔を広げる */
-  width: 80%;
   max-width: 100%; /* PCボタンが大きく見えるよう調整 */
 }
 
 /* ボタンデザイン（統一幅＋中央配置） */
 .section7-jump a {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-
-  width: 100%;
-  height: 70px; /* PCでゆったり大きめに */
-  padding: 0 10px;
-
   background-color: #e9fffe;
   border: 2px solid #e7ffd2;
   border-radius: 12px;
   text-decoration: none;
-
   font-weight: bold;
-  font-size: 1rem;
   color: #000;
-
-  white-space: nowrap; /* ← 全体は改行させない（スマホでもPCでも） */
   transition: background-color 0.2s ease;
 }
 /* Section7 カレッジジャンプのホバー */
@@ -751,16 +713,12 @@ header .right {
   .section7-jump a {
     height: 50px; /* ← 高さ広めで見やすい */
     font-size: 0.95rem;
-
     padding: 5px 8px;
-    white-space: normal; /* ← 改行 OK にする（必須） */
     line-height: 1.2; /* ← 2行でも綺麗に見える */
-
     display: flex;
     align-items: center;
     justify-content: center;
     text-align: center;
-
     /* 全ボタン同じ幅に */
     width: 90%;
   }
@@ -768,7 +726,6 @@ header .right {
   /* 「カレッジ」を2行目へ強制的に送る */
   .section7-jump a span {
     display: inline-block;
-    white-space: normal;
     white-space: nowrap; /*文字の改行禁止*/
   }
 }
@@ -1100,9 +1057,6 @@ header .right {
 ================================ */
 
 h2 {
-  font-size: 2em;
-  margin: 40px 0 20px;
-  text-align: center;
   color: #333;
 }
 
@@ -1129,7 +1083,6 @@ h2 {
 ================================ */
 .college-gallery {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
   gap: 25px;
   max-width: 900px;
   margin: 40px auto;
@@ -1140,12 +1093,10 @@ h2 {
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: 100%;
 }
 
 /* ▼ 枠（PC・スマホ共通で使える最適形） */
 .gallery-frame {
-  width: 100%;
   aspect-ratio: 16 / 9; /* ★ スマホに最適：縦横バランスが良い正方形 */
   background-color: transparent;
   border-radius: 20px;
@@ -1158,10 +1109,6 @@ h2 {
 
 /* ▼ 画像：縦横どちらが長くても「枠の中に縮む」設定（最強） */
 .gallery-frame img {
-  max-width: 100%; /* 横長画像はこれで横が枠に合う */
-  max-height: 100%; /* 縦長画像はこれで縦が枠に合う */
-  width: auto;
-  height: auto;
   object-fit: contain; /* 切れない・収まる */
   background-color: transparent;
   display: block;
@@ -1229,10 +1176,6 @@ h2 {
 📱 レスポンシブ
 ================================ */
 @media (max-width: 768px) {
-  h2 {
-    font-size: 1.6em;
-  }
-
   .img-slider-custom {
     height: 300px;
   }
@@ -1423,7 +1366,6 @@ h2 {
   position: relative;
   z-index: 2;
   width: 500px;
-  text-align: center;
   padding-bottom: 30px;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
   /* アニメーション用 */
@@ -1452,7 +1394,6 @@ h2 {
   border-radius: 50%;
   margin: 0 auto;
   cursor: pointer;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
   position: relative;
   transition: transform 0.2s;
   animation: pulseLoop 2s infinite;
