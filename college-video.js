@@ -44,6 +44,11 @@ document.addEventListener("DOMContentLoaded", () => {
           frontSection.classList.remove("fade-out");
         });
       }, 600);
+
+      
+       document.getElementById("video-college").scrollIntoView({
+        behavior: "smooth" 
+       }); 
     });
   }
 
