@@ -1596,8 +1596,14 @@ section.open .back {
   width: 100%;
   height: 100%;
   padding: 20px;
+
+
+
   /* 任意の背景画像を指定 */
   background-image: url("img/pafo/パフォ/パフォ素材/パフォ/劇団四季のアラジンを観に行きました.jpg");
+  background-color: rgba(245, 22, 167, 0.4); /* 半透明の黒ピンク。色は自由に変えられる！ */
+  background-blend-mode: overlay;       /* ← 画像と色を合成 */
+
   background-size: cover;
   background-position: center;
   filter: blur(1px) brightness(0.3); /* ぼかしと暗さ */
