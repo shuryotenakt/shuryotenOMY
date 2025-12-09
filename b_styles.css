@@ -1850,7 +1850,11 @@ section.open .back {
   }
 
   .game-slide-track {
-    height: 100%;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    position: relative;
+    height: 200px;
   }
 }
 
