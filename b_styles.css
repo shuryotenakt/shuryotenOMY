@@ -1,783 +1,831 @@
-    body {
-    margin: 0;
-    padding: 0; /* ← モバイルで左右に適度な余白を入れる */
-    box-sizing: border-box;
-    font-family: 'IBM Plex Sans JP', sans-serif;
-    background: linear-gradient(
-      90deg,
-      rgba(255, 199, 231, 0.76) 0%,
-      rgba(255, 215, 240, 0.7) 30%,
-      rgba(168, 232, 255, 0.797) 100%
-    );
-
-    background-size: 300% 300%; /* ← 背景を広げて動かす余地を作る */
-    animation: gradientShift 30s ease-in-out infinite;
-    max-width: 100vw;
-    overflow-x: hidden;
-    }
-
-    /*背景グラデーション*/
-
-    @keyframes gradientShift {
-  0%   { background-position: 0% 50%; }
-  50%  { background-position: 100% 50%; }
-  100% { background-position: 0% 50%; }
+* {
+  outline: 2px solid red;
 }
 
+body {
+  margin: 0;
+  padding: 0; /* ← モバイルで左右に適度な余白を入れる */
+  box-sizing: border-box;
+  background: linear-gradient(
+    90deg,
+    rgba(255, 199, 231, 0.76) 0%,
+    rgba(255, 215, 240, 0.7) 30%,
+    rgba(168, 232, 255, 0.797) 100%
+  );
 
+  background-size: 300% 300%; /* ← 背景を広げて動かす余地を作る */
+  animation: gradientShift 10s ease-in-out infinite;
+  max-width: 100vw;
+  overflow-x: hidden;
+}
 
-        /* ヘッダー部分 */
-    header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 1vh 5vw;
-    box-shadow: 0 4px 10px rgba(147, 147, 147, 0.15);
-    border-radius: 20px;
-    background-color: rgba(255, 240, 245, 0.7);
-    margin: 0 auto;
-    max-width: 100%;
-    position: relative;
-    z-index: 10;
-    }
+/*背景グラデーション*/
 
-    /* 左・中央・右 */
-    header .left,
-    header .center,
-    header .right {
-    font-weight: bold;
-    font-size: 0.8em;
-    color: #000;
-    }
+@keyframes gradientShift {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
 
+/* =============================== */
+/*     カレッジタイトル（完全版）    */
+/* =============================== */
 
-    header .center {
-    flex: 1;
-    text-align: center; /* ← 中央揃え */
-    margin: 0 auto; /* ← 自動で中央に配置 */
-    }
-
-
-    header .left,
-    header .right {
-    flex: 0 0 auto;
-    }
-
-    /* レスポンシブ対応 */
-    @media (max-width: 600px) {
-    header {
-        flex-direction: row ;
-        padding: 10px 5vh;
-    }
-    header .center {
-    order: 1;
-    }
-    header .left {
-    order: 0;
-    }
-    header .right {
-    order: 2;
-    }
-    }
-
-    /* section1-nav: ナビゲーションボタン仕様 */
-    .section1-nav {
-    padding: 20px;
-    max-width: 100%;
-    text-align: center;
-    }
-
-    .section1-nav nav ul {
-    list-style: none;
-    padding: 0;
-    margin: 0 auto;
-    display: flex;
-    flex-direction: column;       /* 縦並び */    
-    gap: 10px;
-    max-width: 280px;
-    align-items: center;
-    justify-content: center;    
-    }
-    .section1-nav nav li {
-    margin: 0;
-    }
-    .section1-nav nav a {
-    display: inline-block;
-    width: 100%;
-    padding: 12px;
-    background-color: #ffffff81;
-    border: 1px solid #b7f0b5;
-    border-radius: 6px;
-    color: #000;
-    font-weight: bold;
-    text-decoration: none;
-    transition: background-color 0.2s ease;
-    text-align: center;
-    }
-    .section1-nav nav a:hover {
-    background-color: #ffcf94b5;
-    }
-
-    /* section2-png */
-    /* section2-png */
-    .section2-png {
-        position: relative;
-        height: 100vh;
-        overflow: hidden;
-        margin-top: 10px;
-        margin-bottom: 10px;
-    }
-    .section2-png .background-img {
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100vh;
-      height: 100vh;
-      object-fit: cover;
-      z-index: -1;
-    }
-    .section2-png .overlay {
-      position: absolute;
-      bottom: 20px;
-      right: 40px;
-      font-size: 6em;
-      font-weight: bold;
-      color: #fff;
-      text-shadow:
-      -1px -1px 0 #000,
-      1px -1px 0 #000,
-      -1px  1px 0 #000,
-      1px  1px 0 #000,
-      2px  2px 8px rgba(0, 0, 0, 1); /* フチ＋ぼかし影 */
-
-    }
-
-    /* section3-day */
-    .section3-day {
-    padding: 20px;
-    background-color: #fff;
-    margin-top: 10px;
-    margin-bottom: 10px;
-    }
-    .section3-day .date-wrapper {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    align-items: center;
-    gap: 20px;
-    }
-    .section3-day .date-left {
-    flex: 1;
-    min-width: 220px;
-    }
-    .section3-day .date-left p {
-    margin: 10px 0;
-    line-height: 1.5;
-    }
-    .section3-day .date-right {
-    flex: 0 0 auto;
-    background-color: #c8fff8;
-    border-radius: 12px;
-    padding: 0.5vh 10vh;
-    text-align: center;
-    }
-    .section3-day .date-right h1 {
-    font-size: 2em;
-    margin: 0;
-    }
-
-    /* -------------------- section4-venue -------------------- */
-    .section4-venue {
-    padding: 20px;
-    margin-top: 10px;
-    margin-bottom: 10px;
-    }
-    .section4-venue .venue-wrapper {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 20px;
-    }
-    .section4-venue .venue-left {
-    flex: 1;
-    min-width: 220px;
-    }
-    .section4-venue h2 {
-    margin-top: 0;
-    margin-left: 10px;
-    font-weight: bold;
-    }
-    .section4-venue .venue-left a {
-    margin-left: 20px;
-    font-size: 2em;
-    color: #000;
-    text-decoration: underline;
-    font-weight: bold;
-    }
-    .section4-venue .station-access {
-    margin-top: 10px;
-    padding-left: 1.2em;
-    }
-    .station-access p {
-    margin: 10px 0;
-    margin-left: 5px;
-    line-height: 1.5;
-    }
-
-    .section4-venue .venue-right {
-    flex: 1;
-    min-width: 280px;
-    }
-    .gradient-text {
-    background: linear-gradient(
-      270deg,
-      #000000 0%,
-      #000000 64%,
-      #8adcff 65%,
-      #8adcff 83%,
-      #ffffff 82%,
-      #ffffff 90%,
-      #000000 88%,
-      #000000 100%
-    );
-    background-size: 400% 400%;
-    background-clip: text;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    animation: textGradientFlow 10s ease-in-out infinite;
-    display: inline-block;
-    }
-
-    @keyframes textGradientFlow {
-      0% {
-        background-position: 0% 100%;
-      }
-      50% {
-        background-position: 100% 50%;
-      }
-      100% {
-        background-position: 0% 30%;
-      }
-    }
-
-
-    /* -------------------- section5-shousai -------------------- */
-    .section5-shousai {
-    padding: 20px;
-    margin-top: 10px;
-    margin-bottom: 10px;
-    }
-    .section5-shousai h2 {
-    font-weight: bold;
-    margin-bottom: 10px;
-    }
-    .section5-shousai p {
-    white-space: pre-line;
-    line-height: 1.6;
-    }
-
-    /* section6-schedule */
-    .section6-schedule {
-    padding: 20px;
-    margin-top: 10px;
-    margin-bottom: 10px;
-    }
-    .section6-schedule h2 {
-    margin-top: 0;
-    }
-    .section6-schedule table {
-    width: 100%;
-    border-collapse: collapse;
-    margin-bottom: 10px;
-    }
-    .section6-schedule th,
-    .section6-schedule td {
-    border: 1px solid #000;
-    padding: 5px;
-    text-align: center;
-    }
-    .section6-schedule p {
-    margin: 5px 0;
-    }
-
-    /* section7-jump */
-    .section7-jump {
-    padding: 20px;
-    text-align: center;
-    margin-top: 10px;
-    margin-bottom: 10px;
-    
-    }
-    .section7-jump ul {
-    list-style: none;
-    display:inline-block;
-    margin: 5px;
-
-    }
-    .section7-jump li {
-    display: inline-block;
-    margin: 10px;
-    }
-    .section7-jump a {
-      font-size: 14px;
-    display: inline-block;
-    padding: 10px 15px;
-    background-color: #e9fffe;
-    color: #000;
-    font-weight: bold;
-    text-decoration: none;
-    border-radius: 8px;
-    border: 2px solid #e7ffd2;
-    transition: background-color 0.2s ease;
-    }
-    .section7-jump a:hover {
-    background-color: #feddb7;
-    }
-
-/* ==================== section8-manga ==================== */
-.section8-manga {
-  padding: 40px 20px;
+.college-title {
+  font-family: "Shippori Mincho", serif;
+  font-weight: 700;
+  font-size: clamp(1.2rem, 6vw, 2rem);
+  font-style: italic;
+  letter-spacing: 2px;
   text-align: center;
-  margin-top: 10px;
-  margin-bottom: 10px;
-}
-
-.section8-manga h2 {
-  margin-top: 0;
-  margin-bottom: 30px;
-  font-size: 2.5em;
-  color: #333;
-}
-
-/* --- スライダーラッパー --- */
-.manga-slider-wrapper {
-  max-width: 800px;
-  margin: 0 auto 40px;
-}
-
-.manga-slider-container {
+  margin: 60px auto 40px;
+  padding: 20px 0;
   position: relative;
-  width: 100%;
-  height: 450px;
-  overflow: hidden;
-  border-radius: 20px;
-  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
 }
 
-.manga-slider-track {
-  display: flex;
-  height: 100%;
-  transition: transform 0.5s ease-in-out;
-}
-
-.manga-slide {
-  min-width: 100%;
-  height: 100%;
-  flex-shrink: 0;
-}
-
-.manga-slide img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-
-/* --- 矢印ボタン --- */
-.manga-arrow {
+/* ▼ 上下の横線（共通デザイン＋アニメーション） */
+.college-title::before,
+.college-title::after {
+  content: "";
   position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  background: rgba(255, 255, 255, 0.85);
-  border: none;
-  font-size: 28px;
-  width: 50px;
-  height: 50px;
-  border-radius: 50%;
-  cursor: pointer;
-  transition: all 0.3s ease;
-  z-index: 10;
+  left: 0;
+  max-width: 100%;
+  width: 100vw; /* ★ 横幅いっぱい（画面幅） */
+  height: 3px; /* ★ 線の太さ（調整可） */
+
+  /* ▼ 流れるグラデーション（右→左） */
+  background: linear-gradient(
+    90deg,
+    rgba(255, 255, 255, 0) 0%,
+    #fc9460 20%,
+    #ffce6c 40%,
+    #71ecff 60%,
+    #fc9460 80%,
+    rgba(255, 255, 255, 0) 100%
+  );
+
+  background-size: 200% 100%;
+  animation: flowLine 4s linear infinite; /* ★ 流れる速度 */
+  opacity: 0.9;
+}
+
+/* ▼ 上の線（位置だけ） */
+.college-title::before {
+  top: 0;
+  transform: translateX(-0%);
+}
+
+/* ▼ 下の線（位置だけ） */
+.college-title::after {
+  bottom: 0;
+  transform: translateX(-0%);
+}
+
+/* ▼ ラインアニメーション */
+@keyframes flowLine {
+  0% {
+    background-position: 200% 0;
+  }
+  100% {
+    background-position: -200% 0;
+  }
+}
+
+/* ▼ スマホ調整 */
+@media (max-width: 600px) {
+  .college-title {
+    max-width: 95vw;
+  }
+}
+
+/* ================================
+  ヘッダー：レスポンシブ対応版
+================================ */
+header {
   display: flex;
+  justify-content: space-between;
   align-items: center;
-  justify-content: center;
+  padding: clamp(0.5rem, 1vw, 1rem) clamp(2rem, 5vw, 5rem);
+  box-shadow: 0 4px 10px rgba(147, 147, 147, 0.15);
+  border-radius: 20px;
+  background-color: rgba(255, 240, 245, 0.7);
+  margin: 0 auto;
+  max-width: 100%;
+  position: relative;
+  z-index: 10;
+  flex-wrap: wrap; /* 小画面で折り返しOK */
 }
 
-.manga-arrow:hover {
-  background: rgba(255, 255, 255, 1);
-  transform: translateY(-50%) scale(1.1);
-}
-
-.manga-prev { left: 15px; }
-.manga-next { right: 15px; }
-
-/* --- ドットインジケーター --- */
-.manga-dots {
-  display: flex;
-  justify-content: center;
-  gap: 12px;
-  margin-top: 20px;
-}
-
-.manga-dot {
-  width: 14px;
-  height: 14px;
-  border-radius: 50%;
-  background: rgba(0, 0, 0, 0.3);
-  cursor: pointer;
-  transition: all 0.3s ease;
-}
-
-.manga-dot.active {
-  background: #ff69b4;
-  width: 16px;
-  height: 16px;
-}
-
-.manga-dot:hover {
-  background: rgba(255, 105, 180, 0.6);
-}
-
-/* --- メッセージボックス --- */
-.manga-message-box {
-  max-width: 800px;
-  margin: 40px auto;
-  padding: 30px;
-  background: rgba(255, 255, 255, 0.7);
-  border-radius: 15px;
-  line-height: 1.8;
-}
-
-.manga-message-title {
-  font-size: 1.4em;
+/* 左右テキスト */
+header .left,
+header .right {
   font-weight: bold;
-  margin-bottom: 15px;
-  color: #555;
+  color: #000;
+  /* ✅ 画面サイズに応じて文字サイズを調整 */
+  font-size: clamp(0.8rem, 1.2vw, 1.2rem);
 }
 
-/* --- 作品カードグリッド --- */
-.manga-works-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 30px;
-  max-width: 1200px;
-  margin: 50px auto;
-  padding: 0 20px;
-}
-
-.manga-work-card {
-  display: flex;
-  flex-direction: column;
-  gap: 15px;
-}
-
-.manga-work-image {
-  width: 100%;
-  height: 250px;
-  border-radius: 12px;
-  overflow: hidden;
-  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1);
-  transition: transform 0.3s ease;
-}
-
-.manga-work-card:hover .manga-work-image {
-  transform: translateY(-5px);
-}
-
-.manga-work-image img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-
-.manga-work-info {
-  padding: 20px;
-  background: rgba(255, 255, 255, 0.6);
-  border-radius: 12px;
+header .left {
   text-align: left;
 }
-
-.manga-work-info h3 {
-  margin: 0 0 12px 0;
-  font-size: 1.3em;
-  color: #333;
+header .right {
+  text-align: right;
 }
 
-.manga-work-info p {
-  margin: 0;
-  line-height: 1.6;
-  color: #555;
+/* ===== スマホ調整 ===== */
+@media (max-width: 600px) {
+  header {
+    flex-direction: column;
+    gap: 0.4rem;
+    text-align: center;
+    border-radius: 0;
+  }
+
+  header .left,
+  header .right {
+    font-size: clamp(0.9rem, 3.5vw, 1.2rem); /* モバイルではやや大きめ */
+  }
+}
+/* ================================
+🎯 section1-nav: ナビゲーションボタン
+================================ */
+.section1-nav {
+  padding: 40px 20px;
+  max-width: 100%;
+  text-align: center;
 }
 
-/* --- 担任コメント --- */
-.manga-teacher-comment {
-  max-width: 900px;
-  margin: 50px auto 30px;
-  padding: 35px;
-  background: rgba(255, 240, 245, 0.7);
-  border-radius: 15px;
-  border: 2px solid rgba(255, 182, 193, 0.5);
-  line-height: 1.8;
-}
-
-.manga-teacher-name {
-  font-weight: bold;
-  font-size: 1.2em;
-  margin-bottom: 15px;
-  color: #d63384;
-}
-
-/* --- レスポンシブ対応 --- */
-@media (max-width: 768px) {
-  .section8-manga h2 {
-    font-size: 2em;
-  }
-  
-  .manga-slider-container {
-    height: 300px;
-  }
-  
-  .manga-arrow {
-    width: 40px;
-    height: 40px;
-    font-size: 20px;
-  }
-  
-  .manga-works-grid {
-    grid-template-columns: 1fr;
-    gap: 25px;
-  }
-  
-  .manga-work-image {
-    height: 200px;
-  }
-  
-  .manga-message-box,
-  .manga-teacher-comment {
-    padding: 20px;
-  }
-}
-
-@media (max-width: 480px) {
-  .section8-manga {
-    padding: 30px 15px;
-  }
-  
-  .manga-slider-container {
-    height: 250px;
-    border-radius: 15px;
-  }
-  
-  .manga-arrow {
-    width: 35px;
-    height: 35px;
-    font-size: 18px;
-  }
-  
-  .manga-prev { left: 10px; }
-  .manga-next { right: 10px; }
-}
-    /* section9-game */
-    /* --- スライダー --- */
-.slider-container {
-  position: relative;
-  width: 95%;          /* ← 幅を少し広げる */
-  max-width: 700px;    /* ← 400px → 700px */
-  height: 400px;       /* ← 180px → 320px */
-  margin: 30px auto;   /* ← 上下の余白を少し増やす */
-  overflow: hidden;
-  border-radius: 15px; /* ← 少し角丸を強調 */
-}
-
-.slider-track {
+/* --- ナビゲーション全体 --- */
+.section1-nav nav ul {
+  list-style: none; /* ✅ 黒丸消す */
+  padding: 0;
+  margin: 0 auto;
   display: flex;
-  transition: transform 0.6s ease-in-out;
+  justify-content: center; /* ✅ 中央寄せ */
+  align-items: center;
+  gap: 20px;
+  flex-wrap: wrap; /* ✅ 小さい画面では自動で折り返す */
+  max-width: 900px;
 }
 
-.slide {
-  width: 100%;
-  flex-shrink: 0;
+/* --- 各ボタン --- */
+.section1-nav nav li {
+  flex: 1 1 200px; /* ✅ 均等幅（最小200px） */
+  display: flex;
+  justify-content: center;
+}
+
+/* --- リンクボタン --- */
+.section1-nav nav a {
+  display: inline-block;
+  max-width: 250px; /* ✅ 広がりすぎ防止 */
+  background-color: #ffffffc9;
+  border: 2px solid #b7f0b5;
+  border-radius: 10px;
+  color: #000;
+  font-weight: bold;
+  text-decoration: none;
+  text-align: center;
+  white-space: nowrap;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.05);
+  transition: background-color 0.2s ease, transform 0.2s ease;
+}
+
+.section1-nav nav a:hover {
+  background-color: #ffcf94b5;
+  transform: translateY(-2px);
+}
+
+/* ============================
+📱 スマホ対応（600px以下）
+============================ */
+@media (max-width: 600px) {
+  .section1-nav {
+    padding: 20px 10px;
+  }
+
+  .section1-nav nav ul {
+    gap: 10px;
+  }
+
+  .section1-nav nav li {
+    flex: 1 1 30%; /* ✅ スマホでも横3つに並ぶ */
+  }
+
+  .section1-nav nav a {
+    width: 100%;
+    font-size: 0.9em;
+    padding: 10px 0;
+  }
+}
+
+/* ================================
+🎨 Section2: 全デバイスで画像を横いっぱい表示
+================================ */
+.section2-png {
   position: relative;
+  width: 100vw; /* ✅ ビューポート幅いっぱい */
+  overflow: hidden;
+  margin: 0;
+  padding: 0;
 }
 
-.slide img {
-  width: 100%;
-  height: 400px;
-  object-fit: cover;
-  border-radius: 6px;
+.section2-png img {
+  display: block;
+  object-position: center center;
+  margin: 0 auto;
 }
 
-.slide-caption {
-  font-size: 14px;
+/* ===== スマホ調整（縦長端末） ===== */
+@media (max-width: 768px) {
+  .section2-png {
+    width: 100vw;
+  }
+
+  .section2-png img {
+    width: 100vw;
+    height: auto;
+    object-fit: contain;
+  }
+}
+
+/* ===== PCでも横幅いっぱいに広げる ===== */
+@media (min-width: 1024px) {
+  .section2-png img {
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+  }
+}
+
+.section2-png .overlay {
+  position: absolute;
+  bottom: 1%;
+  right: 8%;
+  transform: translate(0, 0);
+  font-size: clamp(2.5rem, 6vw, 5rem); /* ← ここを拡大！ */
+  font-weight: bold;
+  color: #fff;
+  text-shadow: -2px -2px 4px #000, 2px -2px 4px #000, -2px 2px 4px #000,
+    2px 2px 4px #000;
+  white-space: nowrap;
+  z-index: 5;
+}
+
+/* 📱 スマホ調整（縦長時） */
+@media (max-width: 600px) {
+  .section2-png .overlay {
+    bottom: 1%;
+    right: 5%;
+    font-size: clamp(2rem, 9vw, 4rem); /* ← スマホも少し大きめ */
+  }
+}
+
+/* ================================
+🎟️ section3-day: PC/スマホ両対応・かぶり防止＋幅調整
+================================ */
+.section3-day {
+  display: flex;
+  justify-content: space-between;
+  align-items: stretch;
+  background: rgba(255, 255, 255, 0.4);
+  border-radius: 20px;
+  backdrop-filter: blur(10px);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+  margin: 40px auto;
+  padding: 0;
+  width: 90%;
+  max-width: 1000px;
+  overflow: hidden;
+}
+
+/* 左半分 */
+.section3-day .date-left {
+  background: transparent;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.section3-day .date-left p {
+  font-size: clamp(1rem, 1.8vw, 1.5rem);
+  line-height: 1.8;
+  color: #000;
+  margin: 0;
+  font-weight: 600;
+}
+
+/* 右半分（日付） */
+.section3-day .date-right {
+  flex: 0.9; /* ✅ 右やや狭く（左右バランス最適化） */
+  background: linear-gradient(135deg, #a2e3ff, #56b6ff);
+  background-size: 200% 200%;
+  animation: gradientFlow 8s ease-in-out infinite;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  min-height: 180px;
+}
+
+/* アニメーション */
+@keyframes gradientFlow {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+/* 日付コンテンツ */
+.section3-day .date-right .date-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: #000;
+  font-family: "Bebas Neue", sans-serif;
+}
+
+/* 年 */
+.section3-day .date-right .year {
+  font-size: clamp(1rem, 1.8vw, 1.3rem);
+  margin-bottom: 0.5em;
+}
+
+/* 日付数字 */
+.section3-day .date-right h1 {
+  font-weight: 900;
+  letter-spacing: 0.05em;
+  margin: 0;
+}
+
+/* 曜日 */
+.section3-day .date-right .weekday {
+  font-size: clamp(1rem, 1.5vw, 1.2rem);
+  margin-top: 0.6em; /* ✅ 下に離す */
+}
+
+/* 📱 スマホ調整 */
+@media (max-width: 768px) {
+  .section3-day {
+    flex-direction: row; /* ✅ 横並び維持 */
+  }
+
+  /* 左右比率調整でテキストの改行を防ぐ */
+  .section3-day .date-left {
+    flex: 1.3; /* ✅ 左を広く */
+    padding: 20px 15px 20px 25px;
+  }
+
+  .section3-day .date-left p {
+    font-size: clamp(0.9rem, 2.5vw, 1.2rem);
+    line-height: 1.6;
+  }
+
+  .section3-day .date-right {
+    flex: 0.7;
+    padding: 10px;
+    min-height: 150px;
+  }
+
+  .section3-day .date-right h1 {
+    font-size: clamp(2.5rem, 11vw, 5rem);
+    line-height: 1.2;
+    white-space: nowrap;
+  }
+
+  .section3-day .date-right .weekday {
+    margin-top: 0.5em;
+  }
+}
+
+/* -------------------- section4-venue（PC：高さ・中央揃え調整） -------------------- */
+.section4-venue {
+  padding: 20px;
+  margin-top: 0px;
+  margin-bottom: 0px;
+}
+
+/* PC：横並び、スマホ：縦並び */
+.section4-venue .venue-wrapper {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: nowrap;
+  gap: 0px;
+}
+
+/* 左側（会場ボックス） */
+.section4-venue .venue-left {
+  flex: 1;
+  min-width: 300px;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  height: 100%; /* ✅ 高さを右の地図と揃える */
+}
+
+/* 「会場」タイトル */
+.section4-venue h2 {
+  margin-top: 0px; /* ✅ 上に少し余白（詰めすぎ防止） */
+  margin-bottom: 0px;
+  font-weight: bold;
+  font-size: clamp(1.2rem, 2vw, 1.6rem);
+  white-space: nowrap;
+}
+
+/* ソニックシティホール（グラデーション文字） */
+.section4-venue .venue-left a {
+  display: inline-block;
+  font-size: clamp(2rem, 3vw, 3rem);
+  font-weight: bold;
+  text-decoration: underline;
+  text-decoration-color: rgba(0, 0, 0, 0.3);
+  white-space: nowrap;
+  color: transparent;
+  background: linear-gradient(
+    270deg,
+    #000000 0%,
+    #000000 64%,
+    #8adcff 65%,
+    #8adcff 83%,
+    #ffffff 82%,
+    #ffffff 90%,
+    #000000 88%,
+    #000000 100%
+  );
+  background-size: 400% 400%;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: textGradientFlow 10s ease-in-out infinite;
   margin-top: 5px;
 }
 
-.arrow {
-  position: absolute;
-  top: 40%;
-  transform: translateY(-50%);
-  font-size: 24px;
-  background: rgba(255, 255, 255, 0.7);
-  border-radius: 50%;
-  width: 32px;
-  height: 32px;
-  line-height: 32px;
-  text-align: center;
-  cursor: pointer;
-  user-select: none;
+/* グラデーションアニメーション（元のまま） */
+@keyframes textGradientFlow {
+  0% {
+    background-position: 0% 100%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 30%;
+  }
 }
 
-.arrow.left { left: 5px; }
-.arrow.right { right: 5px; }
+/* 右側：Googleマップ */
+.section4-venue .venue-right {
+  flex: 1;
+  min-width: 300px;
+  display: flex;
+  align-items: stretch;
+}
 
-.comment-box {
-  width: 95%;           /* ← 幅を拡大 */
-  max-width: 700px;     /* ← 400px → 700px */
-  margin: 20px auto;    /* ← 余白を追加して中央寄せ */
-  padding: 25px;        /* ← 内側の余白を広げる */
-  border: 1px solid #ccc;
-  background: #f0f0f0;  /* ← 少し明るいグレーに変更 */
+.section4-venue .venue-right iframe {
+  width: 100%;
+  height: 260px; /* ✅ この高さに合わせて左も中央揃えされる */
+  border: none;
+  display: block;
   border-radius: 10px;
-  font-size: 14px;      /* ← テキストを少し大きく */
-  line-height: 1.6;     /* ← 行間もゆったり */
-  text-align: center;   /* ← テキスト中央寄せ */
 }
 
-.work {
+/* 📱 スマホは今のまま（縦並び・変更なし） */
+@media (max-width: 768px) {
+  .section4-venue .venue-wrapper {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .section4-venue .venue-left {
+    align-items: center;
+    justify-content: flex-start;
+  }
+
+  .section4-venue h2 {
+    margin-top: 0px;
+  }
+
+  .section4-venue .venue-right iframe {
+    width: 100%;
+    height: 250px;
+  }
+  .section4-venue p{
+    margin-top: -10px;
+  }
+}
+
+/* ----------------------------
+  section5 全体
+---------------------------- */
+.section5 {
+  width: 100%;
+  max-width: 90%;
+  margin: 0 auto;
+  padding: 30px 20px;
+  font-family: "Meiryo", sans-serif;
+}
+
+/* マップ画像 */
+.section5-map img {
+  width: 100%;
+  border-radius: 8px;
+  margin-bottom: 40px;
+}
+
+/* ----------------------------
+  STEP（各行）
+---------------------------- */
+.section5-step {
+  display: grid;
+  gap: 20px;
+  align-items: center;
+  margin-bottom: 50px;
+}
+
+/* STEP アイコン丸 */
+.section5-step-icon {
+  width: 70px;
+  height: 70px;
+  background-color: #00a000;
+  color: #fff;
+  font-weight: bold;
+  border-radius: 50%;
   display: flex;
   align-items: center;
-  justify-content: space-between;
-  width: 90%;            /* ← ページ幅の90%まで拡大 */
-  max-width: 900px;      /* ← 枠の最大サイズを広げる（420→900px） */
-  margin: 30px auto;     /* ← 余白を少し広げてゆったり */
-  border-bottom: 1px solid #ddd;
-  padding-bottom: 20px;  /* ← 下の余白も少し増やす */
+  justify-content: center;
+  text-align: center;
+  line-height: 1.1;
+  font-size: 15px;
 }
 
-.work img {
-  width: 25%;          /* ← 左側の画像をやや大きく */
-  height: auto;
-  border-radius: 10px;
+/* テキスト部分 */
+.section5-step-text p {
+  margin: 0;
 }
 
-    .work p {
-    width: 50%;          /* ← テキスト部分の幅を広げる */
-    font-size: 14px;     /* ← さいず */
-    line-height: 1.6;    /* ← 行間をゆったり */
-    text-align: left;    /* ← 左寄せ */
-    }
-    .work h1 {
-    font-size: 28px;      
-    margin-left: 0;       
-    text-align: center;   
-    width: 100%;    
-    }
+/* 画像 */
+.section5-step-img img {
+  width: 100%;
+  height: 200px;
+  border-radius: 6px;
+  object-fit: cover;
+}
 
-    /* section10-pafo */
-    .section10-pafo {
-    padding: 20px;
-    text-align: center;
-    margin-top: 10px;
-    margin-bottom: 10px;
-    }
-    .section10-pafo h2 {
-    margin-top: 0;
-    text-align: center;
-    }
-    .section10-pafo p {
-    margin: 10px 0;
-    text-align: center;
-    }
+/* ----------------------------
+  スマホ対応
+---------------------------- */
+@media (max-width: 768px) {
+  .section5-step {
+    grid-template-columns: 70px 1fr;
+    grid-template-rows: auto auto;
+  }
 
+  .section5-step-img {
+    grid-column: 1 / 3;
+  }
+}
+
+/* --------------section6-schedule--------------------- */
+.section6-schedule {
+  padding: 20px;
+}
+.section6-schedule h2 {
+  margin-top: 0;
+}
+.section6-schedule table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 10px;
+}
+.section6-schedule th,
+.section6-schedule td {
+  border: 1px solid #000;
+  padding: 5px;
+  text-align: center;
+}
+.section6-schedule p {
+  margin: 5px 0;
+}
+/* 左寄せ（10:00 -、11:30 -、13:30 -） */
+.section6-schedule td:first-child {
+  text-align: left;
+  padding-left: 10px;
+}
+
+/* 12:00 - 13:00 → 真ん中寄せのまま */
+
+/* 最後の「 - 16:00 」だけ右寄せ */
+.section6-schedule tbody tr:last-child td:first-child {
+  text-align: right;
+  padding-right: 10px;
+}
+
+.auto-shrink {
+  display: inline-block;
+  white-space: nowrap;
+  transform-origin: left center;
+    /* はみ出す時だけ縮む */
+  width: max-content;
+  max-width: 100%;
+}
+
+
+/*-----------------map-----------------------*/
+.section15-map h2 {
+  max-width: 100vw;
+  margin-top: 10px;
+}
+.section15-map .mapimage {
+  max-width: 100%;
+}
+
+/*---------------- section7-jump ---------------- */
+.section7-jump {
+  padding: 0 0;
+  margin: 20px auto;
+}
+
+/* 全体中央揃え */
+.section7-jump nav {
+  display: flex;
+  justify-content: center;
+}
+
+/* PC：ゆったり配置の4列 */
+.section7-jump ul {
+  list-style: none;
+  padding: 0;
+  display: grid;
+  max-width: 100%; /* PCボタンが大きく見えるよう調整 */
+}
+
+/* ボタンデザイン（統一幅＋中央配置） */
+.section7-jump a {
+  background-color: #e9fffe;
+  border: 2px solid #e7ffd2;
+  border-radius: 12px;
+  text-decoration: none;
+  font-weight: bold;
+  color: #000;
+  transition: background-color 0.2s ease;
+}
+/* Section7 カレッジジャンプのホバー */
+.section7-jump a:hover {
+  background-color: #ffcf94b5; /* ← 指定してくれた色 */
+  transition: background-color 0.2s ease;
+}
+
+/* ▼ タブボタンが定期的に光るアニメーション */
+@keyframes pulse-glow {
+  0% {
+    box-shadow: 0 0 0 rgba(255, 255, 255, 0);
+  }
+  50% {
+    box-shadow: 0 0 12px rgba(255, 255, 255, 0.8);
+  }
+  100% {
+    box-shadow: 0 0 0 rgba(255, 255, 255, 0);
+  }
+}
+
+/* ▼ タブボタンに適用（全カレッジ共通） */
+.tab-buttons button {
+  animation: pulse-glow 2s infinite; /* 1〜2秒ループ */
+}
+
+/* =========================================
+📱 スマホ専用（768px以下）
+========================================= */
+@media (max-width: 768px) {
+  /* グリッド：2列×2行 */
+  .section7-jump ul {
+    grid-template-columns: repeat(2, 1fr);
+    width: 90%;
+    gap: 20px 10px; /* ← ボタンの間隔を広くする */
+    margin: 0 auto;
+  }
+
+  /* ボタン本体 */
+  .section7-jump a {
+    height: 50px; /* ← 高さ広めで見やすい */
+    font-size: 0.95rem;
+    padding: 5px 8px;
+    line-height: 1.2; /* ← 2行でも綺麗に見える */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    /* 全ボタン同じ幅に */
+    width: 90%;
+  }
+
+  /* 「カレッジ」を2行目へ強制的に送る */
+  .section7-jump a span {
+    display: inline-block;
+    white-space: nowrap; /*文字の改行禁止*/
+  }
+}
 
 /* ================================
   🎥動画カレッジ専用スタイル section11
  ================================ */
-  .section11-video{
-    max-width: 100%;
-  }
-  
-.section11-video h2 {
-    padding: 15px;
-    margin-top: 0;
-    text-align: center;
-    border: 2px solid #000;
-    font-size: 20px;
+/* ▼ 動画カレッジだけタイトル上の余白を追加 */
+.section11-video {
+  margin-top: 0px; /* ← 好きな値に調整できる（50〜80推奨） */
 }
 
 /* =========================
 上部3枚の画像ブロック
 ========================= */
 .image-container {
-    display: flex;
-    justify-content: center;  
-    align-items: flex-start;
-    gap: 30px;
-    padding: 20px;
-    flex-wrap: nowrap;
-    overflow-x: auto;
-    -webkit-overflow-scrolling: touch;
-}
-
-.image-container div {
-    text-align: center;
-    flex-shrink: 0;
-    width: 90%; /* ← 画像と同じ幅に固定 */
-    font-size: 14px;
-    color: #333;
+  display: flex;
+  align-items: flex-start;
+  padding: 20px;
 }
 
 .image {
-    width: 100%;   /* ← 大きめサイズ */
-    height: 120px;
-    object-fit: cover;
-    object-position: center;
-    margin-bottom: 5px;
-    box-shadow: 0 3px 8px rgba(0,0,0,0.2);
-    border-radius: 6px;
-    display: block;
+  object-fit: cover;
+  object-position: center;
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.2);
+  border-radius: 6px;
+  display: block;
 }
 
 /* =========================
 下部のカードブロック
 ========================= */
-.card1,.card2 {
-  width: 500px;
+.card1 {
   display: flex;
-  justify-content: flex-start;   /* 左寄せ */
-  align-items: flex-start;       /* 上揃え */
-  gap: 20px;                     /* テキストと画像の間隔 */
-  margin: 30px auto;
-  background: none;              /* 背景色なし */
-  box-shadow: none;              /* 影なし */
-  border: none;                  /* 枠線なし */
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  width: 90%;
+  box-sizing: border-box;
+}
+
+.card2 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  width: 90%;
+  box-sizing: border-box;
+}
+
+.card3 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  width: 90%;
+  box-sizing: border-box;
+}
+
+.card4 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  width: 90%;
   box-sizing: border-box;
 }
 
 /* --- テキスト部分 --- */
 .text-box {
-  flex: 1;
-  min-width: 0;
+  flex: 1; /* 画像以外の部分を広げる */
   display: flex;
+  height: 200px;
   flex-direction: column;
-  justify-content: flex-start;
+  justify-content: center;
   gap: 12px;
   padding: 0;
   box-sizing: border-box;
   word-break: break-word;
   overflow-wrap: break-word;
-  background: none;
-  box-shadow: none;
-  border: none;
+  min-width: 200px; /* これがあるとスマホでも潰れない */
+  max-width: 300px;
 }
 
 .image2 {
-  display:flex;
-  flex-shrink: 0;           /* ← 画像が潰れないように */
-  width: 160px;
-  height: 120px;
-  object-fit: cover;        /* ← 中央トリミング（縦横比を維持） */
+  display: flex;
+  flex-shrink: 0; /* ← 画像が潰れないように */
+  object-fit: cover; /* ← 中央トリミング（縦横比を維持） */
   object-position: center;
   background-color: #f5f5f5; /* 画像が透明でも背景が整う */
   border-radius: 6px;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
 }
 .title2 {
   margin: 0;
@@ -795,120 +843,167 @@
 スマホ対応（600px以下）
 ========================= */
 @media screen and (max-width: 600px) {
-
-  .section11-video h2 {
-    font-size: 16px;
-    padding: 10px;
-  }
-
   .image-container {
     justify-content: center;
-    gap: 15px;
+    gap: 20px;
     overflow-x: visible;
     flex-wrap: nowrap;
   }
 
-  .image-container div {
-    width: 110px; /* ← スマホでは画像と同じ幅 */
-    font-size: 12px;
-  }
-
   .image {
-    width: 110px;
-    height: 90px;
+    width: 100%;      /* 画面幅に合わせる */
+    height: auto;     /* 自然な縦横比に戻す */
+    max-width: 250px; /* 必要なら上限を設定（好みに応じて調整） */
   }
 
-  .card1, .card2 {
-    flex-direction: column;
-    align-items: center;
-    gap: 10px;
+  .card1,
+  .card2,
+  .card3,
+  .card4 {
     margin: 20px auto;
+    flex-direction: column-reverse; /*上下入れ替え*/
   }
 
-  .text-box, .image2 {
-    width: 90%;
-    height: auto;
-  }
 
   .text-box {
-    font-size: 13px;
     padding: 10px;
   }
 
   .image2 {
-    width: 110px;
-    height: 90px;
+    width: 350px;
+    height: 200px;
   }
 }
 
-    
-    /* section13-comment */
-    .section13-comment {
-    padding: 20px;
-    background-color: #f9f9f9;
-    text-align: center;
-    margin-top: 10px;
-    margin-bottom: 10px;
-    }
-    .section13-comment h2 {
-    margin-top: 0;
-    }
-    .section13-comment p {
-    margin: 10px 0;
-    line-height: 1.5;
-    }
+/* section13-comment */
+.section13-comment {
+  padding: 20px;
+  background: none;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+.section13-comment h2 {
+  margin-top: 0;
+}
+.section13-comment p {
+  margin: 10px 0;
+  line-height: 1.5;
+}
 
-    /* section14-under */
-    /* section14-under: フッターSNSボタン */
-    .section14-under {
-    padding: 20px;
-    text-align: center;
-    font-size: 0.9em;
-    border-top: 2px solid #000000; /* ← 仕切り線を追加 */
-    }
+/* =============================== */
+/*   section14-under：フッターSNSボタン   */
+/* =============================== */
 
-    .section14-under .footer-links {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 50px;
-    margin-bottom: 15px;
-    }
+.section14-under {
+  padding: 20px;
+  border-top: 2px solid #000000;
+}
 
-    .section14-under .footer-links a {
-    display: inline-block;
-    padding: 10px 50px;
-    background-color: #ffffff81;
-    color: #000;
-    text-decoration: none;
-    border: 1px solid #b7f0b5;
-    border-radius: 6px;
-    font-weight: bold;
-    transition: background-color 0.2s ease;
-    }
+.section14-under h3{
+  text-align: center;
+}
 
-    .section14-under .footer-links a:hover {
-    background-color: #ffcf94b5;
-    }
+.section14-under .acount-name{
+  color: #000;
+  font-weight: bold;
+}
 
+/* --- リンクの並び --- */
+.section14-under .footer-links {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 12px;
+  margin-bottom: 15px;
+  align-items: stretch; /* ★ ボタンの高さを揃えたい場合に有効 */
+}
 
-    /* 🔳 ガラス調ボックス共通スタイル */
-    .glass-box {
-    width: 100%; /* ← スマホで画面幅に合わせる */
-    max-width: 90%;
-    padding: 20px auto;
-    margin: 20px auto;
-    background: rgba(255, 255, 255, 0.15);
-    backdrop-filter: blur(10px);
-    -webkit-backdrop-filter: blur(10px);
-    border: 1px solid rgba(255, 255, 255, 0.587);
-    border-radius: 20px;
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.034);
-    }
+/* --- 各リンクボタン --- */
+.section14-under .footer-links a {
+  display: flex; /* ← アイコン＋文字を並べる */
+  align-items: center;
+  justify-content: space-between; /* ← 両端にアイコン・中央に文字 */
+  gap: 10px;
+  text-decoration: none;
+  border: 1px solid #b7f0b5;
+  border-radius: 6px;
+  transition: background-color 0.2s ease;
+  /* ★ 幅をそろえるための設定 */
+  flex: 1 1 auto;
+  text-align: center;
+}
 
+/* --- ホバー時 --- */
+.section14-under .footer-links a:hover {
+  background-color: #ffcf94b5;
+}
 
-  
-  .footer {
+/* --- Xアイコン --- */
+.section14-under .footer-links a i {
+  font-size: 20px;
+  color: #000;
+}
+
+/* --- スマホ調整 --- */
+@media (max-width: 600px) {
+  .section14-under .footer-links a {
+    max-width: 90%; /* ← ボタンを幅広にし、見やすく */
+    padding: 12px 18px;
+  }
+
+  .section14-under .footer-links a i {
+    font-size: 22px; /* ← スマホではアイコン少し大きく */
+  }
+}
+
+/* =============== */
+/* ▼ トップに戻るボタン（常時右下） */
+/* =============== */
+
+:root {
+  --totop-bg: #a4ffac5e; /* ボタンの背景色（調整可） */
+  --totop-icon: #ff3939; /* 三角の色（調整可） */
+}
+
+.to-top-btn {
+  position: fixed;
+  width: 60px; /* ← ボタン全体サイズ（丸） */
+  height: 60px;
+  background: var(--totop-bg);
+  border-radius: 50%;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  pointer-events: none; /* 非表示中クリック不可 */
+  transition: opacity 0.4s ease;
+  z-index: 999;
+}
+
+/* 三角アイコン */
+.triangle-up {
+  width: 0;
+  height: 0;
+  border-left: 20px solid transparent; /* ← サイズ調整できる */
+  border-right: 20px solid transparent;
+  border-bottom: 24px solid var(--totop-icon); /* 三角の色 */
+}
+
+/* ▼ ボタンが表示される状態 */
+.to-top-btn.show {
+  opacity: 1;
+  pointer-events: auto;
+}
+/* 📱 スマホだけホームボタンの位置を少し上へ */
+@media (max-width: 600px) {
+  #toTopBtn {
+    bottom: 50px !important; /* ← ここを調整する */
+    right: 20px;
+  }
+}
+
+.footer {
   padding: 5vh 5vw 5vh; /* ← 左右にvw余白、下を広く */
   max-width: 100%;
   background-color: #9c9c9c69;
@@ -917,161 +1012,996 @@
 
 .footer address {
   font-style: normal; /* ← 斜体を解除 */
-  font-size: 1em;   /* ← 住所の文字を大きく */
+  font-size: 1em; /* ← 住所の文字を大きく */
   margin-bottom: 1em;
 }
 
 .footer p {
-  margin-top: 3em; /* ← 上に余白を入れて下に固定感を出す */
+  margin-top: 1em; /* ← 上に余白を入れて下に固定感を出す */
   border-top: 2px solid #999;
-  padding-top: 3em;
-  font-size: 0.5em;
+  padding-top: 1em;
+  font-size: 1em;
   color: #333;
 }
 
 /* ================================
-   パフォーミングアーツカレッジ専用スライダー
-   =============================== */
-.slider-container {
-    position: relative;
-    max-width: 800px;
-    margin: 40px auto;
-    overflow: hidden;
-    border-radius: 15px;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
-}
+📘 カレッジ共通（タイトルコール）
+================================ */
 
-.slider {
-    display: flex;
-    transition: transform 0.5s ease-in-out;
-}
-
-.slider img {
-    width: 800px;
-    height: 450px;
-    object-fit: cover;
-}
-
-.btn-img {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    width: 50px;
-    height: 50px;
-    background-color: rgba(0,0,0,0.4);
-    color: white;
-    font-size: 30px;
-    line-height: 50px;
-    text-align: center;
-    border-radius: 50%;
-    cursor: pointer;
-    user-select: none;
-}
-
-.prev-img { left: 10px; }
-.next-img { right: 10px; }
-
-/* 写真ギャラリー */
-.photo-gallery {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 20px;
-}
-
-.photo-item {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-.photo-item img {
-    width: 400px;
-    height: 225px;
-    object-fit: cover;
-    border-radius: 15px;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-}
-
-.photo-caption {
-    margin-top: 8px;
-    font-size: 0.95em;
-    color: #555;
-    text-align: center;
+h2 {
+  color: #000000;
+  text-align: center;
 }
 
 /* ================================
-    パフォーミングアーツ用タブ
-   =============================== */
+🎨 作品スライダー (カレッジ共通) — 画像切らずに統一
+================================ */
+
+.img-slider-custom {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  overflow: hidden;
+  border-radius: 20px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+  background-color: #ffffff00;
+}
+
+/* ================================
+🎭 ギャラリー（PC・スマホ統一の完全版）
+  - 2×2固定
+  - 画像の縦横比バラバラでも崩れない
+  - 画像は枠の「長い方」に合わせて縮む（切れない）
+  - スライダーと同じ見た目
+================================ */
+.college-gallery {
+  display: grid;
+  gap: 25px;
+  max-width: 900px;
+  margin: 40px auto;
+}
+
+/* ▼ 各カードの親要素 */
+.photo-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* ▼ 枠（PC・スマホ共通で使える最適形） */
+.gallery-frame {
+  aspect-ratio: 16 / 9; /* ★ スマホに最適：縦横バランスが良い正方形 */
+  background-color: transparent;
+  border-radius: 20px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden; /* ★ 枠外の画像がはみ出さないように */
+}
+
+/* ▼ 画像：縦横どちらが長くても「枠の中に縮む」設定（最強） */
+.gallery-frame img {
+  object-fit: contain; /* 切れない・収まる */
+  background-color: transparent;
+  display: block;
+  object-position: center;
+}
+
+/* ▼ キャプション */
+.photo-caption {
+  margin-top: 8px;
+  font-size: 0.95em;
+  color: #333;
+  text-align: center;
+}
+
+/* ================================
+🗂 タブ切替
+================================ */
+
 .pa-tabs {
-    margin-top: 40px;
-    text-align: center;
+  margin-top: 50px;
+  text-align: center;
 }
 
 .tab-buttons {
-    margin-bottom: 20px;
+  margin-bottom: 25px;
 }
 
 .tab-buttons button {
-    background: #007215;
-    color: #fff;
-    border: none;
-    padding: 14px 28px;
-    margin: 0 10px;
-    border-radius: 30px;
-    cursor: pointer;
-    font-weight: bold;
-    font-size: 1.2em;
-    transition: 0.3s;
+  background: #007215;
+  color: #fff;
+  border: none;
+  padding: 14px 28px;
+  margin: 0 10px;
+  border-radius: 30px;
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 1.2em;
+  transition: 0.3s;
 }
 
 .tab-buttons button:hover {
-    background: #005b12;
+  background: #005b12;
 }
 
 .tab-content {
-    background: #f0fff0;
-    padding: 30px 25px;
-    border-radius: 20px;
-    margin-top: 15px;
-    max-width: 90%;
-    margin-left: auto;
-    margin-right: auto;
-    text-align: left;
-    line-height: 1.8;
-    font-size: 1.1em;
-    color: #004d0a;
+  background: #f0fff0;
+  padding: 30px 25px;
+  border-radius: 20px;
+  margin-top: 15px;
+  max-width: 90%;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: left;
+  line-height: 1.8;
+  font-size: 1.1em;
+  color: #004d0a;
+  display: none; /* ← 初期非表示 */
+}
+
+.tab-content.active {
+  display: block;
 }
 
 /* ================================
-    スマホ対応
-   =============================== */
+📱 レスポンシブ
+================================ */
+@media (max-width: 768px) {
+  .img-slider-custom {
+    height: 300px;
+  }
+
+  .manga-arrow {
+    width: 40px;
+    height: 40px;
+    font-size: 20px;
+  }
+
+  .photo-item img {
+    width: 90%;
+    height: auto;
+  }
+
+  .tab-buttons {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .tab-buttons button {
+    width: 90%;
+    margin: 8px 0;
+    font-size: 1.1em;
+  }
+
+  .tab-content {
+    font-size: 1em;
+    padding: 20px 15px;
+  }
+}
+
+@media (max-width: 480px) {
+  .img-slider-custom {
+    height: 250px;
+  }
+
+  .manga-arrow {
+    width: 35px;
+    height: 35px;
+    font-size: 18px;
+  }
+
+  .manga-prev {
+    left: 10px;
+  }
+  .manga-next {
+    right: 10px;
+  }
+}
+/* ▼ スマホ（600px以下）だけギャラリーを縦1列にする */
+@media screen and (max-width: 600px) {
+  .college-gallery {
+    grid-template-columns: 1fr !important; /* ← 1列にする */
+  }
+
+  .gallery-frame {
+    width: 85vw !important; /* ← 画面の85%の大きさ */
+    margin: 0 auto; /* ← 中央に寄せる */
+  }
+
+  .gallery-frame img {
+    max-width: 100%;
+    max-height: 100%;
+  }
+
+  .photo-item {
+    width: 100%;
+  }
+}
+
+/* ===== ポップアップ全体の背景 ===== */
+.popup-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.7);
+  display: none; /* 🔹最初は非表示 */
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+}
+
+/* ===== ポップアップの中身（画像） ===== */
+
+.popup-img {
+  max-height: 70vh; /* ← 画面の70%以内に収まるように */
+  width: auto; /* ← 縦長画像を自然に表示 */
+  max-width: 90vw; /* ← 横にはみ出さないようにする */
+}
+
+/* ===== 閉じるボタン ===== */
+.popup-close {
+  position: absolute;
+  top: -50px; /* ← 画像より上部へ移動 */
+  right: -1px;
+  width: 10vw; /* ← 画面幅の 10% */
+  height: 10vw;
+  max-width: 60px; /* ← PC用の上限 */
+  max-height: 60px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  font-size: 6vw; /* ← × の大きさ */
+  background: rgba(0, 0, 0, 0.6);
+  color: #fff;
+  border-radius: 50%;
+  cursor: pointer;
+  z-index: 10000;
+  text-shadow: 0 0 10px #000;
+}
+
+.popup-content {
+  max-height: 80vh;
+  padding-top: 0;
+  position: relative;
+}
+
 @media (max-width: 600px) {
-    .hero { padding: 40px 15px; }
-    .hero h1 { font-size: 2em; }
-    .section { padding: 1.5em 1em; }
-    .section-image { width: 100%; }
-    .section h2 { font-size: 1.3em; }
-    .section p { font-size: 0.95em; }
-    .slider img { width: 100%; height: auto; }
-    .photo-item img { width: 90%; height: auto; }
+  .popup-img {
+    max-height: 65vh; /* ← スマホはもっと強めに制限 */
+  }
+}
 
-    .tab-buttons {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
+/* ===============================
+    Front  ここから２重構造のやつ
+=============================== */
+.front {
+  /* マージン削除（親コンテナの中央に配置するため） */
+  margin: 0;
+  background-image: url(/img/manga/【back写真】修了展_1.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  z-index: 2;
+  opacity: 1; /* 初期は不透明 */
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  /* カーソルをポインターに（クリックできる感） */
+  cursor: pointer;
+
+  font-size: medium;
+}
+/* --- Frontデザイン（動画再現） --- */
+.college-front {
+  position: relative;
+  width: 100%;
+  /* 背景画像が見えるように高さを確保 */
+  height: 400px;
+  border-radius: 20px;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  /* トランジション設定 */
+  transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+/* 背景画像レイヤー（ぼかし） */
+.front-bg-layer {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  padding: 20px;
+  /* 任意の背景画像を指定 */
+  background-image: url("img/manga/カルーセル01.jpg");
+  background-size: cover;
+  background-position: center;
+  filter: blur(1px) brightness(0.3); /* ぼかしと暗さ */
+  z-index: 1;
+  transition: transform 0.8s ease;
+}
+
+/* 中央の白いカード */
+.front-card {
+  position: relative;
+  z-index: 2;
+  width: 500px;
+  padding-bottom: 30px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+  /* アニメーション用 */
+  transition: transform 0.5s ease, opacity 0.5s ease;
+}
+
+/* 本文テキスト */
+.card-body-text {
+  padding: 10px 5px;
+  color: #ffffff;
+  font-size: 1.2rem;
+  text-align: center;
+  font-weight: bold;
+  line-height: 1.6;
+}
+.card-body-text span {
+  font-size: 1rem;
+}
+
+/* 白い丸ボタン */
+.open-circle-btn {
+  display: block;
+  width: 50px;
+  height: 50px;
+  background: #676767;
+  border: none;
+  border-radius: 50%;
+  margin: 0 auto;
+  cursor: pointer;
+  position: relative;
+  transition: transform 0.2s;
+  animation: pulseLoop 2s infinite;
+}
+
+/* ボタンホバー時 */
+.open-circle-btn:hover {
+  transform: scale(1.1);
+  background: #f0faff;
+}
+/* 矢印アイコンっぽく見せる装飾（任意） */
+.open-circle-btn::after {
+  content: "";
+  display: block;
+  width: 12px;
+  height: 12px;
+  border-right: 3px solid #ccc;
+  border-bottom: 3px solid #ccc;
+  transform: rotate(45deg);
+  position: absolute;
+  top: 16px;
+  left: 18px;
+}
+
+/* --- アニメーション定義 --- */
+
+/* Frontが消えるとき（拡大フェードアウト） */
+.college-front.fade-out .front-card {
+  transform: scale(1.5);
+  opacity: 0;
+}
+.college-front.fade-out .front-bg-layer {
+  transform: scale(1.2);
+  opacity: 0;
+}
+
+/* ===================================
+    Back
+=================================== */
+.back {
+  margin: 0;
+  background: #a7a7a7;
+  color: #1e293b;
+  z-index: 1;
+  opacity: 0; /* 初期非表示 */
+  transform: translateY(20px); /* 少し下に配置しておく */
+  pointer-events: none; /* 見えてないときはクリック無効 */
+}
+
+/* Back全体の設定（動画に合わせて水色背景にする） */
+.college-back {
+  position: relative;
+  border-radius: 20px;
+  background-color: #cc9ad0;
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+/* Backが現れるとき（フェードイン・ズームイン） */
+.college-back.fade-in {
+  opacity: 1;
+  transform: scale(1);
+}
+
+@keyframes pulseLoop {
+  0% {
+    box-shadow: 0 0 0 0 rgba(255, 255, 255, 0.7);
+  }
+  70% {
+    box-shadow: 0 0 0 10px rgba(255, 255, 255, 0);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(255, 255, 255, 0);
+  }
+}
+
+/* --- 切り替え時の挙動 --- */
+
+/* Open時のFront：消す */
+section.open .front {
+  opacity: 0;
+  pointer-events: none; /* 消えたらクリック無効 */
+  transform: scale(1.1); /* 少し拡大しながら消える */
+}
+
+/* Open時のBack：出す */
+section.open .back {
+  height: 500px;
+  opacity: 1;
+  transform: translateY(0); /* 元の位置に戻る */
+  pointer-events: auto; /* クリック有効化 */
+}
+
+/* ================================
+  新スライダー（中央大・左右小）
+================================ */
+
+.section-sample-college {
+  overflow: hidden; /* 横スクロール防止 */
+}
+
+.sample-slider-wrap {
+  width: 100%;
+  position: relative;
+  overflow: hidden; /* はみ出した画像を隠す */
+}
+
+.sample-slide-track {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  position: relative;
+}
+
+/* スライド1枚ぶんの枠 */
+.sample-slide {
+  /* デフォルト（左右）は20%の幅 */
+  flex: 0 0 20%;
+  max-width: 20%;
+  width: 100%;
+  height: 90%; /* 中央より少し小さく */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.6s ease-in-out; /* ヌルっと動くアニメーション */
+  opacity: 0.6; /* 左右は少し薄く */
+  transform: scale(0.9); /* 少し縮小 */
+  position: relative;
+  z-index: 1;
+}
+
+.sample-slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* 枠に合わせてトリミング */
+  border-radius: 10px;
+}
+
+/* 左右スライドの画像を少し小さく表示 */
+.sample-slide:not(.active) {
+  opacity: 0.6;
+  transform: scale(0.75);
+}
+
+/* 中央の画像（active） */
+.sample-slide.active {
+  /* 中央は60%の幅 */
+  flex: 0 0 60%;
+  max-width: 100%;
+  height: 80%; /* フルサイズ */
+  opacity: 1;
+  transform: scale(1);
+  z-index: 2;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3); /* 影をつけて浮き上がらせる */
+}
+
+.close-btn {
+  float: right;
+}
+
+/* ====== 矢印 ====== */
+.sample-arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 20px;
+  height: 20px;
+  border: none;
+  border-radius: 50%;
+  font-size: 14px;
+  cursor: pointer;
+  z-index: 10;
+}
+
+.sample-prev {
+  left: 10px;
+}
+.sample-next {
+  right: 10px;
+}
+
+/* ===== スマホ ===== */
+
+@media (max-width: 600px) {
+  .sample-slide {
+    flex: 0 0 60%;
+  }
+
+  .sample-slide-track {
+    height: 100%; /* スマホでの高さ */
+  }
+
+  .sample-slide:not(.active) {
+    transform: scale(0.6);
+  }
+
+  .sample-arrow {
+    font-size: 15px;
+  }
+}
+
+/* ================================
+  パフォーミングアーツカレッジ用スライダー (pafo-クラス)
+  ※sample-クラスのデザインを複製
+================================ */
+
+/* 背景画像レイヤー（ぼかし） */
+.pafo-front-bg-layer {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  padding: 20px;
+  /* 任意の背景画像を指定 */
+  background-image: url("img/pafo/パフォ/パフォ素材/パフォ/劇団四季のアラジンを観に行きました.jpg");
+  background-size: cover;
+  background-position: center;
+  filter: blur(1px) brightness(0.3); /* ぼかしと暗さ */
+  z-index: 1;
+  transition: transform 0.8s ease;
+}
+
+.pafo-slider-wrap {
+  width: 100%;
+  position: relative;
+  overflow: hidden; /* はみ出し防止 */
+}
+
+.pafo-slide-track {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  position: relative;
+}
+
+/* スライド個別の設定 */
+.pafo-slide {
+  flex: 0 0 20%; /* 左右は幅20% */
+  max-width: 20%;
+  width: 100%;
+  height: 90%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.6s ease-in-out;
+  opacity: 0.6; /* 中央以外は薄く */
+  transform: scale(0.9); /* 中央以外は小さく */
+  position: relative;
+  z-index: 1;
+}
+
+.pafo-slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+/* 中央（active）以外のスライド */
+.pafo-slide:not(.active) {
+  opacity: 0.6;
+  transform: scale(0.75);
+}
+
+/* 中央（active）のスライド */
+.pafo-slide.active {
+  flex: 0 0 60%; /* 中央は幅60% */
+  max-width: 100%;
+  height: 80%;
+  opacity: 1;
+  transform: scale(1);
+  z-index: 2;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+/* 矢印ボタン */
+.pafo-arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 30px; /* 少し押しやすく調整 */
+  height: 30px;
+  border: none;
+  background: rgba(255, 255, 255, 0.8);
+  border-radius: 50%;
+  font-size: 18px;
+  cursor: pointer;
+  z-index: 10;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.pafo-prev {
+  left: 10px;
+}
+.pafo-next {
+  right: 10px;
+}
+
+/* スマホ対応 */
+@media (max-width: 600px) {
+  .pafo-slide {
+    flex: 0 0 60%; /* スマホでは中央以外の幅も広めに確保しないと潰れる可能性があるため調整推奨 */
+  }
+
+  .pafo-slide:not(.active) {
+    transform: scale(0.6);
+    flex: 0 0 20%; /* 左右は小さく */
+  }
+
+  .pafo-slide.active {
+    flex: 0 0 60%;
+  }
+
+  .pafo-slide-track {
+    height: 100%;
+  }
+}
+
+/* ================================
+  動画カレッジ用スライダー (video-クラス)
+  ※sample-クラスのデザインを複製
+================================ */
+
+/* 背景画像レイヤー（ぼかし） */
+.video-front-bg-layer {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  padding: 20px;
+  /* 任意の背景画像を指定 */
+  background-image: url("/img/video/IMG_2416.JPG");
+  background-size: cover;
+  background-position: center;
+  filter: blur(1px) brightness(0.3); /* ぼかしと暗さ */
+  z-index: 1;
+  transition: transform 0.8s ease;
+}
+
+/* ================================
+  ゲームカレッジ用スライダー (game-クラス)
+  ※spafo-クラスのデザインを複製
+================================ */
+
+/* 背景画像レイヤー（ぼかし） */
+.game-front-bg-layer {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  padding: 20px;
+  /* 任意の背景画像を指定 */
+  background-image: url("img/game/game_front1.jpg");
+  background-size: cover;
+  background-position: center;
+  filter: blur(1px) brightness(0.3); /* ぼかしと暗さ */
+  z-index: 1;
+  transition: transform 0.8s ease;
+}
+
+.game-slider-wrap {
+  width: 100%;
+  position: relative;
+  overflow: hidden; /* はみ出し防止 */
+}
+
+.game-slide-track {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  position: relative;
+}
+
+/* スライド個別の設定 */
+.game-slide {
+  flex: 0 0 20%; /* 左右は幅20% */
+  max-width: 20%;
+  width: 100%;
+  height: 90%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.6s ease-in-out;
+  opacity: 0.6; /* 中央以外は薄く */
+  transform: scale(0.9); /* 中央以外は小さく */
+  position: relative;
+  z-index: 1;
+}
+
+.game-slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+/* 中央（active）以外のスライド */
+.game-slide:not(.active) {
+  opacity: 0.6;
+  transform: scale(0.75);
+}
+
+/* 中央（active）のスライド */
+.game-slide.active {
+  flex: 0 0 60%; /* 中央は幅60% */
+  max-width: 100%;
+  height: 80%;
+  opacity: 1;
+  transform: scale(1);
+  z-index: 2;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+/* 矢印ボタン */
+.game-arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 30px; /* 少し押しやすく調整 */
+  height: 30px;
+  border: none;
+  background: rgba(255, 255, 255, 0.8);
+  border-radius: 50%;
+  font-size: 18px;
+  cursor: pointer;
+  z-index: 10;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.game-prev {
+  left: 10px;
+}
+.game-next {
+  right: 10px;
+}
+
+.game-college-back{
+  background-color: #baf7e0cb;
+}
+
+/* スマホ対応 */
+@media (max-width: 600px) {
+  .game-slide {
+    flex: 0 0 60%; /* スマホでは中央以外の幅も広めに確保しないと潰れる可能性があるため調整推奨 */
+  }
+
+  .game-slide:not(.active) {
+    transform: scale(0.6);
+    flex: 0 0 20%; /* 左右は小さく */
+  }
+
+  .game-slide.active {
+    flex: 0 0 60%;
+  }
+
+  .game-slide-track {
+    height: 100%;
+  }
+}
+
+/*section-アンケート*/
+.section-ankto {
+    font-size: 25px;
+    padding: 20px;
+    text-align: center;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+/* 画像（クラス image でも img でもOKに統一） */
+.section-ankto img,
+.section-ankto .image {
+    width: 100%;
+    max-width: 300px;
+    height: auto;      /* ← 高さ固定を完全に解除 */
+    display: block;
+    margin: 0 auto;
+    border-radius: 8px;
+    margin-bottom: 40px;
+}
+
+.section-ankto a {
+    display: inline-block;
+}
+
+/* スマホレイアウト */
+@media screen and (max-width: 600px) {
+    .section-ankto {
+        font-size: 18px;
+        max-width: 95%;
+        padding: 15px;
+        margin-top: 15px;
     }
 
-    .tab-buttons button {
-        padding: 16px 24px;
-        margin: 8px 0;
-        font-size: 1.1em;
-        width: 90%;
+    .section-ankto img,
+    .section-ankto .image {
+        max-width: 200px;
+        height: auto; /* 念のため追加 */
+        margin-bottom: 20px;
     }
 
-    .tab-content {
-        font-size: 1em;
-        padding: 20px 15px;
+    .section-ankto p {
+        font-size: 20px;
+        margin-bottom: 10px;
     }
 }
 
+/* ================================
+パフォーミングアーツカレッジ用スライダー (manga-クラス)
+  ※sample-クラスのデザインを複製
+================================ */
+
+/* 背景画像レイヤー（ぼかし） */
+.manga-front-bg-layer {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  padding: 20px;
+  /* 任意の背景画像を指定 */
+  background-image: url("img/pafo/パフォ/パフォ素材/パフォ/劇団四季のアラジンを観に行きました.jpg");
+  background-size: cover;
+  background-position: center;
+  filter: blur(1px) brightness(0.3); /* ぼかしと暗さ */
+  z-index: 1;
+  transition: transform 0.8s ease;
+}
+
+.manga-slider-wrap {
+  width: 100%;
+  position: relative;
+  overflow: hidden; /* はみ出し防止 */
+}
+
+.manga-slide-track {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  position: relative;
+}
+
+/* スライド個別の設定 */
+.manga-slide {
+  flex: 0 0 20%; /* 左右は幅20% */
+  max-width: 20%;
+  width: 100%;
+  height: 90%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.6s ease-in-out;
+  opacity: 0.6; /* 中央以外は薄く */
+  transform: scale(0.9); /* 中央以外は小さく */
+  position: relative;
+  z-index: 1;
+}
+
+.manga-slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+/* 中央（active）以外のスライド */
+.manga-slide:not(.active) {
+  opacity: 0.6;
+  transform: scale(0.75);
+}
+
+/* 中央（active）のスライド */
+.manga-slide.active {
+  flex: 0 0 60%; /* 中央は幅60% */
+  max-width: 100%;
+  height: 80%;
+  opacity: 1;
+  transform: scale(1);
+  z-index: 2;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+/* 矢印ボタン */
+.manga-arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 30px; /* 少し押しやすく調整 */
+  height: 30px;
+  border: none;
+  background: rgba(255, 255, 255, 0.8);
+  border-radius: 50%;
+  font-size: 18px;
+  cursor: pointer;
+  z-index: 10;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.manga-prev {
+  left: 10px;
+}
+.manga-next {
+  right: 10px;
+}
+
+.manga-college-back{
+  background-color: rgb(255, 200, 199);
+}
+
+/* スマホ対応 */
+@media (max-width: 600px) {
+  .manga-slide {
+    flex: 0 0 60%; /* スマホでは中央以外の幅も広めに確保しないと潰れる可能性があるため調整推奨 */
+  }
+
+  .manga-slide:not(.active) {
+    transform: scale(0.6);
+    flex: 0 0 20%; /* 左右は小さく */
+  }
+
+  .manga-slide.active {
+    flex: 0 0 60%;
+  }
+
+  .manga-slide-track {
+    height: 100%;
+  }
+}
