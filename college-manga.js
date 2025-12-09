@@ -1,9 +1,9 @@
 document.addEventListener("DOMContentLoaded", () => {
-  const track = document.querySelector(".sample-slide-track");
+  const track = document.querySelector(".manga-slide-track");
   // querySelectorAllの結果はNodeListなので、操作しやすい配列(Array)に変換
-  let slides = Array.from(document.querySelectorAll(".sample-slide"));
-  const prevBtn = document.querySelector(".sample-prev");
-  const nextBtn = document.querySelector(".sample-next");
+  let slides = Array.from(document.querySelectorAll(".manga-slide"));
+  const prevBtn = document.querySelector(".manga-prev");
+  const nextBtn = document.querySelector(".manga-next");
 
   const frontSection = document.getElementById("manga-front");
   const backSection = document.getElementById("manga-back");
@@ -23,6 +23,7 @@ document.addEventListener("DOMContentLoaded", () => {
   // 「開く」ボタン（白い丸ボタン）
   if (openBtn) {
     openBtn.addEventListener("click", () => {
+
       // 1. Frontにフェードアウトクラスを付与（拡大して消える）
       frontSection.classList.add("fade-out");
 
@@ -42,6 +43,20 @@ document.addEventListener("DOMContentLoaded", () => {
           startAutoPlay();
         });
       }, 500); // CSSのtransition時間と合わせる
+          });
+  }
+
+  if (closeBtn) {
+    closeBtn.addEventListener("click", () => {
+      backSection.classList.remove("fade-in");
+      setTimeout(() => {
+        stopAutoPlay();
+        backSection.style.display = "none";
+        frontSection.style.display = "flex"; // CSSに合わせて調整
+        requestAnimationFrame(() => {
+          frontSection.classList.remove("fade-out");
+        });
+      }, 600);
     });
   }
 
@@ -104,28 +119,6 @@ document.addEventListener("DOMContentLoaded", () => {
     startAutoPlay();
   });
 
-  // 「閉じる」ボタン
-  if (closeBtn) {
-    closeBtn.addEventListener("click", () => {
-      // 1. Backのフェードインクラスを外す（縮小して消える）
-      backSection.classList.remove("fade-in");
-
-      // 2. アニメーション時間(0.6s)待ってから表示切り替え
-      setTimeout(() => {
-        stopAutoPlay();
-        backSection.style.display = "none";
-
-        // Frontを再表示
-        frontSection.style.display = "flex"; // CSSでflexレイアウトにしているため
-
-        // Frontのフェードアウトクラスを外して元に戻す
-        // transitionが効くように少し遅らせる（即時だとパッと出る）
-        requestAnimationFrame(() => {
-          frontSection.classList.remove("fade-out");
-        });
-      }, 600);
-    });
-  }
 
   // マウスが乗ったら止めるなどの処理はお好みで
   /*
