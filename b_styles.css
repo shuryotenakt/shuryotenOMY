@@ -743,18 +743,11 @@ header .right {
 ========================= */
 .image-container {
   display: flex;
-  justify-content: center;
   align-items: flex-start;
-  gap: 100px;
   padding: 20px;
-  flex-wrap: nowrap;
-  overflow-x: auto;
-  -webkit-overflow-scrolling: touch;
 }
 
 .image {
-  width: 500px; /* ← 大きめサイズ */
-  height: 300px;
   object-fit: cover;
   object-position: center;
   margin-bottom: 5px;
@@ -827,8 +820,6 @@ header .right {
 .image2 {
   display: flex;
   flex-shrink: 0; /* ← 画像が潰れないように */
-  width: 350px;
-  height: 200px;
   object-fit: cover; /* ← 中央トリミング（縦横比を維持） */
   object-position: center;
   background-color: #f5f5f5; /* 画像が透明でも背景が整う */
@@ -877,11 +868,6 @@ header .right {
     flex-direction: column-reverse; /*上下入れ替え*/
   }
 
-  .text-box,
-  .image2 {
-    width: 90%;
-    height: auto;
-  }
 
   .text-box {
     font-size: 13px;
@@ -1837,6 +1823,10 @@ section.open .back {
 }
 .game-next {
   right: 10px;
+}
+
+.game-college-back{
+  background-color: #c2e3fd7e;
 }
 
 /* スマホ対応 */
