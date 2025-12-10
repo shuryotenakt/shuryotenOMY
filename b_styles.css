@@ -887,18 +887,19 @@ header .right {
   .card4 {
     margin: 20px auto;
     flex-direction: column-reverse; /*上下入れ替え*/
-    max-width: auto
+    max-width: auto;
+    
   }
 
   .text-box {
     width: 100%;
-    max-width: auto;
+    max-width: none;
+    height: auto;
   }
 
   .image2 {
-    height: 50vw;
-    max-width: auto;
-  }
+    height: 50vw; /* 画面幅の50% */
+  }  
 }
 
 /* section13-comment */
