@@ -1555,6 +1555,7 @@ section.open .back {
 
 .close-btn {
   float: right;
+  height: 40px;
 }
 
 /* ====== 矢印 ====== */
