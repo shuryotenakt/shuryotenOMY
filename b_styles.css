@@ -783,7 +783,7 @@ header .right {
 }
 
 .video-college-back {
-  background-color: #b98cda;
+  background-color: #e9bcff;
 }
 
 /* =========================
@@ -1451,7 +1451,7 @@ h2 {
 .college-back {
   position: relative;
   border-radius: 20px;
-  background-color: #cc9ad0;
+  background-color: #e2aee7;
   transition: opacity 0.6s ease, transform 0.6s ease;
 }
 
