@@ -1584,6 +1584,9 @@ section.open .back {
   /* 任意の背景画像を指定 */
   background-image: url("img/pafo/パフォ/パフォ素材/パフォ/劇団四季のアラジンを観に行きました.jpg");
 
+.pafo {
+    background-color: #FFE4C4;  /* ← 薄いオレンジ */
+}
 
 
   background-size: cover;
