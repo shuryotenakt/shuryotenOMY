@@ -867,7 +867,7 @@ header .right {
 /* =========================
 スマホ対応（600px以下）
 ========================= */
-@media screen and (max-width: 600px) {
+@media (max-width: 780px) {
   .image-container {
     justify-content: center;
     gap: 20px;
@@ -878,7 +878,7 @@ header .right {
   .image {
     width: 100%; /* 画面幅に合わせる */
     height: auto; /* 自然な縦横比に戻す */
-    max-width: 250px; /* 必要なら上限を設定（好みに応じて調整） */
+    max-width: auto; /* 必要なら上限を設定（好みに応じて調整） */
   }
 
   .card1,
@@ -887,15 +887,17 @@ header .right {
   .card4 {
     margin: 20px auto;
     flex-direction: column-reverse; /*上下入れ替え*/
+    max-width: auto
   }
 
   .text-box {
     width: 100%;
+    max-width: auto;
   }
 
   .image2 {
-    width: 350px;
-    height: 200px;
+    height: 50vw;
+    max-width: auto;
   }
 }
 
