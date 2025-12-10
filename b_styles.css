@@ -1779,6 +1779,10 @@ section.open .back {
   transition: transform 0.8s ease;
 }
 
+.video-college-back {
+  background-color: #fff9b7e6;
+}
+
 /* ================================
   ゲームカレッジ用スライダー (game-クラス)
   ※spafo-クラスのデザインを複製
