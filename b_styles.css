@@ -1754,6 +1754,10 @@ section.open .back {
     flex: 0 0 60%;
   }
 }
+.pafo-college-back {
+  background-color: #b7ffbfe6;
+}
+
 
 /* ================================
   動画カレッジ用スライダー (video-クラス)
