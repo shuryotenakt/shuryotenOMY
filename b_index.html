@@ -408,16 +408,28 @@
                 <button id="open-video-btn" class="open-circle-btn"></button>
             </div>
         </div>
+
     <div class="college-back" id="video-back" style="display: none;">
+
       <div class="video-college-back">
+
         <div class="image-container">
           <div>
-            <img src="/img/video/IMG_1034.jpeg" alt="画像1" class="image">
+            <img src="/img/video/IMG_1034.jpeg" alt="画像1" class="video-popup-target image">
           </div>
           <div>
-            <img src="/img/video/IMG_2235.jpeg" alt="画像2" class="image">
+            <img src="/img/video/IMG_2235.jpeg" alt="画像2" class="video-popup-target image">
           </div>
         </div>
+
+        <!-- ▼ ポップアップ本体（共通1個） ▼ -->
+        <div class="popup-overlay video-popup-overlay" id="videoPopup">
+          <div class="popup-content">
+            <span class="popup-close" id="videoPopupClose">&times;</span>
+            <img src="" alt="full" class="popup-img" id="videoPopupImg">
+          </div>
+        </div>
+
         <div class="video-layout">
           <div class="video-text">
             近年、主力となっている動画業界。動画制作に関する知識を学び、私た
@@ -425,50 +437,56 @@
       にしていく。私たちが形作った様々な動画をぜひご覧ください。
           </div>
         </div>
+
         <div class="college-gallery">
+
           <div class="card1">
             <div class="text-box">
               <p class="title2">2-1<br>
             このチームは、今回の埼玉県警察とのコラボ企画でいいものを<br />
             お届け出来るよう精一杯頑張ります。
               </p>
-              <p class="author1"></p>
+              
             </div>
             <img src="/img/video/2-1.png" alt="=画像4"class="image2">
           </div>
+
           <div class="card2">
             <div class="text-box">
               <p class="title2">2-2<br>
               フィッシング詐欺の対策映像を制作しました。<br /> 
               実写にこだわらず、自分達で素材を作り、声もチーム内で録りました。
               </p>
-              <p class="author1"></p>
+              
             </div>
             <img src="/img/video/2-2.png" alt="=画像5"class="image2">
           </div>
+
       <!-- tada start-->
           <div class="card3">
-          <div class="text-box">
-            <p class="title2">Aチーム<br>
-            石橋：禁酒呑童子の再戦伝のモーションを担当しました。<br />
-            読み手が物語に吸い込まれるようなモーションを制作したのでぜひ見に来てくだい！！<br /> 
-            山本：烈焔の心のモーションの編集を担当しました。物語に合わせて見やすいように編集しました。 
-            </p>
-            <p class="author1"></p>
-          </div>
+            <div class="text-box">
+              <p class="title2">Aチーム<br>
+              石橋：禁酒呑童子の再戦伝のモーションを担当しました。<br>
+              読み手が物語に吸い込まれるようなモーションを制作したのでぜひ見に来てくだい！！<br> 
+              山本：烈焔の心のモーションの編集を担当しました。物語に合わせて見やすいように編集しました。 
+              </p>
+              
+            </div>
           <img src="/img/video/Aチーム.png" alt="=画像6"class="image2">
           </div>
+
           <div class="card3">
-          <div class="text-box">
-            <p class="title2">Aチーム<br>
-            渡邉：２作品のBGM、最終調整を担当しました。２つの音を重ねて風景を感じさせ
-            タり、その場の雰囲気に合わせて音声を調整して臨場感を出せるように意識しまし
-            た。ぜひ音にも注目してお楽しみ下さい！ 
-            </p>
-            <p class="author1"></p>
+            <div class="text-box">
+              <p class="title2">Aチーム<br>
+              渡邉：２作品のBGM、最終調整を担当しました。２つの音を重ねて風景を感じさせ
+              タり、その場の雰囲気に合わせて音声を調整して臨場感を出せるように意識しまし
+              た。ぜひ音にも注目してお楽しみ下さい！ 
+              </p>
+              
+            </div>
+            <img src="/img/video/A2チーム.png" alt="=画像6.5"class="image2">
           </div>
-          <img src="/img/video/A2チーム.png" alt="=画像6.5"class="image2">
-          </div>
+
       <!-- tada end-->
           <div class="card4">
             <div class="text-box">
@@ -579,6 +597,7 @@
 <script src="move.js"></script>
 <script src="move2.js"></script>
 <script src="popup.js"></script>
+<script src="popup-video.js"></script>
 
 <script src="college-manga.js"></script>
 <script src="college-game.js"></script>
