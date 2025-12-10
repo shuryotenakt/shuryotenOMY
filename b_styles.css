@@ -1359,7 +1359,7 @@ h2 {
   background-image: url("img/manga/カルーセル01.jpg");
   background-size: cover;
   background-position: center;
-  filter: blur(1px) brightness(0.3); /* ぼかしと暗さ */
+  filter: blur(1px) brightness(0.5); /* ぼかしと暗さ */
   z-index: 1;
   transition: transform 0.8s ease;
 }
@@ -1622,7 +1622,7 @@ section.open .back {
   background-blend-mode: overlay;
   background-size: cover;
   background-position: center;
-  filter: blur(1px) brightness(0.3); /* ぼかしと暗さ */
+  filter: blur(1px) brightness(0.5); /* ぼかしと暗さ */
   z-index: 1;
   transition: transform 0.8s ease;
 }
@@ -1772,7 +1772,7 @@ section.open .back {
   background-position: center;
   background-color: rgba(159, 203, 251, 0.45);
   background-blend-mode: overlay;
-  filter: blur(1px) brightness(0.3); /* ぼかしと暗さ */
+  filter: blur(1px) brightness(0.5); /* ぼかしと暗さ */
   z-index: 1;
   transition: transform 0.8s ease;
 }
@@ -1799,7 +1799,7 @@ section.open .back {
 
   background-size: cover;
   background-position: center;
-  filter: blur(1px) brightness(0.3); /* ぼかしと暗さ */
+  filter: blur(1px) brightness(0.5); /* ぼかしと暗さ */
   z-index: 1;
   transition: transform 0.8s ease;
 }
@@ -2007,7 +2007,7 @@ section.open .back {
   background-blend-mode: overlay;
   background-size: cover;
   background-position: center;
-  filter: blur(1px) brightness(0.3); /* ぼかしと暗さ */
+  filter: blur(1px) brightness(0.5); /* ぼかしと暗さ */
   z-index: 1;
   transition: transform 0.8s ease;
 }
