@@ -1,6 +1,6 @@
-* {
+/* * {
   outline: 2px solid red;
-}
+} */
 
 body {
   margin: 0;
@@ -836,12 +836,9 @@ header .right {
 /* --- テキスト部分 --- */
 .text-box {
   flex: 1; /* 画像以外の部分を広げる */
-  display: flex;
   height: 200px;
   flex-direction: column;
   justify-content: center;
-  gap: 12px;
-  padding: 0;
   box-sizing: border-box;
   word-break: break-word;
   overflow-wrap: break-word;
@@ -859,8 +856,9 @@ header .right {
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
 }
 .title2 {
+  border: 2px solid #000;
   margin: 0;
-  font-size: 23px;
+  font-size: 18px;
   color: #000;
   line-height: 1.6;
 }
