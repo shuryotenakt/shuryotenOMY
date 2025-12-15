@@ -44,6 +44,8 @@
         </div>
 </section>
 
+<p class="popup-text-2">↑↑↑↑↑　タップで写真拡大　↑↑↑↑↑</p>
+
 <section class="section3-day">
   <div class="date-left">
     <p>
@@ -57,7 +59,7 @@
   <div class="date-right">
     <div class="date-content">
       <div class="year">2026年</div>
-      <h1>3 / 4</h1>
+      <h1>3/4</h1>
       <div class="weekday">（水）</div>
     </div>
   </div>
@@ -200,8 +202,8 @@
             <!-- 中央のカード -->
             <div class="front-card">
                 <div class="card-body-text">
-                    <p>「入学してから１年間！成長した成果を見に来てください」<br/>１年担任　シュウ<br><br/>
-                「学生生活の集大成を展示します！学生制作のグッズ販売もしますのでお楽しみに」<br/>２年担任　髙根沢</span></p>
+                    <p>「入学してから１年間！成長した成果を見に来てください」<br/>１年担任　シュウ先生<br><br/>
+                「学生生活の集大成を展示します！学生制作のグッズ販売もしますのでお楽しみに」<br/>２年担任　髙根沢先生</span></p>
                 </div>
                 <!-- 白い丸ボタン -->
                 <button id="open-manga-btn" class="open-circle-btn"></button>
@@ -268,7 +270,7 @@
 
         <div class="front-card">
             <div class="card-body-text">
-                <p>『思考錯誤の連続。<br/>その分、熱がこもっています』<br/><br/>担任　鈴木</p>
+                <p>『思考錯誤の連続。<br/>その分、熱がこもっています』<br/><br/>担任　鈴木先生</p>
             </div>
             <button id="open-game-btn" class="open-circle-btn"></button>
         </div>
@@ -279,9 +281,12 @@
         <!-- ★ game スライダー -->
         <div class="game-slider-wrap">
             <div class="game-slide-track">
-                <div class="game-slide"><img src="img/game/game_front1.jpg" alt="1"></div>
-                <div class="game-slide"><img src="img/game/game_front2.png" alt="2"></div>
-                <div class="game-slide"><img src="img/game/game_front3.jpg" alt="3"></div>
+                <div class="game-slide"><img src="img/game/game_front1.jpg" alt="1">
+                <p class="game-text">思考錯誤の連続。その分、熱がこもっています</p></div>
+                <div class="game-slide"><img src="img/game/game_front2.png" alt="2">
+                  <p class="game-text">展示イベントでも、ゲームは大人気！</p></div>
+                <div class="game-slide"><img src="img/game/game_front3.jpg" alt="3">
+                  <p class="game-text">みんなで、ゲーム企画書を作りました！</p></div>
             </div>
 
             <button class="game-arrow game-prev">&#10094;</button>
@@ -302,8 +307,14 @@
                     <img src="img/game/game_back2.jpg">
                 </div>
                 <div class="photo-caption">ドキドキの就活イベント！ <br/>企業様に、がんばった成果をアピール！</div>
+            </div>
 
+            <div class="photo-item">
+                <div class="gallery-frame">
+                    <img src="img/game/game_back3.jpg">
                 </div>
+                <div class="photo-caption">インプットも大切！<br/>ジョイポリスで楽しく学ぼう！</div>
+            </div>
         <button id="close-game-btn" class="close-btn">× 閉じる</button>
     </div>
             </div>
@@ -326,49 +337,55 @@
             <div class="pafo-front-bg-layer"></div>
             
             <div class="front-card">
-                <div class="card-body-text">
-                    <p>自分と向き合い作品と向き合い、たくさん悩んでたくさん挑戦して、1年間でとっても成長しました。<br /><br />
-                    修了展では、アフレコLIVEと朗読劇をお届けします。
-                    身近で生の演技を楽しんでいってくださいね。<br/><br />1年担任　亀中</span></p>
-                </div>
-                <button id="open-pafo-btn" class="open-circle-btn"></button>
+              <div class="card-body-text">
+                <p>自分と向き合い作品と向き合い、たくさん悩んでたくさん挑戦して、1年間でとっても成長しました。<br /><br />
+                  修了展では、アフレコLIVEと朗読劇をお届けします。
+                  身近で生の演技を楽しんでいってくださいね。<br/><br />1年担任　亀中先生</span></p>
+              </div>
+              <button id="open-pafo-btn" class="open-circle-btn"></button>
             </div>
         </div>
 
         <div class="college-back" id="pafo-back" style="display: none;">
-        <div class="pafo-slider-wrap">
-                <div class="pafo-slide-track">
-                    <div class="pafo-slide"><img src="img/pafo/仲良しいいチーム.jpg" alt="1"></div>
-                    <div class="pafo-slide"><img src="img/pafo/アフレコ風景１.jpg" alt="2"></div>
-                    <div class="pafo-slide"><img src="img/pafo/入学してすぐ行われた2年生との交流会.jpg" alt="3"></div>
-                    <div class="pafo-slide"><img src="img/pafo/アフレコ風景２.jpg" alt="4"></div>
-                    <div class="pafo-slide"><img src="img/pafo/初めての行事「川越散策」.jpg" alt="5"></div>
-                    <div class="pafo-slide"><img src="img/pafo/劇団四季のアラジンを観に行きました.jpg" alt="6"></div>
-              
-                </div>
-
-                <button class="pafo-arrow pafo-prev">&#10094;</button>
-                <button class="pafo-arrow pafo-next">&#10095;</button>
+          <div class ="pafo-college-back">
+          <!--pafo スライダー-->
+          <div class="pafo-slider-wrap">
+            <div class="pafo-slide-track">
+              <div class="pafo-slide"><img src="img/pafo/仲良しいいチーム.jpg" alt="1">
+              <div class="pafo-text">仲良しいいチーム</div></div>
+              <div class="pafo-slide"><img src="img/pafo/アフレコ風景１.jpg" alt="2">
+              <div class="pafo-text">アフレコ風景 ~vol.1~</div></div>
+              <div class="pafo-slide"><img src="img/pafo/入学してすぐ行われた2年生との交流会.jpg" alt="3">
+              <div class="pafo-text">入学してすぐ行われた2年生との交流会</div></div>
+              <div class="pafo-slide"><img src="img/pafo/アフレコ風景２.jpg" alt="4">
+              <div class="pafo-text">アフレコ風景 ~vol.2~</div></div>
+              <div class="pafo-slide"><img src="img/pafo/初めての行事「川越散策」.jpg" alt="5">
+              <div class="pafo-text">初めての行事「川越散策」</div></div>
+              <div class="pafo-slide"><img src="img/pafo/劇団四季のアラジンを観に行きました.jpg" alt="6">
+              <div class="pafo-text">劇団四季のアラジンを観に行きました</div></div>
             </div>
+
+            <button class="pafo-arrow pafo-prev">&#10094;</button>
+            <button class="pafo-arrow pafo-next">&#10095;</button>
+          </div>
 
             <div class="college-gallery">
-                <div class="photo-item">
-                    <div class="gallery-frame">
-                    <img src="/img/pafo/元気いっぱいエネルギー溢れる1年生.jpg">
-                    </div>
-                    <div class="photo-caption">元気いっぱいエネルギー溢れる1年生</div>
+              <div class="photo-item">
+                <div class="gallery-frame">
+                <img src="img/pafo/元気いっぱいエネルギー溢れる1年生.jpg">
                 </div>
+                <div class="photo-caption">元気いっぱいエネルギー溢れる1年生</div>
+              </div>
 
-                <div class="photo-item">
-                    <div class="gallery-frame">
-                    <img src="/img/pafo/初めてのインターン！自分たちで作り上げて立派にやり遂げました！.jpg">
-                    </div>
-                    <div class="photo-caption">初めてのインターン！<br/>自分たちで作り上げて立派にやり遂げました！</div>
-                    </div>
-                    <button id="close-pafo-btn" class="close-btn">× 閉じる</button>
+              <div class="photo-item">
+                <div class="gallery-frame">
+                  <img src="img/pafo/初めてのインターン！自分たちで作り上げて立派にやり遂げました！.jpg">
+                </div>
+                <div class="photo-caption">初めてのインターン！<br/>自分たちで作り上げて立派にやり遂げました！</div>
+              </div>
+              <button id="close-pafo-btn" class="close-btn">× 閉じる</button>
             </div>
-            
-        
+        </div>
 
     </section>
     <!-- tada 12/8 追加END -->
@@ -386,81 +403,107 @@
             <!-- 中央のカード -->
             <div class="front-card">
                 <div class="card-body-text">
-                    <p>「想像して創造する。アイディアをカタチにする学校」<br/><br/>
-                    修了展に向けて全員準備してきました！<br/>カメラ体験会も是非来てください！<br/>担任　青木 </span></p>
+                    <p>「想像して創造する。<br/>アイディアをカタチにする学校」<br/><br/>
+                    修了展に向けて全員準備してきました！<br/>カメラ体験会も是非来てください！<br/><br/>担任　青木先生 </span></p>
                 </div>
                 <!-- 白い丸ボタン -->
                 <button id="open-video-btn" class="open-circle-btn"></button>
             </div>
         </div>
+
     <div class="college-back" id="video-back" style="display: none;">
+
+      <div class="video-college-back">
+
         <div class="image-container">
-    <div>
-      <img src="/img/video/IMG_1034.jpeg" alt="画像1" class="image">
-    </div>
-    <div>
-      <img src="/img/video/IMG_2235.jpeg" alt="画像2" class="image">
-    </div>
-  
-    </div>
-      <div class="card1">
-    <div class="text-box">
-      <p class="title2">2-1<br>
-        このチームは、今回の埼玉県警察とのコラボ企画でいいものを<br />
-        お届け出来るよう精一杯頑張ります。
-      </p>
-      <p class="author1"></p>
-    </div>
-    <img src="/img/video/2-1.png" alt="=画像4"class="image2">
-  </div>
-  <div class="card2">
-    <div class="text-box">
-      <p class="title2">2-2<br>
-      フィッシング詐欺の対策映像を制作しました。<br /> 
-      実写にこだわらず、自分達で素材を作り、声もチーム内で録りました。
-      </p>
-      <p class="author1"></p>
-    </div>
-    <img src="/img/video/2-2.png" alt="=画像5"class="image2">
-  </div>
-  <!-- tada start-->
-    <div class="card3">
-    <div class="text-box">
-      <p class="title2">Aチーム<br>
-      石橋：禁酒呑童子の再戦伝のモーションを担当しました。<br />
-      読み手が物語に吸い込まれるようなモーションを制作したのでぜひ見に来てくだい！！<br /> 
-      山本：烈焔の心のモーションの編集を担当しました。物語に合わせて見やすいように編集しました。 
-      </p>
-      <p class="author1"></p>
-    </div>
-    <img src="/img/video/Aチーム.png" alt="=画像6"class="image2">
-    </div>
-    <div class="card3">
-    <div class="text-box">
-      <p class="title2">Aチーム<br>
-      渡邉：２作品のBGM、最終調整を担当しました。２つの音を重ねて風景を感じさせ
-      タり、その場の雰囲気に合わせて音声を調整して臨場感を出せるように意識しまし
-      た。ぜひ音にも注目してお楽しみ下さい！ 
-      </p>
-      <p class="author1"></p>
-    </div>
-    <img src="/img/video/A2チーム.png" alt="=画像6.5"class="image2">
-    </div>
-  <!-- tada end-->
-  <div class="card4">
-    <div class="text-box">
-      <p class="title2">Bチーム<br>
-      大河内：今回私は音声を担当しました。音声にも注目してみてください。<br />
-      山口：最終調整を担当した山口です。細部までこだわった作品をご覧ください。<br /> 
-      平野：モーション担当です。現地でライブアフレコを見てください。<br />
-      </p>
-      <p class="author1"></p>
-    </div>
-    <img src="/img/video/Bチーム.png" alt="=画像7"class="image2">
-  </div>
-            <!-- 戻るボタン（右下に配置） -->
-            <button id="close-video-btn" class="close-btn">× 閉じる</button>
+          <div>
+            <img src="img/video/IMG_1034.jpeg" alt="画像1" class="video-popup-target image">
+          </div>
+          <div>
+            <img src="img/video/IMG_2235.jpeg" alt="画像2" class="video-popup-target image">
+          </div>
         </div>
+
+        <!-- ▼ ポップアップ本体（共通1個） ▼ -->
+        <div class="popup-overlay video-popup-overlay" id="videoPopup">
+          <div class="popup-content">
+            <span class="popup-close" id="videoPopupClose">&times;</span>
+            <img src="" alt="full" class="popup-img" id="videoPopupImg">
+          </div>
+        </div>
+        <p class="popup-text">↑↑↑↑↑　タップで写真拡大　↑↑↑↑↑</p>
+
+        <div class="video-layout">
+          <div class="video-text">
+            近年、主力となっている動画業界。動画制作に関する知識を学び、私た
+      ちは2年間を通じて様々な作品制作に取り組みました。アイデアを想像し、カタチ
+      にしていく。私たちが形作った様々な動画をぜひご覧ください。
+          </div>
+        </div>
+
+        <div class="college-gallery">
+
+          <div class="card1">
+        <div class="text-box">
+            <p class="title2">2-1<br>
+            このチームは、今回の埼玉県警察とのコラボ企画でいいものを
+            お届け出来るよう精一杯頑張ります。
+            </p>
+        </div>
+            <img src="img/video/2-1.png" alt="=画像4"class="image2">
+          </div>
+
+          <div class="card2">
+            <div class="text-box">
+              <p class="title2">2-2<br>
+              フィッシング詐欺の対策映像を制作しました。<br> 
+              実写にこだわらず、自分達で素材を作り、声もチーム内で録りました。
+              </p>
+            </div>
+            <img src="img/video/2-2.png" alt="=画像5"class="image2">
+          </div>
+
+      <!-- tada start-->
+          <div class="card3">
+            <div class="text-box">
+              <p class="title2">Aチーム<br>
+              石橋<br>禁酒呑童子の再戦伝のモーションを担当しました。<br>
+              読み手が物語に吸い込まれるようなモーションを制作したのでぜひ見に来てくだい！！<br> 
+              山本<br>烈焔の心のモーションの編集を担当しました。物語に合わせて見やすいように編集しました。 
+              </p>
+            </div>
+            <img src="img/video/Aチーム.png" alt="=画像6"class="image2">
+          </div>
+
+          <div class="card3">
+            <div class="text-box">
+              <p class="title2">Aチーム<br>
+              渡邉<br>２作品のBGM、最終調整を担当しました。２つの音を重ねて風景を感じさせ
+              タり、その場の雰囲気に合わせて音声を調整して臨場感を出せるように意識しまし
+              た。ぜひ音にも注目してお楽しみ下さい！ 
+              </p>
+            </div>
+            <img src="img/video/A2チーム.png" alt="=画像6.5"class="image2">
+          </div>
+
+      <!-- tada end-->
+          <div class="card4">
+            <div class="text-box">
+              <p class="title2">Bチーム<br>
+              大河内<br>今回私は音声を担当しました。音声にも注目してみてください。<br>
+              山口<br>最終調整を担当した山口です。細部までこだわった作品をご覧ください。<br> 
+              平野<br>モーション担当です。現地でライブアフレコを見てください。<br>
+              </p>
+            </div>
+            <img src="img/video/Bチーム.png" alt="=画像7"class="image2">
+          </div>
+
+          <!-- 戻るボタン（右下に配置） -->
+          <button id="close-video-btn" class="close-btn">× 閉じる</button>
+        </div>
+      </div>
+
+    </div>
 </section>
 
 
@@ -469,7 +512,7 @@
   <!-- 修了展への想い:contentReference[oaicite:13]{index=13} -->
   <h2 class="college-title">IT College<br>Web Project 2025 - 2026</h2>
   <!-- みんなの写真 -->
-  <img src="/img/member/IMG_0840.jpg" alt="ITカレッジメンバー" class="it-photo">
+  <img src="img/member/IMG_0840.jpg" alt="ITカレッジメンバー" class="it-photo">
   <p>
     このページは、総合学園ヒューマンアカデミー大宮校 ITカレッジの6人チームで制作しました。
   </p>
@@ -535,7 +578,7 @@
   <address>
     〒３３０－０８０２<br>
     埼玉県さいたま市大宮区宮町１－１０３－１<br>大宮ＹＫビル１階<br>
-    ☎０４８－６１５－４３８６<br>
+    <a href="tel:0486154386">☎０４８－６１５－４３８６</a><br>
   </address>
   <p class="copyright">
     Copyright ©2025<br>
@@ -551,14 +594,12 @@
 
 
 <script src="move.js"></script>
-<script src="move2.js"></script>
 <script src="popup.js"></script>
+<script src="popup-video.js"></script>
 
 <script src="college-manga.js"></script>
-<!-- <script src="college-game.js"></script> -->
+<script src="college-game.js"></script>
 <script src="college-pafo.js"></script>
 <script src="college-video.js"></script>
-
-<script src="test.js"></script>
 </body>
 </html>
