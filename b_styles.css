@@ -1750,7 +1750,7 @@ section.open .back {
   /* 配置とサイズの調整 */
   width: 100%;
   margin-top: 10px;
-  font-size: 100%;
+  font-size: clamp(12px, 3vw, 16px);
   white-space: nowrap;
 
   opacity: 0; /* 透明にする */
