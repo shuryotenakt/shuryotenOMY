@@ -43,9 +43,9 @@ document.addEventListener("DOMContentLoaded", () => {
         });
 
         
-       document.getElementById("pafo-college").scrollIntoView({
+      document.getElementById("pafo-college").scrollIntoView({
         behavior: "smooth" 
-       }); 
+      }); 
       }, 600);
     });
   }

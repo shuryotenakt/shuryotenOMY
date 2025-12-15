@@ -1698,6 +1698,7 @@ section.open .back {
 .pafo-slide.active {
   flex: 0 0 60%; /* 中央は幅60% */
   max-width: 100%;
+  width: 60%;
   height: 80%;
   opacity: 1;
   transform: scale(1);
