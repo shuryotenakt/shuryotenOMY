@@ -1636,8 +1636,6 @@ section.open .back {
   padding: 20px;
   /* 任意の背景画像を指定 */
   background-image: url("img/pafo/劇団四季のアラジンを観に行きました.jpg");
-
-
   background-blend-mode: overlay;
   background-color: rgba(159, 203, 251, 0.45);
   background-blend-mode: overlay;
@@ -1658,6 +1656,7 @@ section.open .back {
   display: flex;
   align-items: center;
   width: 100%;
+  max-width: 100vw;
   position: relative;
 }
 
@@ -1665,7 +1664,7 @@ section.open .back {
 .pafo-slide {
   flex: 0 0 20%; /* 左右は幅20% */
   max-width: 20%;
-  width: 100%;
+  width: 80%;
   height: 90%;
   display: flex;
   flex-direction: column;
@@ -1685,7 +1684,7 @@ section.open .back {
 
 .pafo-slide img {
   width: 100%;
-  object-fit: cover;
+  object-fit: contain;
   border-radius: 10px;
 }
 
