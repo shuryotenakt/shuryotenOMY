@@ -242,7 +242,7 @@ header .right {
   margin: 0 auto;
 }
 
-.popup-text-2{
+.popup-text-2 {
   font-size: 10px;
   text-align: center;
   margin-top: 10px;
@@ -754,7 +754,7 @@ header .right {
   margin-top: 0px; /* ← 好きな値に調整できる（50〜80推奨） */
 }
 
-.popup-text{
+.popup-text {
   font-size: 10px;
   text-align: center;
   margin-top: -10px;
@@ -765,11 +765,10 @@ header .right {
 
 /* 動画カレッジのコメントに枠線を付ける */
 .text-box .title2 {
-  border: 2px solid #000;   /* 黒い枠線 */
-  padding: 10px;            /* 中の余白 */
-  border-radius: 8px;       /* 少し丸みをつける */
+  border: 2px solid #000; /* 黒い枠線 */
+  padding: 10px; /* 中の余白 */
+  border-radius: 8px; /* 少し丸みをつける */
 }
-
 
 /* =========================
 上部3枚の画像ブロック
@@ -803,7 +802,7 @@ header .right {
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: #d2acff;
+  background-color: #f6e777;
   border-radius: 20%;
   flex-direction: column;
 }
@@ -880,7 +879,6 @@ header .right {
   line-height: 1.6;
 }
 
-
 /* =========================
 スマホ対応（600px以下）
 ========================= */
@@ -905,7 +903,6 @@ header .right {
     margin: 20px auto;
     flex-direction: column-reverse; /*上下入れ替え*/
     max-width: auto;
-    
   }
 
   .text-box {
@@ -916,7 +913,7 @@ header .right {
 
   .image2 {
     height: 50vw; /* 画面幅の50% */
-  }  
+  }
 }
 
 /* section13-comment */
@@ -1751,7 +1748,7 @@ section.open .back {
   /* 配置とサイズの調整 */
   width: 100%;
   margin-top: 10px;
-  font-size: clamp(12px, 3vw, 16px);
+  font-size: clamp(10px, 3vw, 16px);
   white-space: nowrap;
 
   opacity: 0; /* 透明にする */
@@ -1762,7 +1759,6 @@ section.open .back {
 .pafo-college-back {
   background-color: #b7ffbfe6;
 }
-
 
 /* スマホ対応 */
 @media (max-width: 600px) {
@@ -1779,7 +1775,6 @@ section.open .back {
     flex: 0 0 60%;
   }
 }
-
 
 /* ================================
   動画カレッジ用スライダー (video-クラス)
