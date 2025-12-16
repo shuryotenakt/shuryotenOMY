@@ -1121,6 +1121,7 @@ h2 {
   justify-content: center;
   align-items: center;
   overflow: hidden; /* ★ 枠外の画像がはみ出さないように */
+  width: 100%; /* マンガ・イラスト画像サイズ調整のため */
 }
 
 /* ▼ 画像：縦横どちらが長くても「枠の中に縮む」設定（最強） */
