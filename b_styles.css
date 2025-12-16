@@ -242,6 +242,15 @@ header .right {
   margin: 0 auto;
 }
 
+.pen-name{
+  font-size: clamp(0.5rem, 2.5vw, 1rem);
+  font-family: "Playfair Display", serif;
+  font-style: italic;
+  font-weight: 700;
+  text-align: right;
+  padding: 5px 15px;
+}
+
 .popup-text-2 {
   font-size: 10px;
   text-align: center;
