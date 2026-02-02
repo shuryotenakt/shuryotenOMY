@@ -2183,3 +2183,123 @@ section.open .back {
     flex: 0 0 60%;
   }
 }
+
+/* =============================== */
+/* section16-evacuation : 避難経路 */
+/* =============================== */
+
+.section16-evacuation {
+  padding: 60px 20px;
+  background-color: #fffcf4; /* 注意を引く薄いクリーム色 */
+  border-top: 4px solid #ff7b7b; /* 上部に緊急色（赤）のライン */
+  margin-top: 40px;
+}
+
+/* コンテンツ全体を中央寄せ */
+.section16-evacuation .evacuation-content {
+  max-width: 900px;
+  margin: 0 auto;
+  font-family: "Meiryo", sans-serif;
+  color: #333;
+}
+
+/* 避難場所名 */
+.section16-evacuation .evacuation-spot {
+  font-size: clamp(1.2rem, 3vw, 1.5rem);
+  font-weight: bold;
+  color: #d32f2f; /* 赤文字で強調 */
+  text-align: center;
+  background: #fff;
+  padding: 15px;
+  border: 2px solid #d32f2f;
+  border-radius: 10px;
+  margin-bottom: 20px;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+.section16-evacuation p {
+  line-height: 1.8;
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+/* マップ画像枠 */
+.section16-evacuation .evacuation-map-box {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+/* マップ画像本体 */
+.section16-evacuation .escape-img {
+  width: 100%;
+  max-width: 800px; /* PCで見えすぎないように制限 */
+  height: auto;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  background-color: #fff;
+}
+
+.map-caption {
+  font-size: 0.8rem;
+  color: #666;
+  margin-top: 5px;
+}
+
+/* 手順リスト */
+.section16-evacuation .evacuation-route-text ul {
+  list-style: none;
+  padding: 0;
+  margin: 0 auto;
+  max-width: 700px;
+}
+
+.section16-evacuation .evacuation-route-text li {
+  background: #fff;
+  margin-bottom: 15px;
+  padding: 15px 20px;
+  border-radius: 8px;
+  display: flex;
+  align-items: flex-start;
+  gap: 15px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+  text-align: left; /* リスト内は左寄せ */
+}
+
+/* 数字バッジ */
+.section16-evacuation .step-num {
+  background-color: #333;
+  color: #fff;
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: bold;
+  flex-shrink: 0; /* 数字が潰れないように */
+  font-size: 0.9rem;
+  margin-top: 3px; /* テキストと高さ合わせ */
+}
+
+/* スマホ対応 */
+@media (max-width: 600px) {
+  .section16-evacuation {
+    padding: 40px 15px;
+  }
+  
+  .section16-evacuation .evacuation-spot {
+    font-size: 1.1rem;
+    padding: 10px;
+  }
+
+  .section16-evacuation .evacuation-route-text li {
+    flex-direction: column; /* スマホなら数字を上にしてもOK */
+    align-items: flex-start;
+    gap: 5px;
+  }
+  
+  .section16-evacuation .step-num {
+    margin-bottom: 5px;
+  }
+}
